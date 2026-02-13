@@ -1,0 +1,24 @@
+
+{
+  "id": "ex-deriv-06",
+  "topic": "Opérations sur les dérivées",
+  "context": "On considère plusieurs fonctions combinées.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Comment dériver le produit $f(x) = x^6 \\cos(x)$",
+      "hint": "\\method Utilisez la règle $(uv)' = u'v + uv'$. \\step Posez $u = x^6$ et $v = \\cos x$. \\conclusion $f'(x) = 6x^5 \\cos x - x^6 \\sin x$."
+    },
+    {
+      "id": "q2",
+      "content": "De quelle manière calcule-t-on la dérivée du quotient $f(x) = \\frac{3x+6}{4x+7}$",
+      "hint": "\\method Utilisez $\\left(\\frac{u}{v}\\right)' = \\frac{u'v-uv'}{v^2}$. \\step $u'=3$, $v'=4$. \\step $3(4x+7) - 4(3x+6) = 12x + 21 - 12x - 24 = -3$. \\conclusion $f'(x) = \\frac{-3}{(4x+7)^2}$."
+    },
+    {
+      "id": "q3",
+      "content": "Comment dériver la forme composée $f(x) = \\sin(-5x+3)$",
+      "hint": "\\method Utilisez $(f(ax+b))' = a \\cdot f'(ax+b)$. \\step Ici $a = -5$ et $f = \\sin$. \\conclusion $f'(x) = -5 \\cos(-5x+3)$."
+    }
+  ]
+}

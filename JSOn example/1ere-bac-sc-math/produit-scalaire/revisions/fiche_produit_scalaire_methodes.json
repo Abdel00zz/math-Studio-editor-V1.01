@@ -1,0 +1,180 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_choix_formule",
+      "category": "method",
+      "title": "Sais-tu **choisir** la bonne formule du produit scalaire ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le choix dépend des données : coordonnées, normes, angles ou projections."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier les données disponibles",
+            "Formule analytique : $\\vec{u} \\cdot \\vec{v} = xx' + yy'$",
+            "Formule trigonométrique : $\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\| \\|\\vec{v}\\| \\cos \\theta$",
+            "Formule avec normes : $\\vec{u} \\cdot \\vec{v} = \\frac{1}{2}(\\|\\vec{u}+\\vec{v}\\|^2 - \\|\\vec{u}\\|^2 - \\|\\vec{v}\\|^2)$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_parallelisme_orthogonalite",
+      "category": "method",
+      "title": "Maîtrises-tu le **parallélisme** et l'**orthogonalité** de deux droites ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Deux droites sont orthogonales ssi leurs vecteurs directeurs ont un produit scalaire nul."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier les vecteurs directeurs $\\vec{u}$ et $\\vec{v}$",
+            "Orthogonalité : $\\vec{u} \\cdot \\vec{v} = 0$",
+            "Parallélisme : $\\vec{u}$ et $\\vec{v}$ colinéaires (déterminant nul)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_distances_aires_angles",
+      "category": "method",
+      "title": "Es-tu capable de **calculer** des distances, aires et angles ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le produit scalaire permet de calculer les mesures géométriques fondamentales."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Distance : $AB = \\|\\overrightarrow{AB}\\| = \\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2}$",
+            "Angle : $\\cos(\\vec{u}, \\vec{v}) = \\frac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\| \\|\\vec{v}\\|}$",
+            "Aire du triangle : $\\mathcal{A} = \\frac{1}{2} |x_{AB} y_{AC} - y_{AB} x_{AC}|$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_ensemble_MA_MB",
+      "category": "method",
+      "title": "Connais-tu l'ensemble des points $M$ vérifiant $\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = 0$ ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "C'est le cercle de diamètre $[AB]$ (angle inscrit dans un demi-cercle)."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Reconnaître la condition d'orthogonalité $\\overrightarrow{MA} \\perp \\overrightarrow{MB}$",
+            "Identifier le cercle de diamètre $[AB]$",
+            "Centre : milieu $I$ de $[AB]$, rayon : $r = \\frac{AB}{2}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_cercle_equation",
+      "category": "method",
+      "title": "Sais-tu **déterminer** le centre et le rayon d'un cercle ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On met l'équation sous forme canonique pour identifier centre et rayon."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Partir de $x^2 + y^2 + ax + by + c = 0$",
+            "Compléter les carrés : $(x + \\frac{a}{2})^2 + (y + \\frac{b}{2})^2 = \\frac{a^2+b^2}{4} - c$",
+            "Centre $\\Omega(-\\frac{a}{2}; -\\frac{b}{2})$, rayon $r = \\sqrt{\\frac{a^2+b^2}{4} - c}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_equation_droite",
+      "category": "method",
+      "title": "Maîtrises-tu l'**équation cartésienne** d'une droite ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Une droite est définie par un point et un vecteur normal."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier un vecteur normal $\\vec{n}(a;b)$",
+            "Écrire l'équation : $ax + by + c = 0$",
+            "Déterminer $c$ avec un point de la droite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_cartesien_parametrique",
+      "category": "method",
+      "title": "Es-tu capable de **passer** d'une équation cartésienne à paramétrique ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise un point et un vecteur directeur pour la forme paramétrique."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Trouver un point $A$ de la droite",
+            "Identifier un vecteur directeur $\\vec{u}(-b; a)$ si l'équation est $ax+by+c=0$",
+            "Écrire : $\\begin{cases} x = x_A + t(-b) \\\\ y = y_A + ta \\end{cases}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_distance_point_droite",
+      "category": "method",
+      "title": "Sais-tu **calculer** la distance d'un point à une droite ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La distance est la longueur du segment perpendiculaire à la droite."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Mettre l'équation sous forme $ax + by + c = 0$",
+            "Appliquer : $d(M_0, \\mathcal{D}) = \\frac{|ax_0 + by_0 + c|}{\\sqrt{a^2 + b^2}}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_problemes_geometriques",
+      "category": "method",
+      "title": "As-tu compris comment **résoudre** des problèmes géométriques avec le produit scalaire ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le produit scalaire transforme les relations géométriques en calculs algébriques."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Traduire les données géométriques en relations vectorielles",
+            "Utiliser le produit scalaire pour les conditions d'orthogonalité",
+            "Exploiter les formules pour calculer les grandeurs demandées"
+          ]
+        }
+      ]
+    }
+  ]
+}

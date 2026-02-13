@@ -1,0 +1,199 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_simplification_chasles",
+      "category": "method",
+      "title": "Sais-tu **simplifier** une expression vectorielle avec Chasles ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La relation de Chasles $\\overrightarrow{AB} + \\overrightarrow{BC} = \\overrightarrow{AC}$ permet de réduire des sommes vectorielles."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Repérer des vecteurs dont l'extrémité de l'un est l'origine de l'autre",
+            "Regrouper les termes pour appliquer Chasles",
+            "Utiliser la propriété du parallélogramme si nécessaire"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_colinearite",
+      "category": "method",
+      "title": "Maîtrises-tu la **démonstration de colinéarité** de deux vecteurs ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Deux vecteurs sont colinéaires s'il existe un réel $k$ tel que $\\vec{v} = k \\cdot \\vec{u}$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Exprimer les vecteurs $\\vec{u}$ et $\\vec{v}$ en fonction d'une base connue",
+            "Chercher un coefficient multiplicateur entre les composantes",
+            "Écrire la relation $\\vec{v} = k\\vec{u}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_alignement_3_points",
+      "category": "method",
+      "title": "Es-tu capable de **montrer** que trois points sont alignés ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Trois points $A, B, C$ sont alignés si les vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ sont colinéaires."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer ou exprimer les vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$",
+            "Trouver un réel $k$ tel que $\\overrightarrow{AC} = k \\overrightarrow{AB}$",
+            "Conclure à l'alignement"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_parallelisme_droites",
+      "category": "method",
+      "title": "Connais-tu la **démonstration du parallélisme** de deux droites ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Deux droites sont parallèles si leurs vecteurs directeurs sont colinéaires."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier un vecteur directeur pour la première droite",
+            "Identifier un vecteur directeur pour la seconde droite",
+            "Montrer que ces vecteurs sont colinéaires"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_coplanarite_3_vecteurs",
+      "category": "method",
+      "title": "Sais-tu **montrer** que 3 vecteurs sont coplanaires ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Trois vecteurs sont coplanaires si l'un s'écrit comme combinaison linéaire des deux autres."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Chercher deux réels $x$ et $y$ tels que $\\vec{w} = x\\vec{u} + y\\vec{v}$",
+            "Si cette relation existe, les vecteurs sont coplanaires",
+            "Si $\\vec{u}$ et $\\vec{v}$ sont colinéaires, ils sont forcément coplanaires"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_coplanarite_4_points",
+      "category": "method",
+      "title": "Maîtrises-tu la **démonstration de coplanarité** de 4 points ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Quatre points sont coplanaires si trois vecteurs formés à partir d'une même origine sont coplanaires."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Former les vecteurs $\\overrightarrow{AB}$, $\\overrightarrow{AC}$ et $\\overrightarrow{AD}$",
+            "Vérifier que $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ ne sont pas colinéaires",
+            "Trouver $x, y$ tels que $\\overrightarrow{AD} = x\\overrightarrow{AB} + y\\overrightarrow{AC}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_parallelisme_droite_plan",
+      "category": "method",
+      "title": "Es-tu capable de **montrer** qu'une droite est parallèle à un plan ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Une droite est parallèle à un plan si son vecteur directeur est coplanaire avec les vecteurs du plan."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier le vecteur directeur $\\vec{u}$ de la droite",
+            "Identifier les vecteurs directeurs $\\vec{v}$ et $\\vec{w}$ du plan",
+            "Montrer que $\\vec{u} = x\\vec{v} + y\\vec{w}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_parallelisme_plan_plan",
+      "category": "method",
+      "title": "Connais-tu la **démonstration du parallélisme** de deux plans ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Deux plans sont parallèles si les vecteurs directeurs de l'un sont coplanaires avec ceux de l'autre."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier la base $(\\vec{u}, \\vec{v})$ du premier plan",
+            "Identifier la base $(\\vec{u'}, \\vec{v'})$ du second plan",
+            "Montrer que $\\vec{u'}$ et $\\vec{v'}$ sont combinaisons de $(\\vec{u}, \\vec{v})$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_decomposition_base",
+      "category": "method",
+      "title": "Sais-tu **décomposer** un vecteur dans une base ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Tout vecteur s'écrit de manière unique dans une base de l'espace."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Utiliser la relation de Chasles pour introduire les origines des vecteurs de base",
+            "Remplacer les vecteurs intermédiaires par leur expression dans la base",
+            "Regrouper les termes"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_lieu_droite",
+      "category": "method",
+      "title": "Maîtrises-tu la **caractérisation vectorielle** d'une droite ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "L'ensemble des points $M$ tels que $\\overrightarrow{AM}$ est colinéaire à $\\vec{u}$ est une droite."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier la relation de la forme $\\overrightarrow{AM} = k\\vec{u}$",
+            "Identifier le point fixe $A$ et le vecteur fixe $\\vec{u}$",
+            "Conclure : c'est la droite $D(A; \\vec{u})$"
+          ]
+        }
+      ]
+    }
+  ]
+}

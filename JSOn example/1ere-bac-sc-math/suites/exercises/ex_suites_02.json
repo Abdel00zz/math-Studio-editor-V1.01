@@ -1,0 +1,44 @@
+{
+  "id": "ex-analyse-suite-homographique",
+  "topic": "Analyse",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Déterminer les valeurs de $\\alpha$ pour que la suite $(u_n)_{n \\in \\mathbb{N}}$ soit constante",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "Rappel de cours : Une suite est constante si $u_{n+1} = u_n$ pour tout $n$. Résolvez l'équation algébrique $x = \\frac{3x}{x+21}$ pour trouver les valeurs possibles de l'initialisation."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "On pose : $\\alpha = 1$",
+      "subQuestions": [
+        {
+          "id": "sq2a",
+          "content": "Montrer que $0 < u_n \\quad \\forall n \\in \\mathbb{N}$",
+          "hint": "Raisonnement par récurrence. Pour l'hérédité, observez que si $u_n > 0$, alors le numérateur et le dénominateur de $u_{n+1}$ sont strictement positifs."
+        },
+        {
+          "id": "sq2b",
+          "content": "Montrer que $u_{n+1} \\le \\frac{1}{7} u_n \\quad \\forall n \\in \\mathbb{N}$",
+          "hint": "Transformation suggérée : Exprimez le rapport $\\frac{u_{n+1}}{u_n}$ (qui vaut $\\frac{3}{u_n+21}$). Utilisez ensuite le résultat précédent ($u_n > 0$) pour majorer cette fraction. Remarquez que $u_n + 21 > 21$."
+        },
+        {
+          "id": "sq2c",
+          "content": "Déduire que la suite $(u_n)$ est décroissante",
+          "hint": "Piste de réflexion : Vous avez montré que $u_{n+1} \\le k \\cdot u_n$ avec $k = 1/7 < 1$. Puisque $u_n$ est positif, quel est l'effet de la multiplication par un nombre inférieur à 1 ?"
+        },
+        {
+          "id": "sq2d",
+          "content": "Montrer que $u_n \\le \\left(\\frac{1}{7}\\right)^n \\quad \\forall n \\in \\mathbb{N}$",
+          "hint": "Méthode : Procédez par itération des inégalités (cascade) ou par récurrence. Si $u_1 \\le \\frac{1}{7}u_0$, $u_2 \\le \\frac{1}{7}u_1$, etc., on peut borner $u_n$ en fonction de $u_0$ (qui vaut 1)."
+        }
+      ]
+    }
+  ]
+}

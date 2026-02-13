@@ -1,0 +1,61 @@
+{
+  "id": "ex-analyse-suite-homographique-02",
+  "topic": "Analyse",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que $(\\forall n \\in \\mathbb{N}) \\quad u_n > \\frac{1}{3}$",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "Utilisez un raisonnement par \\textbf{\\textcolor{blue}{récurrence}}. Pour l'hérédité, étudiez le signe de la différence $u_{n+1} - \\frac{1}{3}$ en réduisant au même dénominateur."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Étudier la monotonie de $(u_n)_n$ en déduire que $(\\forall n \\in \\mathbb{N}) \\quad u_n \\le 1$",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Calculez la différence $u_{n+1} - u_n$. Factorisez le numérateur par $u_n$ et utilisez le résultat de la question 1 pour déterminer le signe. Pour la déduction : si la suite est décroissante et commence à $u_0=1$, comment se positionnent les termes suivants par rapport au premier ?"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que $(\\forall n \\in \\mathbb{N}) \\quad u_{n+1} - \\frac{1}{3} \\le \\frac{1}{6}\\left(u_n - \\frac{1}{3}\\right)$ en déduire que $(\\forall n \\in \\mathbb{N}) \\quad u_n - \\frac{1}{3} \\le \\frac{2}{3}\\left(\\frac{1}{6}\\right)^n$",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "Pour l'inégalité, utilisez l'expression simplifiée de $u_{n+1} - 1/3$ trouvée à la question 1 et majorez le dénominateur $1+15u_n$ sachant que $u_n > 1/3$. Pour la déduction, procédez par itération ou récurrence en remarquant que $u_0 - 1/3 = 2/3$."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "On pose $v_n = 1 - \\displaystyle \\frac{1}{3u_n}$ pour tout entier naturel $n$",
+      "subQuestions": [
+        {
+          "id": "sq4a",
+          "content": "Montrer que $(v_n)_n$ est une suite géométrique de raison $\\frac{1}{6}$",
+          "hint": "Exprimez $v_{n+1}$ en fonction de $u_{n+1}$, puis substituez $u_{n+1}$ par sa définition. Simplifiez la fraction pour faire apparaître l'expression de $v_n$ multipliée par $1/6$."
+        },
+        {
+          "id": "sq4b",
+          "content": "Calculer $v_n$ puis $u_n$ en fonction de $n$",
+          "hint": "Formule du terme général : $v_n = v_0 \\times q^n$. N'oubliez pas de calculer $v_0$. Ensuite, inversez la relation initiale $v_n = 1 - \\frac{1}{3u_n}$ pour isoler $u_n$."
+        },
+        {
+          "id": "sq4c",
+          "content": "On pose $S_n = \\displaystyle \\sum_{k=0}^{n} v_k$ et $T_n = \\displaystyle \\sum_{k=0}^{n} \\frac{1}{u_k}$. Déterminer $S_n$ en fonction de $n$. En déduire que $T_n = 3n + \\frac{3}{5} + \\frac{12}{5}\\left(\\frac{1}{6}\\right)^{n+1}$",
+          "hint": "Pour $S_n$, c'est la somme classique d'une suite géométrique. Pour $T_n$, remarquez que la relation définissant $v_n$ permet d'écrire $\\frac{1}{u_k} = 3(1 - v_k)$. Utilisez la linéarité de la somme : $\\sum (3 - 3v_k) = 3\\sum 1 - 3\\sum v_k$."
+        }
+      ]
+    }
+  ]
+}

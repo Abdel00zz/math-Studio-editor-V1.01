@@ -1,0 +1,72 @@
+{
+  "id": "ex-prod-scal-3",
+  "topic": "Produit Scalaire",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Calculer $\\overrightarrow{AB} \\cdot \\overrightarrow{AC}$ et $\\det(\\overrightarrow{AB}, \\overrightarrow{AC})$.",
+          "hint": "Commencez par déterminer les coordonnées des vecteurs. Appliquez ensuite les formules analytiques : $XX' + YY'$ pour le produit scalaire et $XY' - YX'$ pour le déterminant."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "En déduire une mesure de l'angle $(\\overrightarrow{AB}, \\overrightarrow{AC})$.",
+          "hint": "Utilisez le lien entre le produit scalaire et le cosinus, ainsi que le lien entre le déterminant et le sinus. Le signe des deux vous donnera le cadran du cercle trigonométrique."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "Calculer la surface du triangle $ABC$.",
+          "hint": "L'aire d'un triangle peut être calculée directement à partir de la valeur absolue du déterminant de deux vecteurs formant ses côtés : $\\frac{1}{2} |\\det(\\vec{u}, \\vec{v})|$."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "Déterminer une équation cartésienne de la hauteur du triangle $ABC$ passant par $A$.",
+          "hint": "[GRAPH:ex_prod_scal_3_graph]\\\\La hauteur issue de $A$ est la droite passant par $A$ et \\textbf{perpendiculaire} au côté $(BC)$. Quel vecteur pouvez-vous utiliser comme vecteur normal ?"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq5a",
+          "content": "Déterminer les équations cartésiennes des droites $(AB)$ et $(AC)$.",
+          "hint": "Pour $(AB)$, observez les ordonnées des points. Pour $(AC)$, cherchez un vecteur normal ou le coefficient directeur."
+        },
+        {
+          "id": "sq5b",
+          "content": "En utilisant la propriété $d(M, (AB)) = d(M, (AC))$, déterminer les deux équations possibles pour la bissectrice.",
+          "hint": "La bissectrice est l'ensemble des points équidistants des deux côtés. Écrivez l'égalité des distances avec les valeurs absolues : $\\frac{|ax+by+c|}{\\sqrt{a^2+b^2}} = \\dots$. Cela mènera à deux cas : $A = B$ ou $A = -B$."
+        },
+        {
+          "id": "sq5c",
+          "content": "À l'aide de la figure, identifier l'équation de la bissectrice intérieure de l'angle $(\\overrightarrow{AB}, \\overrightarrow{AC})$.",
+          "hint": "[GRAPH:ex_prod_scal_3_graph]\\\\Observez la pente de la bissectrice intérieure sur le graphique (est-elle positive ou négative ?). Comparez cela avec les pentes des deux équations trouvées précédemment."
+        }
+      ]
+    }
+  ]
+}

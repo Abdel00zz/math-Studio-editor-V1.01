@@ -1,0 +1,135 @@
+{
+  "header": {
+    "title": "Arithmétique dans ℤ",
+    "subtitle": "Fiche de Révision - Concepts Fondamentaux",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "divisibilite_z",
+      "category": "course",
+      "title": "Divisibilité dans ℤ",
+      "content": "\\begin{definition}Soit $a$ et $b$ deux entiers relatifs.\\\\On dit que $a$ divise $b$, et on écrit $a/b$ s'il existe $k \\in \\mathbb{Z}$ tel que $b = \\blank{ak}$.\\\\Autrement dit : $a/b \\Leftrightarrow [(\\exists k \\in \\mathbb{Z}) : b = ka]$\\\\On dit aussi que $b$ est divisible par $a$, ou que $b$ est un \\blank{multiple} de $a$, ou encore que $a$ est un \\blank{diviseur} de $b$.\\end{definition}\\begin{property}Soit $a$, $b$, $c$ et $d$ des éléments de $\\mathbb{Z}$. Alors :\\begin{itemize}\\item $a/a$ et $a/0$ et $a/\\blank{ab}$\\item $a/b \\Leftrightarrow a/\\blank{-b}$\\item $(a/b$ et $b/c) \\Rightarrow a/\\blank{c}$\\item $(a/b$ et $a/c) \\Rightarrow (a/b + c$ et $a/b - \\blank{c})$\\item $(a/b$ et $b/a) \\Rightarrow |a| = \\blank{|b|}$\\item $(a/b$ et $c/d) \\Rightarrow \\blank{ac/bd}$\\item $(\\forall(x;\\beta) \\in \\mathbb{Z}^2) : (a/b$ et $a/c) \\Rightarrow a/\\alpha b + \\blank{\\beta c}$\\end{itemize}\\end{property}"
+    },
+    {
+      "id": "division_euclidienne_n",
+      "category": "course",
+      "title": "Division Euclidienne dans ℕ",
+      "content": "\\begin{theorem}Soit $a$ et $b$ deux entiers naturels tels que $a \\neq 0$.\\\\Il existe un unique couple $(q; r) \\in \\mathbb{N}^2$ tel que $b = aq + r$ et $0 \\leq r < \\blank{a}$.\\\\L'opération qui permet la détermination du couple $(q; r)$ est appelée la \\textbf{division euclidienne} de l'entier $b$ par l'entier $a$ dans $\\mathbb{N}$.\\\\Les entiers $b$, $a$, $q$ et $r$ sont appelés respectivement le \\blank{dividende}, le \\blank{diviseur}, le \\blank{quotient} et le \\blank{reste}.\\end{theorem}"
+    },
+    {
+      "id": "division_euclidienne_z",
+      "category": "course",
+      "title": "Division Euclidienne dans ℤ",
+      "content": "\\begin{theorem}Soit $a$ et $b$ deux entiers naturels tels que $a \\neq 0$.\\\\Il existe un unique couple $(q; r) \\in \\mathbb{Z} \\times \\mathbb{N}$ tel que $b = aq + r$ et $0 \\leq r < \\blank{a}$.\\\\L'opération qui permet la détermination du couple $(q; r)$ est appelée la \\textbf{division euclidienne} de l'entier $b$ par l'entier $a$ dans $\\mathbb{Z}$.\\\\Les entiers $b$, $a$, $q$ et $r$ sont appelés respectivement le dividende, le diviseur, le quotient et le reste.\\end{theorem}"
+    },
+    {
+      "id": "nombres_premiers_def",
+      "category": "course",
+      "title": "Nombres Premiers",
+      "content": "\\begin{definition}Soit $p \\in \\mathbb{Z}$\\\\On dit que $p$ est un \\textbf{nombre premier} si $|p| \\neq 1$ et $D_p = \\{-1; 1; -p; \\blank{p}\\}$, où $D_p$ désigne l'ensemble des diviseurs de $p$.\\end{definition}\\begin{remark}Si $p$ est premier dans $\\mathbb{N}$, alors $-p$ est premier dans $\\mathbb{Z}$.\\end{remark}\\begin{theorem}L'ensemble $\\mathbb{P}$ des nombres premiers positifs est \\blank{infini}.\\end{theorem}"
+    },
+    {
+      "id": "decomposition_facteurs_premiers",
+      "category": "course",
+      "title": "Décomposition en Produit de Facteurs Premiers",
+      "content": "\\begin{theorem}Tout entier relatif $n$ distinct de $1$ et $-1$ peut s'écrire et de façon unique sous la forme $n = \\varepsilon p_1^{\\alpha_1} p_2^{\\alpha_2} \\ldots p_k^{\\alpha_k}$ où $p_1, p_2, \\ldots, p_k$ des nombres premiers positifs et distincts, $\\alpha_1, \\alpha_2, \\ldots, \\alpha_k$ des éléments de $\\mathbb{N}^*$ et $\\varepsilon = \\blank{\\pm 1}$.\\\\Cette écriture est appelée la \\textbf{décomposition} de $n$ en produit de facteurs premiers.\\end{theorem}\\begin{property}Soit $n$ un entier naturel supérieur ou égal à $2$ et tel que sa décomposition en produit de facteurs premiers est : $n = p_1^{\\alpha_1} p_2^{\\alpha_2} \\ldots p_k^{\\alpha_k}$.\\\\Pour qu'un entier naturel $d$ soit un diviseur de $n$, il faut et il suffit que sa décomposition en produit de facteurs premiers s'écrit sous la forme\\\\$d = p_1^{\\beta_1} p_2^{\\beta_2} \\ldots p_k^{\\beta_k}$ avec $0 \\leq \\beta_i \\leq \\blank{\\alpha_i}$ pour tout $i \\in \\{1; 2; \\ldots; k\\}$.\\\\Pour qu'un entier naturel $m$ soit un multiple de $n$, il faut et il suffit que sa décomposition en produit de facteurs premiers s'écrit sous la forme\\\\$m = p_1^{\\gamma_1} p_2^{\\gamma_2} \\ldots p_k^{\\gamma_k} \\times a$ avec $\\alpha_i \\leq \\blank{\\gamma_i}$ pour tout $i \\in \\{1; 2; \\ldots; k\\}$ et $a$ est produit des facteurs premiers distincts de $p_1, p_2, \\ldots, p_k$.\\end{property}"
+    },
+    {
+      "id": "determination_nombres_premiers",
+      "category": "course",
+      "title": "Détermination des Nombres Premiers",
+      "content": "\\begin{theorem}Soit $n$ un entier non premier et supérieur ou égal à $2$.\\\\Alors, il existe au moins un diviseur premier $p$ du nombre $n$ et vérifiant $p^2 \\leq \\blank{n}$.\\\\En d'autres termes :\\\\$(n$ est un nombre premier$) \\Leftrightarrow (n$ n'admet pas de diviseur premier dans $[2; \\sqrt{n}] \\cap \\blank{\\mathbb{N}})$\\end{theorem}"
+    },
+    {
+      "id": "nombre_diviseurs",
+      "category": "course",
+      "title": "Nombre de Diviseurs d'un Entier Naturel Non Nul",
+      "content": "\\begin{theorem}Soit $a = p_1^{\\alpha_1} p_2^{\\alpha_2} \\ldots p_k^{\\alpha_k}$ la décomposition d'un entier naturel non nul en produit de facteurs premiers.\\\\Le nombre de diviseurs positifs de $a$ vaut : $(1 + \\alpha_1)(1 + \\alpha_2) \\ldots (1 + \\blank{\\alpha_n})$\\end{theorem}"
+    },
+    {
+      "id": "pgcd",
+      "category": "course",
+      "title": "Plus Grand Commun Diviseur (PGCD)",
+      "content": "\\begin{definition}Soit $a$ et $b$ deux entiers relatifs non nuls.\\\\Le plus grand commun diviseur de $a$ et $b$, noté $a \\wedge b$ ou $PGCD(a, b)$ ou $\\Delta(a, b)$, est le plus grand des diviseurs strictement positifs communs à $a$ et $\\blank{b}$.\\end{definition}\\begin{remark}\\begin{itemize}\\item On convient que pour tout $a \\in \\mathbb{Z}$ : $a \\wedge 0 = \\blank{|a|}$\\item La définition précédente peut être encore formulée par l'équivalence suivante :\\\\$$\\delta = a \\wedge b \\Leftrightarrow \\left\\{\\begin{array}{l}\\delta/a \\text{ et } \\delta/b \\\\(\\forall d \\in D_a \\cap D_b) : d \\leq \\blank{\\delta}\\end{array}\\right.$$\\item Soit $a$ et $b$ deux entiers relatifs non nuls.\\\\Si $\\delta = a \\wedge b$ alors :\\begin{itemize}\\item $\\delta \\geq 1$ et $\\delta/a$ et $\\blank{\\delta/b}$\\item Pour tout $d \\in \\mathbb{Z}^*$ : $(d/a$ et $d/b) \\Rightarrow \\blank{d/\\delta}$\\end{itemize}\\end{itemize}\\end{remark}\\begin{property}Soit $a$, $b$ et $c$ des entiers relatifs non nuls.\\\\Alors :\\begin{itemize}\\item $a \\wedge b = |a| \\wedge \\blank{|b|}$\\item $a \\wedge b = b \\wedge \\blank{a}$\\item $a \\wedge a = \\blank{|a|}$\\item $a \\wedge 1 = \\blank{1}$\\item $(a \\wedge b) \\wedge c = a \\wedge (b \\wedge \\blank{c})$\\item $a/b \\Leftrightarrow a \\wedge b = \\blank{|b|}$\\item $a^n \\wedge a = \\blank{|a|}$\\end{itemize}\\end{property}"
+    },
+    {
+      "id": "algorithme_euclide",
+      "category": "course",
+      "title": "Algorithme d'Euclide",
+      "content": "\\begin{property}Soit $a$ et $b$ deux entiers relatifs non nuls.\\\\Si $a = bq + r$ et $0 < r < b$, alors : $a \\wedge b = b \\wedge \\blank{r}$\\\\En d'autres termes : Lorsque $b$ ne divise pas $a$, le plus grand commun diviseur des entiers $a$ et $b$ est égal au dernier reste non nul obtenu grâce à l'algorithme d'Euclide.\\end{property}\\begin{remark}[Explication de l'algorithme d'Euclide]On considère deux entiers $a \\in \\mathbb{Z}^*$ et $b \\in \\mathbb{N}^*$.\\\\On effectue la division euclidienne de $a$ par $b$ : $a = bq_1 + r_1$ avec $0 \\leq r_1 < b$\\begin{itemize}\\item Si $r_1 = 0$, on arrête l'algorithme en déduisant que $a \\wedge b = \\blank{b}$.\\item Si $r_1 \\neq 0$, on continue.\\end{itemize}On effectue la division euclidienne de $b$ par $r_1$ : $b = r_1q_2 + r_2$ avec $0 \\leq r_2 < r_1$\\begin{itemize}\\item Si $r_2 = 0$, on arrête l'algorithme en déduisant que $a \\wedge b = \\blank{r_1}$.\\item Si $r_2 \\neq 0$, on continue.\\end{itemize}Etc.\\\\Notons que le processus engagé va s'arrêter, car sinon, on construirait une suite d'entiers naturels strictement décroissante, ce qui est impossible.\\\\Il existe donc un entier $p \\in \\mathbb{N}$ tel que $r_p \\neq 0$ et $r_{p+1} = 0$.\\\\Par conséquent : $a \\wedge b = \\blank{r_p}$\\end{remark}"
+    },
+    {
+      "id": "pgcd_decomposition",
+      "category": "course",
+      "title": "PGCD et Décomposition",
+      "content": "\\begin{property}Soit $(a; b) \\in (\\mathbb{N}^*)^2$ tel que $a = p_1^{\\alpha_1} p_2^{\\alpha_2} \\ldots p_k^{\\alpha_k}$ et $b = p_1^{\\beta_1} p_2^{\\beta_2} \\ldots p_k^{\\beta_k}$ avec $p_1, p_2, \\ldots, p_k$ des nombres premiers positifs et distincts et $\\beta_i = 0$ si $p_i$ n'apparaît pas dans la décomposition de $b$ et $\\alpha_i = 0$ si $p_i$ n'apparaît pas dans la décomposition de $a$.\\\\Alors :\\\\$$a \\wedge b = p_1^{\\gamma_1} p_2^{\\gamma_2} \\ldots p_k^{\\gamma_k} \\text{ avec } \\gamma_i = \\blank{inf}(\\alpha_i; \\beta_i) \\text{ pour tout } i \\in \\{1; 2; \\ldots; k\\}$$\\end{property}"
+    },
+    {
+      "id": "ppcm",
+      "category": "course",
+      "title": "Plus Petit Commun Multiple (PPCM)",
+      "content": "\\begin{definition}Soit $a$ et $b$ deux entiers relatifs non nuls.\\\\Le plus petit commun multiple de $a$ et $b$, noté $a \\vee b$ ou $PPCM(a, b)$ ou $M(a, b)$, est le plus petit des multiples strictement positifs communs à $a$ et $\\blank{b}$.\\end{definition}\\begin{remark}\\begin{itemize}\\item On convient que pour tout $a \\in \\mathbb{Z}$ : $a \\vee 0 = \\blank{0}$\\item En notant $a\\mathbb{Z}$, l'ensemble des multiples de $a$, on a :\\\\$a\\mathbb{Z} = \\{\\ldots; -3a; -2a; -a; 0; a; 2a; 3a; \\blank{\\ldots}\\}$\\\\Le plus petit élément de l'ensemble $(a\\mathbb{Z} \\cap b\\mathbb{Z}) \\cap \\mathbb{N}^*$ est donc $a \\vee \\blank{b}$\\item Soit $a$ et $b$ deux entiers relatifs non nuls.\\\\Si $m = a \\vee b$, alors :\\begin{itemize}\\item $m \\geq 1$ et $a/m$ et $\\blank{b/m}$\\item Pour tout $c \\in \\mathbb{Z}$ : $(a/c$ et $b/c) \\Rightarrow \\blank{m/c}$\\end{itemize}\\end{itemize}\\end{remark}\\begin{property}Soit $a$, $b$ et $c$ des entiers relatifs non nuls.\\\\Alors :\\begin{itemize}\\item $a \\vee b = |a| \\vee \\blank{|b|}$\\item $a \\vee b = b \\vee \\blank{a}$\\item $a \\vee a = \\blank{|a|}$\\item $a \\vee 1 = \\blank{|a|}$\\item $(a \\vee b) \\vee c = a \\vee (b \\vee \\blank{c})$\\item $a/b \\Leftrightarrow a \\vee b = \\blank{|a|}$\\item $a \\vee b/ab$\\end{itemize}\\end{property}"
+    },
+    {
+      "id": "ppcm_decomposition",
+      "category": "course",
+      "title": "PPCM et Décomposition",
+      "content": "\\begin{property}Soit $(a; b) \\in (\\mathbb{N}^*)^2$ tel que $a = p_1^{\\alpha_1} p_2^{\\alpha_2} \\ldots p_k^{\\alpha_k}$ et $b = p_1^{\\beta_1} p_2^{\\beta_2} \\ldots p_k^{\\beta_k}$ avec $p_1, p_2, \\ldots, p_k$ des nombres premiers positifs et distincts et $\\beta_i = 0$ si $p_i$ n'apparaît pas dans la décomposition de $b$ et $\\alpha_i = 0$ si $p_i$ n'apparaît pas dans la décomposition de $a$.\\\\Alors :\\\\$$a \\vee b = p_1^{\\gamma_1} p_2^{\\gamma_2} \\ldots p_k^{\\gamma_k} \\text{ avec } \\gamma_i = \\blank{sup}(\\alpha_i; \\beta_i) \\text{ pour tout } i \\in \\{1; 2; \\ldots; k\\}$$\\end{property}"
+    },
+    {
+      "id": "relation_pgcd_ppcm",
+      "category": "course",
+      "title": "Relation entre PGCD et PPCM",
+      "content": "\\begin{property}Soit $a$, $b$ et $c$ des entiers relatifs non nuls.\\\\Alors :\\begin{itemize}\\item $(ca) \\vee (cb) = |c|(a \\vee \\blank{b})$\\item $(ca) \\wedge (cb) = |c|(a \\wedge \\blank{b})$\\item $\\left\\{\\begin{array}{l}c/a \\\\c/b\\end{array}\\right. \\Rightarrow \\left(\\dfrac{a}{c}\\right) \\vee \\left(\\dfrac{b}{c}\\right) = \\dfrac{a\\vee b}{\\blank{|c|}}$\\item $(a \\wedge b), (a \\vee b) = \\blank{|ab|}$\\end{itemize}\\end{property}"
+    },
+    {
+      "id": "congruence_modulo",
+      "category": "course",
+      "title": "Congruences Modulo n",
+      "content": "\\begin{definition}Soit $n$ un entier naturel non nul.\\\\On dit que deux entiers relatifs $a$ et $b$ sont \\textbf{congrus modulo $n$} si $n$ divise $b - \\blank{a}$, c'est-à-dire s'il existe un entier $k \\in \\mathbb{Z}$ tel que $b = a + \\blank{kn}$.\\\\On écrit : $a \\equiv b \\; [n]$\\end{definition}\\begin{theorem}[Propriétés de la relation de congruence]Soit $n$ un entier naturel non nul.\\\\La relation « de congruence » est une relation d'équivalence sur $\\mathbb{Z}$, c'est-à-dire :\\begin{itemize}\\item Elle est réflexive : $(\\forall a \\in \\mathbb{Z}) \\; a \\equiv \\blank{a} \\; [n]$\\item Elle est symétrique : $(\\forall (a;b) \\in \\mathbb{Z}^2) \\; (a \\equiv b \\; [n] \\Rightarrow b \\equiv \\blank{a} \\; [n])$\\item Elle est transitive : $(\\forall (a;b;c) \\in \\mathbb{Z}^3) \\; (a \\equiv b \\; [n]$ et $b \\equiv c \\; [n]) \\Rightarrow a \\equiv \\blank{c} \\; [n])$\\end{itemize}\\end{theorem}\\begin{property}Soit $n$ un entier naturel non nul et $(a; b; c; d) \\in \\mathbb{Z}^4$.\\\\Alors :\\begin{itemize}\\item $a \\equiv b \\; [n] \\Leftrightarrow$ (Les restes respectifs des divisions euclidiennes de $a$ et de $b$ par $n$ sont \\blank{égaux})\\item Si $a \\equiv b \\; [n]$ et $c \\equiv d \\; [n]$, alors : $a + c \\equiv b + d \\; [n]$ et $ac \\equiv \\blank{bd} \\; [n]$\\item Si $a \\equiv b \\; [n]$ et $k \\in \\mathbb{Z}$, alors : $ka \\equiv \\blank{kb} \\; [n]$\\item Si $a \\equiv b \\; [n]$ et $p \\in \\mathbb{N}$, alors : $a^p \\equiv \\blank{b^p} \\; [n]$\\end{itemize}\\end{property}"
+    },
+    {
+      "id": "classes_equivalence",
+      "category": "course",
+      "title": "Classes d'Équivalence Modulo n",
+      "content": "\\begin{definition}Soit $n$ un élément de $\\mathbb{N}^*$.\\\\L'ensemble des entiers relatifs qui ont le même reste $r$ de la division euclidienne par $n$ est appelé la \\textbf{classe d'équivalence} de $r$, et on la note $\\overline{r}$. C'est la classe d'équivalence de $r$ modulo $n$ dans $\\mathbb{Z}$.\\\\Généralisation : soit $a \\in \\mathbb{Z}$ et $n \\in \\mathbb{N}^*$.\\\\La classe d'équivalence de $a$ est l'ensemble défini par :\\\\$$\\overline{a} = \\{x \\in \\mathbb{Z}/x \\equiv a \\; [n]\\} = \\{a + kn / k \\in \\blank{\\mathbb{Z}}\\}$$\\end{definition}\\begin{theorem}Soit $n$ un entier naturel non nul.\\\\Pour tout $x \\in \\mathbb{Z}$, on désigne par $\\overline{x}$ la classe d'équivalence de $x$ modulo $n$.\\\\Alors :\\begin{itemize}\\item $(\\forall a \\in \\mathbb{Z}) \\; (\\exists !r \\in \\{0; 1; \\ldots; n-1\\}) \\; \\overline{a} = \\blank{\\overline{r}}$\\item Si $0 \\leq r < n$ et $0 \\leq r' < n$, alors : $\\overline{r} = \\overline{r'} \\Leftrightarrow r = r'$ et $r \\neq r' \\Leftrightarrow \\overline{r} \\cap \\overline{r'} = \\blank{\\emptyset}$\\item $(\\forall x \\in \\mathbb{Z}) \\; (\\exists !r \\in \\{0; 1; \\ldots; n-1\\}) \\; x = r$ ($r$ étant le reste de la division euclidienne de $x$ par $n$)\\item $\\mathbb{Z} = \\overline{0} \\cup \\overline{1} \\cup \\overline{2} \\cup \\ldots \\cup \\overline{n-1}$\\item Par définition $\\mathbb{Z}/n\\mathbb{Z} = \\{\\overline{0}; \\overline{1}; \\overline{2}; \\ldots; \\overline{n-1}\\}$. On a : $Card(\\mathbb{Z}/n\\mathbb{Z}) = \\blank{n}$\\end{itemize}\\end{theorem}"
+    },
+    {
+      "id": "operations_znz",
+      "category": "course",
+      "title": "Opérations dans ℤ/nℤ",
+      "content": "\\begin{definition}Soit $n$ un entier naturel non nul.\\\\On définit l'addition dans $\\mathbb{Z}/n\\mathbb{Z}$ comme suit : Pour tous $\\overline{x}$ et $\\overline{y}$ de $\\mathbb{Z}/n\\mathbb{Z}$ :\\\\$$\\overline{x} + \\overline{y} = \\overline{x + \\blank{y}}$$\\\\On définit la multiplication dans $\\mathbb{Z}/n\\mathbb{Z}$ comme suit : Pour tous $\\overline{x}$ et $\\overline{y}$ de $\\mathbb{Z}/n\\mathbb{Z}$ :\\\\$$\\overline{x} \\times \\overline{y} = \\overline{x \\times \\blank{y}}$$\\end{definition}"
+    },
+    {
+      "id": "methode_division_euclidienne",
+      "category": "method",
+      "title": "Effectuer une Division Euclidienne",
+      "content": "\\textbf{Comment effectuer une division euclidienne ?}\\\\\\begin{method}Pour déterminer le quotient $q$ et le reste $r$ de la division euclidienne de $b$ par $a$ ($a \\neq 0$) :\\\\\\textbf{Étape 1 :} Écrire $b = aq + r$ avec $0 \\leq r < |a|$\\\\\\textbf{Étape 2 :} Si $a > 0$ et $b \\geq 0$ : division usuelle\\\\\\textbf{Étape 3 :} Si $a < 0$ ou $b < 0$ : ajuster pour avoir $0 \\leq r < |a|$\\\\\\textbf{Attention :} Le reste $r$ doit toujours vérifier $0 \\leq r < |a|$\\end{method}\\\\\\begin{example}\\textbf{Exemple 1 :} Division euclidienne de $67$ par $5$\\\\$67 = 5 \\times 13 + 2$ avec $0 \\leq 2 < 5$\\\\Quotient : $q = 13$, Reste : $r = 2$\\\\\\textbf{Exemple 2 :} Division euclidienne de $-67$ par $5$\\\\On cherche $q$ et $r$ tels que : $-67 = 5q + r$ avec $0 \\leq r < 5$\\\\$-67 = 5 \\times (-14) + 3$ car $-70 + 3 = -67$\\\\Quotient : $q = -14$, Reste : $r = 3$\\\\\\textbf{Exemple 3 :} Division euclidienne de $29$ par $-6$\\\\On cherche : $29 = (-6)q + r$ avec $0 \\leq r < 6$\\\\$29 = (-6) \\times (-5) + (-1) = (-6) \\times (-4) + 5$\\\\Quotient : $q = -4$, Reste : $r = 5$\\end{example}"
+    },
+    {
+      "id": "methode_pgcd_euclide",
+      "category": "method",
+      "title": "Calculer le PGCD par l'Algorithme d'Euclide",
+      "content": "\\textbf{Comment calculer le PGCD de deux nombres par l'algorithme d'Euclide ?}\\\\\\begin{method}Pour calculer $a \\wedge b$ :\\\\\\textbf{Étape 1 :} Effectuer la division euclidienne de $a$ par $b$ : $a = bq_1 + r_1$\\\\\\textbf{Étape 2 :} Si $r_1 = 0$ : alors $a \\wedge b = b$. Fin.\\\\\\textbf{Étape 3 :} Si $r_1 \\neq 0$ : effectuer la division euclidienne de $b$ par $r_1$ : $b = r_1q_2 + r_2$\\\\\\textbf{Étape 4 :} Continuer jusqu'à obtenir un reste nul $r_p = 0$\\\\\\textbf{Étape 5 :} Le PGCD est le dernier reste non nul : $a \\wedge b = r_{p-1}$\\end{method}\\\\\\begin{example}Calculer $134 \\wedge 25$ par l'algorithme d'Euclide.\\\\\\textbf{Solution :}\\\\$134 = 25 \\times 5 + 9$\\\\$25 = 9 \\times 2 + 7$\\\\$9 = 7 \\times 1 + 2$\\\\$7 = 2 \\times 3 + 1$\\\\$2 = 1 \\times 2 + 0$\\\\Le dernier reste non nul est $1$, donc $134 \\wedge 25 = 1$.\\end{example}"
+    },
+    {
+      "id": "methode_pgcd_decomposition",
+      "category": "method",
+      "title": "Calculer PGCD et PPCM par Décomposition",
+      "content": "\\textbf{Comment calculer le PGCD et le PPCM par décomposition ?}\\\\\\begin{method}Pour calculer $a \\wedge b$ et $a \\vee b$ :\\\\\\textbf{Étape 1 :} Décomposer $a$ et $b$ en produit de facteurs premiers\\\\$$a = p_1^{\\alpha_1} p_2^{\\alpha_2} \\ldots p_k^{\\alpha_k}$$\\\\$$b = p_1^{\\beta_1} p_2^{\\beta_2} \\ldots p_k^{\\beta_k}$$\\\\\\textbf{Étape 2 :} Pour le PGCD, prendre le minimum des exposants :\\\\$$a \\wedge b = p_1^{\\min(\\alpha_1, \\beta_1)} p_2^{\\min(\\alpha_2, \\beta_2)} \\ldots p_k^{\\min(\\alpha_k, \\beta_k)}$$\\\\\\textbf{Étape 3 :} Pour le PPCM, prendre le maximum des exposants :\\\\$$a \\vee b = p_1^{\\max(\\alpha_1, \\beta_1)} p_2^{\\max(\\alpha_2, \\beta_2)} \\ldots p_k^{\\max(\\alpha_k, \\beta_k)}$$\\end{method}\\\\\\begin{example}Déterminer $a \\wedge b$ dans les cas suivants :\\\\$\\mathbf{1}$ $a = 13$ et $ab = 221$\\\\$\\mathbf{2}$ $a = 17$ et $ab = -578$\\\\\\textbf{Solutions :}\\\\$\\mathbf{1}$ $221 = 13 \\times 17$, donc $b = 17$\\\\$a \\wedge b = 13 \\wedge 17 = 1$ (nombres premiers entre eux)\\\\$\\mathbf{2}$ $578 = 2 \\times 17^2$, donc $ab = -2 \\times 17^2$\\\\Si $a = 17$, alors $b = -2 \\times 17 = -34$\\\\$a \\wedge b = 17 \\wedge 34 = 17$\\end{example}"
+    },
+    {
+      "id": "methode_congruences",
+      "category": "method",
+      "title": "Résoudre des Congruences",
+      "content": "\\textbf{Comment résoudre des équations avec des congruences ?}\\\\\\begin{method}[Résolution dans $\\mathbb{Z}/n\\mathbb{Z}$]Pour résoudre une équation dans $\\mathbb{Z}/n\\mathbb{Z}$ :\\\\\\textbf{Étape 1 :} Simplifier l'équation en utilisant les propriétés des congruences\\\\\\textbf{Étape 2 :} Tester toutes les valeurs possibles $\\overline{0}, \\overline{1}, \\ldots, \\overline{n-1}$\\\\\\textbf{Étape 3 :} Vérifier les solutions trouvées\\end{method}\\\\\\begin{example}Résoudre dans $\\mathbb{Z}/6\\mathbb{Z}$ les équations :\\\\$\\mathbf{1}$ $\\overline{4}\\overline{x} = \\overline{2}$\\\\$\\mathbf{2}$ $\\overline{3}\\overline{x}^2 + \\overline{x} + \\overline{1} = \\overline{0}$\\\\$\\mathbf{3}$ $(\\overline{2}\\overline{x} - \\overline{1})(\\overline{2}\\overline{x} + \\overline{3}) = \\overline{0}$\\\\$\\mathbf{4}$ $\\overline{x}^3 = \\overline{x}$\\\\\\textbf{Solutions :}\\\\$\\mathbf{1}$ On teste $\\overline{x} \\in \\{\\overline{0}, \\overline{1}, \\overline{2}, \\overline{3}, \\overline{4}, \\overline{5}\\}$\\\\$\\overline{4} \\times \\overline{2} = \\overline{8} = \\overline{2}$ ✓\\\\$\\overline{4} \\times \\overline{5} = \\overline{20} = \\overline{2}$ ✓\\\\Solutions : $\\overline{x} \\in \\{\\overline{2}, \\overline{5}\\}$\\\\$\\mathbf{3}$ $(\\overline{2}\\overline{x} - \\overline{1})(\\overline{2}\\overline{x} + \\overline{3}) = \\overline{0}$\\\\$\\overline{2}\\overline{x} = \\overline{1}$ ou $\\overline{2}\\overline{x} = \\overline{-3} = \\overline{3}$\\\\Solutions à tester dans $\\{\\overline{0}, \\overline{1}, \\ldots, \\overline{5}\\}$\\end{example}"
+    },
+    {
+      "id": "methode_nombres_premiers",
+      "category": "method",
+      "title": "Déterminer si un Nombre est Premier",
+      "content": "\\textbf{Comment déterminer si un nombre est premier ?}\\\\\\begin{method}Pour déterminer si $n$ est premier :\\\\\\textbf{Étape 1 :} Calculer $\\sqrt{n}$\\\\\\textbf{Étape 2 :} Tester la divisibilité de $n$ par tous les nombres premiers $p$ tels que $p \\leq \\sqrt{n}$\\\\\\textbf{Étape 3 :} Si aucun ne divise $n$, alors $n$ est premier\\\\\\textbf{Étape 4 :} Si l'un d'eux divise $n$, alors $n$ n'est pas premier\\end{method}\\\\\\begin{example}Parmi les nombres suivants, lesquels sont des nombres premiers :\\\\$127 - 1979 - 2017 - 13957 - 3599 - 2309$\\\\\\textbf{Solution :}\\\\Pour $127$ : $\\sqrt{127} \\approx 11.3$\\\\Nombres premiers à tester : $2, 3, 5, 7, 11$\\\\$127$ n'est divisible par aucun d'eux → $127$ est premier ✓\\\\Pour $2017$ : $\\sqrt{2017} \\approx 44.9$\\\\Nombres premiers à tester : $2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43$\\\\$2017$ n'est divisible par aucun d'eux → $2017$ est premier ✓\\end{example}"
+    }
+  ]
+}

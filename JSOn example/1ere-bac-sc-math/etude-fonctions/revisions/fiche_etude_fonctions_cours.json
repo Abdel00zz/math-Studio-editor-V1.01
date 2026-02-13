@@ -1,0 +1,57 @@
+{
+  "header": {
+    "title": "Étude des Fonctions Numériques",
+    "subtitle": "Fiche de Cours - Branches & Symétries",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "def_branche_infinie",
+      "category": "course",
+      "title": "Branches infinies - Définition",
+      "content": "\\begin{definition}On dit que la courbe $\\mathcal{C}_f$ de la fonction $f$ admet une \\textbf{branche infinie}, lorsque l'une des coordonnées d'un point de $\\mathcal{C}_f$ tend vers l'infini.\\end{definition}"
+    },
+    {
+      "id": "asymptote_verticale",
+      "category": "course",
+      "title": "Asymptote verticale",
+      "content": "\\begin{definition}Si $\\lim_{x \\to a} f(x) = \\pm\\infty$, alors la droite $x=a$ est une \\textbf{asymptote verticale}.\\end{definition}"
+    },
+    {
+      "id": "asymptote_horizontale",
+      "category": "course",
+      "title": "Asymptote horizontale",
+      "content": "\\begin{definition}Si $\\lim_{x \\to \\pm\\infty} f(x) = b$, alors la droite $y=b$ est une \\textbf{asymptote horizontale}.\\end{definition}"
+    },
+    {
+      "id": "asymptote_oblique",
+      "category": "course",
+      "title": "Asymptote oblique",
+      "content": "\\begin{definition}Si $\\lim_{x \\to \\pm\\infty} [f(x) - (ax+b)] = 0$, alors la droite $y=ax+b$ est une \\textbf{asymptote oblique}.\\end{definition}"
+    },
+    {
+      "id": "direction_asymptotique",
+      "category": "course",
+      "title": "Branches paraboliques",
+      "content": "\\begin{definition}Si $\\lim_{x \\to \\infty} f(x) = \\infty$, on étudie $\\frac{f(x)}{x}$ :\\begin{itemize}\\item Si $\\lim \\frac{f(x)}{x} = 0$ : Branche parabolique direction $(Ox)$.\\item Si $\\lim \\frac{f(x)}{x} = \\infty$ : Branche parabolique direction $(Oy)$.\\item Si $\\lim \\frac{f(x)}{x} = a \\neq 0$ et $\\lim (f(x)-ax) = \\infty$ : Branche parabolique direction $y=ax$.\\end{itemize}\\end{definition}"
+    },
+    {
+      "id": "axe_symetrie",
+      "category": "course",
+      "title": "Axe de symétrie",
+      "content": "\\begin{property}La droite $x=a$ est axe de symétrie si : $\\forall x, f(2a-x) = f(x)$.\\end{property}"
+    },
+    {
+      "id": "centre_symetrie",
+      "category": "course",
+      "title": "Centre de symétrie",
+      "content": "\\begin{property}Le point $\\Omega(a,b)$ est centre de symétrie si : $\\forall x, f(2a-x) = 2b - f(x)$.\\end{property}"
+    },
+    {
+      "id": "convexite_definition",
+      "category": "course",
+      "title": "Convexité et concavité",
+      "content": "\\begin{definition}Soit $f$ deux fois dérivable.\\begin{itemize}\\item Si $f'' \\ge 0$, $f$ est \\textbf{convexe}.\\item Si $f'' \\le 0$, $f$ est \\textbf{concave}.\\item Si $f''$ s'annule et change de signe, il y a un \\textbf{point d'inflexion}.\\end{itemize}\\end{definition}"
+    }
+  ]
+}

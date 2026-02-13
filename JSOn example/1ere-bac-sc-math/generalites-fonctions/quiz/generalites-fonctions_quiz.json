@@ -1,0 +1,55 @@
+
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "true-false",
+      "question": "Une fonction impaire admet l'axe des ordonnées comme axe de symétrie.",
+      "isTrue": false,
+      "explanation": "C'est la fonction PAIRE qui est symétrique par rapport à l'axe des ordonnées. La fonction impaire est symétrique par rapport à l'origine O."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "question": "Soit f une fonction croissante sur I. Si a < b, alors :",
+      "options": [
+        { "text": "f(a) < f(b)", "isCorrect": false },
+        { "text": "f(a) ≤ f(b)", "isCorrect": true },
+        { "text": "f(a) > f(b)", "isCorrect": false },
+        { "text": "f(a) ≥ f(b)", "isCorrect": false }
+      ],
+      "explanation": "La croissance conserve l'ordre (inégalités larges par défaut). Si a < b, alors f(a) ≤ f(b)."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "question": "La composée de deux fonctions décroissantes est :",
+      "options": [
+        { "text": "Décroissante", "isCorrect": false },
+        { "text": "Croissante", "isCorrect": true },
+        { "text": "Constante", "isCorrect": false },
+        { "text": "On ne peut pas savoir", "isCorrect": false }
+      ],
+      "explanation": "Si f et g ont le MÊME sens de variation (ici toutes deux décroissantes), leur composée est croissante. (« moins par moins donne plus »)."
+    },
+    {
+      "id": "q4",
+      "type": "true-false",
+      "question": "Si f est majorée par 3, alors l'équation f(x) = 4 n'a pas de solution.",
+      "isTrue": true,
+      "explanation": "Si f est majorée par 3, cela signifie que pour tout x, f(x) ≤ 3. Donc f(x) ne peut jamais égaler 4."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "question": "Quelle est la période de la fonction x ↦ cos(2x) ?",
+      "options": [
+        { "text": "2π", "isCorrect": false },
+        { "text": "π", "isCorrect": true },
+        { "text": "π/2", "isCorrect": false },
+        { "text": "4π", "isCorrect": false }
+      ],
+      "explanation": "La période de cos(ax) est 2π/a. Ici a=2, donc T = 2π/2 = π."
+    }
+  ]
+}

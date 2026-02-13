@@ -1,0 +1,143 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_domaine_definition",
+      "category": "method",
+      "title": "Sais-tu **déterminer** le domaine de définition ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le domaine est l'ensemble des réels $x$ pour lesquels $f(x)$ existe."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier les contraintes : dénominateur non nul, radicande positif",
+            "Poser le système d'inéquations correspondant",
+            "Résoudre dans $\\mathbb{R}$ et écrire le domaine"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_variations_monotonie",
+      "category": "method",
+      "title": "Maîtrises-tu l'**étude des variations** avec le taux d'accroissement ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise le taux d'accroissement entre deux réels distincts."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Poser $a, b \\in I$ avec $a \\neq b$",
+            "Calculer le taux : $T(a,b) = \\dfrac{f(a)-f(b)}{a-b}$",
+            "Simplifier et étudier le signe de $T(a,b)$",
+            "Conclure : si $T \\ge 0$ alors $f$ est croissante"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_parite_fonction",
+      "category": "method",
+      "title": "Es-tu capable d'**étudier** la parité d'une fonction ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La parité permet de réduire le domaine d'étude grâce aux symétries."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Vérifier la symétrie du domaine : $\\forall x \\in D_f, -x \\in D_f$",
+            "Calculer $f(-x)$",
+            "Si $f(-x) = f(x)$ : fonction paire ; si $f(-x) = -f(x)$ : fonction impaire"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_extremums",
+      "category": "method",
+      "title": "Connais-tu la **détermination des extremums** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On montre que $f(x) \\le M$ pour tout $x$ et qu'il existe $x_0$ tel que $f(x_0) = M$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer la différence $f(x) - M$ (ou $f(x) - m$)",
+            "Étudier le signe de cette différence",
+            "Vérifier l'existence d'un réel où l'égalité est atteinte"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_trinome_second_degre",
+      "category": "method",
+      "title": "Sais-tu **étudier** un trinôme du second degré ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On détermine le sommet de la parabole pour connaître les variations."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier les coefficients $a, b, c$",
+            "Calculer le sommet : $\\alpha = -\\frac{b}{2a}$ et $\\beta = f(\\alpha)$",
+            "Dresser le tableau selon le signe de $a$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_fonction_homographique",
+      "category": "method",
+      "title": "Maîtrises-tu l'**étude d'une fonction homographique** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Les variations dépendent du signe du déterminant $\\Delta = ad - bc$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Déterminer le domaine : $D_f = \\mathbb{R} \\setminus \\{-d/c\\}$",
+            "Calculer le déterminant : $\\Delta = ad - bc$",
+            "Si $\\Delta > 0$ : fonction croissante ; si $\\Delta < 0$ : fonction décroissante"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_position_relative_courbes",
+      "category": "method",
+      "title": "Es-tu capable d'**étudier** la position relative de deux courbes ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On étudie le signe de la différence $f(x) - g(x)$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Poser $d(x) = f(x) - g(x)$",
+            "Étudier le signe de $d(x)$",
+            "Si $d(x) > 0$ : $\\mathcal{C}_f$ au-dessus ; si $d(x) < 0$ : en dessous"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_choix_technique",
+      "category": "method",
+      "title": "Sais-tu **choisir** la bonne technique de comptage ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On se pose deux questions : l'ordre compte-t-il ? Y a-t-il répétition ?"
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Ordre important ? OUI : Arrangement ; NON : Combinaison",
+            "Répétition possible ? OUI : $n^p$ ; NON : $A_n^p$ ou $C_n^p$",
+            "Tous les éléments ? OUI et ordre important : Permutation ($n!$)"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_binome",
+      "category": "method",
+      "title": "Maîtrises-tu l'**utilisation du binôme** de Newton ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le binôme permet de développer $(a+b)^n$ avec les coefficients binomiaux."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier $a$, $b$ et $n$",
+            "Écrire la somme $\\sum C_n^k a^k b^{n-k}$",
+            "Calculer les coefficients $C_n^k$ avec le triangle de Pascal",
+            "Développer les termes"
+          ]
+        }
+      ]
+    }
+  ]
+}

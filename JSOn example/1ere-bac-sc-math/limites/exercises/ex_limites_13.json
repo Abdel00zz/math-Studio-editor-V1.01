@@ -1,0 +1,23 @@
+{
+  "id": "ex-limites-13",
+  "topic": "Limites et Paramètres",
+  "context": "On considère la fonction $f$ définie par : $$f(x) = \\begin{cases} \\dfrac{x^2 + (m+1)x - 3}{x^2 + x} & \text{si} x < -1 \\\\ \\dfrac{-2x + b}{\\sqrt{x^2 + 2} + 1} & \text{si} x \\geq -1 \\end{cases}$$",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Calculer $\\displaystyle \\lim_{x \\to +\\infty} f(x)$ et $\\displaystyle \\lim_{x \\to -\\infty} f(x)$.",
+      "hint": "En $+\\infty$, factorisez par $x$ au numérateur et au dénominateur (attention $\\sqrt{x^2}=x$). En $-\\infty$, utilisez la règle du quotient des termes de plus haut degré pour la fonction rationnelle."
+    },
+    {
+      "id": "q2",
+      "content": "Discuter selon les valeurs de $m$ la limite $\\displaystyle \\lim_{x \\to -1^-} f(x)$.",
+      "hint": "Étudiez le signe du dénominateur $x(x+1)$ quand $x \\to -1^-$. Calculez la limite du numérateur : si elle est non nulle, la limite est infinie. Si elle est nulle, factorisez le numérateur par $(x+1)$."
+    },
+    {
+      "id": "q3",
+      "content": "Calculer $\\displaystyle \\lim_{x \\to -1^+} f(x)$ ; puis déterminer les nombres $m$ et $b$ pour que $f$ admette une limite en $-1$.",
+      "hint": "Calculez l'image de $-1$ avec l'expression de droite. Pour que la limite existe, la limite à gauche doit être finie (détermine $m$) et égale à la limite à droite (détermine $b$)."
+    }
+  ]
+}

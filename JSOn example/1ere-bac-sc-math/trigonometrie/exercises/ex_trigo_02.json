@@ -1,0 +1,41 @@
+
+{
+  "id": "ex-trigo-002",
+  "topic": "Trigonométrie",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Formule de transformation",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Montrer que $(\\forall n \\in \\mathbb{N}^*)$ : $\\sin\\frac{\\pi}{6} \\times \\sin\\frac{k\\pi}{3} = \\frac{1}{2}\\left[\\cos\\frac{(2k-1)\\pi}{6} - \\cos\\frac{(2k+1)\\pi}{6}\\right]$",
+          "hint": "\\method On utilise la formule de transformation produit-somme : $\\sin p \\sin q = \\frac{1}{2}[\\cos(p-q) - \\cos(p+q)]$.\\parIci, $p = \\frac{k\\pi}{3}$ et $q = \\frac{\\pi}{6}$.\\par$$\\begin{aligned} p - q &= \\frac{k\\pi}{3} - \\frac{\\pi}{6} = \\frac{2k\\pi - \\pi}{6} = \\frac{(2k-1)\\pi}{6} \\\\ p + q &= \\frac{k\\pi}{3} + \\frac{\\pi}{6} = \\frac{2k\\pi + \\pi}{6} = \\frac{(2k+1)\\pi}{6} \\end{aligned}$$\\parEn remplaçant dans la formule :\\par$\\sin\\frac{k\\pi}{3} \\sin\\frac{\\pi}{6} = \\frac{1}{2} \\left[ \\cos\\left(\\frac{(2k-1)\\pi}{6}\\right) - \\cos\\left(\\frac{(2k+1)\\pi}{6}\\right) \\right]$\\par\\conclusion La relation est démontrée."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Somme partielle",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Montrer que $\\sin\\left(\\frac{\\pi}{6}\\right) \\times S_n = \\frac{1}{2}\\left[\\cos\\frac{\\pi}{6} - \\cos\\frac{(2n+1)\\pi}{6}\\right]$",
+          "hint": "\\method On multiplie la somme $S_n$ par le facteur constant $\\sin\\frac{\\pi}{6}$.\\par$$\\begin{aligned} \\sin\\frac{\\pi}{6} \\times S_n &= \\sum_{k=1}^{n} \\left( \\sin\\frac{\\pi}{6} \\sin\\frac{k\\pi}{3} \\right) \\\\ &= \\frac{1}{2} \\sum_{k=1}^{n} \\left[ \\cos\\frac{(2k-1)\\pi}{6} - \\cos\\frac{(2k+1)\\pi}{6} \\right] \\end{aligned}$$\\par\\tip On reconnaît une \\textbf{somme télescopique} de la forme $\\sum (u_k - u_{k+1})$ avec $u_k = \\cos\\frac{(2k-1)\\pi}{6}$.\\parDéveloppons les premiers et derniers termes :\\par$$\\begin{aligned} 2\\sin\\frac{\\pi}{6} S_n &= \\left(\\cos\\frac{\\pi}{6} - \\cos\\frac{3\\pi}{6}\\right) + \\left(\\cos\\frac{3\\pi}{6} - \\cos\\frac{5\\pi}{6}\\right) + \\cdots + \\left(\\cos\\frac{(2n-1)\\pi}{6} - \\cos\\frac{(2n+1)\\pi}{6}\\right) \\end{aligned}$$\\parTous les termes intermédiaires s'annulent.\\par\\conclusion $\\boxed{\\sin\\frac{\\pi}{6} \\times S_n = \\frac{1}{2}\\left[\\cos\\frac{\\pi}{6} - \\cos\\frac{(2n+1)\\pi}{6}\\right]}$"
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Expression explicite",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "En déduire que $S_n = 2\\sin\\left(\\frac{n\\pi}{6}\\right)\\sin\\left(\\frac{(n+1)\\pi}{6}\\right)$",
+          "hint": "On sait que $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$. L'égalité précédente devient :\\par$\\frac{1}{2} S_n = \\frac{1}{2} \\left[ \\cos\\frac{\\pi}{6} - \\cos\\frac{(2n+1)\\pi}{6} \\right] \\implies S_n = \\cos\\frac{\\pi}{6} - \\cos\\frac{(2n+1)\\pi}{6}$\\par\\method On utilise la formule de transformation somme-produit : $\\cos p - \\cos q = -2\\sin\\frac{p+q}{2}\\sin\\frac{p-q}{2}$.\\par$$\\begin{aligned} \\frac{p+q}{2} &= \\frac{1}{2} \\left( \\frac{\\pi}{6} + \\frac{(2n+1)\\pi}{6} \\right) = \\frac{(2n+2)\\pi}{12} = \\frac{(n+1)\\pi}{6} \\\\ \\frac{p-q}{2} &= \\frac{1}{2} \\left( \\frac{\\pi}{6} - \\frac{(2n+1)\\pi}{6} \\right) = \\frac{-2n\\pi}{12} = -\\frac{n\\pi}{6} \\end{aligned}$$\\parAinsi :\\par$S_n = -2 \\sin\\left(\\frac{(n+1)\\pi}{6}\\right) \\sin\\left(-\\frac{n\\pi}{6}\\right)$\\parLa fonction sinus étant impaire, $\\sin(-x) = -\\sin(x)$, les signes moins se compensent.\\par\\conclusion $\\boxed{S_n = 2\\sin\\frac{n\\pi}{6}\\sin\\frac{(n+1)\\pi}{6}}$"
+        }
+      ]
+    }
+  ]
+}

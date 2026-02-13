@@ -1,0 +1,64 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_eq_plan",
+      "category": "method",
+      "title": "Sais-tu **déterminer** l'équation d'un plan ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise un point $A$ et un vecteur normal $\\vec{n}(a,b,c)$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier le vecteur normal $\\vec{n}(a,b,c)$",
+            "Écrire la forme $ax + by + cz + d = 0$",
+            "Déterminer $d$ en utilisant les coordonnées du point $A$ appartenant au plan"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_distance_point_plan",
+      "category": "method",
+      "title": "Es-tu capable de **calculer** la distance d'un point à un plan ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On applique la formule avec l'équation cartésienne du plan."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Avoir l'équation cartésienne du plan $ax+by+cz+d=0$",
+            "Appliquer la formule : $d(M, P) = \\frac{|ax_M + by_M + cz_M + d|}{\\sqrt{a^2+b^2+c^2}}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_sphere",
+      "category": "method",
+      "title": "Maîtrises-tu la **détermination de l'équation** d'une sphère ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La sphère de centre $\\Omega(a,b,c)$ et de rayon $R$ est l'ensemble des points $M$ tels que $\\Omega M^2 = R^2$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Écrire $(x-a)^2 + (y-b)^2 + (z-c)^2 = R^2$",
+            "Développer si nécessaire pour obtenir $x^2+y^2+z^2 - 2ax - 2by - 2cz + d = 0$"
+          ]
+        }
+      ]
+    }
+  ]
+}

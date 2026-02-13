@@ -1,0 +1,58 @@
+
+{
+  "header": {
+    "title": "Généralités sur les Fonctions",
+    "subtitle": "Fiche de Cours - Concepts Fondamentaux",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "parite",
+      "category": "course",
+      "title": "Comment étudier la parité d'une fonction ?",
+      "content": "\\begin{definition}[Fonction Paire/Impaire]Soit $f$ une fonction définie sur $\\mathcal{D}_f$. Pour étudier la parité, il faut d'abord vérifier que $\\mathcal{D}_f$ est \\textbf{centré en 0} (c'est-à-dire : $\\forall x \\in \\mathcal{D}_f, -x \\in \\mathcal{D}_f$).\\\\Ensuite :\\begin{itemize}\\item $f$ est \\textbf{paire} si pour tout $x \\in \\mathcal{D}_f$, $f(-x) = \\blank{f(x)}$.\\item $f$ est \\textbf{impaire} si pour tout $x \\in \\mathcal{D}_f$, $f(-x) = \\blank{-f(x)}$.\\end{itemize}\\end{definition}\\begin{note}\\textbf{Interprétation Graphique :} Fonction Paire $\\iff$ Axe symétrie $(Oy)$. Fonction Impaire $\\iff$ Centre symétrie $O$.\\end{note}"
+    },
+    {
+      "id": "periodicite",
+      "category": "course",
+      "title": "Qu'est-ce qu'une fonction périodique ?",
+      "content": "\\begin{definition}[Fonction Périodique]Une fonction $f$ est dite \\textbf{périodique} de période $T$ (ou $T$-périodique) avec $T > 0$ si :\\begin{itemize}\\item Pour tout $x \\in \\mathcal{D}_f$, $x+T \\in \\mathcal{D}_f$ et $x-T \\in \\mathcal{D}_f$\\item Pour tout $x \\in \\mathcal{D}_f$, $f(x+T) = \\blank{f(x)}$\\end{itemize}\\end{definition}\\begin{note}\\textbf{Interprétation Graphique :} La courbe $\\mathcal{C}_f$ est invariante par toute translation de vecteur $k \\cdot T\\vec{i}$ ($k \\in \\mathbb{Z}$), on peut restreindre l'étude à un intervalle de longueur $T$.\\end{note}"
+    },
+    {
+      "id": "comparaison_position",
+      "category": "course",
+      "title": "Comment comparer deux fonctions ?",
+      "content": "\\begin{definition}Soient $f$ et $g$ deux fonctions définies sur un intervalle $I$.\\begin{itemize}\\item On écrit $f \\le g$ si pour tout $x \\in I$, $f(x) \\le g(x)$.\\item On écrit $f = g$ si pour tout $x \\in I$, $f(x) = g(x)$.\\end{itemize}\\end{definition}\\begin{method}[Étude de la position relative]Pour savoir si $\\mathcal{C}_f$ est au-dessus ou en-dessous de $\\mathcal{C}_g$, on étudie le \\textbf{signe de la différence} $D(x) = f(x) - g(x)$.\\\\\\begin{itemize}\\item Si $f(x) - g(x) \\ge 0$, alors $\\mathcal{C}_f$ est \\textbf{au-dessus} de $\\mathcal{C}_g$.\\item Si $f(x) - g(x) \\le 0$, alors $\\mathcal{C}_f$ est \\textbf{en-dessous} de $\\mathcal{C}_g$.\\item Les solutions de $f(x) = g(x)$ sont les abscisses des \\textbf{points d'intersection}.\n\\end{itemize}\\end{method}"
+    },
+    {
+      "id": "fonction_bornee",
+      "category": "course",
+      "title": "Quand dit-on qu'une fonction est bornée ?",
+      "content": "\\begin{definition}Soit $f$ une fonction définie sur un intervalle $I$.\\begin{itemize}\\item $f$ est \\textbf{majorée} sur $I$ s'il existe un réel $M$ tel que : $\\forall x \\in I, f(x) \\le \\blank{M}$.\\item $f$ est \\textbf{minorée} sur $I$ s'il existe un réel $m$ tel que : $\\forall x \\in I, f(x) \\ge \\blank{m}$.\\item $f$ est \\textbf{bornée} sur $I$ si elle est à la fois \\blank{majorée} et \\blank{minorée} (c-à-d $|f(x)| \\le K$).\\end{itemize}\\end{definition}"
+    },
+    {
+      "id": "monotonie",
+      "category": "course",
+      "title": "Comment définir la monotonie ?",
+      "content": "\\begin{definition}[Taux d'accroissement]Le taux d'accroissement de $f$ entre deux réels distincts $a$ et $b$ est : $$\\tau_{a,b} = \\frac{f(b) - f(a)}{\\blank{b - a}}$$\\end{definition}\\begin{property}Sur un intervalle $I$ :\\begin{itemize}\\item $f$ est croissante $\\iff$ pour tous $a \\neq b$, $\\tau_{a,b} \\ge \\blank{0}$.\\item $f$ est décroissante $\\iff$ pour tous $a \\neq b$, $\\tau_{a,b} \\le \\blank{0}$.\\end{itemize}\\end{property}\\begin{note}\\textbf{Interprétation Graphique :} $\\tau_{a,b}$ est la pente de la corde $(AB)$. Si la courbe « monte », $f$ est croissante. Si elle « descend », $f$ est décroissante.\\end{note}"
+    },
+    {
+      "id": "composee",
+      "category": "course",
+      "title": "Comment définir la composée de deux fonctions ?",
+      "content": "\\begin{definition}Soient $f$ une fonction définie sur $\\mathcal{D}_f$ et $g$ une fonction définie sur $\\mathcal{D}_g$.\\\\La composée de $f$ suivie de $g$, notée $g \\circ f$, est la fonction définie par $(g \\circ f)(x) = g(f(x))$.\\\\\\textbf{Attention au Domaine de Définition :} Le domaine de $g \\circ f$ est l'ensemble des réels $x$ tels que :\\\\$$\\mathcal{D}_{g \\circ f} = \\{ x \\in \\mathbb{R} \\mid x \\in \\mathcal{D}_f \\text{ et } f(x) \\in \\blank{\\mathcal{D}_g} \\}$$\\end{definition}\\begin{theorem}[Monotonie de la composée]\\begin{itemize}\\item Si $f$ et $g$ ont le \\textbf{même sens} de variation, alors $g \\circ f$ est \\blank{croissante}.\\item Si $f$ et $g$ ont des sens de variation \\textbf{contraires}, alors $g \\circ f$ est \\blank{décroissante}.\\end{itemize}\\end{theorem}"
+    },
+    {
+      "id": "homographiques",
+      "category": "course",
+      "title": "Quelles sont les propriétés de la fonction homographique ?",
+      "content": "\\begin{definition}Une fonction homographique est définie par $f(x) = \\dfrac{ax+b}{cx+d}$ avec $c \\neq 0$ et $ad-bc \\neq 0$.\\\\Son domaine de définition est $\\mathcal{D}_f = \\mathbb{R} \\setminus \\{\\blank{-d/c}\\}$.\\end{definition}\\begin{property}[Forme réduite et Variations]On calcule le déterminant $\\Delta = \\blank{ad - bc}$.\\begin{itemize}\\item Si $\\Delta > 0$, $f$ est strictement \\blank{croissante} sur ses intervalles.\\item Si $\\Delta < 0$, $f$ est strictement \\blank{décroissante} sur ses intervalles.\\end{itemize}\\end{property}\\begin{note}\\textbf{Interprétation Graphique :} La courbe est une hyperbole de centre $\\Omega(\\blank{-d/c} ; \\blank{a/c})$ et d'asymptotes $x = -d/c$ et $y = a/c$.\\end{note}"
+    },
+    {
+      "id": "partie_entiere",
+      "category": "course",
+      "title": "Qu'est-ce que la fonction Partie Entière ?",
+      "content": "\\begin{definition}Pour tout réel $x$, il existe un unique entier relatif $n$ tel que $\\blank{n \\le x < n+1}$. Cet entier est appelé la \\textbf{partie entière} de $x$, notée $E(x)$.\\end{definition}\\begin{property}Propriétés fondamentales :\\begin{itemize}\\item $\\forall x \\in \\mathbb{R}, \\quad E(x) \\le x < \\blank{E(x) + 1}$\\item $\\forall x \\in \\mathbb{R}, \\quad x - 1 < E(x) \\le \\blank{x}$\\item $\\forall x \\in \\mathbb{R}, \\forall k \\in \\mathbb{Z}, \\quad E(x + k) = \\blank{E(x) + k}$\\end{itemize}\\end{property}\\begin{note}\\textbf{Interprétation Graphique :} La courbe est en \\textbf{escalier}, constante sur chaque intervalle $[n, n+1[$.\\end{note}"
+    }
+  ]
+}

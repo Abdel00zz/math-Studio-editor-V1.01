@@ -1,0 +1,50 @@
+{
+  "id": "ex-analyse-suite-homographique-arithmetique-min",
+  "topic": "Analyse",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1a",
+          "content": "Vérifier que $\\displaystyle u_{n+1} - a = \\frac{a(u_n - a)}{a + (a - u_n)} \\quad (\\forall n \\in \\mathbb{N})$",
+          "hint": "Remplacez $u_{n+1}$ par sa définition et réduisez au même dénominateur. Remarquez que le dénominateur $2a - u_n$ peut s'écrire $a + (a - u_n)$ pour correspondre à la forme demandée."
+        },
+        {
+          "id": "sq1b",
+          "content": "Montrer que $(\\forall n \\in \\mathbb{N}) \\quad u_n < a$",
+          "hint": "Utilisez un raisonnement par \\textbf{\\textcolor{blue}{récurrence}}. Pour l'hérédité, exploitez l'égalité prouvée en 1.a) pour étudier le signe de $u_{n+1} - a$, en sachant que $u_n - a < 0$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Montrer que $(u_n)_n$ est une suite croissante",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Calculez la différence $u_{n+1} - u_n$. Au numérateur, identifiez une \\textbf{\\textcolor{blue}{identité remarquable}} du type $(a-u_n)^2$. Le signe du dénominateur se déduit de la question 1.b)."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "On pose $\\displaystyle v_n = \\frac{a}{a - u_n}$ pour tout entier naturel $n$",
+      "subQuestions": [
+        {
+          "id": "sq3a",
+          "content": "Montrer que $(v_n)_n$ est une suite arithmétique puis calculer $u_n$ en fonction de $n$ ; $b$ et $a$",
+          "hint": "Calculez $v_{n+1} - v_n$ pour trouver la raison constante de la suite. Exprimez ensuite $v_n$ en fonction de $n$, puis inversez la relation pour isoler $u_n$."
+        },
+        {
+          "id": "sq3b",
+          "content": "Déterminer la somme $\\displaystyle S_n = \\sum_{k=0}^{n} \\frac{1}{a - u_k}$ en fonction de $n$ ; $b$ et $a$",
+          "hint": "Observez le lien entre le terme de la somme et $v_k$ : on a $\\frac{1}{a - u_k} = \\frac{1}{a} v_k$. Utilisez la formule de la \\textbf{\\textcolor{blue}{somme des termes d'une suite arithmétique}}."
+        }
+      ]
+    }
+  ]
+}

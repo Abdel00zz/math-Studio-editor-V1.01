@@ -1,0 +1,177 @@
+
+{
+  "header": {
+    "title": "Les Suites Numériques",
+    "subtitle": "Analyse Discrète & Raisonnement par Récurrence",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "introduction_et_modes",
+      "category": "course",
+      "title": "Généralités et Modes de Génération",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Une suite numérique modélise une évolution étape par étape. Contrairement aux fonctions définies sur $\\mathbb{R}$ (temps continu), la suite est définie sur $\\mathbb{N}$ (temps discret)."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une suite numérique ?",
+          "content": "Une suite numérique $(u_n)$ est une application de $\\mathbb{I} \\subset \\mathbb{N}$ vers $\\mathbb{R}$.\\nÀ tout entier naturel $n$, on associe un unique réel noté $u_n$.$$u : \\begin{cases} \\mathbb{N} \\to \\mathbb{R} \\\\ n \\mapsto \\blank{u_n} \\end{cases}$$"
+        },
+        {
+          "type": "property",
+          "title": "Comment définir une suite ?",
+          "content": "Il existe deux approches fondamentales pour définir une suite :\\begin{itemize}\\item \\textbf{Formule explicite :} Le terme $u_n$ est fonction directe de $n$. $$u_n = \\blank{f(n)}$$\\item \\textbf{Relation de récurrence :} Le terme $u_{n+1}$ dépend du terme précédent. La connaissance du \\textbf{premier terme} est indispensable.$$u_{n+1} = \\blank{f(u_n)}$$\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Soit la suite récurrente définie par $u_0 = 1$ et $u_{n+1} = \\sqrt{1 + u_n^2}$. Calculons les premiers termes :$$\\begin{aligned} u_1 &= \\sqrt{1 + 1^2} = \\blank{\\sqrt{2}} \\\\ u_2 &= \\sqrt{1 + (\\sqrt{2})^2} = \\sqrt{3} \\\\ u_3 &= \\sqrt{1 + 3} = \\blank{2} \\end{aligned}$$On conjecture que pour tout $n$, $u_n = \\blank{\\sqrt{1+n}}$."
+        }
+      ]
+    },
+    {
+      "id": "raisonnement_recurrence",
+      "category": "course",
+      "title": "Le Raisonnement par Récurrence",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "C'est l'outil fondamental pour démontrer qu'une propriété $P(n)$ est vraie pour tout entier $n \\ge n_0$."
+        },
+        {
+          "type": "theorem",
+          "title": "Comment fonctionne la récurrence ?",
+          "content": "La démonstration se déroule impérativement en trois étapes :\\begin{enumerate}\\item \\textbf{Initialisation :} On vérifie que la propriété est vraie au premier rang. ($\\blank{P(n_0)}$ est vraie).\\item \\textbf{Hérédité :} On suppose que $P(n)$ est vraie pour un entier $n$ fixé, et on démontre qu'elle implique la vérité au rang suivant.$$P(n) \\implies \\blank{P(n+1)}$$\\item \\textbf{Conclusion :} On affirme que la propriété est vraie pour tout entier $n \\ge \\blank{n_0}$.\\end{enumerate}",
+          "media": {
+            "src": "https://substackcdn.com/image/fetch/$s_!FotM!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1c41c748-454f-4ec5-9bf7-636527d4f899_480x480.gif",
+            "type": "image",
+            "position": "right",
+            "width": "30%",
+            "caption": "Principe des dominos : chute du premier + transmission = chute de tous.",
+            "shadow": true,
+            "border": true
+          }
+        },
+        {
+          "type": "example",
+          "content": "Démontrons l'\\textbf{Inégalité de Bernoulli} : $(1+a)^n \\ge 1 + na$ pour tout $a > 0$ et $n \\in \\mathbb{N}$.\\\\\\textbf{Hérédité :} Supposons $(1+a)^n \\ge 1 + na$. Montrons que $(1+a)^{n+1} \\ge 1 + (n+1)a$.$$\\begin{aligned} (1+a)^{n+1} &= (1+a)^n \\times (1+a) \\\\ &\\ge \\blank{(1+na)(1+a)} \\quad \\text{(Hypothèse)} \\\\ &= 1 + a + na + na^2 \\\\ &= 1 + (n+1)a + \\blank{na^2} \\end{aligned}$$Or $\\blank{na^2} \\ge 0$, donc on a bien $(1+a)^{n+1} \\ge 1 + (n+1)a$."
+        }
+      ]
+    },
+    {
+      "id": "suites_arithmetiques",
+      "category": "course",
+      "title": "Suites Arithmétiques",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Une suite est arithmétique si l'on passe d'un terme au suivant en ajoutant toujours la même constante."
+        },
+        {
+          "type": "definition",
+          "title": "Quand une suite est-elle arithmétique ?",
+          "content": "La suite $(u_n)$ est \\textbf{arithmétique} de raison $r$ si pour tout $n$ :$$u_{n+1} - u_n = \\blank{r}$$"
+        },
+        {
+          "type": "theorem",
+          "title": "Quelles sont les formules clés ?",
+          "content": "Soit $(u_n)$ une suite arithmétique de raison $r$. \\begin{itemize}\\item \\textbf{Terme général :} $u_n = u_p + \\blank{(n-p)r}$. En particulier $u_n = u_0 + \\blank{nr}$.\\item \\textbf{Somme des termes :} $$S = \\displaystyle\\sum_{k=p}^n u_k = \\blank{\\frac{n-p+1}{2}} \\times (u_p + u_n)$$ \\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Calculons la somme des entiers impairs $S_n = 1 + 3 + 5 + \\dots + (2n-1)$.\\\\C'est la somme de $n$ termes d'une suite arithmétique de raison $r=2$ et de premier terme $1$.$$\\begin{aligned} S_n &= \\text{Nb termes} \\times \\frac{\\text{1er} + \\text{Dernier}}{2} \\\\ &= \\blank{n} \\times \\frac{1 + (2n-1)}{2} \\\\ &= n \\times \\frac{2n}{2} = \\blank{n^2} \\end{aligned}$$"
+        }
+      ]
+    },
+    {
+      "id": "suites_geometriques",
+      "category": "course",
+      "title": "Suites Géométriques",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Malthus_PL_en.svg/640px-Malthus_PL_en.svg.png",
+        "type": "image",
+        "position": "right",
+        "width": "35%",
+        "caption": "Arithmétique (bleu) vs Géométrique (rouge)",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Une suite est géométrique si l'on passe d'un terme au suivant en multipliant toujours par la même constante."
+        },
+        {
+          "type": "definition",
+          "title": "Quand une suite est-elle géométrique ?",
+          "content": "La suite $(u_n)$ est \\textbf{géométrique} de raison $q$ si pour tout $n$ :$$u_{n+1} = \\blank{q \\times u_n}$$"
+        },
+        {
+          "type": "theorem",
+          "title": "Quelles sont les formules clés ?",
+          "content": "Soit $(u_n)$ une suite géométrique de raison $q \\neq 1$. \\begin{itemize}\\item \\textbf{Terme général :} $u_n = u_p \\times \\blank{q^{n-p}}$. En particulier $u_n = u_0 \\times \\blank{q^n}$.\\item \\textbf{Somme des termes :} $$S = \\displaystyle\\sum_{k=p}^n u_k = u_p \\times \\frac{1 - \\text{raison}^{\\text{Nb termes}}}{1 - \\text{raison}} = u_p \\times \\frac{1 - q^{\\blank{n-p+1}}}{1 - q}$$ \\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Un nénuphar double sa surface chaque jour ($u_{n+1} = 2u_n$). S'il couvre $u_0 = 1\\text{m}^2$ le jour 0, quelle est la surface totale accumulée après 10 jours (somme de $u_0$ à $u_{10}$) ?\\\\Calcul de la somme géométrique :$$\\begin{aligned} S_{10} &= \\displaystyle\\sum_{k=0}^{10} u_k = u_0 \\times \\frac{1 - 2^{11}}{1 - 2} \\\\ &= 1 \\times \\frac{1 - 2048}{-1} = \\blank{2047} \\text{m}^2 \\end{aligned}$$"
+        }
+      ]
+    },
+    {
+      "id": "monotonie_et_bornes",
+      "category": "course",
+      "title": "Étude Globale : Monotonie et Bornes",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "L'étude qualitative d'une suite (savoir si elle croît, si elle est bloquée par une valeur) est souvent un préalable nécessaire à l'étude de sa convergence."
+        },
+        {
+          "type": "property",
+          "title": "Comment déterminer la monotonie ?",
+          "content": "Pour étudier la monotonie, on étudie le signe de la différence $u_{n+1} - u_n$.\\begin{itemize}\\item Si $\\forall n, u_{n+1} - u_n \\ge \\blank{0}$, la suite est \\textbf{croissante}.\\item Si $\\forall n, u_{n+1} - u_n \\le \\blank{0}$, la suite est \\textbf{décroissante}.\\end{itemize}"
+        },
+        {
+          "type": "definition",
+          "title": "Quand dit-on qu'une suite est bornée ?",
+          "content": "\\begin{itemize}\\item \\textbf{Majorée :} $\\exists M \\in \\mathbb{R}, \\forall n \\in \\mathbb{N}, \\blank{u_n \\le M}$.\\item \\textbf{Minorée :} $\\exists m \\in \\mathbb{R}, \\forall n \\in \\mathbb{N}, \\blank{u_n \\ge m}$.\\item \\textbf{Bornée :} Si elle est à la fois majorée et minorée ($|u_n| \\le \\blank{K}$).\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Soit la suite homographique $u_n = \\frac{2n+1}{n+3}$. Étudions sa monotonie.\\\\Calculons la différence $u_{n+1} - u_n$ :$$\\begin{aligned} u_{n+1} - u_n &= \\frac{2n+3}{n+4} - \\frac{2n+1}{n+3} \\\\ &= \\frac{(2n+3)(n+3) - (2n+1)(n+4)}{(n+4)(n+3)} \\\\ &= \\frac{\\blank{5}}{(n+4)(n+3)} \\end{aligned}$$Le numérateur est positif, le dénominateur aussi. Donc la suite est \\textbf{strictement croissante}."
+        }
+      ]
+    },
+    {
+      "id": "sommes_et_sigma",
+      "category": "course",
+      "title": "Manipulation du symbole Sigma",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le symbole $\\Sigma$ permet de condenser l'écriture de sommes. La maîtrise de ses propriétés (linéarité, télescopage) est essentielle."
+        },
+        {
+          "type": "definition",
+          "title": "Comment lire le symbole $\\Sigma$ ?",
+          "content": "La somme $u_p + u_{p+1} + \\dots + u_n$ se note : $$\\displaystyle\\sum_{k=p}^n \\blank{u_k}$$"
+        },
+        {
+          "type": "property",
+          "title": "Quelles sont les règles de calcul ?",
+          "content": "\\begin{itemize}\\item \\textbf{Linéarité :} $\\displaystyle\\sum (\\alpha u_k + v_k) = \\alpha \\sum u_k + \\blank{\\sum v_k}$.\\item \\textbf{Relation de Chasles :} $\\displaystyle\\sum_{k=p}^n u_k = \\sum_{k=p}^m u_k + \\sum_{k=\\blank{m+1}}^n u_k$.\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Calculons la \\textbf{somme télescopique} $S = \\displaystyle\\sum_{k=1}^n \\frac{1}{k(k+1)}$.\\\\On utilise la décomposition : $\\frac{1}{k(k+1)} = \\blank{\\frac{1}{k} - \\frac{1}{k+1}}$.\\\\En écrivant la somme en extension :$$\\begin{aligned} S &= \\left(1 - \\frac{1}{2}\\right) + \\left(\\frac{1}{2} - \\frac{1}{3}\\right) + \\dots + \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right) \\\\ &= 1 + \\left(-\\frac{1}{2} + \\frac{1}{2}\\right) + \\dots + \\left(-\\frac{1}{n} + \\frac{1}{n}\\right) - \\frac{1}{n+1} \\\\ &= 1 - \\blank{\\frac{1}{n+1}} = \\blank{\\frac{n}{n+1}} \\end{aligned}$$"
+        },
+        {
+          "type": "example",
+          "content": "Sommes usuelles à connaître par cœur :\\begin{itemize}\\item $\\displaystyle\\sum_{k=1}^n k = \\blank{\\frac{n(n+1)}{2}}$\\item $\\displaystyle\\sum_{k=1}^n k^2 = \\blank{\\frac{n(n+1)(2n+1)}{6}}$\\end{itemize}"
+        }
+      ]
+    }
+  ]
+}

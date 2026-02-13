@@ -1,0 +1,146 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_formules_transformation",
+      "category": "method",
+      "title": "Maîtrises-tu les **formules de transformation** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Les formules d'addition, duplication et linéarisation permettent de simplifier les expressions."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Addition : $\\cos(a+b) = \\cos a \\cos b - \\sin a \\sin b$",
+            "Duplication : $\\cos(2a) = \\cos^2 a - \\sin^2 a = 2\\cos^2 a - 1$",
+            "Linéarisation : $\\cos^2 x = \\frac{1 + \\cos(2x)}{2}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_eq_lineaire",
+      "category": "method",
+      "title": "Sais-tu **résoudre** l'équation $a \\cos x + b \\sin x = c$ ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On ramène à la forme $\\cos(x-\\alpha) = K$ en factorisant par le module."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer le module $r = \\sqrt{a^2 + b^2}$",
+            "Identifier l'angle $\\alpha$ : $\\cos \\alpha = \\frac{a}{r}$, $\\sin \\alpha = \\frac{b}{r}$",
+            "Écrire sous la forme $\\cos(x - \\alpha) = \\frac{c}{r}$",
+            "Résoudre si $|\\frac{c}{r}| \\leq 1$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_eq_fondamentales",
+      "category": "method",
+      "title": "Es-tu capable de **résoudre** les équations trigonométriques fondamentales ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Les équations $\\cos x = a$, $\\sin x = a$, $\\tan x = a$ ont des solutions particulières."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "$\\cos x = \\cos \\alpha \\Rightarrow x = \\alpha + 2k\\pi$ ou $x = -\\alpha + 2k\\pi$",
+            "$\\sin x = \\sin \\alpha \\Rightarrow x = \\alpha + 2k\\pi$ ou $x = \\pi - \\alpha + 2k\\pi$",
+            "$\\tan x = \\tan \\alpha \\Rightarrow x = \\alpha + k\\pi$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_inequations",
+      "category": "method",
+      "title": "Connais-tu la **résolution** des inéquations trigonométriques ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On ramène à une inéquation fondamentale puis on utilise le cercle trigonométrique."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Transformer en inéquation fondamentale ($\\cos x \\geq a$, $\\sin x < b$...)",
+            "Placer les valeurs sur le cercle trigonométrique",
+            "Identifier l'arc solution",
+            "Exprimer la solution avec le paramètre $k \\in \\mathbb{Z}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_cercle_trigo",
+      "category": "method",
+      "title": "Sais-tu **lire** les solutions sur le cercle trigonométrique ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le cercle trigonométrique permet de visualiser toutes les solutions d'une équation."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Tracer le cercle et repérer les axes $\\cos$ (horizontal) et $\\sin$ (vertical)",
+            "Placer la valeur sur l'axe correspondant",
+            "Tracer la droite horizontale (pour $\\sin$) ou verticale (pour $\\cos$)",
+            "Les intersections avec le cercle donnent les solutions principales"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_somme_produit",
+      "category": "method",
+      "title": "Maîtrises-tu la **transformation** somme ↔ produit ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Les formules de Simpson transforment les sommes en produits et vice-versa."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Somme → Produit : $\\cos p + \\cos q = 2\\cos(\\frac{p+q}{2})\\cos(\\frac{p-q}{2})$",
+            "Produit → Somme : $2\\cos a \\cos b = \\cos(a+b) + \\cos(a-b)$",
+            "Utiliser ces formules pour factoriser ou développer"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_changement_var",
+      "category": "method",
+      "title": "Connais-tu le **changement** de variable $t = \\tan(x/2)$ ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Ce changement transforme toute expression rationnelle en $\\sin x$, $\\cos x$ en fraction rationnelle."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Poser $t = \\tan(x/2)$",
+            "Remplacer : $\\sin x = \\frac{2t}{1+t^2}$, $\\cos x = \\frac{1-t^2}{1+t^2}$",
+            "Résoudre l'équation polynomiale en $t$",
+            "Revenir à $x$ avec $x = 2\\arctan(t)$"
+          ]
+        }
+      ]
+    }
+  ]
+}

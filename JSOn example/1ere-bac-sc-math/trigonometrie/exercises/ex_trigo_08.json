@@ -1,0 +1,27 @@
+
+{
+  "id": "ex-trigo-008",
+  "topic": "Trigonométrie",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que $\\cos(x) = \\dfrac{1-t^2}{1+t^2}$.",
+      "hint": "On utilise la formule $\\cos(x) = \\cos^2\\frac{x}{2} - \\sin^2\\frac{x}{2}$ et on divise par $\\cos^2\\frac{x}{2}$ :\\par\\par$$\\cos(x) = \\cos^2\\frac{x}{2}\\left(1 - \\tan^2\\frac{x}{2}\\right) = \\frac{1 - t^2}{\\frac{1}{\\cos^2\\frac{x}{2}}}$$\\par\\parOr $\\frac{1}{\\cos^2\\frac{x}{2}} = 1 + \\tan^2\\frac{x}{2} = 1 + t^2$\\par\\parDonc $\\boxed{\\cos(x) = \\frac{1-t^2}{1+t^2}}$"
+    },
+    {
+      "id": "q2",
+      "content": "Montrer que $\\sin(x) = \\dfrac{2t}{1+t^2}$.",
+      "hint": "On utilise $\\sin(x) = 2\\sin\\frac{x}{2}\\cos\\frac{x}{2}$. Divisons par $\\cos^2\\frac{x}{2}$ :\\par\\par$$\\sin(x) = 2\\sin\\frac{x}{2}\\cos\\frac{x}{2} = \\frac{2\\tan\\frac{x}{2}}{\\frac{1}{\\cos^2\\frac{x}{2}}}$$\\par\\parAvec $\\frac{1}{\\cos^2\\frac{x}{2}} = 1 + t^2$ :\\par\\par$$\\boxed{\\sin(x) = \\frac{2t}{1+t^2}}$$"
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que $\\tan(x) = \\dfrac{2t}{1-t^2}$.",
+      "hint": "On a simplement :\\par$$\\tan(x) = \\frac{\\sin(x)}{\\cos(x)} = \\frac{\\frac{2t}{1+t^2}}{\\frac{1-t^2}{1+t^2}} = \\boxed{\\frac{2t}{1-t^2}}$$\\par\\par(On retrouve la formule $\\tan(2\\alpha) = \\frac{2\\tan\\alpha}{1-\\tan^2\\alpha}$ avec $\\alpha = \\frac{x}{2}$)"
+    },
+    {
+      "id": "q4",
+      "content": "Montrer que $\\dfrac{1-\\cos(x)}{\\sin(x)} = t$.",
+      "hint": "En remplaçant par les expressions trouvées :\\par\\par$$\\frac{1-\\cos(x)}{\\sin(x)} = \\frac{1 - \\frac{1-t^2}{1+t^2}}{\\frac{2t}{1+t^2}}$$\\par\\par$$= \\frac{\\frac{1+t^2 - 1 + t^2}{1+t^2}}{\\frac{2t}{1+t^2}} = \\frac{2t^2}{2t} = \\boxed{t}$$\\par\\parOn peut aussi vérifier directement :\\par$$\\frac{1-\\cos x}{\\sin x} = \\frac{2\\sin^2\\frac{x}{2}}{2\\sin\\frac{x}{2}\\cos\\frac{x}{2}} = \\frac{\\sin\\frac{x}{2}}{\\cos\\frac{x}{2}} = \\tan\\frac{x}{2} = t$$"
+    }
+  ]
+}

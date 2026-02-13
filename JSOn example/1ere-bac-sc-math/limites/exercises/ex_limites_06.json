@@ -1,0 +1,35 @@
+{
+  "id": "ex-limites-06",
+  "topic": "Limites et Comparaison",
+  "context": "",
+  "sessionDate": "2026-01-26T20:00:00.000Z",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que : $(\\forall x \\in \\mathbb{R}); 2x-4 \\le 2x-1+3\\cos x$. En déduire : $\\displaystyle\\lim_{x \\to +\\infty} (2x-1+3\\cos x)$.",
+      "hint": "Utilisez le fait que $\\cos x \\ge -1$. Construisez l'inégalité. Puisque le terme minorant tend vers $+\\infty$, concluez par comparaison."
+    },
+    {
+      "id": "q2",
+      "content": "Soit $f$ la fonction définie sur $\\mathbb{R}$ par : $f(x) = 4x^2 - 4x\\sin(x) + 1$.",
+      "subQuestions": [
+        {
+          "id": "sq2a",
+          "content": "Montrer que $f$ est une fonction paire.",
+          "hint": "Calculez $f(-x)$ en remplaçant $x$ par $-x$. Rappelez-vous que $(-x)^2 = x^2$ et $\\sin(-x) = -\\sin(x)$."
+        },
+        {
+          "id": "sq2b",
+          "content": "Montrer que : $(\\forall x \\in \\mathbb{R}^+); f(x) \\ge (2x-1)^2$.",
+          "hint": "Partez de $\\sin x \\le 1$. Multipliez par $-4x$ (qui est négatif ou nul sur $\\mathbb{R}^+$) : l'inégalité change de sens. Ajoutez $4x^2 + 1$ et factorisez."
+        },
+        {
+          "id": "sq2c",
+          "content": "En déduire : $\\displaystyle\\lim_{x \\to +\\infty} f(x)$ puis $\\displaystyle\\lim_{x \\to -\\infty} f(x)$.",
+          "hint": "En $+\\infty$, utilisez l'inégalité établie et le théorème de comparaison. En $-\\infty$, utilisez la parité de la fonction prouvée en 2.a ($f(x) = f(-x)$)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+
+{
+  "header": {
+    "title": "Dénombrement",
+    "subtitle": "Cours, Culture & Applications",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "ensembles_cardinaux",
+      "category": "course",
+      "title": "Ensembles Finis et Cardinaux",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Venn_diagram_for_A_union_B_union_C.svg/1200px-Venn_diagram_for_A_union_B_union_C.svg.png",
+        "type": "image",
+        "position": "right",
+        "width": "25%",
+        "caption": "Diagramme de Venn : Union de 3 ensembles",
+        "shadow": false,
+        "border": false
+      },
+      "blocks": [
+        {
+          "type": "definition",
+          "title": "Qu'est-ce que le cardinal d'un ensemble ?",
+          "content": "Un ensemble $E$ est dit \\textbf{fini} s'il contient un nombre déterminé d'éléments distincts. Ce nombre entier naturel est appelé le \\blueb{cardinal} de $E$, noté $\\text{Card}(E)$ ou $|E|$.\\\\Par convention, le cardinal de l'ensemble vide est $\\text{Card}(\\emptyset) = \\blank{0}$."
+        },
+        {
+          "type": "culture",
+          "title": "Histoire : L'origine du calcul",
+          "content": "Le mot \\textbf{calcul} vient du latin \\textit{calculus} (« petit caillou »). Les bergers de l'Antiquité utilisaient des cailloux pour dénombrer leurs troupeaux par \\textbf{bijection} (un caillou = une tête de bétail), bien avant l'invention des chiffres écrits. C'est la naissance de l'abstraction mathématique."
+        },
+        {
+          "type": "property",
+          "title": "Quelles sont les propriétés du principe additif ?",
+          "content": "Soient $A$ et $B$ deux parties d'un ensemble fini $E$.\\begin{itemize}\\item \\textbf{Union disjointe :} Si $A \\cap B = \\emptyset$, alors $\\text{Card}(A \\cup B) = \\text{Card}(A) + \\text{Card}(B)$.\\item \\textbf{Différence :} $\\text{Card}(A \\setminus B) = \\text{Card}(A) - \\text{Card}(\\blank{A \\cap B})$.\\item \\textbf{Complémentaire :} $\\text{Card}(\\bar{A}) = \\text{Card}(E) - \\text{Card}(A)$.\\end{itemize}"
+        },
+        {
+          "type": "theorem",
+          "title": "Quelle est la formule du crible (Poincaré) ?",
+          "content": "Pour dénombrer une union quelconque, il faut retirer les éléments comptés en double (Principe d'Inclusion-Exclusion) :\\\\$\\bullet$ \\textbf{Pour 2 ensembles :} $\\text{Card}(A \\cup B) = \\text{Card}(A) + \\text{Card}(B) - \\blank{\\text{Card}(A \\cap B)}$.\\\\$\\bullet$ \\textbf{Pour 3 ensembles :} $\\text{Card}(A \\cup B \\cup C) = \\Sigma \\text{Card}(A) - \\Sigma \\text{Card}(A \\cap B) + \\blank{\\text{Card}(A \\cap B \\cap C)}$."
+        }
+      ]
+    },
+    {
+      "id": "principe_fondamental",
+      "category": "course",
+      "title": "Principe Multiplicatif",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Tree_diagram_for_flipping_a_coin_twice.svg/1024px-Tree_diagram_for_flipping_a_coin_twice.svg.png",
+        "type": "image",
+        "position": "left",
+        "width": "30%",
+        "caption": "Arbre des possibles (Lancer de pièce)",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "theorem",
+          "title": "Comment calculer le nombre d'issues d'une expérience ?",
+          "content": "Si une expérience est constituée de $p$ choix successifs \\textbf{indépendants}, où le $k$-ième choix offre $n_k$ possibilités, alors le nombre total d'issues est le \\blueb{produit} :\\\\$$\\boxed{N = n_1 \\times n_2 \\times \\dots \\times \\blank{n_p}}$$"
+        },
+        {
+          "type": "culture",
+          "title": "Biologie : Le Code de la Vie",
+          "content": "L'ADN est un langage écrit avec 4 lettres (bases azotées A, C, G, T). Un « mot » génétique, appelé \\textbf{codon}, est formé de 3 lettres. Le principe multiplicatif nous donne le nombre de codons possibles : $4 \\times 4 \\times 4 = 64$. C'est cette combinatoire qui permet de coder les 20 acides aminés essentiels à la vie."
+        },
+        {
+          "type": "property",
+          "title": "Quel est le cardinal d'un produit cartésien ?",
+          "content": "Si $E$ et $F$ sont deux ensembles finis, le nombre de couples $(x, y)$ avec $x \\in E$ et $y \\in F$ est :\\\\$$\\text{Card}(E \\times F) = \\text{Card}(E) \\times \\blank{\\text{Card}(F)}$$"
+        }
+      ]
+    },
+    {
+      "id": "arrangements",
+      "category": "course",
+      "title": "Arrangements (L'ordre compte)",
+      "blocks": [
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'un arrangement avec répétition ?",
+          "content": "Soit $E$ un ensemble à $n$ éléments. Un \\textbf{arrangement avec répétition} de $p$ éléments de $E$ (ou $p$-liste) est une suite ordonnée de $p$ éléments de $E$, non nécessairement distincts.\\\\Leur nombre est égal à $\\boxed{\\blank{n^p}}$."
+        },
+        {
+          "type": "culture",
+          "title": "Info : La sécurité des mots de passe",
+          "content": "La sécurité informatique repose sur les arrangements avec répétition. Un code PIN à 4 chiffres n'offre que $10^4 = 10\\,000$ combinaisons (craquable instantanément). Un mot de passe de 8 caractères utilisant chiffres, lettres et symboles (environ 90 possibilités par caractère) offre $90^8 \\approx 4,3 \\times 10^{15}$ arrangements. L'explosion combinatoire est notre meilleure protection."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'un arrangement sans répétition ?",
+          "content": "Un \\textbf{arrangement sans répétition} de $p$ éléments de $E$ (avec $p \\le n$) est une suite ordonnée de $p$ éléments \\textbf{distincts} de $E$.\\\\Leur nombre est noté $A_n^p$ :\\\\$$\\boxed{A_n^p = \\frac{n!}{\\blank{(n-p)!}}}$$"
+        }
+      ]
+    },
+    {
+      "id": "permutations",
+      "category": "course",
+      "title": "Permutations (Ordre total)",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Deck_of_cards_02.jpg/1280px-Deck_of_cards_02.jpg",
+        "type": "image",
+        "position": "right",
+        "width": "30%",
+        "caption": "52! mélanges possibles",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une permutation ?",
+          "content": "Une \\textbf{permutation} d'un ensemble fini $E$ à $n$ éléments est un arrangement sans répétition de \\textbf{tous} les éléments de $E$.\\\\Le nombre de permutations est la factorielle $n$ :\\\\$$\\boxed{n! = n \\times (n-1) \\times \\dots \\times 2 \\times \\blank{1}}$$"
+        },
+        {
+          "type": "culture",
+          "title": "Le Vertige des Cartes (52!)",
+          "content": "Le nombre de mélanges possibles d'un jeu de 52 cartes est $52! \\approx 8 \\times 10^{67}$. Ce nombre est astronomique : il est supérieur au nombre d'atomes dans notre galaxie. Statistiquement, chaque fois que vous mélangez correctement un jeu de cartes, vous créez une séquence qui n'a \\textbf{jamais} existé dans l'histoire de l'univers."
+        },
+        {
+          "type": "property",
+          "title": "Linguistique : Les Anagrammes",
+          "content": "Le nombre d'anagrammes d'un mot de $n$ lettres contenant $k_1$ lettres identiques de type 1, $k_2$ de type 2... est :\\\\$$\\frac{n!}{k_1! \\times k_2! \\times \\dots \\times k_r!}$$\\\\Exemple : \\textbf{ANANAS} (6 lettres : 3 A, 2 N, 1 S).\\\\Nombre d'anagrammes = $\\frac{6!}{3! \\times 2! \\times 1!} = \\frac{720}{6 \\times 2} = \\blank{60}$."
+        }
+      ]
+    },
+    {
+      "id": "combinaisons",
+      "category": "course",
+      "title": "Combinaisons (L'ordre ne compte pas)",
+      "blocks": [
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une combinaison ?",
+          "content": "Une \\textbf{combinaison} de $p$ éléments de $E$ est une \\blueb{partie} (sous-ensemble) de $E$ contenant $p$ éléments. Contrairement aux arrangements, l'ordre n'intervient pas.\\\\Le nombre de combinaisons est noté $C_n^p$ ou $\\binom{n}{p}$ :\\\\$$\\boxed{C_n^p = \\frac{A_n^p}{p!} = \\frac{n!}{p!(\\blank{n-p})!}}$$"
+        },
+        {
+          "type": "culture",
+          "title": "Physique : L'Entropie de Boltzmann",
+          "content": "En thermodynamique statistique, l'entropie $S$ mesure le « désordre » d'un système. Ludwig Boltzmann a montré qu'elle est proportionnelle au logarithme du nombre de « micro-états » (combinaisons) possibles des particules : $S = k_B \\ln(\\Omega)$. Plus le nombre de combinaisons $\\Omega$ est grand, plus le système est désordonné et stable."
+        },
+        {
+          "type": "property",
+          "title": "Quelles sont les propriétés caractéristiques ?",
+          "content": "Pour tous entiers $n$ et $p$ tels que $0 \\le p \\le n$ :\\begin{itemize}\\item \\textbf{Symétrie :} $C_n^{n-p} = \\blank{C_n^p}$\\item \\textbf{Relation de Pascal :} $C_n^p + C_n^{p+1} = \\blank{C_{n+1}^{p+1}}$\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "formules_sommes",
+      "category": "course",
+      "title": "Binôme de Newton et Histoire",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Pascal_triangle_mod2.svg/1024px-Pascal_triangle_mod2.svg.png",
+        "type": "image",
+        "position": "right",
+        "width": "30%",
+        "caption": "Triangle de Sierpinski (Pascal Modulo 2)",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "theorem",
+          "title": "Quelle est la formule du Binôme de Newton ?",
+          "content": "Pour tout $(a,b) \\in \\mathbb{R}^2$ et $n \\in \\mathbb{N}^*$ :\\\\$$\\boxed{(a+b)^n = \\sum_{k=0}^{n} C_n^k a^k b^{\\blank{n-k}}}$$"
+        },
+        {
+          "type": "culture",
+          "title": "Art & Maths : Le Triangle de Sierpinski",
+          "content": "Si l'on colorie les nombres impairs dans le Triangle de Pascal et qu'on laisse les pairs en blanc, une figure fractale célèbre apparaît : le \\textbf{Triangle de Sierpinski}. Cette structure autosimilaire relie l'arithmétique combinatoire à la géométrie fractale moderne."
+        },
+        {
+          "type": "property",
+          "title": "Cardinal de l'ensemble des parties",
+          "content": "Le nombre total de sous-ensembles d'un ensemble à $n$ éléments est :\\\\$$\\sum_{k=0}^n C_n^k = \\blank{2^n}$$"
+        }
+      ]
+    }
+  ]
+}

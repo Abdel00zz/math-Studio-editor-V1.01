@@ -1,0 +1,69 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_injectivite",
+      "category": "method",
+      "title": "Sais-tu **montrer** qu'une application est injective ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On suppose que deux éléments ont la même image et on montre qu'ils sont égaux."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Prendre deux éléments $x, y \\in E$",
+            "Supposer que $f(x) = f(y)$",
+            "Résoudre l'équation pour montrer que $x = y$",
+            "Conclure que $f$ est injective"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_surjectivite",
+      "category": "method",
+      "title": "Maîtrises-tu la **démonstration de surjectivité** d'une application ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On montre que tout élément de l'arrivée admet au moins un antécédent."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Prendre un élément $y \\in F$",
+            "Chercher s'il existe $x \\in E$ tel que $f(x) = y$",
+            "Vérifier que la solution trouvée appartient bien à $E$",
+            "Conclure que $f$ est surjective"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_bijection",
+      "category": "method",
+      "title": "Es-tu capable de **montrer** qu'une application est bijective ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "L'équation $y = f(x)$ doit avoir une unique solution pour tout $y$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Prendre un élément $y \\in F$",
+            "Résoudre l'équation $y = f(x)$ d'inconnue $x$",
+            "Montrer que l'équation admet une unique solution $x \\in E$",
+            "Exprimer $x$ en fonction de $y$ pour trouver la réciproque"
+          ]
+        }
+      ]
+    }
+  ]
+}

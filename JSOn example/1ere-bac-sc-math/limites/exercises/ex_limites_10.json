@@ -1,0 +1,44 @@
+{
+  "id": "ex-limites-10",
+  "topic": "Limites de fonctions",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Calculer les limites de la partie fractionnaire en 0.",
+      "subQuestions": [
+        {
+          "id": "sq1a",
+          "content": "$\\displaystyle\\lim_{x \\to 0^+} (x - E(x))$",
+          "hint": "Pour $x$ très proche de 0 et positif (ex: $x=0.1$), dans quel intervalle $[n, n+1[$ se trouve-t-il ? Que vaut alors $E(x)$ ?"
+        },
+        {
+          "id": "sq1b",
+          "content": "$\\displaystyle\\lim_{x \\to 0^-} (x - E(x))$",
+          "hint": "Pour $x$ très proche de 0 et négatif (ex: $x=-0.1$), dans quel intervalle $[n, n+1[$ se trouve-t-il ? Que vaut alors $E(x)$ ?"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Soit $a$ un entier relatif. Calculer les limites suivantes en $a$.",
+      "subQuestions": [
+        {
+          "id": "sq2a",
+          "content": "$\\displaystyle\\lim_{x \\to a^+} (E(x+2) + E(2-x))$",
+          "hint": "Posez $x = a+h$ avec $h \\to 0^+$. Utilisez les propriétés de la partie entière, notamment $E(k+y)=k+E(y)$ pour $k$ entier, et soyez attentif à la partie $E(2-a-h)$."
+        },
+        {
+          "id": "sq2b",
+          "content": "$\\displaystyle\\lim_{x \\to a^+} (E(x) + (x-E(x))^2)$",
+          "hint": "Quand $x$ tend vers $a$ par la droite, que vaut $E(x)$ ? Utilisez cette valeur pour simplifier l'expression avant de passer à la limite."
+        },
+        {
+          "id": "sq2c",
+          "content": "$\\displaystyle\\lim_{x \\to a^-} (E(x) + (x-E(x))^2)$",
+          "hint": "Quand $x$ tend vers $a$ par la gauche, que vaut $E(x)$ (pensez à $x=2.99$ pour $a=3$) ? Utilisez cette valeur pour évaluer la limite."
+        }
+      ]
+    }
+  ]
+}

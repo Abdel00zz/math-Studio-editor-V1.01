@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "Produit Vectoriel",
+    "subtitle": "Fiche de Cours",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "def_produit_vectoriel",
+      "category": "course",
+      "title": "Définition",
+      "content": "\\begin{definition}Dans un repère orthonormé direct, le produit vectoriel de deux vecteurs $\\vec{u}$ et $\\vec{v}$, noté $\\vec{u} \\wedge \\vec{v}$, est un \\textbf{vecteur} orthogonal à $\\vec{u}$ et à $\\vec{v}$.\\end{definition}"
+    },
+    {
+      "id": "coordonnees_pv",
+      "category": "course",
+      "title": "Expression Analytique",
+      "content": "\\begin{theorem}Si $\\vec{u}(x,y,z)$ et $\\vec{v}(x',y',z')$, alors $\\vec{w} = \\vec{u} \\wedge \\vec{v}$ a pour coordonnées :\\\\$$X = yz' - zy', \\quad Y = zx' - xz', \\quad Z = xy' - yx'$$\\end{theorem}"
+    },
+    {
+      "id": "norme_pv",
+      "category": "course",
+      "title": "Norme et Aire",
+      "content": "\\begin{property}$||\\vec{u} \\wedge \\vec{v}|| = ||\\vec{u}|| \\cdot ||\\vec{v}|| \\cdot |\\sin(\\vec{u}, \\vec{v})|$.\\\\Cela correspond à l'aire du parallélogramme construit sur $\\vec{u}$ et $\\vec{v}$.\\end{property}"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_recurrence",
+      "category": "method",
+      "title": "Maîtrises-tu le **raisonnement par récurrence** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La récurrence prouve une propriété pour tous les entiers à partir d'un certain rang."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Initialisation : vérifier $P(n_0)$",
+            "Hérédité : supposer $P(n)$ vraie, démontrer $P(n+1)$",
+            "Conclusion : la propriété est vraie pour tout $n \\geq n_0$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_etude_suite",
+      "category": "method",
+      "title": "Sais-tu **étudier** une suite numérique ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "L'étude comprend la majoration, minoration et monotonie de la suite."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Majoration : trouver $M$ tel que $u_n \\leq M$ pour tout $n$",
+            "Minoration : trouver $m$ tel que $u_n \\geq m$ pour tout $n$",
+            "Monotonie : étudier le signe de $u_{n+1} - u_n$ ou $\\frac{u_{n+1}}{u_n}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_reconnaitre_suite",
+      "category": "method",
+      "title": "Es-tu capable de **reconnaître** une suite arithmétique ou géométrique ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Une suite est arithmétique si $u_{n+1} - u_n = r$ constant, géométrique si $\\frac{u_{n+1}}{u_n} = q$ constant."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer $u_{n+1} - u_n$ pour tester si c'est arithmétique",
+            "Calculer $\\frac{u_{n+1}}{u_n}$ (si $u_n \\neq 0$) pour tester si c'est géométrique",
+            "Identifier le premier terme $u_0$ et la raison $r$ ou $q$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_somme_termes",
+      "category": "method",
+      "title": "Sais-tu **calculer** la somme de $n$ termes consécutifs ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Les formules de somme dépendent du type de suite."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Suite arithmétique : $S_n = \\frac{n(u_1 + u_n)}{2} = \\frac{n(2u_1 + (n-1)r)}{2}$",
+            "Suite géométrique ($q \\neq 1$) : $S_n = u_1 \\cdot \\frac{1-q^n}{1-q}$",
+            "Cas particulier : $1 + 2 + ... + n = \\frac{n(n+1)}{2}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_situation_suite",
+      "category": "method",
+      "title": "Connais-tu les **situations** modélisées par une suite ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "De nombreux problèmes concrets se modélisent par des suites."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Suite arithmétique : ajout/retrait constant (salaire avec augmentation fixe)",
+            "Suite géométrique : multiplication constante (intérêts composés, populations)",
+            "Identifier la relation de récurrence à partir de l'énoncé"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_arithmetico_geo",
+      "category": "method",
+      "title": "Maîtrises-tu les suites **arithmético-géométriques** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Pour $u_{n+1} = au_n + b$ avec $a \\neq 1$, on cherche une suite auxiliaire géométrique."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Résoudre l'équation du point fixe : $\\alpha = a\\alpha + b$",
+            "Poser $v_n = u_n - \\alpha$",
+            "Montrer que $(v_n)$ est géométrique de raison $a$",
+            "Exprimer $u_n = v_n + \\alpha$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_resoudre_probleme",
+      "category": "method",
+      "title": "Es-tu capable d'**utiliser** une suite pour résoudre un problème ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Traduire le problème en termes de suite permet d'exploiter les formules connues."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier la grandeur qui évolue et définir $u_n$",
+            "Établir la relation de récurrence $u_{n+1} = f(u_n)$",
+            "Reconnaître le type de suite et appliquer les formules",
+            "Répondre à la question posée (rang, somme, limite...)"
+          ]
+        }
+      ]
+    }
+  ]
+}

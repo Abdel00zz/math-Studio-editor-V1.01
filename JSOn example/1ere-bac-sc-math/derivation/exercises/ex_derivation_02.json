@@ -1,0 +1,30 @@
+
+{
+  "id": "ex-deriv-02",
+  "topic": "Interprétation géométrique",
+  "context": "Soit $f$ la fonction définie par $f(x) = \\sqrt{x+3}$ et $(\\mathcal{C}_f)$ sa courbe représentative.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Comment déterminer l'équation de la tangente au point d'abscisse 1",
+      "subQuestions": [
+        {
+          "id": "a",
+          "content": "Calculer l'image de 1 par la fonction $f$.",
+          "hint": "Remplacez simplement $x$ par 1 dans $\\sqrt{x+3}$."
+        },
+        {
+          "id": "b",
+          "content": "Sachant que $f'(1) = \\frac{1}{4}$, écrire l'équation cartésienne de la tangente $(T)$.",
+          "hint": "\\method Appliquez la formule $y = f'(a)(x-a) + f(a)$ avec $a=1$. \\step $y = \\frac{1}{4}(x-1) + 2$. \\conclusion Simplifiez l'expression pour obtenir $y = \\frac{1}{4}x + \\frac{7}{4}$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Quelle est la particularité du coefficient directeur de $(T)$",
+      "hint": "\\tip Le nombre dérivé $f'(1)$ est précisément la pente (coefficient directeur) de la droite tangente à la courbe au point d'abscisse 1."
+    }
+  ]
+}

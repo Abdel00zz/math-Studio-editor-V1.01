@@ -1,0 +1,37 @@
+
+{
+  "id": "ex-bary-004",
+  "topic": "Barycentre",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Faire une figure illustrant ces données lorsque $k = \\dfrac{1}{3}$, puis lorsque $k = -1$.",
+      "hint": "Pour $k=1/3$, $D$ est sur le segment $[AB]$. Où précisément ? Pour $k=-1$, la relation $\\overrightarrow{AD} = -\\overrightarrow{AB}$ signifie que $A$ est le milieu de quel segment ?"
+    },
+    {
+      "id": "q2",
+      "content": "Montrer que $D = \\text{bar}\\{(A;1-k);(B;k)\\}$.",
+      "hint": "\\method Pour vérifier si $D$ est le barycentre, montrez que la relation vectorielle $(1-k)\\overrightarrow{DA} + k\\overrightarrow{DB} = \\vec{0}$ est satisfaite, en utilisant la définition $\\overrightarrow{AD} = k\\overrightarrow{AB}$."
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que $E = \\text{bar}\\{(C;1-k);(A;k)\\}$.",
+      "hint": "Le raisonnement est identique à la question précédente, en remplaçant les points $A,B,D$ par $C,A,E$."
+    },
+    {
+      "id": "q4",
+      "content": "En déduire que pour tout point $M$ du plan, on a : $\\overrightarrow{MD} + \\overrightarrow{ME} = \\overrightarrow{MA} + \\overrightarrow{MC} + k\\overrightarrow{CB}$.",
+      "hint": "\\method Utilisez la relation de Chasles pour décomposer $\\overrightarrow{MD}$ en passant par $A$, et $\\overrightarrow{ME}$ en passant par $C$. Vous pourrez ensuite utiliser les définitions de $D$ et $E$ de l'énoncé."
+    },
+    {
+      "id": "q5",
+      "content": "Montrer que $\\overrightarrow{MD} + \\overrightarrow{ME} = 2(\\overrightarrow{MB'} + k\\overrightarrow{B'C'})$ où $B'$ et $C'$ sont les milieux respectifs de $[AC]$ et $[AB]$.",
+      "hint": "Dans l'expression de la question 4, regroupez les termes $\\overrightarrow{MA} + \\overrightarrow{MC}$ et utilisez la propriété du milieu $B'$. Que pouvez-vous dire du vecteur $\\overrightarrow{CB}$ en utilisant les milieux $B'$ et $C'$ (théorème des milieux) ?"
+    },
+    {
+      "id": "q6",
+      "content": "Soit $I$ le milieu de $[DE]$. Déduire de la question précédente que $I$, $B'$ et $C'$ sont alignés.",
+      "hint": "Utilisez la propriété du milieu pour exprimer $\\overrightarrow{MI}$ en fonction de $\\overrightarrow{MD}$ et $\\overrightarrow{ME}$. En combinant avec le résultat de la question 5, quelle relation vectorielle lie $\\overrightarrow{B'I}$ et $\\overrightarrow{B'C'}$ ?"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ex-limites-02",
+  "topic": "Limites : Formes Indéterminées Courantes",
+  "context": "Calculer les limites suivantes en levant les indéterminations, notamment par factorisation et usage de l'expression conjuguée.",
+  "sessionDate": "2026-01-25T19:00:00.000Z",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "$\\displaystyle\\lim_{x \\to +\\infty} \\left(\\sqrt{x^3 + x + 1} - 3x\\right)$",
+      "hint": "Factorisez par $x^3$ sous la racine pour obtenir le terme dominant $x^{3/2}$. Comparez les puissances de $x$."
+    },
+    {
+      "id": "q2",
+      "content": "$\\displaystyle\\lim_{x \\to +\\infty} \\left(\\frac{\\sqrt{x^2 + 1} - 3x}{x + 1}\\right)$",
+      "hint": "Factorisez par $x$ au numérateur (rappel : $\\sqrt{x^2}=x$ en $+\\infty$) et au dénominateur, puis simplifiez."
+    },
+    {
+      "id": "q3",
+      "content": "$\\displaystyle\\lim_{x \\to 2^+} \\frac{x^2 - 4}{\\sqrt{x} - \\sqrt{2}}$",
+      "hint": "Multipliez numérateur et dénominateur par l'expression conjuguée $(\\sqrt{x} + \\sqrt{2})$. Factorisez $x^2-4$ pour simplifier par $(x-2)$."
+    },
+    {
+      "id": "q4",
+      "content": "$\\displaystyle\\lim_{x \\to 4} \\frac{\\sqrt{2x + 1} - \\sqrt{3x - 3}}{x - 4}$",
+      "hint": "Multipliez par la quantité conjuguée du numérateur. Simplifiez le numérateur pour faire apparaître le facteur $(x-4)$."
+    },
+    {
+      "id": "q5",
+      "content": "$\\displaystyle\\lim_{x \\to 0} \\frac{\\sqrt{x^2+1}-1}{x}$",
+      "hint": "Utilisez l'expression conjuguée $\\sqrt{x^2+1}+1$ pour rationaliser le numérateur. Simplifiez ensuite par $x$."
+    },
+    {
+      "id": "q6",
+      "content": "$\\displaystyle\\lim_{x \\to 1} \\frac{x\\sqrt{x}-1}{x^2-1}$",
+      "hint": "Posez $t = \\sqrt{x}$ (donc $x=t^2$). L'expression devient une fraction rationnelle en $t$. Factorisez par $(t-1)$."
+    }
+  ]
+}

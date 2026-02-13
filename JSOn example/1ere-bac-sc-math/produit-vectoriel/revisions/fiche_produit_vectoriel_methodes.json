@@ -1,0 +1,66 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_calcul_pv",
+      "category": "method",
+      "title": "Sais-tu **calculer** un produit vectoriel ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le produit vectoriel se calcule avec les déterminants des coordonnées."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Disposer les coordonnées des vecteurs en colonne",
+            "Calculer les déterminants $2 \\times 2$ pour chaque composante",
+            "Appliquer la formule $\\vec{u} \\wedge \\vec{v} = \\begin{vmatrix} y & y' \\\\ z & z' \\end{vmatrix}\\vec{i} - \\begin{vmatrix} x & x' \\\\ z & z' \\end{vmatrix}\\vec{j} + \\begin{vmatrix} x & x' \\\\ y & y' \\end{vmatrix}\\vec{k}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_aire_triangle",
+      "category": "method",
+      "title": "Maîtrises-tu le **calcul de l'aire** d'un triangle avec le produit vectoriel ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "L'aire du triangle $ABC$ est la moitié de la norme du produit vectoriel $\\overrightarrow{AB} \\wedge \\overrightarrow{AC}$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer le vecteur $\\vec{w} = \\overrightarrow{AB} \\wedge \\overrightarrow{AC}$",
+            "Calculer la norme $||\\vec{w}||$",
+            "Conclure : Aire $(ABC) = \\frac{1}{2} ||\\vec{w}||$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_distance_point_droite",
+      "category": "method",
+      "title": "Es-tu capable de **calculer** la distance d'un point à une droite ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La distance se calcule avec le produit vectoriel entre $\\overrightarrow{AM}$ et le vecteur directeur."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer $\\overrightarrow{AM} \\wedge \\vec{u}$",
+            "Calculer la norme du résultat",
+            "Diviser par la norme de $\\vec{u}$ : $d(M, \\Delta) = \\frac{||\\overrightarrow{AM} \\wedge \\vec{u}||}{||\\vec{u}||}$"
+          ]
+        }
+      ]
+    }
+  ]
+}

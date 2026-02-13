@@ -1,0 +1,20 @@
+
+{
+  "id": "ex-limites-07",
+  "topic": "Limites et Paramètres",
+  "context": "",
+  "sessionDate": "2026-01-26T20:00:00.000Z",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Soit $n$ un entier naturel non nul. Déterminer, suivant les valeurs de $n$, les limites suivantes : $\\displaystyle\\lim_{x \\to +\\infty} \\left(\\frac{x^n}{x^2+x+1}\\right)$ et $\\displaystyle\\lim_{x \\to -\\infty} \\left(\\frac{x^n}{x^2+x+1}\\right)$",
+      "hint": "C'est la limite d'une fraction rationnelle. Comparez le degré du numérateur ($n$) avec celui du dénominateur (2). Distinguez les cas $n < 2$, $n = 2$, et $n > 2$. Pour la limite en $-\\infty$, faites attention au signe qui dépend de la parité de $n$ et $n-2$."
+    },
+    {
+      "id": "q2",
+      "content": "Soit $a, b, c$ des nombres réels tels que $a > 0$. Déterminer, suivant les valeurs de $a$, la limite suivante : $\\displaystyle\\lim_{x \\to +\\infty} \\left(x - \\sqrt{ax^2 + bx + c}\\right)$",
+      "hint": "C'est une forme indéterminée $\\infty - \\infty$. Utilisez l'expression conjuguée. Factorisez par le terme dominant au dénominateur et distinguez les cas $a=1$ et $a \\neq 1$."
+    }
+  ]
+}

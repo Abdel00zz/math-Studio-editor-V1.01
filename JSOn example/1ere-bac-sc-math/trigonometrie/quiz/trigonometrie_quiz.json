@@ -1,0 +1,141 @@
+
+{
+  "questions": [
+    {
+      "id": "q1_mesure_principale",
+      "type": "mcq",
+      "category": "Cercle Trigonométrique",
+      "question": "Quelle est la mesure principale de l'angle $\\frac{49\\pi}{6}$ ?",
+      "options": [
+        { "text": "$\\frac{\\pi}{6}$", "isCorrect": true },
+        { "text": "$-\\frac{\\pi}{6}$", "isCorrect": false },
+        { "text": "$\\frac{5\\pi}{6}$", "isCorrect": false },
+        { "text": "$\\frac{7\\pi}{6}$", "isCorrect": false }
+      ],
+      "explanation": "On effectue la division euclidienne de 49 par 12 (car $2\\pi = \\frac{12\\pi}{6}$). $49 = 4 \\times 12 + 1$. Donc $\\frac{49\\pi}{6} = 4\\pi + \\frac{\\pi}{6} \\equiv \\frac{\\pi}{6} [2\\pi]$."
+    },
+    {
+      "id": "q2_formule_cos_somme",
+      "type": "mcq",
+      "category": "Formules d'Addition",
+      "question": "Quelle est la formule correcte pour $\\cos(a + b)$ ?",
+      "options": [
+        { "text": "$\\cos a \\cos b + \\sin a \\sin b$", "isCorrect": false },
+        { "text": "$\\cos a \\cos b - \\sin a \\sin b$", "isCorrect": true },
+        { "text": "$\\sin a \\cos b + \\cos a \\sin b$", "isCorrect": false },
+        { "text": "$\\cos a \\sin b - \\sin a \\cos b$", "isCorrect": false }
+      ],
+      "explanation": "Pour le cosinus, le signe change : $\\cos(a+b) = \\cos a \\cos b - \\sin a \\sin b$. La formule avec le signe $+$ correspond à $\\cos(a-b)$."
+    },
+    {
+      "id": "q3_duplication",
+      "type": "true-false",
+      "category": "Formules de Duplication",
+      "question": "Pour tout réel $x$, on a $1 - \\cos(2x) = 2\\sin^2(x)$.",
+      "isTrue": true,
+      "explanation": "C'est exact. On part de $\\cos(2x) = 1 - 2\\sin^2(x)$, ce qui donne $2\\sin^2(x) = 1 - \\cos(2x)$."
+    },
+    {
+      "id": "q4_eq_cos",
+      "type": "mcq",
+      "category": "Équations",
+      "question": "Quelles sont les solutions de $\\cos x = \\frac{\\sqrt{3}}{2}$ dans l'intervalle $]-\\pi, \\pi]$ ?",
+      "options": [
+        { "text": "$\\frac{\\pi}{6}$ et $-\\frac{\\pi}{6}$", "isCorrect": true },
+        { "text": "$\\frac{\\pi}{3}$ et $-\\frac{\\pi}{3}$", "isCorrect": false },
+        { "text": "$\\frac{5\\pi}{6}$ et $-\\frac{5\\pi}{6}$", "isCorrect": false },
+        { "text": "$\\frac{\\pi}{6}$ uniquement", "isCorrect": false }
+      ],
+      "explanation": "On sait que $\\cos(\\frac{\\pi}{6}) = \\frac{\\sqrt{3}}{2}$. Les solutions sont de la forme $x = \\pm \\frac{\\pi}{6} + 2k\\pi$. Dans $]-\\pi, \\pi]$, ce sont $\\frac{\\pi}{6}$ et $-\\frac{\\pi}{6}$."
+    },
+    {
+      "id": "q5_transfo_lineaire",
+      "type": "mcq",
+      "category": "Transformation a.cos + b.sin",
+      "question": "Quelle est la forme transformée de $\\sqrt{3}\\cos x + \\sin x$ ?",
+      "options": [
+        { "text": "$2\\cos(x - \\frac{\\pi}{6})$", "isCorrect": true },
+        { "text": "$2\\cos(x + \\frac{\\pi}{6})$", "isCorrect": false },
+        { "text": "$\\sqrt{2}\\cos(x - \\frac{\\pi}{3})$", "isCorrect": false },
+        { "text": "$2\\sin(x - \\frac{\\pi}{6})$", "isCorrect": false }
+      ],
+      "explanation": "Le module est $r = \\sqrt{(\\sqrt{3})^2 + 1^2} = 2$. On factorise : $2(\\frac{\\sqrt{3}}{2}\\cos x + \\frac{1}{2}\\sin x)$. On pose $\\cos \\phi = \\frac{\\sqrt{3}}{2}$ et $\\sin \\phi = \\frac{1}{2}$, donc $\\phi = \\frac{\\pi}{6}$. D'où $2\\cos(x - \\frac{\\pi}{6})$."
+    },
+    {
+      "id": "q6_tan_demi_angle",
+      "type": "mcq",
+      "category": "Changement de variable",
+      "question": "Si on pose $t = \\tan(\\frac{x}{2})$, comment s'exprime $\\sin x$ ?",
+      "options": [
+        { "text": "$\\frac{1-t^2}{1+t^2}$", "isCorrect": false },
+        { "text": "$\\frac{2t}{1-t^2}$", "isCorrect": false },
+        { "text": "$\\frac{2t}{1+t^2}$", "isCorrect": true },
+        { "text": "$\\frac{1+t^2}{2t}$", "isCorrect": false }
+      ],
+      "explanation": "C'est une formule classique du paramétrage rationnel : $\\sin x = \\frac{2t}{1+t^2}$, $\\cos x = \\frac{1-t^2}{1+t^2}$ et $\\tan x = \\frac{2t}{1-t^2}$."
+    },
+    {
+      "id": "q7_inequation",
+      "type": "mcq",
+      "category": "Inéquations",
+      "question": "Sur $[0, 2\\pi]$, quel est l'ensemble solution de $\\sin x \\ge \\frac{1}{2}$ ?",
+      "options": [
+        { "text": "$[0, \\frac{\\pi}{6}] \\cup [\\frac{5\\pi}{6}, 2\\pi]$", "isCorrect": false },
+        { "text": "$[\\frac{\\pi}{6}, \\frac{5\\pi}{6}]$", "isCorrect": true },
+        { "text": "$[-\\frac{\\pi}{6}, \\frac{\\pi}{6}]$", "isCorrect": false },
+        { "text": "$[\\frac{\\pi}{3}, \\frac{2\\pi}{3}]$", "isCorrect": false }
+      ],
+      "explanation": "Sur le cercle trigonométrique, l'ordonnée est supérieure à $1/2$ pour les angles compris entre $\\frac{\\pi}{6}$ et $\\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$."
+    },
+    {
+      "id": "q8_methode_resolution",
+      "type": "ordering",
+      "category": "Méthode",
+      "question": "Remettez dans l'ordre les étapes pour résoudre $\\cos(2x) = \\sin(x)$.",
+      "items": [
+        { "id": "1", "text": "Transformer $\\sin(x)$ en $\\cos(\\frac{\\pi}{2} - x)$." },
+        { "id": "2", "text": "Écrire l'égalité : $2x = \\frac{\\pi}{2} - x + 2k\\pi$ ou $2x = -(\\frac{\\pi}{2} - x) + 2k\\pi$." },
+        { "id": "3", "text": "Résoudre les deux équations pour isoler $x$." },
+        { "id": "4", "text": "Sélectionner les solutions dans l'intervalle demandé." }
+      ],
+      "correctOrder": ["1", "2", "3", "4"],
+      "explanation": "Il faut d'abord se ramener à une équation de la forme $\\cos U = \\cos V$ avant d'appliquer les formules de résolution."
+    },
+    {
+      "id": "q9_erreur_classique",
+      "type": "error-spotting",
+      "category": "Chasse à l'erreur",
+      "question": "Un élève veut simplifier l'expression $\\cos(x + \\pi) + \\sin(x + \\frac{\\pi}{2})$. Où est l'erreur ?",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "Je sais que $\\cos(x + \\pi) = -\\cos(x)$."
+        },
+        {
+          "id": "s2",
+          "text": "Je sais que $\\sin(x + \\frac{\\pi}{2}) = \\sin(x)$." ,
+          "isError": true,
+          "correction": "C'est faux. $\\sin(x + \\frac{\\pi}{2}) = \\cos(x)$. C'est un décalage de $\\pi/2$."
+        },
+        {
+          "id": "s3",
+          "text": "Donc l'expression vaut $-\\cos(x) + \\sin(x)$."
+        }
+      ],
+      "explanation": "La formule correcte est $\\sin(x + \\frac{\\pi}{2}) = \\cos(x)$. Ainsi, l'expression se simplifie en $-\\cos x + \\cos x = 0$."
+    },
+    {
+      "id": "q10_transform_produit",
+      "type": "mcq",
+      "category": "Formules de Simpson",
+      "question": "L'expression $\\sin(3x) + \\sin(x)$ est égale à :",
+      "options": [
+        { "text": "$2\\sin(2x)\\cos(x)$", "isCorrect": true },
+        { "text": "$2\\cos(2x)\\sin(x)$", "isCorrect": false },
+        { "text": "$\\sin(4x)$", "isCorrect": false },
+        { "text": "$2\\sin(4x)$", "isCorrect": false }
+      ],
+      "explanation": "Formule : $\\sin p + \\sin q = 2\\sin(\\frac{p+q}{2})\\cos(\\frac{p-q}{2})$. Ici $p=3x, q=x$, donc $\\frac{p+q}{2} = 2x$ et $\\frac{p-q}{2} = x$."
+    }
+  ]
+}

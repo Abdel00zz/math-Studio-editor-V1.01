@@ -1,0 +1,125 @@
+
+{
+  "header": {
+    "title": "Calcul Trigonométrique",
+    "subtitle": "Formules & Propriétés",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "category": "course",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Astrolabio_%2816787706916%29.jpg",
+        "type": "image",
+        "position": "right",
+        "width": "30%",
+        "caption": "Astrolabe d'al-Shali ",
+        "shadow": false,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "content": "\\large{Née de l'astronomie antique pour calculer la distance des astres, la trigonométrie a évolué grâce aux mathématiciens indiens et arabes qui ont formalisé la notion de sinus.\\par\\medskip\nBien plus tard, Joseph Fourier a révélé sa véritable puissance en démontrant que tout phénomène périodique (le son, la lumière, les signaux 4G/5G) peut se décomposer en une somme de sinus et cosinus.\\par\\medskip\nCe chapitre pose les fondations analytiques de cet outil universel : comment mesurer les angles de manière unique sur le cercle et comment transformer des expressions complexes pour maîtriser le calcul.}"
+        }
+      ]
+    },
+    {
+      "id": "abscisse_curviligne",
+      "category": "course",
+      "title": "Le Cercle Trigonométrique et Abscisses",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Pour étudier les fonctions circulaires, nous devons d'abord définir un repère sur le cercle lui-même. C'est le rôle de l'abscisse curviligne, qui enroule la droite réelle autour du cercle."
+        },
+        {
+          "type": "definition",
+          "title": "De quelle manière définit-on l'abscisse curviligne sur un cercle",
+          "content": "Sur le cercle trigonométrique $(\\mathcal{C})$ d'origine $I$, tout point $M$ est repéré par une infinité de réels appelés \\textbf{abscisses curvilignes}. Si $x$ est une abscisse de $M$, alors toutes les abscisses de $M$ sont de la forme $x + \\blank{2k\\pi}$ avec $k \\in \\mathbb{Z}$. Il existe une unique abscisse $\\alpha$ appartenant à $]-\\pi; \\pi]$, appelée \\blueb{abscisse curviligne principale}.",
+          "graphId": "trigo_enroulement",
+          "graphCaption": "Le point M est associé à plusieurs réels (x, x+2π, ...) par enroulement."
+        },
+        {
+          "type": "example",
+          "title": "Comment déterminer pratiquement la mesure principale",
+          "content": "Déterminons la mesure principale de $\\frac{27\\pi}{4}$.\\par On cherche à écrire $\\frac{27}{4}$ sous la forme $2k + r$ avec $r \\in ]-1; 1]$. On a $27 = 4 \\times 6 + 3$, donc $\\frac{27\\pi}{4} = \\frac{24\\pi + 3\\pi}{4} = 6\\pi + \\frac{3\\pi}{4}$.\\par Comme $6\\pi$ est un multiple pair de $\\pi$, la mesure principale est $\\blank{\\frac{3\\pi}{4}}$."
+        }
+      ]
+    },
+    {
+      "id": "lignes_trigo",
+      "category": "course",
+      "title": "Lignes Trigonométriques",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le cosinus, le sinus et la tangente ne sont pas de simples ratios dans un triangle, mais les coordonnées d'un point mobile sur le cercle. Cette définition étend ces notions à tous les réels."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une ligne trigonométrique d'un point vectoriel",
+          "content": "Dans un repère orthonormé $(O; \\vec{i}, \\vec{j})$, pour tout réel $x$, si $M$ est le point d'abscisse curviligne $x$ :\\begin{itemize}\\item $\\cos x$ est l'abscisse de $M$.\\item $\\sin x$ est l'ordonnée de $M$.\\item $\\tan x = \\frac{\\sin x}{\\cos x}$ (si $x \\neq \\frac{\\pi}{2} + k\\pi$).\\end{itemize}",
+          "graphId": "trigo_cercle_base",
+          "graphCaption": "Visualisation du cosinus (abscisse) et du sinus (ordonnée)."
+        },
+        {
+          "type": "property",
+          "title": "Quelle égalité fondamentale lie sinus et cosinus",
+          "content": "Pour tout $x \\in \\mathbb{R}$, on a la relation de Pythagore trigonométrique : $$\\cos^2 x + \\sin^2 x = \\blank{1}$$De plus, pour la tangente : $1 + \\tan^2 x = \\frac{1}{\\blank{\\cos^2 x}}$."
+        }
+      ]
+    },
+    {
+      "id": "formules_transformation",
+      "category": "course",
+      "title": "Formules de Transformation",
+      "blocks": [
+        {
+          "type": "theorem",
+          "title": "Comment se comportent les fonctions face à un angle opposé",
+          "content": "Pour tout angle $x$ :\\begin{itemize}\\item $\\cos(-x) = \\blank{\\cos(x)}$ (Parité)\\item $\\sin(-x) = \\blank{-\\sin(x)}$ (Imparité)\\end{itemize}",
+          "graphId": "trigo_symetrie",
+          "graphCaption": "Symétrie axiale par rapport à l'axe des abscisses."
+        },
+        {
+          "type": "theorem",
+          "title": "Quelles sont les formules permettant d'additionner deux angles",
+          "content": "\\begin{itemize}\\item $\\cos(a+b) = \\cos a \\cos b - \\blank{\\sin a \\sin b}$\\item $\\sin(a+b) = \\sin a \\cos b + \\blank{\\cos a \\sin b}$\\item $\\tan(a+b) = \\frac{\\tan a + \\tan b}{1 - \\blank{\\tan a \\tan b}}$\\end{itemize}"
+        },
+        {
+          "type": "theorem",
+          "title": "Que deviennent les relations pour un angle double",
+          "content": "Pour tout réel $a$ :\\begin{itemize}\\item $\\sin(2a) = \\blank{2\\sin a \\cos a}$\\item $\\cos(2a) = \\cos^2 a - \\sin^2 a = \\blank{2\\cos^2 a - 1} = 1 - 2\\sin^2 a$\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "transformations_somme_produit",
+      "category": "course",
+      "title": "Transformation de Sommes en Produits",
+      "blocks": [
+        {
+          "type": "property",
+          "title": "Comment linéariser une somme de fonctions circulaires",
+          "content": "Pour tous réels $p$ et $q$ :\\begin{itemize}\\item $\\cos p + \\cos q = 2 \\cos(\\frac{p+q}{2}) \\cos(\\frac{p-q}{\\blank{2}})$\\item $\\sin p + \\sin q = 2 \\sin(\\frac{p+q}{2}) \\cos(\\frac{p-q}{\\blank{2}})$\\item $\\cos p - \\cos q = -2 \\sin(\\frac{p+q}{2}) \\sin(\\frac{p-q}{2})$\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "equations_trigo",
+      "category": "course",
+      "title": "Fonctions et Équations Trigonométriques",
+      "blocks": [
+        {
+          "type": "theorem",
+          "title": "Sous quelle condition deux cosinus ou sinus sont-ils égaux",
+          "content": "\\begin{itemize}\\item $\\cos x = \\cos a \\iff x = a + 2k\\pi \\text{ ou } x = \\blank{-a} + 2k\\pi$\\item $\\sin x = \\sin a \\iff x = a + 2k\\pi \\text{ ou } x = \\blank{\\pi - a} + 2k\\pi$\\item $\\tan x = \\tan a \\iff x = a + \\blank{k\\pi}$\\end{itemize}",
+          "graphId": "trigo_fonctions",
+          "graphCaption": "Courbes des fonctions cosinus et sinus."
+        }
+      ]
+    }
+  ]
+}

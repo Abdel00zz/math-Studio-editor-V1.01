@@ -1,0 +1,21 @@
+{
+  "id": "ex-limites-11",
+  "topic": "Limites et Continuité",
+  "context": "Soit $f$ une fonction définie sur $]- \\infty; -3[ \\cup ]-3; 4[ \\cup ]4; +\\infty[$ et $\\mathcal{C}_f$ sa courbe représentative. Les droites $d_1, d_2$ et $d_3$ sont des asymptotes à $\\mathcal{C}_f$. \n\n Par lecture graphique, conjecturer les limites de la fonction $f$ aux bornes de son domaine de définition.",
+  "media": {
+    "src": "https://cdn.jai20enmaths.com/d/5eecf4bb8bde0a0007ec577d/b0a993e0-b251-11ea-b03c-0bca2a4d254d.png",
+    "type": "image",
+    "position": "bottom",
+    "width": "100%",
+    "alt": "Courbe représentative de la fonction f et de ses asymptotes"
+  },
+  "sessionDate": "2026-01-25T20:00:00.000Z",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "hint": "Identifiez les bornes du domaine : $-\\infty, -3, 4, +\\infty$. Pour chaque borne, observez le comportement de la courbe $(C_f)$ lorsqu'elle s'approche des asymptotes $d_1, d_2$ et $d_3$."
+    }
+  ]
+}

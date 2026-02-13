@@ -1,0 +1,252 @@
+
+{
+  "header": {
+    "title": "La Rotation dans le Plan",
+    "subtitle": "Cours Complet & Propriétés",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "category": "course",
+      "title": "Introduction",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/8/87/Rotation_illustration2.svg",
+        "type": "image",
+        "position": "right",
+        "width": "30%",
+        "caption": "Rotation d'un objet en deux dimensions autour d'un point O.",
+        "shadow": false,
+        "border": false
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "content": "La rotation est une transformation fondamentale qui dépasse la simple géométrie abstraite. Elle est au cœur de l'harmonie visuelle et de l'ingénierie moderne. Si les bases ont été posées par les géomètres grecs comme **Euclide**, ce sont les mathématiciens et artisans du monde islamique qui ont élevé l'usage de la rotation au rang d'art absolu."
+        },
+        {
+          "type": "text",
+          "content": "Aujourd'hui, la rotation est omniprésente dans les **applications technologiques** :\\par\\begin{itemize}\\item En **robotique**, les bras articulés calculent leur position grâce à des matrices de rotation.\\item En **infographie 3D** et jeux vidéo, chaque mouvement de caméra repose sur ces transformations.\\item En **aéronautique**, les gyroscopes utilisent la conservation du moment cinétique (liée à la rotation) pour l'orientation des avions et satellites.\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "definition_base",
+      "category": "course",
+      "title": "Définition et Sens",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "La rotation est une transformation ponctuelle fondamentale qui modélise un mouvement circulaire autour d'un point fixe. Elle préserve la structure géométrique des figures."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une rotation ?",
+          "content": "Soit $\\Omega$ un point du plan et $\\theta$ un nombre réel. La \\textbf{rotation} $r(\\Omega, \\theta)$ est la transformation qui laisse le point $\\Omega$ \\blank{invariant} et qui associe à tout point $M$ le point $M'$ tel que :$$\\begin{cases} \\Omega M' = \\blank{\\Omega M} \\\\ (\\overrightarrow{\\Omega M}, \\overrightarrow{\\Omega M'}) \\equiv \\blank{\\theta} \\; [2\\pi] \\end{cases}$$Ces deux conditions caractérisent \\textbf{uniquement} la position de $M'$ : la première impose que $M'$ appartient au cercle de centre $\\Omega$ et de rayon $\\Omega M$, la seconde fixe sa position \\blank{angulaire} sur ce cercle.",
+          "graphId": "rot_definition",
+          "graphCaption": "Modifiez l'angle θ et déplacez M pour visualiser la rotation."
+        },
+        {
+          "type": "remark",
+          "content": "Le signe de $\\theta$ détermine le sens du déplacement sur le cercle de centre $\\Omega$ :\\begin{itemize}\\item Si $\\theta > 0$, le mouvement s'effectue dans le sens \\blank{trigonométrique} (sens inverse des aiguilles d'une montre).\\item Si $\\theta < 0$, le mouvement s'effectue dans le sens \\blank{horaire} (sens des aiguilles d'une montre).\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "title": "Exemple 1 : Rotation dans un carré",
+          "content": "Soit $ABCD$ un carré de centre $O$ orienté dans le sens direct. Considérons la rotation $r(O, -\\frac{\\pi}{2})$.\\begin{itemize}\\item L'image de $A$ est le point \\blank{D} (car $OA=OD$ et l'angle est $-90^{\\circ}$).\\item L'image du triangle $OAB$ est le triangle \\blank{ODA}.\\end{itemize}"
+        },
+        {
+          "type": "property",
+          "title": "Comment trouver la réciproque ?",
+          "content": "Toute rotation est une transformation \\blank{bijective}. La réciproque de la rotation $r(\\Omega, \\theta)$ est la rotation de même centre et d'angle opposé :$$r^{-1} = r(\\Omega, \\blank{-\\theta})$$Pour tous points $M$ et $N$ du plan :$$r(\\Omega, \\theta)(M) = N \\iff r(\\Omega, \\blank{-\\theta})(N) = M$$"
+        },
+        {
+          "type": "example",
+          "title": "Exemple 2 : Réciproque dans un triangle équilatéral",
+          "content": "Soit $ABC$ un triangle équilatéral direct. Soit $r$ la rotation de centre $A$ et d'angle $\\frac{\\pi}{3}$.\\begin{itemize}\\item On a $r(B) = C$ car $AB=AC$ et $(\\overrightarrow{AB}, \\overrightarrow{AC}) = \\frac{\\pi}{3}$.\\item La réciproque $r^{-1}$ est la rotation de centre $A$ et d'angle \\blank{-\\frac{\\pi}{3}}.\\item On en déduit que $r^{-1}(C) = \\blank{B}$.\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "decomposition_rotation",
+      "category": "course",
+      "title": "Décomposition d'une Rotation",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Toute rotation peut s'exprimer comme la composée de deux symétries orthogonales dont les axes se coupent au centre de la rotation. Cette décomposition est fondamentale pour l'étude des transformations."
+        },
+        {
+          "type": "theorem",
+          "title": "Comment décomposer une rotation ?",
+          "content": "Soit $r(\\Omega, \\theta)$ une rotation de centre $\\Omega$ et d'angle $\\theta$. Il existe deux droites sécantes $(\\Delta)$ et $(\\Delta')$ se coupant en $\\Omega$ telles que :$$r(\\Omega, \\theta) = \\mathcal{S}_{(\\Delta')} \\circ \\mathcal{S}_{(\\Delta)}$$où l'angle entre les deux axes vérifie :$$\\left(\\overrightarrow{u}, \\overrightarrow{u'}\\right) \\equiv \\frac{\\blank{\\theta}}{\\blank{2}} \\; [2\\pi]$$avec $\\overrightarrow{u}$ et $\\overrightarrow{u'}$ vecteurs directeurs respectifs de $(\\Delta)$ et $(\\Delta')$."
+        },
+        {
+          "type": "remark",
+          "content": "Cette décomposition n'est pas unique : on peut choisir $(\\Delta)$ arbitrairement, puis $(\\Delta')$ est déterminée par la condition sur l'angle. Toute translation de vecteur non nul $\\vec{v}$ peut également se décomposer en deux symétries orthogonales d'axes \\blank{parallèles}, espacés d'une distance $\\frac{\\|\\vec{v}\\|}{2}$."
+        },
+        {
+          "type": "example",
+          "title": "Exemple 3 : Décomposition et axes",
+          "content": "Soit $r(O, \\frac{\\pi}{3})$ une rotation.\\begin{enumerate}\\item On choisit $(\\Delta) = (Ox)$ l'axe des abscisses.\\item La droite $(\\Delta')$ doit passer par $O$ et faire un angle de $\\frac{\\pi}{3} \\div 2 = \\blank{\\frac{\\pi}{6}}$ avec $(Ox)$.\\item On a alors $r = \\mathcal{S}_{(\\Delta')} \\circ \\mathcal{S}_{(Ox)}$.\\end{enumerate}"
+        }
+      ]
+    },
+    {
+      "id": "proprietes_conservation",
+      "category": "course",
+      "title": "Propriétés de Conservation",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "En tant qu'isométrie, la rotation conserve les propriétés métriques et affines des figures géométriques. Ces invariants sont essentiels pour les démonstrations."
+        },
+        {
+          "type": "property",
+          "title": "Quelles distances sont conservées ?",
+          "content": "Si $r(A) = A'$ et $r(B) = B'$, alors :$$A'B' = \\blank{AB}$$La rotation est une \\blueb{isométrie} : elle préserve toutes les distances. Cette propriété découle directement de la définition : tous les points se déplacent sur des cercles de même centre $\\Omega$, sans changement de rayon.",
+          "graphId": "rot_isometrie",
+          "graphCaption": "Déplacez les points A, B, C pour vérifier que les distances sont conservées."
+        },
+        {
+          "type": "property",
+          "title": "Quels angles sont conservés ?",
+          "content": "Soit $A, B, C, D$ quatre points avec $A \\neq B$ et $C \\neq D$. Si $r(A) = A'$, $r(B) = B'$, $r(C) = C'$ et $r(D) = D'$, alors :$$\\left(\\overrightarrow{AB}, \\overrightarrow{CD}\\right) \\equiv \\left(\\overrightarrow{A'B'}, \\overrightarrow{\\blank{C'D'}}\\right) \\; [2\\pi]$$La rotation conserve les mesures des angles \\blank{orientés}. Cette propriété permet de déterminer l'angle d'une rotation connaissant deux points et leurs images."
+        },
+        {
+          "type": "property",
+          "title": "Comment sont conservés alignement et colinéarité ?",
+          "content": "Soit $A, B, C$ trois points alignés tels que $\\overrightarrow{AC} = k\\overrightarrow{AB}$ où $k \\in \\mathbb{R}$. Si $r(A) = A'$, $r(B) = B'$ et $r(C) = C'$, alors :\\begin{itemize}\\item Les points $A'$, $B'$, $C'$ sont \\blank{alignés}.\\item $\\overrightarrow{A'C'} = \\blank{k}\\overrightarrow{A'B'}$.\\end{itemize}La rotation conserve l'alignement des points et le coefficient de \\blank{colinéarité} de deux vecteurs."
+        },
+        {
+          "type": "theorem",
+          "title": "Le barycentre est-il conservé ?",
+          "content": "Soit $G$ le barycentre du système pondéré $\\{(A, \\alpha); (B, \\beta)\\}$ avec $\\alpha + \\beta \\neq 0$. Si $r(A) = A'$, $r(B) = B'$ et $r(G) = G'$, alors $G'$ est le barycentre du système $\\{(A', \\alpha); (B', \\blank{\\beta})\\}$.\\par\\smallskip La rotation conserve le \\blank{barycentre}. Cette propriété s'étend au barycentre de trois ou quatre points pondérés, ainsi qu'au milieu d'un segment et au centre de gravité d'un triangle."
+        },
+        {
+          "type": "example",
+          "title": "Exemple 4 : Conservation du milieu",
+          "content": "Soient $ABCD$ et $AEFG$ deux carrés directs. Soit $r$ la rotation de centre $A$ et d'angle $\\frac{\\pi}{2}$.\\begin{itemize}\\item On a $r(B) = D$ et $r(G) = E$.\\item Soit $I$ le milieu de $[BG]$. Son image $I'$ sera le milieu du segment image, c'est-à-dire le milieu de \\blank{[DE]}.\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "title": "Exemple 5 : Analytique",
+          "content": "Dans un repère $(O; \\vec{i}, \\vec{j})$, soit $M(2; 0)$. On cherche son image $M'$ par $r(O, \\frac{\\pi}{3})$.\\begin{itemize}\\item $x' = 2\\cos(\\frac{\\pi}{3}) - 0\\sin(\\frac{\\pi}{3}) = 2(1/2) = \\blank{1}$.\\item $y' = 2\\sin(\\frac{\\pi}{3}) + 0\\cos(\\frac{\\pi}{3}) = 2(\\sqrt{3}/2) = \\blank{\\sqrt{3}}$.\\item Donc $M'(1; \\sqrt{3})$ (On vérifie $OM' = \\sqrt{1+3} = 2 = OM$)."
+        }
+      ]
+    },
+    {
+      "id": "images_figures",
+      "category": "course",
+      "title": "Images des Figures Usuelles",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "L'image d'une figure géométrique par une rotation est une figure de même nature. La position relative de la figure image dépend de l'angle de rotation."
+        },
+        {
+          "type": "property",
+          "title": "Quelle est l'image d'une droite ?",
+          "content": "L'image d'une droite $(D)$ par une rotation $r(\\Omega, \\theta)$ est une droite $(D')$ telle que :\\begin{itemize}\\item Si $\\Omega \\in (D)$, alors $(D')$ passe par $\\Omega$ et $(\\vec{u}, \\vec{u'}) \\equiv \\blank{\\theta} \\; [2\\pi]$ où $\\vec{u}$ et $\\vec{u'}$ sont des vecteurs directeurs de $(D)$ et $(D')$.\\item Si $\\Omega \\notin (D)$, alors $(D')$ est parallèle à $(D)$ si et seulement si $\\theta \\equiv \\blank{0} \\; [\\pi]$.\\end{itemize}"
+        },
+        {
+          "type": "remark",
+          "content": "La rotation conserve plusieurs propriétés géométriques importantes :\\begin{itemize}\\item Le \\blank{parallélisme} : les images de deux droites parallèles sont deux droites parallèles.\\item L'\\blank{orthogonalité} : les images de deux droites perpendiculaires sont deux droites perpendiculaires.\\item La nature des triangles : l'image d'un triangle isocèle (resp. rectangle, équilatéral) est un triangle \\blank{isocèle} (resp. rectangle, équilatéral).\\item L'image d'un rectangle est un \\blank{rectangle}.\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "title": "Exemple 6 : Image d'un cercle",
+          "content": "Soit $\\mathcal{C}$ le cercle de centre $I(1; 0)$ et de rayon $2$. Soit $r$ la rotation de centre $O$ et d'angle $\\frac{\\pi}{2}$.\\begin{itemize}\\item L'image du centre $I(1;0)$ est le point $J(0;1)$.\\item L'image du cercle $\\mathcal{C}$ est le cercle $\\mathcal{C}'$ de centre \\blank{J} et de même rayon \\blank{2}.\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "point_invariant_caracterisation",
+      "category": "course",
+      "title": "Point Invariant et Caractérisation",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le centre d'une rotation est caractérisé comme l'unique point invariant par cette transformation, sauf dans le cas particulier d'une rotation d'angle multiple de $2\\pi$."
+        },
+        {
+          "type": "property",
+          "title": "Quel est le point invariant ?",
+          "content": "Si $\\theta \\not\\equiv 0 \\; [2\\pi]$, le centre $\\Omega$ est l'\\blank{unique} point invariant de la rotation $r(\\Omega, \\theta)$. Pour tout point $M \\neq \\Omega$ tel que $r(M) = M'$, on a :\\begin{itemize}\\item $M'$ appartient au cercle de centre $\\Omega$ et de rayon $\\blank{\\Omega M}$.\\item La médiatrice du segment $[MM']$ passe par le point $\\blank{\\Omega}$.\\item Le triangle $\\Omega MM'$ est \\blank{isocèle} de sommet $\\Omega$.\\end{itemize}",
+          "graphId": "rot_mediatrice_graph",
+          "graphCaption": "Observez que Ω est toujours sur la médiatrice de [MM'] et que le triangle ΩMM' est isocèle."
+        },
+        {
+          "type": "example",
+          "title": "Exemple 7 : Trouver le centre",
+          "content": "Soient $A$ et $B$ deux points distincts. On cherche le centre $\\Omega$ de la rotation d'angle $\\frac{\\pi}{2}$ qui transforme $A$ en $B$.\\begin{enumerate}\\item Le triangle $\\Omega AB$ doit être isocèle rectangle en $\\Omega$.\\item $\\Omega$ appartient à la médiatrice de $[AB]$.\\item Précisément, $\\Omega$ est tel que $(\\overrightarrow{\\Omega A}, \\overrightarrow{\\Omega B}) = \\frac{\\pi}{2}$.\\end{enumerate}"
+        }
+      ]
+    },
+    {
+      "id": "composition_rotations",
+      "category": "course",
+      "title": "Composition de Rotations",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "La composition de deux rotations n'est pas toujours une rotation. La nature de la transformation résultante dépend des centres et de la somme des angles."
+        },
+        {
+          "type": "theorem",
+          "title": "Que donne la composée de deux rotations de même centre ?",
+          "content": "Soient $r_1 = r(\\Omega, \\alpha_1)$ et $r_2 = r(\\Omega, \\alpha_2)$ deux rotations de même centre $\\Omega$. Alors :$$r_2 \\circ r_1 = r(\\Omega, \\alpha_1 + \\blank{\\alpha_2})$$De plus, la composition est \\blank{commutative} : $r_1 \\circ r_2 = r_2 \\circ r_1$.",
+          "graphId": "rot_composition",
+          "graphCaption": "Modifiez les angles α et β pour voir que la composée donne une rotation d'angle α+β."
+        },
+        {
+          "type": "theorem",
+          "title": "Que donne la composée de deux rotations de centres différents ?",
+          "content": "Soient $r_1 = r(\\Omega_1, \\alpha_1)$ et $r_2 = r(\\Omega_2, \\alpha_2)$ deux rotations de centres distincts. Posons $S = \\alpha_1 + \\alpha_2$. Alors :\\begin{itemize}\\item Si $S \\not\\equiv 0 \\; [2\\pi]$, alors $r_2 \\circ r_1$ est une \\textbf{rotation} d'angle $\\blank{\\alpha_1 + \\alpha_2}$.\\item Si $S \\equiv 0 \\; [2\\pi]$ (c'est-à-dire $\\alpha_2 \\equiv -\\alpha_1 \\; [2\\pi]$), alors $r_2 \\circ r_1$ est une \\blank{translation}.\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "title": "Exemple 8 : Composition et Translation",
+          "content": "Soit $ABCD$ un carré. On pose $r_A = r(A, \\frac{\\pi}{2})$ et $r_B = r(B, -\\frac{\\pi}{2})$.\\begin{itemize}\\item La somme des angles est $\\frac{\\pi}{2} - \\frac{\\pi}{2} = 0$.\\item La composée $f = r_B \\circ r_A$ est donc une \\blank{translation}.\\item Pour trouver son vecteur, on cherche l'image de $A$ : $r_A(A) = A$, puis $r_B(A)$. Le vecteur est $\\overrightarrow{Ar_B(A)}$.\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "applications_exercices",
+      "category": "course",
+      "title": "Applications et Problèmes",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les rotations sont utilisées pour résoudre des problèmes de géométrie plane, notamment pour démontrer des propriétés d'alignement, de perpendicularité ou pour construire des lieux géométriques."
+        },
+        {
+          "type": "example",
+          "title": "Exemple 9 : Problème de synthèse",
+          "content": "Soit $ABCD$ un carré de centre $O$. Soit $I$ un point de $[BD]$. On construit le cercle $\\Gamma$ de centre $I$ passant par $A$. Il coupe $(AB)$ en $J$ et $(AD)$ en $K$.\\par\\smallskip On utilise la rotation $r(A, -\\frac{\\pi}{2})$. Elle transforme $(AB)$ en $(AD)$ et laisse le cercle invariant (car son centre est sur l'axe de symétrie du carré). On en déduit que l'image de $J$ est $K$, ce qui prouve que $AJ = \\blank{AK}$."
+        }
+      ]
+    },
+    {
+      "id": "culture_cloture",
+      "category": "course",
+      "title": "Culture & Patrimoine",
+      "media": {
+        "src": "https://en.7news.ma/wp-content/uploads/2025/05/zellige-marocain.jpg",
+        "type": "image",
+        "position": "right",
+        "width": "35%",
+        "caption": "Rosace de Zellige : symétrie rotationnelle",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "culture",
+          "title": "Le Zellige Marocain : Mathématiques en Mouvement",
+          "content": "Le **Zellige marocain** est l'une des plus belles applications pratiques de la rotation. Pour créer ces pavages complexes qui recouvrent le plan sans laisser de vide, les artisans (*Maâlems*) utilisent intuitivement des propriétés avancées de symétrie. Une rosace centrale est souvent générée par des rotations successives d'un motif élémentaire d'un angle $\\frac{2\\pi}{n}$ (avec $n=8, 12, 16, \\dots$). Ces motifs témoignent d'une compréhension profonde de l'invariance par rotation bien avant la formalisation de la théorie des groupes."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,276 @@
+{
+  "header": {
+    "title": "Dérivation Complète",
+    "subtitle": "Dérivabilité, applications et équations différentielles",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "derivabilite_point",
+      "category": "course",
+      "title": "Dérivabilité en un point",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "La dérivabilité mesure la capacité d'une fonction à être approchée par une droite au voisinage d'un point. C'est un concept fondamental qui permet d'étudier le comportement local d'une fonction."
+        },
+        {
+          "type": "definition",
+          "title": "Comment définir la dérivabilité en un point",
+          "content": "Soit $f$ une fonction définie sur un intervalle ouvert $I$ et $a \\in I$. On dit que $f$ est \\textbf{dérivable} en $a$ s'il existe un réel $l$ tel que :\\par\\smallskip$$\\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h} = \\blank{l}$$\\par\\smallskip Le nombre $l$ est appelé le \\textbf{nombre dérivé} de $f$ en $a$ et noté $\\blank{f'(a)}$. On peut aussi écrire :\\par\\smallskip$$\\lim_{x \\to a} \\frac{f(x)-f(a)}{x-a} = \\blank{f'(a)}$$"
+        },
+        {
+          "type": "remark",
+          "content": "Le taux de variation $\\frac{f(x)-f(a)}{x-a}$ représente le rapport entre la variation de $y$ et celle de $x$. Quand $x$ se rapproche de $a$, ce rapport tend vers $f'(a)$. En physique, on utilise souvent la notation $\\frac{df}{dx}(a)$ pour désigner le nombre dérivé. Cette notation, appelée \\textbf{notation de Leibniz}, est particulièrement utile pour exprimer des grandeurs physiques comme la vitesse instantanée ou l'accélération."
+        },
+        {
+          "type": "example",
+          "content": "Étudions la dérivabilité de $f(x)=x^2$ en $a=2$.\\par\\smallskip Calculons la limite :\\par\\smallskip$$\\lim_{x\\to 2}\\frac{f(x)-f(2)}{x-2} = \\lim_{x\\to 2}\\frac{x^2-4}{x-2} = \\lim_{x\\to 2}\\frac{(x-2)(x+2)}{x-2}$$\\par\\smallskip$$= \\lim_{x\\to 2}(x+2) = \\blank{4}$$\\par\\smallskip Donc $f$ est dérivable en $2$ et $f'(2)=\\blank{4}$."
+        }
+      ]
+    },
+    {
+      "id": "interpretation_geometrique",
+      "category": "course",
+      "title": "Interprétation géométrique",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le nombre dérivé possède une signification géométrique fondamentale : il représente le coefficient directeur de la tangente à la courbe au point considéré."
+        },
+        {
+          "type": "property",
+          "title": "Qu'est-ce que la tangente à une courbe",
+          "content": "Soit $f$ une fonction dérivable en $a$ et $(C_f)$ sa courbe représentative. La droite $(T)$ passant par le point de coordonnées $(a, f(a))$ et de coefficient directeur $f'(a)$ est appelée la \\textbf{tangente} à $(C_f)$ au point d'abscisse $a$.\\par\\smallskip L'équation de la tangente est : $$y = \\blank{f'(a)}(x-a) + \\blank{f(a)}$$\\par\\smallskip Graphiquement, la tangente $(T)$ est la droite qui touche la courbe $(C_f)$ au point $A(a, f(a))$ sans la traverser (localement). Elle représente la meilleure approximation affine de la fonction au voisinage de $a$."
+        },
+        {
+          "type": "example",
+          "content": "Déterminons l'équation de la tangente à la courbe de $f(x)=\\sqrt{x+3}$ au point d'abscisse $a=1$.\\par\\smallskip On calcule $f(1)=\\sqrt{1+3}=\\blank{2}$.\\par\\smallskip Pour $x>-3$, $f'(x)=\\frac{1}{2\\sqrt{x+3}}$, donc $f'(1)=\\frac{1}{2\\sqrt{4}}=\\blank{\\frac{1}{4}}$.\\par\\smallskip L'équation de la tangente est : $y=\\frac{1}{4}(x-1)+2$, soit $y=\\frac{1}{4}x+\\blank{\\frac{7}{4}}$."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce que l'approximation affine",
+          "content": "Soit $f$ dérivable en $a$. Il existe une fonction $\\varphi$ définie sur $I-\\{a\\}$ telle que :\\par\\smallskip$$f(x)=f'(a)(x-a)+f(a)+(x-a)\\varphi(x) \\text{ et } \\lim_{x\\to a}\\varphi(x)=\\blank{0}$$\\par\\smallskip La fonction affine $g(x)=f'(a)(x-a)+f(a)$ s'appelle l'\\textbf{approximation affine} de $f$ au voisinage de $a$.\\par\\smallskip Pour tout réel $h$ voisin de $a$ on a : $f(h)\\approx \\blank{g(h)}$"
+        },
+        {
+          "type": "remark",
+          "content": "Les approximations affines sont très utiles pour les calculs approchés. Pour $h$ voisin de $0$, on retient :\\par\\smallskip\\begin{enumerate}\\item $\\sqrt{1+h} \\approx 1 + \\frac{h}{\\blank{2}}$ (approximation de la racine carrée)\\item $\\displaystyle\\frac{1}{1+h} \\approx 1 - \\blank{h}$ (approximation de l'inverse)\\item $(1+h)^2 \\approx 1 + \\blank{2h}$ (approximation du carré)\\item $(1+h)^3 \\approx 1 + 3h$ (approximation du cube)\\end{enumerate}\\par Ces formules permettent de calculer rapidement des valeurs approchées sans calculatrice."
+        },
+        {
+          "type": "culture",
+          "title": "La vitesse instantanée en physique",
+          "content": "En physique, la dérivée représente la \\textbf{vitesse instantanée}. Si $x(t)$ est la position d'un mobile à l'instant $t$, alors $v(t)=x'(t)$ est sa vitesse instantanée à cet instant.\\par\\smallskip De même, l'accélération est la dérivée de la vitesse : $a(t)=v'(t)=x''(t)$.\\par\\smallskip Par exemple, pour un objet en chute libre, la position est $x(t)=x_0-\\frac{1}{2}gt^2$ où $g\\approx 9{,}8$ m/s². La vitesse est alors $v(t)=x'(t)=-gt$ et l'accélération $a(t)=v'(t)=-g$.\\par\\smallskip Ce lien entre dérivation et mouvement a révolutionné la physique au XVIIe siècle avec Newton et Leibniz, permettant de décrire précisément la chute des corps et les orbites planétaires.",
+          "media": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/200px-GodfreyKneller-IsaacNewton-1689.jpg",
+            "type": "image",
+            "position": "right",
+            "width": "25%",
+            "caption": "Isaac Newton (1643-1727), inventeur du calcul différentiel",
+            "shadow": true,
+            "border": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "derivees_laterales",
+      "category": "course",
+      "title": "Dérivabilité à droite et à gauche",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Certaines fonctions ne sont pas dérivables en un point mais possèdent des dérivées à droite ou à gauche. Cette notion est particulièrement utile pour étudier les fonctions définies par morceaux."
+        },
+        {
+          "type": "definition",
+          "title": "Comment définir les dérivées à droite et à gauche",
+          "content": "Soit $f$ définie sur $[a, a+r[$ avec $r>0$. On dit que $f$ est \\textbf{dérivable à droite} en $a$ si la limite suivante existe et est finie :\\par\\smallskip$$\\lim_{h\\to 0^+}\\frac{f(a+h)-f(a)}{h}=f'_d(a)$$\\par\\smallskip Soit $f$ définie sur $]a-r, a]$ avec $r>0$. On dit que $f$ est \\textbf{dérivable à gauche} en $a$ si la limite suivante existe et est finie :\\par\\smallskip$$\\lim_{h\\to 0^-}\\frac{f(a+h)-f(a)}{h}=\\blank{f'_g(a)}$$"
+        },
+        {
+          "type": "property",
+          "title": "Quand une fonction est-elle dérivable en un point",
+          "content": "$f$ est dérivable en $a$ si et seulement si :\\par\\smallskip\\begin{enumerate}\\item $f$ est dérivable à droite en $a$\\item $f$ est dérivable à gauche en $a$\\item $f'_d(a) = \\blank{f'_g(a)}$\\end{enumerate}"
+        },
+        {
+          "type": "example",
+          "content": "Étudions la dérivabilité de $f(x)=|x-3|$ en $a=3$.\\par\\smallskip Pour $x>3$, on a $|x-3|=x-3$. À droite :\\par\\smallskip$$f'_d(3)=\\lim_{x\\to 3^+}\\frac{|x-3|-0}{x-3}=\\lim_{x\\to 3^+}\\frac{x-3}{x-3}=\\blank{1}$$\\par\\smallskip Pour $x<3$, on a $|x-3|=-(x-3)$. À gauche :\\par\\smallskip$$f'_g(3)=\\lim_{x\\to 3^-}\\frac{|x-3|-0}{x-3}=\\lim_{x\\to 3^-}\\frac{-(x-3)}{x-3}=\\blank{-1}$$\\par\\smallskip Comme $f'_d(3)\\neq f'_g(3)$, $f$ n'est pas dérivable en $3$.\\par\\smallskip La courbe de $f(x)=|x-3|$ est formée de deux demi-droites de pentes $1$ et $-1$ qui se rencontrent au point $(3,0)$, formant un point anguleux. Au point $A(3,0)$, la courbe admet deux demi-tangentes de pentes différentes."
+        },
+        {
+          "type": "property",
+          "title": "Qu'indique une limite infinie",
+          "content": "Si $\\displaystyle\\lim_{x\\to a}\\frac{f(x)-f(a)}{x-a}=+\\infty$ ou $-\\infty$, alors $f$ n'est pas dérivable en $a$.\\par\\smallskip Dans ce cas, $(C_f)$ admet au point d'abscisse $a$ une \\textbf{tangente verticale} d'équation $\\blank{x=a}$."
+        },
+        {
+          "type": "remark",
+          "content": "Les demi-tangentes permettent de visualiser le comportement de la courbe au voisinage d'un point. Il existe quatre configurations possibles :\\par\\smallskip\\begin{enumerate}\\item La courbe admet une tangente (les deux demi-tangentes coïncident)\\item La courbe admet un point anguleux (les demi-tangentes ont des pentes différentes)\\item La courbe admet une tangente verticale (limite infinie)\\item La courbe admet une demi-tangente verticale d'un côté seulement\\end{enumerate}"
+        },
+        {
+          "type": "warning",
+          "content": "Une fonction peut être \\textbf{continue} en un point sans y être dérivable. Par exemple, $f(x)=|x|$ est continue en $0$ mais n'est pas dérivable en $0$ car $f'_d(0)=\\blank{1}$ et $f'_g(0)=\\blank{-1}$."
+        }
+      ]
+    },
+    {
+      "id": "fonction_derivee",
+      "category": "course",
+      "title": "Fonction dérivée et opérations",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Lorsqu'une fonction est dérivable en tout point d'un intervalle, on peut définir sa fonction dérivée. Pour dériver des fonctions combinées, on dispose de règles de calcul efficaces."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une fonction dérivable sur un intervalle",
+          "content": "Soit $f$ définie sur un intervalle $I$. On dit que $f$ est \\textbf{dérivable sur} $I$ si elle est dérivable en tout point $x$ de $I$.\\par\\smallskip La fonction $f'$ qui à chaque $x\\in I$ associe $\\blank{f'(x)}$ est appelée \\textbf{fonction dérivée} de $f$."
+        },
+        {
+          "type": "property",
+          "title": "Quelles sont les dérivées des fonctions usuelles",
+          "content": "$$\\begin{array}{|c|c|c|}\\hline \\text{Fonction } f(x) & \\text{Dérivée } f'(x) & \\text{Domaine de dérivabilité} \\\\\\hline\\hline c \\text{ (constante)} & \\blank{0} & \\mathbb{R} \\\\\\hline ax+b & \\blank{a} & \\mathbb{R} \\\\\\hline x^n \\text{ } (n\\in\\mathbb{N}^*) & \\blank{nx^{n-1}} & \\mathbb{R} \\\\\\hline \\displaystyle\\frac{1}{x} & \\blank{-\\frac{1}{x^2}} & \\mathbb{R}^* \\\\\\hline \\displaystyle\\frac{1}{x^n} & -\\frac{n}{x^{n+1}} & \\mathbb{R}^* \\\\\\hline \\sqrt{x} & \\blank{\\frac{1}{2\\sqrt{x}}} & ]0,+\\infty[ \\\\\\hline \\sin x & \\blank{\\cos x} & \\mathbb{R} \\\\\\hline \\cos x & \\blank{-\\sin x} & \\mathbb{R} \\\\\\hline \\tan x & 1+\\tan^2 x = \\displaystyle\\frac{1}{\\cos^2 x} & \\mathbb{R}\\setminus\\{\\frac{\\pi}{2}+k\\pi, k\\in\\mathbb{Z}\\} \\\\\\hline\\end{array}$$"
+        },
+        {
+          "type": "property",
+          "title": "Quelles sont les règles de dérivation",
+          "content": "Soit $u$ et $v$ dérivables sur $I$, $n\\in\\mathbb{N}^*$, $\\alpha\\in\\mathbb{R}$ :\\par\\smallskip\\textbf{Opérations algébriques :}\\par\\smallskip\\begin{itemize}\\item $(u+v)' = \\blank{u' + v'}$ \\quad ; \\quad $(\\alpha u)' = \\blank{\\alpha u'}$\\item $(u\\times v)' = \\blank{u'\\times v + u\\times v'}$\\item $(u^n)' = \\blank{n\\times u'\\times u^{n-1}}$\\end{itemize}\\par\\smallskip\\textbf{Quotients :} (si $v\\neq0$ sur $I$)\\par\\smallskip\\begin{itemize}\\item $\\left(\\displaystyle\\frac{1}{v}\\right)' = \\blank{-\\frac{v'}{v^2}}$\\item $\\left(\\displaystyle\\frac{u}{v}\\right)' = \\displaystyle\\frac{u'\\times v - u\\times v'}{\\blank{v^2}}$\\end{itemize}\\par\\smallskip\\textbf{Racine carrée :} (si $u>0$ sur $I$)\\par\\smallskip\\begin{itemize}\\item $(\\sqrt{u})' = \\displaystyle\\frac{u'}{\\blank{2\\sqrt{u}}}$\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Calculons la dérivée de $f(x)=\\sqrt{x}+x^5$ sur $]0,+\\infty[$.\\par\\smallskip On utilise $(u+v)'=u'+v'$ :\\par\\smallskip$$f'(x)=(\\sqrt{x})' + (x^5)' = \\frac{1}{2\\sqrt{x}} + \\blank{5x^4}$$"
+        },
+        {
+          "type": "remark",
+          "content": "Propriétés importantes sur les domaines de dérivabilité :\\par\\smallskip\\begin{enumerate}\\item Toute fonction \\textbf{polynôme} est dérivable sur $\\mathbb{R}$\\item Toute fonction \\textbf{rationnelle} est dérivable sur chaque intervalle de son ensemble de définition\\item Les fonctions trigonométriques $\\sin$ et $\\cos$ sont dérivables sur $\\mathbb{R}$\\item La fonction $\\tan$ est dérivable sur tout intervalle ne contenant pas de valeur de la forme $\\frac{\\pi}{2}+k\\pi$ avec $k\\in\\mathbb{Z}$\\end{enumerate}"
+        },
+        {
+          "type": "example",
+          "content": "Calculons la dérivée de $f(x)=\\frac{1}{\\tan(x)}$ sur $I=]0;\\frac{\\pi}{2}[$.\\par\\smallskip Posons $u(x)=1$ et $v(x)=\\tan(x)$.\\par\\smallskip On a $u'(x)=0$ et $v'(x)=1+\\tan^2(x)$.\\par\\smallskip En appliquant $\\left(\\frac{u}{v}\\right)'=\\frac{u'v-uv'}{v^2}$ :\\par\\smallskip$$f'(x)=\\frac{0\\times\\tan(x)-1\\times(1+\\tan^2(x))}{\\tan^2(x)}=\\frac{-(1+\\tan^2(x))}{\\blank{\\tan^2(x)}}$$"
+        },
+        {
+          "type": "warning",
+          "content": "Erreur fréquente : Ne pas confondre $(uv)'$ avec $u'v'$. La règle correcte est $(uv)'=\\blank{u'v+uv'}$. Par exemple, si $f(x)=x\\sin(x)$, alors $f'(x)=1\\times\\sin(x)+x\\times\\cos(x)=\\sin(x)+x\\cos(x)$ et \\textbf{non} $f'(x)=1\\times\\cos(x)$."
+        }
+      ]
+    },
+    {
+      "id": "monotonie",
+      "category": "course",
+      "title": "Dérivée et sens de variations",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le signe de la dérivée donne des informations précieuses sur le sens de variation d'une fonction. C'est l'une des applications les plus importantes de la dérivation."
+        },
+        {
+          "type": "property",
+          "title": "Quel est le lien entre le signe de la dérivée et les variations",
+          "content": "Soit $f$ dérivable sur un intervalle $I$ :\\par\\smallskip\\begin{enumerate}\\item Si $f$ est croissante sur $I$, alors $\\forall x\\in I$, $f'(x)\\ge\\blank{0}$\\item Si $f$ est décroissante sur $I$, alors $\\forall x\\in I$, $f'(x)\\le\\blank{0}$\\item Si $f'(x)>0$ sur $I$ (sauf en un nombre fini de points), alors $f$ est strictement \\blank{croissante} sur $I$\\item Si $f'(x)<0$ sur $I$ (sauf en un nombre fini de points), alors $f$ est strictement \\blank{décroissante} sur $I$\\item Si $f'(x)=0$ sur $I$, alors $f$ est \\blank{constante} sur $I$\\end{enumerate}"
+        },
+        {
+          "type": "remark",
+          "content": "Ces résultats fondamentaux ne sont valables que sur un \\textbf{intervalle}. Une fonction peut avoir une dérivée positive sur deux intervalles disjoints sans être croissante sur leur réunion. Par exemple, $f(x)=\\frac{1}{x}$ a une dérivée $f'(x)=-\\frac{1}{x^2}<0$ sur $]-\\infty;0[$ et sur $]0;+\\infty[$, donc $f$ est décroissante sur chacun de ces intervalles, mais on ne peut pas dire que $f$ est décroissante sur $\\mathbb{R}^*=]-\\infty;0[\\cup]0;+\\infty[$ car $f(-1)=-1<f(1)=1$."
+        },
+        {
+          "type": "example",
+          "content": "Étudions les variations de $f(x)=\\frac{2x+3}{x-1}$ sur son domaine de définition.\\par\\smallskip Le domaine est $D_f=\\mathbb{R}\\setminus\\{1\\}=]-\\infty;1[\\cup]1;+\\infty[$.\\par\\smallskip On calcule la dérivée avec $\\left(\\frac{u}{v}\\right)'=\\frac{u'v-uv'}{v^2}$ :\\par\\smallskip$$f'(x)=\\frac{2(x-1)-(2x+3)\\times 1}{(x-1)^2}=\\frac{2x-2-2x-3}{(x-1)^2}=\\frac{-5}{(x-1)^2}$$\\par\\smallskip Tableau de signes :\\par\\smallskip$$\\begin{array}{|c|ccccc|}\\hline x & -\\infty & & 1 & & +\\infty \\\\\\hline (x-1)^2 & & + & \\parallel & + & \\\\\\hline f'(x) & & \\blank{-} & \\parallel & \\blank{-} & \\\\\\hline f & & \\searrow & \\parallel & \\searrow & \\\\\\hline\\end{array}$$\\par\\smallskip Comme $(x-1)^2>0$ pour $x\\neq 1$, on a $f'(x)<0$ sur chaque intervalle.\\par\\smallskip Donc $f$ est strictement décroissante sur $]-\\infty;1[$ et sur $\\blank{]1;+\\infty[}$."
+        }
+      ]
+    },
+    {
+      "id": "extremums",
+      "category": "course",
+      "title": "Dérivée et extremums",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les extremums d'une fonction correspondent aux points où elle atteint des valeurs maximales ou minimales localement. La dérivée permet de les détecter efficacement."
+        },
+        {
+          "type": "property",
+          "title": "Quelle est la condition nécessaire pour un extremum",
+          "content": "Soit $f$ dérivable sur un intervalle ouvert $I$ et $a\\in I$.\\par\\smallskip Si $f$ admet un \\textbf{extremum} (minimum ou maximum) local en $a$, alors $\\blank{f'(a)=0}$.\\par\\smallskip Dans ce cas, la tangente à $(C_f)$ au point d'abscisse $a$ est \\blank{horizontale}."
+        },
+        {
+          "type": "remark",
+          "content": "La réciproque est fausse : $f'(a)=0$ n'implique pas toujours un extremum. Il faut étudier le signe de $f'$ au voisinage de $a$ pour conclure. Par exemple, pour $f(x)=x^3$, on a $f'(0)=0$ mais $f$ n'admet pas d'extremum en $0$ car $f'(x)=3x^2\\ge 0$ pour tout $x$, donc $f$ est strictement croissante sur $\\mathbb{R}$."
+        },
+        {
+          "type": "property",
+          "title": "Comment déterminer la nature d'un extremum",
+          "content": "Soit $f$ dérivable sur un intervalle ouvert $I$ et $a\\in I$.\\par\\smallskip\\begin{enumerate}\\item Si $f'(a)=0$ et $f'$ \\textbf{change de signe} au voisinage de $a$, alors $f(a)$ est un extremum local de $f$\\item Si $f'$ passe du positif au négatif en $a$, alors $f(a)$ est un \\blank{maximum} local\\item Si $f'$ passe du négatif au positif en $a$, alors $f(a)$ est un \\blank{minimum} local\\item $f(a)$ est la valeur maximale de $f$ sur $I$ si $\\forall x\\in I$, $f(x)\\le \\blank{f(a)}$\\item $f(a)$ est la valeur minimale de $f$ sur $I$ si $\\forall x\\in I$, $f(x)\\ge \\blank{f(a)}$\\end{enumerate}"
+        },
+        {
+          "type": "example",
+          "content": "Déterminons les extremums de $f(x)=x^2-2x+5$ sur $\\mathbb{R}$.\\par\\smallskip On calcule $f'(x)=2x-2$. Donc $f'(x)=0$ pour $x=\\blank{1}$.\\par\\smallskip Tableau de variations complet :\\par\\smallskip$$\\begin{array}{|c|ccccc|}\\hline x & -\\infty & & 1 & & +\\infty \\\\\\hline f'(x) & & \\blank{-} & 0 & \\blank{+} & \\\\\\hline & & & \\blank{4} & & \\\\f & & \\searrow & & \\nearrow & \\\\& +\\infty & & & & +\\infty \\\\\\hline\\end{array}$$\\par\\smallskip La dérivée $f'$ s'annule en $x=1$ et change de signe (de $-$ à $+$).\\par\\smallskip Donc $f$ admet un \\textbf{minimum} en $x=1$ avec $f(1)=1-2+5=\\blank{4}$."
+        },
+        {
+          "type": "culture",
+          "title": "Optimisation en technologie",
+          "content": "L'étude des extremums de fonctions est fondamentale en ingénierie et en technologie. Par exemple :\\par\\smallskip\\begin{itemize}\\item En \\textbf{télécommunications}, on cherche à maximiser la portée d'une antenne en optimisant sa hauteur et sa puissance\\item En \\textbf{aéronautique}, on minimise la résistance de l'air en optimisant la forme des ailes et du fuselage\\item En \\textbf{économie}, on maximise le profit d'une entreprise en trouvant le prix de vente optimal\\item En \\textbf{architecture}, on minimise les coûts de construction tout en maximisant la solidité des structures\\end{itemize}\\par\\smallskip Ces problèmes d'optimisation se traduisent mathématiquement par la recherche d'extremums de fonctions, ce qui nécessite le calcul de dérivées et l'étude de leur signe.",
+          "media": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Airfoil_with_flow_streamlines.svg/300px-Airfoil_with_flow_streamlines.svg.png",
+            "type": "image",
+            "position": "right",
+            "width": "30%",
+            "caption": "Profil d'aile optimisé pour minimiser la résistance aérodynamique",
+            "shadow": true,
+            "border": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "derivees_successives",
+      "category": "course",
+      "title": "Dérivées successives",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "La dérivation peut être répétée pour obtenir des dérivées d'ordre supérieur. Ces dérivées successives sont utiles pour étudier la convexité des fonctions et résoudre certaines équations différentielles."
+        },
+        {
+          "type": "definition",
+          "title": "Comment définir les dérivées successives",
+          "content": "Soit $f$ dérivable sur $I$. On dit que $f$ est \\textbf{deux fois dérivable} sur $I$ si $f'$ est dérivable sur $I$. La dérivée de $f'$ est notée $f''$ et appelée \\textbf{dérivée seconde}.\\par\\smallskip Plus généralement, pour $n\\ge 1$, on dit que $f$ est $n$ fois dérivable si $f^{(n-1)}$ est dérivable, et on pose :\\par\\smallskip$$f^{(n)} = \\blank{(f^{(n-1)})'}$$\\par\\smallskip avec les conventions : $f^{(0)}=\\blank{f}$ et $f^{(1)}=f'$."
+        },
+        {
+          "type": "remark",
+          "content": "Notations et vocabulaire pour les dérivées successives :\\par\\smallskip\\begin{enumerate}\\item $f'$ ou $f^{(1)}$ : dérivée première\\item $f''$ ou $f^{(2)}$ : dérivée seconde\\item $f'''$ ou $f^{(3)}$ : dérivée troisième\\item $f^{(4)}$, $f^{(5)}$, ... : dérivées d'ordre 4, 5, ...\\end{enumerate}\\par\\smallskip Si $y=f(x)$, on utilise aussi la notation différentielle : $f'(x)=\\frac{dy}{dx}$ ou $dy=f'(x)dx$. Cette écriture, très utilisée en physique, permet de manipuler les différentielles comme des quantités algébriques."
+        },
+        {
+          "type": "example",
+          "content": "Calculons les dérivées successives de $f(x)=\\sin(x)$.\\par\\smallskip On a successivement :\\par\\smallskip\\begin{align*}f(x) &= \\sin(x) \\\\f'(x) &= \\blank{\\cos(x)} = \\sin\\left(x+\\frac{\\pi}{2}\\right) \\\\f''(x) &= -\\sin(x) = \\sin\\left(x+\\blank{\\pi}\\right) \\\\f'''(x) &= -\\cos(x) = \\sin\\left(x+\\frac{3\\pi}{2}\\right) \\\\f^{(4)}(x) &= \\sin(x) = \\sin(x+2\\pi)\\end{align*}\\par\\smallskip On observe que $f^{(4)}(x)=f(x)$. Les dérivées se répètent avec une période de $\\blank{4}$.\\par\\smallskip On peut montrer par récurrence que : $$f^{(n)}(x) = \\sin\\left(x + \\frac{n\\pi}{\\blank{2}}\\right)$$"
+        }
+      ]
+    },
+    {
+      "id": "equations_differentielles",
+      "category": "course",
+      "title": "Équations différentielles",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Une équation différentielle relie une fonction à ses dérivées. Ces équations modélisent de nombreux phénomènes physiques, biologiques et économiques."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une équation différentielle",
+          "content": "Une \\textbf{équation différentielle} est une équation entre une fonction $f$ et ses dérivées dont la fonction $f$ est l'inconnue.\\par\\smallskip On note en général la fonction $f$ par $y$ et ses dérivées par $y'$, $y''$, $y^{(3)}$, etc.\\par\\smallskip Par exemple, $y''+\\omega^2 y=0$ est une équation différentielle d'ordre $\\blank{2}$."
+        },
+        {
+          "type": "property",
+          "title": "Quelle est la solution de l'équation $y''+\\omega^2 y=0$",
+          "content": "Soit $\\omega$ un nombre réel non nul. Les solutions de l'équation différentielle $y''+\\omega^2 y=0$ sont les fonctions $y$ définies sur $\\mathbb{R}$ par :\\par\\smallskip$$y(x)=a\\cos(\\omega x)+b\\sin(\\omega x)$$\\par\\smallskip où $a$ et $b$ sont des \\textbf{constantes réelles}.\\par\\smallskip On peut aussi écrire la solution sous la forme : $$y(x)=A\\cos(\\omega x+\\varphi)$$ où $A\\ge 0$ est l'\\textbf{amplitude} et $\\varphi$ la \\textbf{phase initiale}."
+        },
+        {
+          "type": "remark",
+          "content": "L'équation différentielle $y''+\\omega^2 y=0$ admet une \\textbf{unique solution} $y$ vérifiant les conditions initiales $y(x_0)=y_0$ et $y'(x_0)=y_i$, où $\\omega$, $x_0$, $y_0$ et $y_i$ sont des nombres réels donnés avec $\\omega\\neq 0$. Ces deux conditions permettent de déterminer uniquement les constantes $a$ et $b$. On parle alors de \\textbf{problème de Cauchy}."
+        },
+        {
+          "type": "example",
+          "content": "Résolvons l'équation $y''+16y=0$ avec les conditions $y(0)=0$ et $y'(0)=-1$.\\par\\smallskip On a $\\omega^2=16$, donc $\\omega=4$. La solution générale est :\\par\\smallskip$$y(x)=a\\cos(4x)+b\\sin(4x)$$\\par\\smallskip Calculons la dérivée : $y'(x)=-4a\\sin(4x)+4b\\cos(4x)$.\\par\\smallskip Appliquons les conditions initiales :\\par\\smallskip\\begin{enumerate}\\item $y(0)=a\\cos(0)+b\\sin(0)=a=\\blank{0}$\\item $y'(0)=-4a\\sin(0)+4b\\cos(0)=4b=-1$, donc $b=\\blank{-\\frac{1}{4}}$\\end{enumerate}\\par\\smallskip La solution unique est : $$y(x)=-\\frac{1}{4}\\sin(4x)$$"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_image_point",
+      "category": "method",
+      "title": "Sais-tu **construire** l'image d'un point par une rotation ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "L'image $M'$ vérifie $\\Omega M = \\Omega M'$ et l'angle $(\\overrightarrow{\\Omega M}, \\overrightarrow{\\Omega M'}) \\equiv \\alpha [2\\pi]$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Tracer la demi-droite $[\\Omega M)$",
+            "Tracer le cercle de centre $\\Omega$ passant par $M$",
+            "Construire la demi-droite faisant un angle $\\alpha$ avec $[\\Omega M)$",
+            "Placer $M'$ à l'intersection du cercle et de cette demi-droite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_demontrer_egalite",
+      "category": "method",
+      "title": "Maîtrises-tu la **démonstration d'égalité** de longueurs ou d'orthogonalité ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La rotation conserve les distances et les angles."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier une rotation qui envoie une figure sur une autre",
+            "Déterminer les images des points : $R(A)=A'$ et $R(B)=B'$",
+            "Conclure que $AB = A'B'$ par conservation des distances",
+            "Utiliser l'angle de rotation pour conclure sur la position relative"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_retrouver_centre",
+      "category": "method",
+      "title": "Es-tu capable de **déterminer** le centre d'une rotation ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le centre est le point d'intersection des médiatrices."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Tracer la médiatrice du segment $[AA']$",
+            "Tracer la médiatrice du segment $[BB']$",
+            "Identifier le point d'intersection $\\Omega$",
+            "Vérifier l'angle en calculant $(\\overrightarrow{\\Omega A}, \\overrightarrow{\\Omega A'})$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_decomposition",
+      "category": "method",
+      "title": "Connais-tu la **décomposition** d'une rotation en deux symétries ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Toute rotation s'écrit comme composée de deux symétries axiales."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Choisir une droite $(\\Delta)$ passant par $\\Omega$",
+            "Déterminer $(\\Delta')$ passant par $\\Omega$ telle que $(\\Delta, \\Delta') = \\frac{\\theta}{2} [\\pi]$",
+            "Écrire $R = S_{(\\Delta')} \\circ S_{(\\Delta)}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_composition_nature",
+      "category": "method",
+      "title": "Sais-tu **déterminer** la nature de la composée de deux rotations ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La nature dépend de la somme des angles $S = \\alpha + \\beta$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer la somme $S = \\alpha + \\beta$",
+            "Si $S \\not\\equiv 0 [2\\pi]$ : la composée est une rotation d'angle $S$",
+            "Si $S \\equiv 0 [2\\pi]$ : la composée est une translation"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+
+{
+  "id": "ex-gen-fonc-01",
+  "topic": "Généralités sur les Fonctions",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Domaine de définition et Parité",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Déterminer $D_f$ et étudier la parité de $f$.",
+          "hint": "Pour le domaine, le dénominateur peut-il s'annuler ? Pour la parité, vérifiez que le domaine est centré en 0, puis calculez $f(-x)$ et comparez avec $f(x)$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Fonction Bornée",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Montrer que pour tout $x \\in \\mathbb{R}$, $f(x) \\le 1$.",
+          "hint": "\\method Pour comparer $f(x)$ à 1, étudiez le signe de la différence $f(x) - 1$. Mettez l'expression au même dénominateur et essayez de faire apparaître une identité remarquable."
+        },
+        {
+          "id": "sq3",
+          "content": "En déduire que $f$ est bornée sur $\\mathbb{R}$.",
+          "hint": "Vous avez déjà montré que $f$ est majorée par 1. Utilisez la parité de la fonction (démontrée en Q1) pour trouver un minorant."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Variations",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "Calculer le taux d'accroissement $T(a,b)$ pour $a \\neq b$.",
+          "hint": "\\method Partez de la définition $T(a,b) = \\frac{f(a)-f(b)}{a-b}$. Mettez $f(a)-f(b)$ au même dénominateur, puis cherchez à factoriser le numérateur par $(a-b)$."
+        },
+        {
+          "id": "sq5",
+          "content": "Étudier les variations sur $[1, +\\infty[$ et sur $[0, 1]$.",
+          "hint": "Le signe du taux d'accroissement ne dépend que du terme $(1-ab)$. Analysez le signe de ce terme lorsque $a$ et $b$ sont dans chacun des intervalles demandés."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "id": "ex-limites-09",
+  "topic": "Limites de fonctions",
+  "context": "On considère la fonction $f$ définie par : $f(x) = \\sqrt{x^2 - 2x\\cos(x) + 1}$.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Déterminer $D_f$ l'ensemble de définition de la fonction $f$."
+    },
+    {
+      "id": "q2",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq2a",
+          "content": "Montrer que : $(\\forall x \\in \\mathbb{R}^*), \\quad \\left|\\dfrac{\\cos x}{x}\\right| \\le \\dfrac{1}{|x|}$",
+          "hint": "Utilisez l'encadrement fondamental $-1 \\le \\cos x \\le 1$ et divisez l'inégalité par $|x|$."
+        },
+        {
+          "id": "sq2b",
+          "content": "En déduire la limite de $f$ en $+\\infty$ et en $-\\infty$.",
+          "hint": "Factorisez par $x^2$ à l'intérieur de la racine en rappelant que $\\sqrt{x^2} = |x|$. Utilisez le résultat précédent et le théorème des gendarmes pour trouver la limite de $\\frac{\\cos x}{x}$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq3a",
+          "content": "Montrer que : $(\\forall x \\in \\mathbb{R}^+), \\quad |x - \\cos x| \\le f(x) \\le x + 1$.",
+          "hint": "Comparez les carrés des expressions car les termes sont positifs. Pour $f(x) \\le x+1$, étudiez le signe de $(x+1)^2 - f(x)^2$. Pour la minoration, utilisez l'identité $\\sin^2 x + \\cos^2 x = 1$."
+        },
+        {
+          "id": "sq3b",
+          "content": "En déduire $\\displaystyle\\lim_{x \\to +\\infty} \\frac{f(x)}{x}$.",
+          "hint": "Divisez l'encadrement de la question précédente par $x$ (positif en $+\\infty$) et appliquez le théorème des gendarmes aux bornes."
+        }
+      ]
+    }
+  ]
+}

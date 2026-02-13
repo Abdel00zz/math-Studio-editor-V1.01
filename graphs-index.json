@@ -1,0 +1,141 @@
+{
+    "classes":  {
+                    "2bac-se":  {
+                                    "continuite":  [
+                                                       "continuite_point",
+                                                       "image_intervalle",
+                                                       "tvi_general"
+                                                   ],
+                                    "suites":  "ex_suite_sqrt",
+                                    "complexes":  [
+                                                      "alignement_points",
+                                                      "argument_angle",
+                                                      "conjugue_symetrie",
+                                                      "cpx_conjugue",
+                                                      "cpx_mod_arg",
+                                                      "cpx_rotation",
+                                                      "ex_cpx_01_graph",
+                                                      "ex_cpx_03_graph",
+                                                      "ex_cpx_04_graph",
+                                                      "ex_cpx_05_graph",
+                                                      "ex_cpx_06_graph",
+                                                      "ex_cpx_07_graph",
+                                                      "ex_cpx_08_graph",
+                                                      "module_distance",
+                                                      "plan_complexe_intro",
+                                                      "representation_geometrique",
+                                                      "transformations_complexes"
+                                                  ],
+                                    "logarithmes":  [
+                                                        "ex_log_001_graph",
+                                                        "ex_log_002_graph",
+                                                        "ex_log_003_graph",
+                                                        "ex_log_004_graph",
+                                                        "ex_log_005_graph",
+                                                        "ex_log_006_graph",
+                                                        "ex_log_007_graph",
+                                                        "ln_courbe",
+                                                        "ln_croissance_comparee",
+                                                        "log_bases_comparaison"
+                                                    ],
+                                    "exponentielles":  [
+                                                           "courbe_exponentielle",
+                                                           "exp_limites",
+                                                           "exp_reference",
+                                                           "ex_exp_01_graph",
+                                                           "ex_exp_02_graph",
+                                                           "ex_exp_03_graph",
+                                                           "ex_exp_04_graph",
+                                                           "ex_exp_04_g_graph",
+                                                           "ex_exp_05_graph"
+                                                       ],
+                                    "etude-fonctions":  [
+                                                            "ex_hyperbola_x2",
+                                                            "ex_piecewise_rational"
+                                                        ],
+                                    "calcul-integral":  [
+                                                            "aire_entre_courbes",
+                                                            "ex_integral_01_graph",
+                                                            "ex_integral_04_graph",
+                                                            "integral_area",
+                                                            "valeur_moyenne"
+                                                        ]
+                                },
+                    "term":  {
+                                 "analyse":  [
+                                                 "ex_analyse_poly",
+                                                 "ex_rational_2x",
+                                                 "ex_suites_graph",
+                                                 "s12_graph",
+                                                 "s4a-2",
+                                                 "s6_graph"
+                                             ]
+                             },
+                    "tronc-commun-sc":  {
+                                            "droite-plan":  [
+                                                                "droite_vecteur_directeur",
+                                                                "milieu_segment",
+                                                                "repere_point_coords"
+                                                            ],
+                                            "calcul-vectoriel":  [
+                                                                     "multiplication_scalaire",
+                                                                     "somme_chasles",
+                                                                     "vecteur_egalite"
+                                                                 ]
+                                        },
+                    "1bac-sm":  {
+                                    "limites":  [
+                                                    "asymptote_horizontale",
+                                                    "intro_limites_1_sur_x",
+                                                    "intro_limites_racine_x",
+                                                    "intro_limites_x_carre",
+                                                    "limite_finie",
+                                                    "limite_infinie_point",
+                                                    "limite_infini_infini"
+                                                ],
+                                    "rotation":  [
+                                                     "ex_rot_01_fig",
+                                                     "ex_rot_02_fig",
+                                                     "ex_rot_03_fig",
+                                                     "ex_rot_04_fig",
+                                                     "ex_rot_05_fig",
+                                                     "ex_rot_06_fig"
+                                                 ],
+                                    "produit-scalaire":  [
+                                                             "cercle_diametre",
+                                                             "droite_normal",
+                                                             "ex_prod_scal_1_graph",
+                                                             "ex_prod_scal_3_graph",
+                                                             "ex_prod_scal_4_graph",
+                                                             "ex_prod_scal_euler",
+                                                             "ex_prod_scal_locus",
+                                                             "prod_scal_al_kashi",
+                                                             "prod_scal_cercle",
+                                                             "prod_scal_definition",
+                                                             "prod_scal_mediane",
+                                                             "prod_scal_proj",
+                                                             "repere_orthonorme"
+                                                         ],
+                                    "trigonometrie":  [
+                                                          "trigo_cercle_base",
+                                                          "trigo_enroulement",
+                                                          "trigo_fonctions",
+                                                          "trigo_symetrie",
+                                                          "trigo_tangente"
+                                                      ],
+                                    "barycentre":  [
+                                                       "bary_2_pts",
+                                                       "bary_3_pts",
+                                                       "bary_4_pts",
+                                                       "ex_bary_01_graph",
+                                                       "ex_bary_01_q1",
+                                                       "ex_bary_01_q3",
+                                                       "ex_bary_02_graph",
+                                                       "ex_bary_04_k_minus_1",
+                                                       "ex_bary_05_graph",
+                                                       "ex_geo_004_k1_3"
+                                                   ]
+                                }
+                },
+    "generated":  "2026-02-02 11:44:12"
+}

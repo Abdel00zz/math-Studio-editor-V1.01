@@ -1,0 +1,22 @@
+
+{
+  "id": "ex-trigo-007",
+  "topic": "Trigonométrie",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que $\\cos(3x) = 4\\cos^3(x) - 3\\cos(x)$.",
+      "hint": "On utilise $\\cos(3x) = \\cos(2x + x) = \\cos(2x)\\cos(x) - \\sin(2x)\\sin(x)$.\\par\\parAvec $\\cos(2x) = 2\\cos^2(x) - 1$ et $\\sin(2x) = 2\\sin(x)\\cos(x)$ :\\par$$\\cos(3x) = (2\\cos^2 x - 1)\\cos x - 2\\sin x \\cos x \\cdot \\sin x$$\\par$$= 2\\cos^3 x - \\cos x - 2\\sin^2 x \\cos x$$\\par$$= 2\\cos^3 x - \\cos x - 2(1-\\cos^2 x)\\cos x$$\\par$$= 2\\cos^3 x - \\cos x - 2\\cos x + 2\\cos^3 x$$\\par$$= \\boxed{4\\cos^3 x - 3\\cos x}$$"
+    },
+    {
+      "id": "q2",
+      "content": "Montrer que $\\sin(3x) = -4\\sin^3(x) + 3\\sin(x)$.",
+      "hint": "On utilise $\\sin(3x) = \\sin(2x + x) = \\sin(2x)\\cos(x) + \\cos(2x)\\sin(x)$.\\par\\parAvec $\\sin(2x) = 2\\sin x \\cos x$ et $\\cos(2x) = 1 - 2\\sin^2 x$ :\\par$$\\sin(3x) = 2\\sin x \\cos x \\cdot \\cos x + (1 - 2\\sin^2 x)\\sin x$$\\par$$= 2\\sin x \\cos^2 x + \\sin x - 2\\sin^3 x$$\\par$$= 2\\sin x (1 - \\sin^2 x) + \\sin x - 2\\sin^3 x$$\\par$$= 2\\sin x - 2\\sin^3 x + \\sin x - 2\\sin^3 x$$\\par$$= \\boxed{3\\sin x - 4\\sin^3 x}$$"
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que $\\tan(3x) = \\dfrac{3\\tan(x) - \\tan^3(x)}{1 - 3\\tan^2(x)}$ pour $x \\neq \\frac{\\pi}{6} + \\frac{k\\pi}{3}$, $k \\in \\mathbb{Z}$.",
+      "hint": "On a $\\tan(3x) = \\frac{\\sin(3x)}{\\cos(3x)}$. Divisons numérateur et dénominateur par $\\cos^3 x$ :\\par\\par$$\\tan(3x) = \\frac{3\\sin x - 4\\sin^3 x}{4\\cos^3 x - 3\\cos x} = \\frac{\\frac{3\\sin x}{\\cos^3 x} - \\frac{4\\sin^3 x}{\\cos^3 x}}{\\frac{4\\cos^3 x}{\\cos^3 x} - \\frac{3\\cos x}{\\cos^3 x}}$$\\par\\par$$= \\frac{\\frac{3\\tan x}{\\cos^2 x} - 4\\tan^3 x}{4 - \\frac{3}{\\cos^2 x}}$$\\par\\parEn utilisant $\\frac{1}{\\cos^2 x} = 1 + \\tan^2 x$ :\\par$$= \\frac{3\\tan x(1 + \\tan^2 x) - 4\\tan^3 x}{4 - 3(1 + \\tan^2 x)}$$\\par$$= \\frac{3\\tan x + 3\\tan^3 x - 4\\tan^3 x}{4 - 3 - 3\\tan^2 x} = \\boxed{\\frac{3\\tan x - \\tan^3 x}{1 - 3\\tan^2 x}}$$"
+    }
+  ]
+}

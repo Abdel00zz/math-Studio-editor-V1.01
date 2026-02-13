@@ -1,0 +1,130 @@
+
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "question": "Quelle est la négation de la proposition : « Pour tout x réel, f(x) > 0 » ?",
+      "options": [
+        { "text": "Pour tout x réel, f(x) ≤ 0", "isCorrect": false },
+        { "text": "Il existe un x réel tel que f(x) ≤ 0", "isCorrect": true },
+        { "text": "Il existe un x réel tel que f(x) < 0", "isCorrect": false },
+        { "text": "Pour tout x réel, f(x) < 0", "isCorrect": false }
+      ],
+      "explanation": "La négation de « Pour tout » (∀) est « Il existe » (∃), et la négation de > est ≤."
+    },
+    {
+      "id": "q2",
+      "type": "true-false",
+      "question": "La proposition (P et Q) est vraie si P est vraie et Q est fausse.",
+      "isTrue": false,
+      "explanation": "Pour que (P et Q) soit vraie, il faut impérativement que P et Q soient toutes les deux vraies."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "question": "L'implication P ⇒ Q est équivalente à :",
+      "options": [
+        { "text": "Q ⇒ P", "isCorrect": false },
+        { "text": "non P ou Q", "isCorrect": true },
+        { "text": "non Q ou P", "isCorrect": false },
+        { "text": "P et non Q", "isCorrect": false }
+      ],
+      "explanation": "C'est une identité remarquable de la logique : (P ⇒ Q) ≡ (¬P ∨ Q)."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "question": "Quelle est la contraposée de « Si x=2, alors x²=4 » ?",
+      "options": [
+        { "text": "Si x²=4, alors x=2", "isCorrect": false },
+        { "text": "Si x²≠4, alors x≠2", "isCorrect": true },
+        { "text": "Si x≠2, alors x²≠4", "isCorrect": false }
+      ],
+      "explanation": "La contraposée de P ⇒ Q est (non Q) ⇒ (non P). Ici : (x²≠4) ⇒ (x≠2)."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "question": "Complétez la table de vérité : Si P est Faux et Q est Vrai, quelle est la valeur de P ⇒ Q ?",
+      "options": [
+        { "text": "Vrai", "isCorrect": true },
+        { "text": "Faux", "isCorrect": false }
+      ],
+      "explanation": "L'implication est toujours vraie si la prémisse (P) est fausse. (Faux ⇒ Vrai) est Vrai."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "question": "Que signifie le quantificateur ∃ !",
+      "options": [
+        { "text": "Il n'existe pas", "isCorrect": false },
+        { "text": "Il existe au moins un", "isCorrect": false },
+        { "text": "Il existe un unique", "isCorrect": true },
+        { "text": "Quel que soit", "isCorrect": false }
+      ],
+      "explanation": "Le point d'exclamation après le quantificateur existentiel signifie l'unicité."
+    },
+    {
+      "id": "q7",
+      "type": "true-false",
+      "question": "Le raisonnement par l'absurde consiste à supposer que la proposition à démontrer est fausse et à aboutir à une contradiction.",
+      "isTrue": true,
+      "explanation": "C'est la définition exacte du raisonnement par l'absurde."
+    },
+    {
+      "id": "q8",
+      "type": "ordering",
+      "question": "Ordonnez les étapes d'un raisonnement par récurrence.",
+      "items": [
+        { "id": "1", "text": "Initialisation (vérifier au rang n0)" },
+        { "id": "2", "text": "Hérédité (Supposer P(n) et montrer P(n+1))" },
+        { "id": "3", "text": "Conclusion (Vrai pour tout n)" }
+      ],
+      "correctOrder": ["1", "2", "3"],
+      "explanation": "L'ordre logique est toujours : Initialisation, puis Hérédité, puis Conclusion."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "question": "La négation de (P ou Q) est :",
+      "options": [
+        { "text": "non P ou non Q", "isCorrect": false },
+        { "text": "non P et non Q", "isCorrect": true },
+        { "text": "non P ou Q", "isCorrect": false }
+      ],
+      "explanation": "C'est la loi de Morgan : ¬(P ∨ Q) ≡ (¬P ∧ ¬Q)."
+    },
+    {
+      "id": "q10",
+      "type": "true-false",
+      "question": "Pour montrer que (∀x ∈ E, P(x)) est fausse, un seul contre-exemple suffit.",
+      "isTrue": true,
+      "explanation": "Si on trouve un seul élément pour lequel la propriété ne marche pas, l'universalité est brisée."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "question": "Quelle proposition est vraie ?",
+      "options": [
+        { "text": "(∃y ∈ ℝ)(∀x ∈ ℝ) : y > x", "isCorrect": false },
+        { "text": "(∀x ∈ ℝ)(∃y ∈ ℝ) : y > x", "isCorrect": true },
+        { "text": "(∀x ∈ ℝ)(∀y ∈ ℝ) : y > x", "isCorrect": false },
+        { "text": "(∃x ∈ ℝ)(∃y ∈ ℝ) : y > x est impossible", "isCorrect": false }
+      ],
+      "explanation": "Pour tout x, on peut choisir y = x + 1. En revanche, il n'existe pas de réel y plus grand que tous les réels."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "question": "Parmi les énoncés suivants, lequel est une fonction propositionnelle (et pas une proposition) ?",
+      "options": [
+        { "text": "7 est un nombre premier", "isCorrect": false },
+        { "text": "√2 est un nombre rationnel", "isCorrect": false },
+        { "text": "x^2 = 4", "isCorrect": true },
+        { "text": "La somme des angles d'un triangle vaut 180°", "isCorrect": false }
+      ],
+      "explanation": "Une fonction propositionnelle dépend d'une variable (ici x). Elle ne devient vraie ou fausse qu'une fois x fixé."
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "ex-geom-rotation-carre",
+  "topic": "Géométrie Plane",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Déterminer un angle de la rotation $r$.",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "L'angle de la rotation est déterminé par le couple de vecteurs $(\\overrightarrow{AD}; \\overrightarrow{AB})$. Utilisez la propriété d'orientation du carré donnée : $(\\overrightarrow{AB},\\overrightarrow{AD}) \\equiv \\frac{\\pi}{2}$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Déterminer l'image de la droite $(DC)$ par la rotation $r$.",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Cherchez l'image d'un point connu de la droite (le point $D$) et l'image de la direction de la droite. Rappelez-vous que la rotation conserve l'\\blueb{orthogonalité} : comme $(DC) \\perp (AD)$, l'image de $(DC)$ sera perpendiculaire à l'image de $(AD)$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que : $r(M)=N$.",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "Raisonnez par \\blueb{intersection} de lieux géométriques. D'une part, comme $M \\in (DC)$, où se trouve obligatoirement $r(M)$ ? D'autre part, utilisez la donnée sur l'angle $\\widehat{MAN} = 90^{\\circ}$."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "En déduire la nature du triangle $AMN$.",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "",
+          "hint": "Une rotation est une \\blueb{isométrie} : elle conserve les distances. Que pouvez-vous dire de la longueur $AM$ et $AN$ sachant que $r(M)=N$ ?"
+        }
+      ]
+    }
+  ]
+}

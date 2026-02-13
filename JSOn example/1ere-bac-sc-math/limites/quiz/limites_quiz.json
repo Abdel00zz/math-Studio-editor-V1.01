@@ -1,0 +1,289 @@
+{
+  "questions": [
+    {
+      "id": "q1_limite_infini",
+      "type": "mcq",
+      "category": "Définition",
+      "question": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} x^2$ ?",
+      "options": [
+        { "text": "$0$", "isCorrect": false },
+        { "text": "$1$", "isCorrect": false },
+        { "text": "$+\\infty$", "isCorrect": true },
+        { "text": "N'existe pas", "isCorrect": false }
+      ],
+      "explanation": "Lorsque $x$ tend vers $+\\infty$, $x^2$ tend également vers $+\\infty$ car l'exposant est pair et positif."
+    },
+    {
+      "id": "q2_limite_inverse",
+      "type": "mcq",
+      "category": "Définition",
+      "question": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\frac{1}{x}$ ?",
+      "options": [
+        { "text": "$+\\infty$", "isCorrect": false },
+        { "text": "$0$", "isCorrect": true },
+        { "text": "$1$", "isCorrect": false },
+        { "text": "$-\\infty$", "isCorrect": false }
+      ],
+      "explanation": "Lorsque $x$ s'approche de $+\\infty$, le réel $\\frac{1}{x}$ s'approche de plus en plus de $0$. C'est une limite usuelle fondamentale."
+    },
+    {
+      "id": "q3_racine_infini",
+      "type": "mcq",
+      "category": "Définition",
+      "question": "Que vaut $\\displaystyle\\lim_{x \\to +\\infty} \\sqrt{x}$ ?",
+      "options": [
+        { "text": "$0$", "isCorrect": false },
+        { "text": "$1$", "isCorrect": false },
+        { "text": "$+\\infty$", "isCorrect": true },
+        { "text": "N'existe pas", "isCorrect": false }
+      ],
+      "explanation": "La fonction racine carrée croît indéfiniment lorsque $x$ tend vers $+\\infty$, donc $\\displaystyle\\lim_{x \\to +\\infty} \\sqrt{x} = +\\infty$."
+    },
+    {
+      "id": "q4_limite_droite_gauche",
+      "type": "true-false",
+      "category": "Définition",
+      "question": "Pour qu'une fonction $f$ admette une limite $l$ en $a$, il faut et il suffit qu'elle admette la même limite $l$ à droite et à gauche en $a$.",
+      "isTrue": true,
+      "explanation": "$\\displaystyle\\lim_{x \\to a} f(x) = l \\Leftrightarrow \\lim_{x \\to a^+} f(x) = l$ et $\\displaystyle\\lim_{x \\to a^-} f(x) = l$. Si les limites à droite et à gauche sont différentes, la fonction n'admet pas de limite en $a$."
+    },
+    {
+      "id": "q5_reflexion_locale",
+      "type": "true-false",
+      "category": "Définition",
+      "question": "La limite d'une fonction en $a$ est une notion locale : elle ne dépend de la fonction qu'au voisinage de $a$.",
+      "isTrue": true,
+      "explanation": "La limite en $a$ est une notion locale : elle ne dépend que du comportement de la fonction au voisinage de $a$. C'est pourquoi on peut avoir $\\displaystyle\\lim_{x \\to 0} f(x) = 0$ sans que $f$ soit définie en $0$. On peut considérer la fonction sur n'importe quel intervalle ouvert centré en $a$ inclus dans son domaine de définition."
+    },
+    {
+      "id": "q6_produit_limites",
+      "type": "mcq",
+      "category": "Propriété",
+      "question": "Si $\\displaystyle\\lim_{x \\to a} f(x) = 2$ et $\\displaystyle\\lim_{x \\to a} g(x) = 4$, que vaut $\\displaystyle\\lim_{x \\to a} (f \\times g)(x)$ ?",
+      "options": [
+        { "text": "$6$", "isCorrect": false },
+        { "text": "$8$", "isCorrect": true },
+        { "text": "$2$", "isCorrect": false },
+        { "text": "Forme indéterminée", "isCorrect": false }
+      ],
+      "explanation": "Lorsque deux fonctions ont des limites finies, la limite de leur produit est le produit de leurs limites : $\\displaystyle\\lim_{x \\to a} (f \\times g)(x) = \\lim_{x \\to a} f(x) \\times \\lim_{x \\to a} g(x) = 2 \\times 4 = 8$."
+    },
+    {
+      "id": "q7_limite_constante",
+      "type": "mcq",
+      "category": "Définition",
+      "question": "Si $c \\in \\mathbb{R}$, que vaut $\\displaystyle\\lim_{x \\to a} c$ ?",
+      "options": [
+        { "text": "$0$", "isCorrect": false },
+        { "text": "$c$", "isCorrect": true },
+        { "text": "$a$", "isCorrect": false },
+        { "text": "N'existe pas", "isCorrect": false }
+      ],
+      "explanation": "La limite d'une constante est toujours égale à cette constante : $\\displaystyle\\lim_{x \\to a} c = c$."
+    },
+    {
+      "id": "q8_reflexion_unicite",
+      "type": "true-false",
+      "category": "Propriété",
+      "question": "Si la limite d'une fonction numérique existe en un point, alors elle est unique.",
+      "isTrue": true,
+      "explanation": "Si une fonction admet une limite en un point, cette limite est nécessairement unique. Il ne peut pas exister deux limites différentes pour une même fonction en un même point."
+    },
+    {
+      "id": "q9_limite_polynome",
+      "type": "mcq",
+      "category": "Méthode",
+      "question": "Pour calculer $\\displaystyle\\lim_{x \\to +\\infty} (2x^3 - 5x^2 + 3x - 1)$, quelle est la méthode appropriée ?",
+      "options": [
+        { "text": "Calculer chaque terme séparément", "isCorrect": false },
+        { "text": "Considérer uniquement le terme de plus haut degré $2x^3$", "isCorrect": true },
+        { "text": "Factoriser par $x$", "isCorrect": false },
+        { "text": "Utiliser la forme conjuguée", "isCorrect": false }
+      ],
+      "explanation": "Pour un polynôme en $\\pm\\infty$, la limite est celle du monôme de plus haut degré. Ici : $\\displaystyle\\lim_{x \\to +\\infty} (2x^3 - 5x^2 + 3x - 1) = \\lim_{x \\to +\\infty} 2x^3 = +\\infty$."
+    },
+    {
+      "id": "q10_limite_rationnelle",
+      "type": "mcq",
+      "category": "Méthode",
+      "question": "Pour calculer $\\displaystyle\\lim_{x \\to +\\infty} \\frac{3x^2 + 2x + 1}{x^2 - 5}$, quelle est la réponse ?",
+      "options": [
+        { "text": "$0$", "isCorrect": false },
+        { "text": "$3$", "isCorrect": true },
+        { "text": "$+\\infty$", "isCorrect": false },
+        { "text": "$\\frac{1}{-5}$", "isCorrect": false }
+      ],
+      "explanation": "Pour une fonction rationnelle en $\\infty$, on considère le quotient des monômes de plus haut degré : $\\displaystyle\\lim_{x \\to +\\infty} \\frac{3x^2}{x^2} = 3$."
+    },
+    {
+      "id": "q11_ordre_etapes_calcul",
+      "type": "ordering",
+      "category": "Méthode",
+      "question": "Ordonner les étapes pour calculer $\\displaystyle\\lim_{x \\to +\\infty} \\frac{x^2 - 1}{2x^2 + 3}$ :",
+      "items": [
+        { "id": "1", "text": "Identifier qu'il s'agit d'une fonction rationnelle" },
+        { "id": "2", "text": "Repérer les termes de plus haut degré au numérateur et dénominateur" },
+        { "id": "3", "text": "Simplifier en ne gardant que $\\frac{x^2}{2x^2}$" },
+        { "id": "4", "text": "Conclure que la limite vaut $\\frac{1}{2}$" }
+      ],
+      "correctOrder": ["1", "2", "3", "4"],
+      "explanation": "La méthode systématique pour les limites de fonctions rationnelles en $\\infty$ : identifier le type, repérer les termes dominants, simplifier, conclure."
+    },
+    {
+      "id": "q12_trigonometrie_limite",
+      "type": "mcq",
+      "category": "Propriété",
+      "question": "Que vaut $\\displaystyle\\lim_{X \\to 0} \\frac{\\sin(X)}{X}$ ?",
+      "options": [
+        { "text": "$0$", "isCorrect": false },
+        { "text": "$1$", "isCorrect": true },
+        { "text": "$+\\infty$", "isCorrect": false },
+        { "text": "N'existe pas", "isCorrect": false }
+      ],
+      "explanation": "C'est une limite trigonométrique fondamentale : $\\displaystyle\\lim_{X \\to 0} \\frac{\\sin(X)}{X} = 1$. Elle est utilisée pour calculer de nombreuses autres limites trigonométriques."
+    },
+    {
+      "id": "q13_conjuguee",
+      "type": "mcq",
+      "category": "Méthode",
+      "question": "Pour lever l'indétermination dans $\\displaystyle\\lim_{x \\to +\\infty} (\\sqrt{x+1} - \\sqrt{x})$, quelle technique utilise-t-on ?",
+      "options": [
+        { "text": "Factorisation par $x$", "isCorrect": false },
+        { "text": "Multiplication par l'expression conjuguée", "isCorrect": true },
+        { "text": "Développement limité", "isCorrect": false },
+        { "text": "Division par le terme de plus haut degré", "isCorrect": false }
+      ],
+      "explanation": "La forme $(\\sqrt{x+1} - \\sqrt{x})$ donne $(\\infty - \\infty)$. On multiplie par $\\frac{\\sqrt{x+1} + \\sqrt{x}}{\\sqrt{x+1} + \\sqrt{x}}$ pour obtenir $\\frac{1}{\\sqrt{x+1} + \\sqrt{x}}$, dont la limite est $0$."
+    },
+    {
+      "id": "q14_theoreme_encadrement",
+      "type": "true-false",
+      "category": "Propriété",
+      "question": "Si $g(x) < f(x) < h(x)$ sur un voisinage de $a$ et si $\\displaystyle\\lim_{x \\to a} g(x) = \\lim_{x \\to a} h(x) = l$, alors $\\displaystyle\\lim_{x \\to a} f(x) = l$.",
+      "isTrue": true,
+      "explanation": "C'est le théorème des gendarmes (ou théorème d'encadrement). Si une fonction est encadrée par deux fonctions qui ont la même limite, alors elle a également cette limite."
+    },
+    {
+      "id": "q15_limite_composition",
+      "type": "mcq",
+      "category": "Application",
+      "question": "Si $\\displaystyle\\lim_{x \\to a} f(x) = l$ avec $l \\neq 0$, que vaut $\\displaystyle\\lim_{x \\to a} \\frac{1}{f(x)}$ ?",
+      "options": [
+        { "text": "$l$", "isCorrect": false },
+        { "text": "$\\frac{1}{l}$", "isCorrect": true },
+        { "text": "$0$", "isCorrect": false },
+        { "text": "$+\\infty$", "isCorrect": false }
+      ],
+      "explanation": "Pour l'inverse d'une fonction qui tend vers $l \\neq 0$ : $\\displaystyle\\lim_{x \\to a} \\frac{1}{f(x)} = \\frac{1}{l}$."
+    },
+    {
+      "id": "q16_reflexion_definie_en_a",
+      "type": "true-false",
+      "category": "Définition",
+      "question": "On peut avoir $\\displaystyle\\lim_{x \\to 0} f(x) = 0$ sans que la fonction $f$ soit définie en $0$.",
+      "isTrue": true,
+      "explanation": "La limite d'une fonction en un point ne nécessite pas que la fonction soit définie en ce point. Par exemple, $f(x) = \\frac{x^2}{x}$ n'est pas définie en $0$, mais $\\displaystyle\\lim_{x \\to 0} f(x) = 0$."
+    },
+    {
+      "id": "q17_analyse_erreur_limite",
+      "type": "error-spotting",
+      "category": "Méthode",
+      "question": "Identifier l'erreur dans le calcul de $\\displaystyle\\lim_{x \\to +\\infty} \\frac{2x^2 + 3x}{x^2 - 1}$ :",
+      "steps": [
+        { "id": "s1", "text": "On identifie une forme indéterminée $\\frac{\\infty}{\\infty}$" },
+        { "id": "s2", "text": "On simplifie : $\\frac{2x^2 + 3x}{x^2 - 1} = \\frac{2 + \\frac{3}{x}}{1 - \\frac{1}{x^2}}$", "isError": false },
+        { "id": "s3", "text": "Quand $x \\to +\\infty$ : $\\frac{3}{x} \\to 0$ et $\\frac{1}{x^2} \\to +\\infty$", "isError": true, "correction": "Quand $x \\to +\\infty$ : $\\frac{3}{x} \\to 0$ et $\\frac{1}{x^2} \\to 0$ (pas $+\\infty$)" },
+        { "id": "s4", "text": "Donc la limite vaut $\\frac{2 + 0}{1 - 0} = 2$" }
+      ],
+      "explanation": "L'erreur est à l'étape 3 : $\\frac{1}{x^2}$ tend vers $0$ quand $x \\to +\\infty$, pas vers $+\\infty$. Plus $x$ est grand, plus $\\frac{1}{x^2}$ est petit."
+    },
+    {
+      "id": "q18_forme_indeterminee_complexe",
+      "type": "mcq",
+      "category": "Application",
+      "question": "Pour calculer $\\displaystyle\\lim_{x \\to 0^+} \\frac{x}{\\sqrt{x}}$, quelle est la bonne approche ?",
+      "options": [
+        { "text": "C'est une forme indéterminée $\\frac{0}{0}$", "isCorrect": false },
+        { "text": "Simplifier : $\\frac{x}{\\sqrt{x}} = \\sqrt{x}$, donc limite = $0$", "isCorrect": true },
+        { "text": "Utiliser la règle de L'Hospital", "isCorrect": false },
+        { "text": "La limite n'existe pas", "isCorrect": false }
+      ],
+      "explanation": "On peut simplifier : $\\frac{x}{\\sqrt{x}} = \\frac{x}{x^{1/2}} = x^{1/2} = \\sqrt{x}$. Donc $\\displaystyle\\lim_{x \\to 0^+} \\frac{x}{\\sqrt{x}} = \\lim_{x \\to 0^+} \\sqrt{x} = 0$."
+    },
+    {
+      "id": "q19_factorisation_trinome",
+      "type": "mcq",
+      "category": "Application",
+      "question": "Pour calculer $\\displaystyle\\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3}$, on doit :",
+      "options": [
+        { "text": "Conclure que la limite n'existe pas car le dénominateur s'annule", "isCorrect": false },
+        { "text": "Factoriser le numérateur : $(x-3)(x+3)$ puis simplifier", "isCorrect": true },
+        { "text": "Multiplier par l'expression conjuguée", "isCorrect": false },
+        { "text": "Diviser par $x$", "isCorrect": false }
+      ],
+      "explanation": "On a une forme $\\frac{0}{0}$. En factorisant : $\\frac{x^2 - 9}{x - 3} = \\frac{(x-3)(x+3)}{x-3} = x+3$ pour $x \\neq 3$. Donc $\\displaystyle\\lim_{x \\to 3} \\frac{x^2 - 9}{x - 3} = 3 + 3 = 6$."
+    },
+    {
+      "id": "q20_ordre_operations_forme_indeterminee",
+      "type": "ordering",
+      "category": "Méthode",
+      "question": "Ordonner les étapes pour calculer $\\displaystyle\\lim_{x \\to +\\infty} (\\sqrt{x^2 + x} - x)$ :",
+      "items": [
+        { "id": "1", "text": "Identifier la forme indéterminée $(\\infty - \\infty)$" },
+        { "id": "2", "text": "Multiplier par l'expression conjuguée $\\frac{\\sqrt{x^2 + x} + x}{\\sqrt{x^2 + x} + x}$" },
+        { "id": "3", "text": "Simplifier : obtenir $\\frac{x}{\\sqrt{x^2 + x} + x}$" },
+        { "id": "4", "text": "Factoriser par $x$ et conclure que la limite vaut $\\frac{1}{2}$" }
+      ],
+      "correctOrder": ["1", "2", "3", "4"],
+      "explanation": "Méthode de l'expression conjuguée : identifier l'indétermination, multiplier par le conjugué, simplifier, factoriser pour conclure."
+    },
+    {
+      "id": "q21_limite_trigonometrique_composee",
+      "type": "mcq",
+      "category": "Application",
+      "question": "Que vaut $\\displaystyle\\lim_{x \\to 0} \\frac{\\sin(3x)}{x}$ ?",
+      "options": [
+        { "text": "$0$", "isCorrect": false },
+        { "text": "$1$", "isCorrect": false },
+        { "text": "$3$", "isCorrect": true },
+        { "text": "$\\frac{1}{3}$", "isCorrect": false }
+      ],
+      "explanation": "On écrit : $\\frac{\\sin(3x)}{x} = 3 \\times \\frac{\\sin(3x)}{3x}$. En posant $X = 3x$, quand $x \\to 0$, $X \\to 0$. Donc : $\\displaystyle\\lim_{x \\to 0} \\frac{\\sin(3x)}{x} = 3 \\times \\lim_{X \\to 0} \\frac{\\sin(X)}{X} = 3 \\times 1 = 3$."
+    },
+    {
+      "id": "q22_reflexion_definition_epsilon",
+      "type": "true-false",
+      "category": "Définition",
+      "question": "La définition mathématique $\\displaystyle\\lim_{x \\to a} f(x) = l$ signifie : $\\forall \\varepsilon > 0, \\exists \\alpha > 0, \\forall x \\in D_f, |x - a| < \\alpha \\Rightarrow |f(x) - l| < \\varepsilon$.",
+      "isTrue": true,
+      "explanation": "C'est la définition formelle (epsilon-alpha) de la limite finie en un point. Elle exprime que $f(x)$ peut être rendu aussi proche de $l$ que souhaité en prenant $x$ suffisamment proche de $a$. Cette définition est fondamentale en analyse mathématique."
+    },
+    {
+      "id": "q23_erreur_limite_rationnelle",
+      "type": "error-spotting",
+      "category": "Application",
+      "question": "Identifier l'erreur dans le calcul de $\\displaystyle\\lim_{x \\to 1} \\frac{x^2 + 3x - 4}{x - 1}$ :",
+      "steps": [
+        { "id": "s1", "text": "On identifie une forme $\\frac{0}{0}$ car le numérateur et le dénominateur s'annulent en $x = 1$" },
+        { "id": "s2", "text": "On cherche à factoriser le numérateur : $x^2 + 3x - 4 = (x - 1)(x + 4)$" },
+        { "id": "s3", "text": "On simplifie : $\\frac{(x - 1)(x + 4)}{x - 1} = x + 4$", "isError": false },
+        { "id": "s4", "text": "Donc $\\displaystyle\\lim_{x \\to 1} \\frac{x^2 + 3x - 4}{x - 1} = 1 + 4 = 5$", "isError": false }
+      ],
+      "correctOrder": ["s1", "s2", "s3", "s4"],
+      "explanation": "Toutes les étapes sont correctes ! La factorisation $x^2 + 3x - 4 = (x - 1)(x + 4)$ est juste (on vérifie : $-1 + 4 = 3$ et $(-1) \\times 4 = -4$), et la limite vaut bien $5$."
+    },
+    {
+      "id": "q24_synthese_methodes",
+      "type": "mcq",
+      "category": "Application",
+      "question": "Pour calculer $\\displaystyle\\lim_{x \\to +\\infty} \\frac{\\sqrt{4x^2 + x} - 2x}{x}$, quelle méthode est la plus efficace ?",
+      "options": [
+        { "text": "Factoriser directement par $x$ au numérateur", "isCorrect": false },
+        { "text": "Multiplier par l'expression conjuguée, puis factoriser par $x$", "isCorrect": true },
+        { "text": "Diviser chaque terme par $x$ sans simplification préalable", "isCorrect": false },
+        { "text": "Utiliser la limite trigonométrique de référence", "isCorrect": false }
+      ],
+      "explanation": "C'est une forme $\\frac{\\infty}{\\infty}$ avec une différence de racines. On multiplie par le conjugué : $\\frac{\\sqrt{4x^2 + x} + 2x}{\\sqrt{4x^2 + x} + 2x}$ pour obtenir $\\frac{x}{x(\\sqrt{4x^2 + x} + 2x)}$. En factorisant par $x$ sous la racine et en simplifiant, on trouve que la limite vaut $0$."
+    }
+  ]
+}

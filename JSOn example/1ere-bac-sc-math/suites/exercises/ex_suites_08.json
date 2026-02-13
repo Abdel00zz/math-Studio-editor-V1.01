@@ -1,0 +1,51 @@
+{
+  "id": "ex-suites-008",
+  "topic": "Suites numériques",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Calculer $F_{16}$.",
+      "hint": "On calcule les termes successifs :\n$F_1 = 1$, $F_2 = 1$, $F_3 = 2$, $F_4 = 3$, $F_5 = 5$, $F_6 = 8$, $F_7 = 13$, $F_8 = 21$,\n$F_9 = 34$, $F_{10} = 55$, $F_{11} = 89$, $F_{12} = 144$, $F_{13} = 233$, $F_{14} = 377$,\n$F_{15} = 610$, $\\boxed{F_{16} = 987}$."
+    },
+    {
+      "id": "q2",
+      "content": "Montrer que l'équation $x^2 - x - 1 = 0$ possède une unique solution positive que nous noterons $\\varphi$. Le nombre $\\varphi$ est appelé le nombre d'or.",
+      "hint": "L'équation $x^2 - x - 1 = 0$ a pour discriminant :\n$\\Delta = 1 + 4 = 5$\n\nLes solutions sont :\n$$x = \\frac{1 \\pm \\sqrt{5}}{2}$$\n\n• $x_1 = \\frac{1 + \\sqrt{5}}{2} \\approx 1.618$ (positif)\n• $x_2 = \\frac{1 - \\sqrt{5}}{2} \\approx -0.618$ (négatif)\n\nDonc il existe une unique solution positive :\n$$\\boxed{\\varphi = \\frac{1 + \\sqrt{5}}{2}}$$"
+    },
+    {
+      "id": "q3",
+      "content": "Montrer les égalités : $\\varphi + 1 = \\varphi^2$, $\\varphi = 1 + \\frac{1}{\\varphi}$, $1 - \\frac{1}{\\varphi} = \\frac{1}{\\varphi^2}$ et $\\frac{\\varphi}{1+\\varphi^2} = \\frac{1}{\\sqrt{5}}$.",
+      "hint": "Comme $\\varphi$ est solution de $x^2 - x - 1 = 0$, on a $\\varphi^2 = \\varphi + 1$.\n\n• **$\\varphi + 1 = \\varphi^2$ :** Direct, c'est la relation caractéristique. ✓\n\n• **$\\varphi = 1 + \\frac{1}{\\varphi}$ :** En divisant $\\varphi^2 = \\varphi + 1$ par $\\varphi$ :\n$\\varphi = 1 + \\frac{1}{\\varphi}$ ✓\n\n• **$1 - \\frac{1}{\\varphi} = \\frac{1}{\\varphi^2}$ :**\n$1 - \\frac{1}{\\varphi} = \\frac{\\varphi - 1}{\\varphi}$. Or $\\varphi - 1 = \\frac{\\sqrt{5}-1}{2}$ et $\\frac{1}{\\varphi} = \\frac{2}{1+\\sqrt{5}} = \\frac{\\sqrt{5}-1}{2}$.\nDonc $1 - \\frac{1}{\\varphi} = \\frac{\\varphi - 1}{\\varphi} = \\frac{1}{\\varphi^2}$ (car $\\varphi(\\varphi-1) = \\varphi^2 - \\varphi = 1$). ✓\n\n• **$\\frac{\\varphi}{1+\\varphi^2} = \\frac{1}{\\sqrt{5}}$ :**\n$1 + \\varphi^2 = 1 + \\varphi + 1 = 2 + \\varphi = 2 + \\frac{1+\\sqrt{5}}{2} = \\frac{5+\\sqrt{5}}{2}$\n$\\frac{\\varphi}{1+\\varphi^2} = \\frac{\\frac{1+\\sqrt{5}}{2}}{\\frac{5+\\sqrt{5}}{2}} = \\frac{1+\\sqrt{5}}{5+\\sqrt{5}} = \\frac{1+\\sqrt{5}}{\\sqrt{5}(\\sqrt{5}+1)} = \\frac{1}{\\sqrt{5}}$ ✓"
+    },
+    {
+      "id": "q4",
+      "content": "Soient $\\alpha$ et $\\beta$ deux réels. On pose pour tout $n \\in \\mathbb{N}^*$ : $V_n = \\alpha \\times \\varphi^n + \\beta \\times \\left(-\\frac{1}{\\varphi}\\right)^n$. Vérifier que la suite $(V_n)_{n \\geq 1}$ satisfait la relation : $V_{n+1} + V_n = V_{n+2}$ pour tout $n \\in \\mathbb{N}^*$.",
+      "hint": "Posons $\\psi = -\\frac{1}{\\varphi} = \\frac{1-\\sqrt{5}}{2}$ (l'autre racine de $x^2 - x - 1 = 0$).\n\nAlors $\\psi^2 = \\psi + 1$ aussi.\n\n$$V_{n+2} = \\alpha\\varphi^{n+2} + \\beta\\psi^{n+2}$$\n$$= \\alpha\\varphi^n \\cdot \\varphi^2 + \\beta\\psi^n \\cdot \\psi^2$$\n$$= \\alpha\\varphi^n(\\varphi + 1) + \\beta\\psi^n(\\psi + 1)$$\n$$= \\alpha\\varphi^{n+1} + \\alpha\\varphi^n + \\beta\\psi^{n+1} + \\beta\\psi^n$$\n$$= V_{n+1} + V_n$$ ✓"
+    },
+    {
+      "id": "q5",
+      "content": "Déterminer $\\alpha$ et $\\beta$ de sorte que $V_1 = V_2 = 1$. Ainsi, pour tout $n \\in \\mathbb{N}^*$, $V_n = F_n$ désigne le nombre de lapins au bout de $n$ mois.",
+      "hint": "On résout le système :\n$$\\begin{cases} V_1 = \\alpha\\varphi + \\beta\\psi = 1 \\\\ V_2 = \\alpha\\varphi^2 + \\beta\\psi^2 = 1 \\end{cases}$$\n\nAvec $\\varphi = \\frac{1+\\sqrt{5}}{2}$, $\\psi = \\frac{1-\\sqrt{5}}{2}$, $\\varphi^2 = \\frac{3+\\sqrt{5}}{2}$, $\\psi^2 = \\frac{3-\\sqrt{5}}{2}$.\n\nEn soustrayant : $\\alpha(\\varphi^2 - \\varphi) + \\beta(\\psi^2 - \\psi) = 0$\n\n$\\alpha \\cdot 1 + \\beta \\cdot 1 = 0$ (car $\\varphi^2 - \\varphi = 1$ et $\\psi^2 - \\psi = 1$)\n\nDonc $\\beta = -\\alpha$. En remplaçant dans $V_1 = 1$ :\n$\\alpha(\\varphi - \\psi) = 1 \\implies \\alpha \\cdot \\sqrt{5} = 1 \\implies \\alpha = \\frac{1}{\\sqrt{5}}$\n\n$$\\boxed{\\alpha = \\frac{1}{\\sqrt{5}}, \\quad \\beta = -\\frac{1}{\\sqrt{5}}}$$"
+    },
+    {
+      "id": "q6",
+      "content": "Vérifier que $\\frac{1-\\sqrt{5}}{2} = -\\frac{1}{\\varphi}$ et en déduire que : $(\\forall n \\in \\mathbb{N}^*) \\quad F_n = \\dfrac{\\left(\\frac{1+\\sqrt{5}}{2}\\right)^n - \\left(\\frac{1-\\sqrt{5}}{2}\\right)^n}{\\sqrt{5}}$.",
+      "hint": "**Vérification :**\n$-\\frac{1}{\\varphi} = -\\frac{2}{1+\\sqrt{5}} = -\\frac{2(1-\\sqrt{5})}{(1+\\sqrt{5})(1-\\sqrt{5})} = -\\frac{2(1-\\sqrt{5})}{1-5} = \\frac{1-\\sqrt{5}}{2}$ ✓\n\n**Formule de Binet :**\nAvec $\\alpha = \\frac{1}{\\sqrt{5}}$ et $\\beta = -\\frac{1}{\\sqrt{5}}$ :\n$$F_n = V_n = \\frac{1}{\\sqrt{5}}\\varphi^n - \\frac{1}{\\sqrt{5}}\\psi^n = \\boxed{\\frac{\\varphi^n - \\psi^n}{\\sqrt{5}} = \\frac{\\left(\\frac{1+\\sqrt{5}}{2}\\right)^n - \\left(\\frac{1-\\sqrt{5}}{2}\\right)^n}{\\sqrt{5}}}$$\n\nC'est la célèbre **formule de Binet**."
+    },
+    {
+      "id": "q7",
+      "content": "À l'aide d'une calculatrice, retrouver $F_{16}$.",
+      "hint": "Avec la formule de Binet :\n$$F_{16} = \\frac{\\varphi^{16} - \\psi^{16}}{\\sqrt{5}}$$\n\n$\\varphi \\approx 1.6180339887$, donc $\\varphi^{16} \\approx 2206.9999...$\n\n$\\psi \\approx -0.6180339887$, donc $\\psi^{16} \\approx 0.000453...$\n\n$$F_{16} \\approx \\frac{2207 - 0.0005}{2.236} \\approx \\boxed{987}$$"
+    },
+    {
+      "id": "q8",
+      "content": "On considère la suite $(W_n)_{n \\geq 1}$ définie par : $W_n = \\dfrac{F_{n+1}}{F_n}$ pour tout $n \\in \\mathbb{N}^*$. Vérifier que $(\\forall n \\in \\mathbb{N}^*) \\quad W_n = \\dfrac{(-1)^{n+1} \\times \\left(\\frac{1}{\\varphi}\\right)^{2n+1} - \\varphi}{(-1)^n \\times \\left(\\frac{1}{\\varphi}\\right)^{2n} - 1}$.",
+      "hint": "On a :\n$$W_n = \\frac{F_{n+1}}{F_n} = \\frac{\\varphi^{n+1} - \\psi^{n+1}}{\\varphi^n - \\psi^n}$$\n\nDivisons numérateur et dénominateur par $\\varphi^n$ :\n$$W_n = \\frac{\\varphi - \\left(\\frac{\\psi}{\\varphi}\\right)^n \\cdot \\psi}{1 - \\left(\\frac{\\psi}{\\varphi}\\right)^n}$$\n\nOr $\\frac{\\psi}{\\varphi} = \\frac{1-\\sqrt{5}}{1+\\sqrt{5}} = -\\frac{1}{\\varphi^2}$.\n\nLa formule demandée s'obtient en substituant."
+    },
+    {
+      "id": "q9",
+      "content": "En déduire que $(\\forall n \\in \\mathbb{N}^*) \\quad W_n = \\dfrac{(-1)^n \\varphi + \\left(\\frac{1}{\\varphi}\\right)^{2n+1}}{(-1)^n + \\left(\\frac{1}{\\varphi}\\right)^{2n}}$.",
+      "hint": "En simplifiant l'expression précédente et en utilisant les propriétés de $\\varphi$, on obtient la forme demandée.\n\nCette écriture permet de voir que lorsque $n \\to +\\infty$, comme $\\frac{1}{\\varphi} < 1$, les termes en $\\left(\\frac{1}{\\varphi}\\right)^{2n}$ tendent vers $0$.\n\nDonc $\\lim_{n \\to +\\infty} W_n = \\frac{(-1)^n \\varphi}{(-1)^n} = \\boxed{\\varphi}$\n\nLe rapport de deux termes consécutifs de Fibonacci tend vers le nombre d'or !"
+    }
+  ]
+}

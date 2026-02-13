@@ -1,0 +1,57 @@
+
+{
+  "id": "ex-bary-002",
+  "topic": "Barycentre",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que $\\overrightarrow{AH} = \\dfrac{1}{2}\\overrightarrow{AB} - \\dfrac{3}{4}\\overrightarrow{AC}$.",
+      "hint": "\\method Appliquez la formule de réduction vectorielle $\\overrightarrow{AH} = \\frac{\\beta}{\\alpha+\\beta+\\gamma}\\overrightarrow{AB} + \\frac{\\gamma}{\\alpha+\\beta+\\gamma}\\overrightarrow{AC}$ avec le barycentre $H$ donné."
+    },
+    {
+      "id": "q2",
+      "content": "Construire les points $H$ et $D$.",
+      "hint": "Pour $D$, utilisez sa définition de milieu. Pour $H$, utilisez la relation vectorielle de la question 1 pour construire $\\overrightarrow{AH}$ comme une somme de vecteurs."
+    },
+    {
+      "id": "q3",
+      "content": "Exprimer $D$ sous forme du barycentre de deux points.",
+      "hint": "Quelle est la définition barycentrique du milieu d'un segment ? Quels coefficients choisir ?"
+    },
+    {
+      "id": "q4",
+      "content": "En appliquant la propriété de l'associativité du barycentre, déduire que $G$ est le milieu de $[DB]$.",
+      "hint": "\\method Regroupez les points $(A,1)$ et $(C,1)$ dans la définition de $G$. Par quel point pondéré pouvez-vous les remplacer ?"
+    },
+    {
+      "id": "q5",
+      "content": "Placer le point $G$ dans la figure.",
+      "hint": "Utilisez le résultat de la question précédente : $G$ est le milieu du segment $[DB]$."
+    },
+    {
+      "id": "q6",
+      "content": "En appliquant la propriété caractéristique du barycentre sur $G$, montrer que $\\overrightarrow{CG} = \\dfrac{1}{4}\\overrightarrow{CA} + \\dfrac{1}{2}\\overrightarrow{CB}$.",
+      "hint": "\\method Exprimez la relation de définition de $G$ en introduisant le point $C$ partout grâce à la relation de Chasles."
+    },
+    {
+      "id": "q7",
+      "content": "En déduire que $\\overrightarrow{CG} = \\dfrac{1}{2}\\overrightarrow{AB} - \\dfrac{3}{4}\\overrightarrow{AC}$.",
+      "hint": "\\method Dans l'expression de $\\overrightarrow{CG}$, remplacez $\\overrightarrow{CB}$ par $\\overrightarrow{CA} + \\overrightarrow{AB}$ et simplifiez."
+    },
+    {
+      "id": "q8",
+      "content": "En déduire que le quadrilatère $CGHA$ est un parallélogramme.",
+      "hint": "Comparez les expressions vectorielles de $\\overrightarrow{AH}$ (question 1) et $\\overrightarrow{CG}$ (question 7). Quelle est la caractérisation vectorielle d'un parallélogramme ?"
+    },
+    {
+      "id": "q9",
+      "content": "Soit $E$ le milieu de $[AB]$. Montrer que les points $H$, $E$ et $G$ sont alignés.",
+      "hint": "\\method Pour montrer l'alignement, il suffit de prouver que les vecteurs $\\overrightarrow{HE}$ et $\\overrightarrow{HG}$ sont colinéaires. Exprimez ces deux vecteurs en fonction de $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$."
+    },
+    {
+      "id": "q10",
+      "content": "Déterminer l'ensemble des points $M$ tels que $\\|5\\overrightarrow{MA} + 2\\overrightarrow{MB} - 3\\overrightarrow{MC}\\| = \\|\\overrightarrow{MA} + 2\\overrightarrow{MB} + \\overrightarrow{MC}\\|$.",
+      "hint": "\\method Utilisez la propriété de réduction vectorielle pour simplifier chaque membre de l'équation en faisant apparaître les barycentres $H$ et $G$. Quelle est la nature de l'ensemble des points $M$ tels que $MH = MG$ ?"
+    }
+  ]
+}

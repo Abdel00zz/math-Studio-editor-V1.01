@@ -1,0 +1,48 @@
+{
+  "id": "ex-limites-01",
+  "topic": "Limites : Techniques de Base",
+  "context": "Calculer les limites suivantes en utilisant les opérations et les règles de base.",
+  "sessionDate": "2026-01-25T19:00:00.000Z",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "$\\displaystyle\\lim_{x \\to 3} \\left(7x^3 + 3 + \\frac{1}{\\sqrt{x}}\\right)$",
+      "hint": "La fonction est définie en 3. Remplacez directement $x$ par 3."
+    },
+    {
+      "id": "q2",
+      "content": "$\\displaystyle\\lim_{x \\to 2} \\frac{x^2 + 3x}{(2x + 1)^2}$",
+      "hint": "Le dénominateur ne s'annule pas en 2. Remplacez $x$ par sa valeur pour calculer la limite."
+    },
+    {
+      "id": "q3",
+      "content": "$\\displaystyle\\lim_{x \\to +\\infty} \\frac{3x - 2}{x^2 - 3x + 2}$",
+      "hint": "C'est une fonction rationnelle en l'infini. Gardez uniquement le quotient des termes de plus haut degré : $\\frac{3x}{x^2}$."
+    },
+    {
+      "id": "q4",
+      "content": "$\\displaystyle\\lim_{x \\to +\\infty} (x^2 - 7x^3 + x)$",
+      "hint": "Pour un polynôme à l'infini, la limite est celle de son terme de plus haut degré. Ici, considérez uniquement $-7x^3$."
+    },
+    {
+      "id": "q5",
+      "content": "$\\displaystyle\\lim_{x \\to 0^+} \\frac{3}{-x^2 + x}$",
+      "hint": "Factorisez le dénominateur par $x$ pour étudier son signe au voisinage de $0^+$. Le numérateur est constant."
+    },
+    {
+      "id": "q6",
+      "content": "$\\displaystyle\\lim_{x \\to -\\infty} \\left(\\sqrt{x^2 + 1} - x^3\\right)$",
+      "hint": "Étudiez le signe de chaque terme. $\\sqrt{x^2+1}$ tend vers $+\\infty$ et $-x^3$ tend aussi vers $+\\infty$. Il n'y a pas d'indétermination."
+    },
+    {
+      "id": "q7",
+      "content": "$\\displaystyle\\lim_{x \\to -2} \\frac{x^3 + 8}{2x^2 + 6x + 4}$",
+      "hint": "Forme $\\frac{0}{0}$. Factorisez le numérateur par l'identité $a^3+b^3$ et le dénominateur par $(x+2)$ pour simplifier la fraction."
+    },
+    {
+      "id": "q8",
+      "content": "$\\displaystyle\\lim_{x \\to 2^+} \\left( \\frac{1}{x-2} - \\frac{1}{x^2-4} \\right)$",
+      "hint": "Réduisez les deux fractions au même dénominateur en remarquant que $x^2-4 = (x-2)(x+2)$. Simplifiez l'expression obtenue avant de passer à la limite."
+    }
+  ]
+}

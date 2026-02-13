@@ -1,0 +1,240 @@
+
+{
+  "questions": [
+    {
+      "id": "q1_analytique_ortho",
+      "type": "mcq",
+      "category": "Analytique",
+      "question": "Dans un repère orthonormé, on considère $\\vec{u}(m; 2)$ et $\\vec{v}(3; -6)$. Pour quelle valeur de $m$ les vecteurs sont-ils orthogonaux ?",
+      "options": [
+        { "text": "4", "isCorrect": true },
+        { "text": "-4", "isCorrect": false },
+        { "text": "2", "isCorrect": false },
+        { "text": "0", "isCorrect": false }
+      ],
+      "explanation": "Deux vecteurs sont orthogonaux si leur produit scalaire est nul : $xx' + yy' = 0$. Ici : $3m + 2(-6) = 0 \\iff 3m - 12 = 0 \\iff \\blueb{m = 4}$."
+    },
+    {
+      "id": "q2_definition_proj",
+      "type": "mcq",
+      "category": "Définition Géométrique",
+      "question": "Soient $A, B, C$ trois points et $H$ le projeté orthogonal de $C$ sur $(AB)$. Quelle égalité est toujours vraie ?",
+      "options": [
+        { "text": "$\\overrightarrow{AB} \\cdot \\overrightarrow{AC} = AB \\times AC$", "isCorrect": false },
+        { "text": "$\\overrightarrow{AB} \\cdot \\overrightarrow{AC} = \\overrightarrow{AB} \\cdot \\overrightarrow{AH}$", "isCorrect": true },
+        { "text": "$\\overrightarrow{AB} \\cdot \\overrightarrow{AC} = AB \\times AH$", "isCorrect": false },
+        { "text": "$\\overrightarrow{AB} \\cdot \\overrightarrow{AC} = 0$", "isCorrect": false }
+      ],
+      "explanation": "C'est la définition par \\blueb{projection orthogonale}. Attention, l'égalité avec les distances ($AB \\times AH$) n'est vraie que si les vecteurs sont de même sens, sinon c'est l'opposé."
+    },
+    {
+      "id": "q3_al_kashi",
+      "type": "mcq",
+      "category": "Théorème d'Al-Kashi",
+      "question": "Soit $ABC$ un triangle avec $AB=3$, $AC=5$ et $\\widehat{BAC} = \\frac{\\pi}{3}$. Que vaut la longueur $BC$ ?",
+      "options": [
+        { "text": "$\\sqrt{19}$", "isCorrect": true },
+        { "text": "$7$", "isCorrect": false },
+        { "text": "$\\sqrt{34}$", "isCorrect": false },
+        { "text": "$4$", "isCorrect": false }
+      ],
+      "explanation": "D'après Al-Kashi : $BC^2 = AB^2 + AC^2 - 2AB \\times AC \\times \\cos(\\widehat{A})$.\\\\$BC^2 = 9 + 25 - 2(3)(5)(0.5) = 34 - 15 = 19$. Donc $\\blueb{BC = \\sqrt{19}}$."
+    },
+    {
+      "id": "q4_mediane",
+      "type": "mcq",
+      "category": "Théorème de la Médiane",
+      "question": "Dans un triangle $ABC$, on donne $AB=4$, $AC=6$ et $BC=8$. Soit $I$ le milieu de $[BC]$. Calculer $AI^2$.",
+      "options": [
+        { "text": "10", "isCorrect": true },
+        { "text": "26", "isCorrect": false },
+        { "text": "13", "isCorrect": false },
+        { "text": "52", "isCorrect": false }
+      ],
+      "explanation": "Théorème de la médiane : $AB^2 + AC^2 = 2AI^2 + \\frac{1}{2}BC^2$. \\\\$16 + 36 = 2AI^2 + \\frac{64}{2} \\implies 52 = 2AI^2 + 32 \\implies 2AI^2 = 20 \\implies \\blueb{AI^2 = 10}$."
+    },
+    {
+      "id": "q5_vecteur_normal",
+      "type": "mcq",
+      "category": "Droite dans le plan",
+      "question": "Quel est un vecteur normal à la droite $(D)$ d'équation $2x - 3y + 5 = 0$ ?",
+      "options": [
+        { "text": "$\\vec{n}(2; -3)$", "isCorrect": true },
+        { "text": "$\\vec{u}(3; 2)$", "isCorrect": false },
+        { "text": "$\\vec{n}(-3; 2)$", "isCorrect": false },
+        { "text": "$\\vec{u}(-2; 3)$", "isCorrect": false }
+      ],
+      "explanation": "Pour une droite d'équation $ax + by + c = 0$, un vecteur normal est $\\vec{n}(a; b)$. Ici $\\blueb{\\vec{n}(2; -3)}$."
+    },
+    {
+      "id": "q6_distance_point_droite",
+      "type": "mcq",
+      "category": "Distance",
+      "question": "Quelle est la distance du point $A(1; 2)$ à la droite $(D) : 3x + 4y - 1 = 0$ ?",
+      "options": [
+        { "text": "2", "isCorrect": true },
+        { "text": "10", "isCorrect": false },
+        { "text": "1", "isCorrect": false },
+        { "text": "0", "isCorrect": false }
+      ],
+      "explanation": "Formule : $d(A, D) = \\frac{|ax_A + by_A + c|}{\\sqrt{a^2 + b^2}}$.\\\\Calcul : $\\frac{|3(1) + 4(2) - 1|}{\\sqrt{3^2 + 4^2}} = \\frac{|10|}{5} = \\blueb{2}$."
+    },
+    {
+      "id": "q7_aire_triangle",
+      "type": "mcq",
+      "category": "Aire",
+      "question": "L'aire d'un triangle $ABC$ est donnée par la formule :",
+      "options": [
+        { "text": "$\\frac{1}{2} |\\det(\\overrightarrow{AB}, \\overrightarrow{AC})|$", "isCorrect": true },
+        { "text": "$\\frac{1}{2} \\overrightarrow{AB} \\cdot \\overrightarrow{AC}$", "isCorrect": false },
+        { "text": "$AB \\times AC$", "isCorrect": false },
+        { "text": "$|\\det(\\overrightarrow{AB}, \\overrightarrow{AC})|$", "isCorrect": false }
+      ],
+      "explanation": "L'aire est la moitié de la valeur absolue du déterminant des vecteurs formés par deux côtés. Le produit scalaire ne donne pas directement l'aire."
+    },
+    {
+      "id": "q8_equation_cercle",
+      "type": "mcq",
+      "category": "Cercle",
+      "question": "Quel est l'ensemble des points $M(x;y)$ vérifiant $x^2 + y^2 - 2x + 4y = 0$ ?",
+      "options": [
+        { "text": "Cercle de centre $\\Omega(1; -2)$ et rayon $\\sqrt{5}$", "isCorrect": true },
+        { "text": "Cercle de centre $\\Omega(-1; 2)$ et rayon $5$", "isCorrect": false },
+        { "text": "Cercle de centre $\\Omega(1; -2)$ et rayon $3$", "isCorrect": false },
+        { "text": "L'ensemble vide", "isCorrect": false }
+      ],
+      "explanation": "On met sous forme canonique : $(x-1)^2 - 1 + (y+2)^2 - 4 = 0 \\iff (x-1)^2 + (y+2)^2 = 5$. C'est un cercle de centre $\\Omega(1; -2)$ et rayon $\\sqrt{5}$."
+    },
+    {
+      "id": "q9_cercle_diametre",
+      "type": "true-false",
+      "category": "Lieu Géométrique",
+      "question": "L'ensemble des points $M$ tels que $\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = 0$ est le cercle de diamètre $[AB]$.",
+      "isTrue": true,
+      "explanation": "C'est exact. Cela correspond aux points $M$ tels que le triangle $AMB$ est rectangle en $M$."
+    },
+    {
+      "id": "q10_ambiguite_carre",
+      "type": "true-false",
+      "category": "Piège conceptuel",
+      "question": "Pour tout vecteur $\\vec{u}$, on a $\\vec{u}^2 = ||\\vec{u}||^2$.",
+      "isTrue": true,
+      "explanation": "Le carré scalaire est toujours égal au carré de la norme. C'est une propriété fondamentale."
+    },
+    {
+      "id": "q11_erreur_identite",
+      "type": "error-spotting",
+      "category": "Chasse à l'erreur",
+      "question": "Un élève a développé $(\\vec{u} + \\vec{v})^2$. Trouvez l'erreur.",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "J'utilise l'identité remarquable vectorielle."
+        },
+        {
+          "id": "s2",
+          "text": "$(\\vec{u} + \\vec{v})^2 = \\vec{u}^2 + 2\\vec{u}\\vec{v} + \\vec{v}^2$ (abus de notation pour le produit scalaire)."
+        },
+        {
+          "id": "s3",
+          "text": "Donc $||\\vec{u} + \\vec{v}||^2 = ||\\vec{u}||^2 + ||\\vec{v}||^2 + 2 \\times ||\\vec{u}|| \\times ||\\vec{v}||$",
+          "isError": true,
+          "correction": "Le terme central est $2 \\vec{u} \\cdot \\vec{v}$ et non $2 ||\\vec{u}|| ||\\vec{v}||$. L'égalité n'est vraie que si les vecteurs sont colinéaires et de même sens."
+        }
+      ],
+      "explanation": "L'élève a confondu produit scalaire $\\vec{u} \\cdot \\vec{v}$ et produit des normes $||\\vec{u}|| \\times ||\\vec{v}||$."
+    },
+    {
+      "id": "q12_ordre_cercle",
+      "type": "ordering",
+      "category": "Méthode",
+      "question": "Remettez dans l'ordre les étapes pour trouver le centre et le rayon d'un cercle $x^2 + y^2 + ax + by + c = 0$.",
+      "items": [
+        { "id": "1", "text": "Regrouper les termes en x et en y." },
+        { "id": "2", "text": "Utiliser le début des identités remarquables (forme canonique)." },
+        { "id": "3", "text": "Passer les constantes de l'autre côté de l'égalité." },
+        { "id": "4", "text": "Identifier le centre $(x_0, y_0)$ et le rayon $R$ (racine de la constante)." }
+      ],
+      "correctOrder": ["1", "2", "3", "4"],
+      "explanation": "C'est la méthode de la forme canonique pour passer de l'équation développée à $(x-x_0)^2 + (y-y_0)^2 = R^2$."
+    },
+    {
+      "id": "q13_lieu_diff_carres",
+      "type": "mcq",
+      "category": "Lieu Géométrique",
+      "question": "Quel est l'ensemble des points $M$ tels que $MA^2 - MB^2 = 0$ ?",
+      "options": [
+        { "text": "La médiatrice de $[AB]$", "isCorrect": true },
+        { "text": "Le cercle de diamètre $[AB]$", "isCorrect": false },
+        { "text": "La droite $(AB)$", "isCorrect": false },
+        { "text": "Le milieu de $[AB]$ uniquement", "isCorrect": false }
+      ],
+      "explanation": "$MA^2 - MB^2 = 0 \\iff MA^2 = MB^2 \\iff MA = MB$. L'ensemble des points équidistants de A et B est la médiatrice de $[AB]$."
+    },
+    {
+      "id": "q14_calcul_angle",
+      "type": "mcq",
+      "category": "Calcul d'angle",
+      "question": "Si $\\vec{u} \\cdot \\vec{v} = 3$ et $||\\vec{u}|| = 2, ||\\vec{v}|| = 3$, que vaut $\\cos(\\vec{u}, \\vec{v})$ ?",
+      "options": [
+        { "text": "$1/2$", "isCorrect": true },
+        { "text": "$\\sqrt{3}/2$", "isCorrect": false },
+        { "text": "$1$", "isCorrect": false },
+        { "text": "$0$", "isCorrect": false }
+      ],
+      "explanation": "$\\cos \\theta = \\frac{\\vec{u} \\cdot \\vec{v}}{||\\vec{u}|| \\times ||\\vec{v}||} = \\frac{3}{2 \\times 3} = \\frac{3}{6} = \\frac{1}{2}$."
+    },
+    {
+      "id": "q15_inegalite",
+      "type": "true-false",
+      "category": "Propriété",
+      "question": "Pour tous vecteurs $\\vec{u}$ et $\\vec{v}$, on a toujours $|\\vec{u} \\cdot \\vec{v}| \\leq ||\\vec{u}|| \\times ||\\vec{v}||$.",
+      "isTrue": true,
+      "explanation": "C'est l'inégalité de Cauchy-Schwarz. L'égalité a lieu si et seulement si les vecteurs sont colinéaires."
+    },
+    {
+      "id": "q16_vecteur_directeur_normal",
+      "type": "error-spotting",
+      "category": "Confusion Fréquente",
+      "question": "On donne la droite $(D) : 3x - 2y + 1 = 0$. Identifier l'erreur.",
+      "steps": [
+        {
+          "id": "s1",
+          "text": "L'équation est de la forme $ax + by + c = 0$ avec $a=3, b=-2$."
+        },
+        {
+          "id": "s2",
+          "text": "Un vecteur normal est $\\vec{n}(3; -2)$."
+        },
+        {
+          "id": "s3",
+          "text": "Un vecteur directeur est $\\vec{u}(-2; 3)$." ,
+          "isError": true,
+          "correction": "Le vecteur directeur est $\\vec{u}(-b; a)$, donc $\\vec{u}(2; 3)$. Le vecteur $(-2; 3)$ serait normal à une droite perpendiculaire."
+        }
+      ],
+      "explanation": "Pour $ax+by+c=0$, $\\vec{n}(a;b)$ et $\\vec{u}(-b;a)$. Ici $\\vec{u}(2;3)$."
+    },
+    {
+      "id": "q17_cercle_tangente",
+      "type": "mcq",
+      "category": "Tangente au cercle",
+      "question": "La tangente au cercle $(C)$ de centre $\\Omega$ en un point $A$ du cercle est :",
+      "options": [
+        { "text": "La droite passant par $A$ et de vecteur normal $\\overrightarrow{\\Omega A}$", "isCorrect": true },
+        { "text": "La droite passant par $A$ et de vecteur directeur $\\overrightarrow{\\Omega A}$", "isCorrect": false },
+        { "text": "La droite $(\\Omega A)$", "isCorrect": false },
+        { "text": "La médiatrice de $[\\Omega A]$", "isCorrect": false }
+      ],
+      "explanation": "Le rayon est toujours perpendiculaire à la tangente au point de contact. Donc $\\overrightarrow{\\Omega A}$ est un vecteur normal."
+    },
+    {
+      "id": "q18_cosinus_signe",
+      "type": "true-false",
+      "category": "Réflexion",
+      "question": "Si $\\vec{u} \\cdot \\vec{v} < 0$, alors l'angle géométrique entre les vecteurs est obtus (compris entre $\\frac{\\pi}{2}$ et $\\pi$).",
+      "isTrue": true,
+      "explanation": "Le signe du produit scalaire est celui du cosinus de l'angle. Un cosinus négatif correspond à un angle obtus."
+    }
+  ]
+}

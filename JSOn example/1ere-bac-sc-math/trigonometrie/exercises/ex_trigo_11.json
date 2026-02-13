@@ -1,0 +1,32 @@
+
+{
+  "id": "ex-trigo-011",
+  "topic": "Trigonométrie",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que $(\\forall x \\in \\mathbb{R})$ : $\\cos(2x) = 2\\cos\\left(x + \\frac{\\pi}{4}\\right)\\sin\\left(x + \\frac{\\pi}{4}\\right)$.",
+      "hint": "Le membre de droite est de la forme $2\\cos(\\theta)\\sin(\\theta)$ avec $\\theta = x + \\frac{\\pi}{4}$.\\par\\parOn sait que $2\\cos(\\theta)\\sin(\\theta) = \\sin(2\\theta)$.\\par\\parDonc : $2\\cos\\left(x + \\frac{\\pi}{4}\\right)\\sin\\left(x + \\frac{\\pi}{4}\\right) = \\sin\\left(2x + \\frac{\\pi}{2}\\right)$\\par\\parOr $\\sin\\left(\\alpha + \\frac{\\pi}{2}\\right) = \\cos(\\alpha)$.\\par\\parDonc : $\\sin\\left(2x + \\frac{\\pi}{2}\\right) = \\boxed{\\cos(2x)}$ ✓"
+    },
+    {
+      "id": "q2",
+      "content": "En déduire dans $\\mathbb{R}$ les solutions de l'équation $4\\cos\\left(x + \\frac{\\pi}{4}\\right)\\sin\\left(x + \\frac{\\pi}{4}\\right) = 1$.",
+      "hint": "D'après la question précédente :\\par$$4\\cos\\left(x + \\frac{\\pi}{4}\\right)\\sin\\left(x + \\frac{\\pi}{4}\\right) = 2\\cos(2x)$$\\par\\parL'équation devient : $2\\cos(2x) = 1 \\iff \\cos(2x) = \\frac{1}{2}$\\par\\par$\\cos(2x) = \\cos\\frac{\\pi}{3}$\\par\\par$$2x = \\pm\\frac{\\pi}{3} + 2k\\pi, \\quad k \\in \\mathbb{Z}$$\\par\\par$$\\boxed{x = \\pm\\frac{\\pi}{6} + k\\pi, \\quad k \\in \\mathbb{Z}}$$"
+    },
+    {
+      "id": "q3",
+      "content": "Soit $x$ un nombre réel. Montrer que $(\\forall x \\in \\mathbb{R})$ : $A(x) = (2 + \\cos(x))(4\\cos^2(x) - 3)$.",
+      "hint": "Développons $(2 + \\cos x)(4\\cos^2 x - 3)$ :\\par$$= 2 \\cdot 4\\cos^2 x + \\cos x \\cdot 4\\cos^2 x - 2 \\cdot 3 - \\cos x \\cdot 3$$\\par$$= 8\\cos^2 x + 4\\cos^3 x - 6 - 3\\cos x$$\\par$$= \\boxed{4\\cos^3 x + 8\\cos^2 x - 3\\cos x - 6 = A(x)}$$ ✓"
+    },
+    {
+      "id": "q4",
+      "content": "Montrer que $(\\forall x \\in \\mathbb{R})$ : $2 + \\cos(x) > 0$.",
+      "hint": "Pour tout $x \\in \\mathbb{R}$, on a $-1 \\leq \\cos(x) \\leq 1$.\\par\\parDonc : $-1 + 2 \\leq \\cos(x) + 2 \\leq 1 + 2$\\par\\parC'est-à-dire : $1 \\leq 2 + \\cos(x) \\leq 3$\\par\\parPar conséquent : $\\boxed{2 + \\cos(x) \\geq 1 > 0}$ pour tout $x \\in \\mathbb{R}$."
+    },
+    {
+      "id": "q5",
+      "content": "Résoudre dans $\\mathbb{R}$ l'équation $A(x) = 0$.",
+      "hint": "D'après la factorisation :\\par$$A(x) = 0 \\iff (2 + \\cos x)(4\\cos^2 x - 3) = 0$$\\par\\parComme $2 + \\cos x > 0$ pour tout $x$ (question 4), on a :\\par$$A(x) = 0 \\iff 4\\cos^2 x - 3 = 0 \\iff \\cos^2 x = \\frac{3}{4}$$\\par$$\\iff \\cos x = \\pm\\frac{\\sqrt{3}}{2}$$\\par\\par• $\\cos x = \\frac{\\sqrt{3}}{2} \\implies x = \\pm\\frac{\\pi}{6} + 2k\\pi$\\par\\par• $\\cos x = -\\frac{\\sqrt{3}}{2} \\implies x = \\pm\\frac{5\\pi}{6} + 2k\\pi$\\par\\par$$\\boxed{\\mathcal{S} = \\left\\{\\pm\\frac{\\pi}{6} + 2k\\pi, \\pm\\frac{5\\pi}{6} + 2k\\pi \\mid k \\in \\mathbb{Z}\\right\\}}$$"
+    }
+  ]
+}

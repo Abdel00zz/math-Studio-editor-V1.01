@@ -1,0 +1,46 @@
+{
+  "tronc-commun-sc": [
+    { "label": "Coefficient Général", "value": "4" },
+    { "label": "Volume Horaire", "value": "5 Heures par semaine" },
+    { "label": "Évaluations", "value": "3 à 4 Devoirs Surveillés" }
+  ],
+  "1ere-bac-sc-ex": [
+    { "label": "Coefficient Général", "value": "7" },
+    { "label": "Volume Horaire", "value": "5 Heures par semaine" },
+    { "label": "Évaluations", "value": "3 Devoirs Surveillés" }
+  ],
+  "1ere-bac-sc-math": [
+    { "label": "Coefficient Général", "value": "9" },
+    { "label": "Volume Horaire", "value": "7 à 8 Heures" },
+    { "label": "Évaluations", "value": "4 Devoirs Surveillés" }
+  ],
+  "2eme-bac-sc-ex": [
+    { "label": "Coefficient Général", "value": "7" },
+    { "label": "Volume Horaire", "value": "5 Heures par semaine" },
+    { "label": "Évaluations", "value": "3 Devoirs Surveillés" },
+    { "label": "Examen National", "value": "Coefficient 7" }
+  ],
+  "2eme-bac-sc-pc": [
+    { "label": "Coefficient Général", "value": "7" },
+    { "label": "Volume Horaire", "value": "5 Heures par semaine" },
+    { "label": "Évaluations", "value": "3 Devoirs Surveillés" },
+    { "label": "Examen National", "value": "Coefficient 7" }
+  ],
+  "2eme-bac-sc-svt": [
+    { "label": "Coefficient Général", "value": "7" },
+    { "label": "Volume Horaire", "value": "5 Heures par semaine" },
+    { "label": "Évaluations", "value": "3 Devoirs Surveillés" },
+    { "label": "Examen National", "value": "Coefficient 7" }
+  ],
+  "2eme-bac-sc-math": [
+    { "label": "Coefficient Général", "value": "9" },
+    { "label": "Volume Horaire", "value": "8 à 9 Heures par semaine" },
+    { "label": "Évaluations", "value": "4 Devoirs Surveillés" },
+    { "label": "Examen National", "value": "Coefficient 9" }
+  ],
+  "default": [
+     { "label": "Coefficient", "value": "-" },
+     { "label": "Volume Horaire", "value": "-" },
+     { "label": "Évaluations", "value": "-" }
+  ]
+}

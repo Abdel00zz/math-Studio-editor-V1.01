@@ -1,0 +1,248 @@
+{
+  "header": {
+    "title": "Produit Scalaire (Analytique)",
+    "subtitle": "Cours Complet & Applications",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "category": "course",
+      "title": "Introduction : Du Produit Scalaire à la Géométrie Analytique",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le \\textit{produit scalaire} transforme deux vecteurs en un nombre réel, permettant de mesurer angles, longueurs et orthogonalités par le calcul. Dans un repère \\blueb{orthonormé} $(O; \\vec{i}, \\vec{j})$, cette opération se ramène à de simples multiplications de \\textit{coordonnées}, rendant accessible l'étude analytique des droites, cercles et configurations géométriques."
+        }
+      ]
+    },
+    {
+      "id": "base_repere",
+      "category": "course",
+      "title": "Base et Repère Orthonormés",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le cadre de travail pour toute géométrie analytique repose sur un repère \\blueb{orthonormé}, où les axes sont perpendiculaires et de même échelle. Établissons rigoureusement ces notions."
+        },
+        {
+          "type": "definition",
+          "title": "Quand une base est-elle orthonormée ?",
+          "content": "Soit $\\mathcal{B}(\\vec{i}, \\vec{j})$ une base du plan vectoriel $V_2$.\\begin{itemize}\\item La base $\\mathcal{B}$ est dite \\textbf{orthogonale} si et seulement si $\\vec{i} \\cdot \\vec{j} = \\blank{0}$.\\item Elle est dite \\textbf{normée} si et seulement si $\\|\\vec{i}\\| = \\|\\vec{j}\\| = \\blank{1}$.\\item Une base est \\blueb{orthonormée} (ou \\textit{orthonormale}) si elle est simultanément \\blank{orthogonale} et \\blank{normée}.\\end{itemize}",
+          "graphId": "repere_orthonorme",
+          "graphCaption": "Visualisation d'un repère orthonormé : les vecteurs de base sont perpendiculaires et de norme unitaire."
+        },
+        {
+          "type": "example",
+          "content": "Soit le repère $(O; \\vec{i}, \\vec{j})$ où $\\vec{i}(1, 0)$ et $\\vec{j}(0, 1)$.\\par\\smallskip\\\\Vérifions qu'il est orthonormé :\\\\\\par\\smallskip\\\\\\textbf{Produit scalaire :}\\\\$$\\vec{i} \\cdot \\vec{j} = 1 \\times 0 + 0 \\times 1 = \\blank{0}$$\\\\Donc $(\\vec{i}, \\vec{j})$ sont orthogonaux.\\par\\smallskip\\\\\\textbf{Normes :}\\\\$$\\|\\vec{i}\\| = \\sqrt{1^2+0^2} = \\blank{1}$$\\\\$$\\|\\vec{j}\\| = \\sqrt{0^2+1^2} = \\blank{1}$$\\par\\smallskip\\\\La base est donc \\textit{orthonormée}. Il s'agit du \\textbf{repère cartésien canonique}."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'un repère orthonormé ?",
+          "content": "Un repère $\\mathcal{R}(O; \\vec{i}, \\vec{j})$ est dit \\textbf{orthonormé} (abrégé \\textsc{ron}) si la base associée $(\\vec{i}, \\vec{j})$ est \\blank{orthonormée}. Cela équivaut à dire que les axes $(O, \\vec{i})$ et $(O, \\vec{j})$ sont \\blank{perpendiculaires} en $O$ et gradués avec la même unité de longueur."
+        },
+        {
+          "type": "remark",
+          "content": "Dans un repère orthonormé, les formules de \\textit{distance} et d'\\textit{angle} se simplifient considérablement. Par exemple, la distance entre deux points $A(x_A,y_A)$ et $B(x_B,y_B)$ s'exprime par $$AB = \\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2}$$ ce qui constitue une application directe du \\textit{théorème de Pythagore} dans le triangle rectangle formé par les projections."
+        },
+        {
+          "type": "example",
+          "content": "Considérons la base $(\\vec{u}, \\vec{v})$ avec $\\vec{u}\\left(\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}\\right)$ et $\\vec{v}\\left(-\\frac{1}{\\sqrt{2}}, \\frac{1}{\\sqrt{2}}\\right)$.\\par\\smallskip\\\\\\textbf{Vérification de l'orthogonalité :}\\\\$$\\vec{u} \\cdot \\vec{v} = \\frac{1}{\\sqrt{2}} \\times \\left(-\\frac{1}{\\sqrt{2}}\\right) + \\frac{1}{\\sqrt{2}} \\times \\frac{1}{\\sqrt{2}}$$\\\\$$= -\\frac{1}{2} + \\frac{1}{2} = \\blank{0}$$\\par\\smallskip\\\\\\textbf{Vérification des normes :}\\\\$$\\|\\vec{u}\\| = \\sqrt{\\left(\\frac{1}{\\sqrt{2}}\\right)^2 + \\left(\\frac{1}{\\sqrt{2}}\\right)^2} = \\sqrt{\\frac{1}{2}+\\frac{1}{2}} = \\blank{1}$$\\\\De même, $\\|\\vec{v}\\| = \\blank{1}$.\\par\\smallskip\\\\La base est \\textit{orthonormée} et correspond à une \\textbf{rotation} de $\\frac{\\pi}{\\blank{4}}$ radians du repère canonique."
+        }
+      ]
+    },
+    {
+      "id": "expression_analytique",
+      "category": "course",
+      "title": "Expression Analytique et Géométrique",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le cadre orthonormé établi, définissons le produit scalaire sous deux formes : \\textbf{géométrique} (projection) et \\textbf{analytique} (coordonnées). Cette dualité permet de passer entre vision intuitive et calcul rigoureux."
+        },
+        {
+          "type": "definition",
+          "title": "Comment définir le produit scalaire par projection ?",
+          "content": "Soient $\\vec{u} = \\overrightarrow{OA}$ et $\\vec{v} = \\overrightarrow{OB}$ deux vecteurs non nuls. Si $H$ désigne le \\textit{projeté orthogonal} de $B$ sur la droite $(OA)$, alors le \\textbf{produit scalaire} de $\\vec{u}$ et $\\vec{v}$ est défini par :\\\\$$\\vec{u} \\cdot \\vec{v} = \\overrightarrow{OA} \\cdot \\overrightarrow{OB} = \\overline{OA} \\times \\blank{\\overline{OH}}$$\\\\où $\\overline{OH}$ est la \\textit{mesure algébrique} du segment $[OH]$ sur l'axe orienté par $\\vec{u}$.",
+          "graphId": "prod_scal_definition",
+          "graphCaption": "Visualisation géométrique : le produit scalaire mesure le produit de la norme de u par la projection de v sur u."
+        },
+        {
+          "type": "theorem",
+          "title": "Comment calculer le produit scalaire avec les coordonnées ?",
+          "content": "Dans un repère orthonormé $(O; \\vec{i}, \\vec{j})$, si $\\vec{u}(x; y)$ et $\\vec{v}(x'; y')$, alors :\\\\$$\\vec{u} \\cdot \\vec{v} = \\blank{xx'} + \\blank{yy'}$$\\\\Cette formule permet de ramener le calcul du produit scalaire à une simple opération \\textit{arithmétique}."
+        },
+        {
+          "type": "example",
+          "content": "Calculons le produit scalaire de $\\vec{u}(3, -2)$ et $\\vec{v}(4, 5)$ dans un repère orthonormé.\\par\\smallskip\\\\\\textbf{Application de la formule :}\\\\$$\\vec{u} \\cdot \\vec{v} = 3 \\times 4 + (-2) \\times 5$$\\\\$$= \\blank{12} + (\\blank{-10})$$\\\\$$= \\blank{2}$$\\par\\smallskip\\\\\\textbf{Interprétation géométrique :}\\\\Le résultat est \\textit{positif}, donc l'angle $\\theta$ entre $\\vec{u}$ et $\\vec{v}$ vérifie $\\cos\\theta > 0$, ce qui signifie que $\\theta \\in \\left]0, \\frac{\\pi}{2}\\right[$. L'angle est \\blank{aigu}."
+        },
+        {
+          "type": "property",
+          "title": "Comment exprimer la norme d'un vecteur ?",
+          "content": "La \\textbf{norme} d'un vecteur $\\vec{u}(x; y)$ s'exprime en fonction du produit scalaire par :\\\\$$\\|\\vec{u}\\| = \\sqrt{\\vec{u} \\cdot \\vec{u}} = \\sqrt{\\blank{x^2} + \\blank{y^2}}$$\\\\Cette relation établit un lien direct entre le produit scalaire et la notion de \\textit{longueur}."
+        },
+        {
+          "type": "example",
+          "content": "Soit $\\vec{w}(5, -12)$. Calculons sa norme.\\par\\smallskip\\\\\\textbf{Calcul :}\\\\$$\\|\\vec{w}\\| = \\sqrt{5^2 + (-12)^2}$$\\\\$$= \\sqrt{25 + 144}$$\\\\$$= \\sqrt{\\blank{169}}$$\\\\$$= \\blank{13}$$\\par\\smallskip\\\\Ce vecteur a donc une longueur de $13$ unités.\\par\\smallskip\\\\\\textbf{Remarque :} Le triplet $(5, 12, 13)$ est un \\textit{triplet pythagoricien}, c'est-à-dire qu'il vérifie $5^2 + 12^2 = 13^2$."
+        },
+        {
+          "type": "property",
+          "title": "Quelle est la condition d'orthogonalité entre deux vecteurs ?",
+          "content": "Deux vecteurs $\\vec{u}(x; y)$ et $\\vec{v}(x'; y')$ sont \\textbf{orthogonaux} si et seulement si :\\\\$$\\vec{u} \\perp \\vec{v} \\iff \\vec{u} \\cdot \\vec{v} = \\blank{0} \\iff xx' + yy' = \\blank{0}$$\\\\Cette caractérisation \\textit{analytique} de l'orthogonalité est fondamentale pour l'étude des configurations géométriques."
+        },
+        {
+          "type": "example",
+          "content": "Soient $\\vec{a}(-1, 3)$ et $\\vec{b}(6, 2)$. Les vecteurs sont-ils orthogonaux ?\\par\\smallskip\\\\\\textbf{Calcul du produit scalaire :}\\\\$$\\vec{a} \\cdot \\vec{b} = (-1) \\times 6 + 3 \\times 2$$\\\\$$= -6 + 6$$\\\\$$= \\blank{0}$$\\par\\smallskip\\\\\\textbf{Conclusion :} Les vecteurs sont \\blank{orthogonaux}.\\par\\smallskip\\\\\\textbf{Interprétation :} Les droites dirigées par $\\vec{a}$ et $\\vec{b}$ sont \\blank{perpendiculaires}. Si on trace ces vecteurs depuis l'origine, ils forment un angle de $\\frac{\\pi}{\\blank{2}}$ radians."
+        },
+        {
+          "type": "property",
+          "title": "Comment relier le produit scalaire aux fonctions trigonométriques ?",
+          "content": "Soit $\\theta$ une mesure de l'\\textit{angle orienté} $(\\vec{u}, \\vec{v})$ avec $\\vec{u}$ et $\\vec{v}$ non nuls. On a les relations fondamentales :\\\\$$\\cos\\theta = \\frac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\|\\|\\vec{v}\\|} = \\frac{xx'+yy'}{\\sqrt{x^2+y^2}\\sqrt{x'^2+y'^2}}$$\\\\$$\\sin\\theta = \\frac{\\det(\\vec{u},\\vec{v})}{\\|\\vec{u}\\|\\|\\vec{v}\\|} = \\frac{\\blank{xy'}-\\blank{yx'}}{\\sqrt{x^2+y^2}\\sqrt{x'^2+y'^2}}$$\\\\où $\\det(\\vec{u},\\vec{v}) = xy' - yx'$ désigne le \\textbf{déterminant} des vecteurs $\\vec{u}$ et $\\vec{v}$."
+        },
+        {
+          "type": "example",
+          "content": "Calculons l'angle entre $\\vec{u}(1, 0)$ et $\\vec{v}(1, 1)$.\\par\\smallskip\\\\\\textbf{Calcul du produit scalaire :}\\\\$$\\vec{u} \\cdot \\vec{v} = 1 \\times 1 + 0 \\times 1 = \\blank{1}$$\\par\\smallskip\\\\\\textbf{Calcul des normes :}\\\\$$\\|\\vec{u}\\| = \\sqrt{1^2 + 0^2} = \\blank{1}$$\\\\$$\\|\\vec{v}\\| = \\sqrt{1^2 + 1^2} = \\sqrt{\\blank{2}}$$\\par\\smallskip\\\\\\textbf{Calcul de l'angle :}\\\\$$\\cos\\theta = \\frac{1}{1 \\times \\sqrt{2}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{\\blank{2}}$$\\par\\smallskip\\\\Donc $\\theta = \\frac{\\pi}{\\blank{4}}$ radians.\\par\\smallskip\\\\\\textbf{Vérification :} Le vecteur $\\vec{v}(1, 1)$ forme effectivement un angle de $\\frac{\\pi}{4}$ avec l'axe des abscisses, ce qui correspond à la bissectrice du premier quadrant."
+        },
+        {
+          "type": "example",
+          "content": "Calculons l'angle entre $\\vec{p}(\\sqrt{3}, 1)$ et $\\vec{q}(0, 2)$.\\par\\smallskip\\\\\\textbf{Produit scalaire :}\\\\$$\\vec{p} \\cdot \\vec{q} = \\sqrt{3} \\times 0 + 1 \\times 2 = \\blank{2}$$\\par\\smallskip\\\\\\textbf{Normes :}\\\\$$\\|\\vec{p}\\| = \\sqrt{(\\sqrt{3})^2 + 1^2} = \\sqrt{3 + 1} = \\blank{2}$$\\\\$$\\|\\vec{q}\\| = \\sqrt{0^2 + 2^2} = \\blank{2}$$\\par\\smallskip\\\\\\textbf{Angle :}\\\\$$\\cos\\theta = \\frac{2}{2 \\times 2} = \\frac{2}{4} = \\frac{1}{\\blank{2}}$$\\par\\smallskip\\\\Donc $\\theta = \\frac{\\pi}{\\blank{3}}$ radians.\\par\\smallskip\\\\\\textbf{Remarque :} Cet angle correspond à $60°$ dans le système sexagésimal, ce qui apparaît fréquemment dans les triangles équilatéraux."
+        }
+      ]
+    },
+    {
+      "id": "theoremes_metriques",
+      "category": "course",
+      "title": "Théorèmes Métriques Fondamentaux",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les formules analytiques établies permettent de démontrer deux \\textbf{théorèmes métriques} majeurs : \\textit{Al-Kashi} généralise Pythagore, tandis que la \\textit{relation de la médiane} relie distances et milieux."
+        },
+        {
+          "type": "theorem",
+          "title": "Quelle est la relation d'Al-Kashi (Loi des Cosinus) ?",
+          "content": "Dans un triangle $ABC$, posons $a=BC$, $b=AC$ et $c=AB$. Alors, pour tout sommet (ici $A$), on a :\\\\$$a^2 = \\blank{b^2} + \\blank{c^2} - 2bc \\cos \\blank{\\hat{A}}$$\\\\Cette relation généralise le \\textit{théorème de Pythagore} : lorsque $\\hat{A} = \\frac{\\pi}{\\blank{2}}$, on retrouve $a^2 = b^2 + c^2$ car $\\cos\\frac{\\pi}{2} = \\blank{0}$.",
+          "graphId": "prod_scal_al_kashi",
+          "graphCaption": "Triangle ABC avec visualisation de la loi des cosinus."
+        },
+        {
+          "type": "example",
+          "content": "Dans un triangle $ABC$, on donne $AB = c = 7$, $AC = b = 5$ et $\\hat{A} = \\frac{\\pi}{3}$. Calculons $BC = a$.\\par\\smallskip\\\\\\textbf{Application du théorème d'Al-Kashi :}\\\\$$a^2 = b^2 + c^2 - 2bc\\cos\\hat{A}$$\\\\$$a^2 = 5^2 + 7^2 - 2 \\times 5 \\times 7 \\times \\cos\\frac{\\pi}{3}$$\\par\\smallskip\\\\Sachant que $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$ :\\\\$$a^2 = 25 + 49 - 70 \\times \\frac{1}{2}$$\\\\$$a^2 = 74 - 35 = \\blank{39}$$\\\\$$a = \\sqrt{39} \\approx \\blank{6.24}$$\\par\\smallskip\\\\\\textbf{Vérification :} On peut constater que $a < b + c$ (inégalité triangulaire vérifiée)."
+        },
+        {
+          "type": "remark",
+          "content": "Le théorème d'Al-Kashi est également connu sous le nom de \\textit{loi des cosinus} ou \\textit{théorème de Pythagore généralisé}. Il a été formulé par le mathématicien et astronome persan \\textbf{Al-Kashi} au XVe siècle, bien que des formes équivalentes existaient déjà dans l'œuvre d'Euclide."
+        },
+        {
+          "type": "theorem",
+          "title": "Quelle est la relation de la médiane ?",
+          "content": "Soit $[AB]$ un segment et $I$ son \\textit{milieu}. Pour tout point $M$ du plan, on a :\\\\$$MA^2 + MB^2 = \\blank{2MI^2} + \\frac{1}{2}\\blank{AB^2}$$\\\\Cette formule, dite \\textit{théorème de la médiane} ou \\textit{relation de la médiane}, relie les distances d'un point aux extrémités d'un segment à sa distance au \\blank{milieu} de ce segment.",
+          "graphId": "prod_scal_mediane",
+          "graphCaption": "Illustration de la relation de la médiane dans un triangle."
+        },
+        {
+          "type": "example",
+          "content": "Dans un triangle $ABC$ rectangle en $A$, avec $AB = 3$ et $AC = 4$, calculons la longueur de la médiane $[AI]$ issue de $A$ vers le milieu $I$ de $[BC]$.\\par\\smallskip\\\\\\textbf{Étape 1 : Calcul de $BC$ par Pythagore}\\\\$$BC^2 = AB^2 + AC^2 = 3^2 + 4^2 = 9 + 16 = \\blank{25}$$\\\\Donc $BC = \\blank{5}$.\\par\\smallskip\\\\\\textbf{Étape 2 : Application du théorème de la médiane}\\\\En prenant $M = A$ (donc $MA = 0$) :\\\\$$AB^2 + AC^2 = 2AI^2 + \\frac{1}{2}BC^2$$\\\\$$9 + 16 = 2AI^2 + \\frac{25}{2}$$\\\\$$25 = 2AI^2 + 12.5$$\\\\$$2AI^2 = 25 - 12.5 = \\blank{12.5}$$\\\\$$AI^2 = \\blank{6.25}$$\\\\$$AI = \\blank{2.5}$$\\par\\smallskip\\\\\\textbf{Propriété remarquable :} Dans un triangle rectangle, la médiane issue du sommet de l'angle droit vers l'hypoténuse mesure exactement la \\textit{moitié} de l'hypoténuse : $AI = \\frac{BC}{2} = \\frac{5}{2} = 2.5$."
+        },
+        {
+          "type": "example",
+          "content": "Dans un triangle équilatéral $ABC$ de côté $a = 6$, calculons la distance $AG$ du centre de gravité $G$ à un sommet.\\par\\smallskip\\\\\\textbf{Étape 1 : Calcul de la médiane $AI$}\\\\Soit $I$ le milieu de $[BC]$. Par le théorème de la médiane appliqué au segment $[BC]$ et au point $A$ :\\\\$$AB^2 + AC^2 = 2AI^2 + \\frac{1}{2}BC^2$$\\\\$$36 + 36 = 2AI^2 + \\frac{36}{2}$$\\\\$$72 = 2AI^2 + 18$$\\\\$$2AI^2 = \\blank{54}$$\\\\$$AI^2 = \\blank{27}$$\\\\$$AI = 3\\sqrt{\\blank{3}}$$\\par\\smallskip\\\\\\textbf{Étape 2 : Position du centre de gravité}\\\\Le centre de gravité $G$ se situe aux $\\frac{2}{3}$ de la médiane depuis le sommet :\\\\$$AG = \\frac{2}{3} \\times AI = \\frac{2}{3} \\times 3\\sqrt{3} = \\blank{2\\sqrt{3}}$$\\par\\smallskip\\\\\\textbf{Vérification numérique :} $2\\sqrt{3} \\approx 3.46$ unités."
+        }
+      ]
+    },
+    {
+      "id": "droite_plan",
+      "category": "course",
+      "title": "Équations de Droites et Vecteurs Normaux",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le produit scalaire permet de définir la notion de \\textbf{vecteur normal}, clé de l'\\textit{équation cartésienne} des droites. Cette approche transforme questions géométriques en problèmes algébriques."
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'un vecteur normal à une droite ?",
+          "content": "Un vecteur $\\vec{n}$ non nul est dit \\textbf{normal} à une droite $(D)$ s'il est \\blank{orthogonal} à tout vecteur \\textit{directeur} de $(D)$. Autrement dit, si $\\vec{u}$ est un vecteur directeur de $(D)$, alors :\\\\$$\\vec{n} \\cdot \\vec{u} = \\blank{0}$$\\\\La notion de vecteur normal est fondamentale pour l'obtention de l'\\textit{équation cartésienne} d'une droite."
+        },
+        {
+          "type": "theorem",
+          "title": "Comment obtenir l'équation cartésienne d'une droite ?",
+          "content": "Toute droite $(D)$ passant par un point $A(x_0, y_0)$ et admettant $\\vec{n}(a, b)$ comme vecteur normal a pour \\textbf{équation cartésienne} :\\\\$$a(x-\\blank{x_0}) + b(y-\\blank{y_0}) = \\blank{0}$$\\\\Après développement, cette équation s'écrit sous la forme canonique : $\\boxed{ax + by + c = 0}$ où $c = -ax_0 - by_0$.\\\\\\par\\smallskip Réciproquement, l'ensemble des points $M(x,y)$ vérifiant une équation $ax+by+c=0$ (avec $(a,b) \\neq (0,0)$) est une droite admettant $\\vec{n}(\\blank{a}, \\blank{b})$ comme vecteur normal.",
+          "graphId": "droite_normal",
+          "graphCaption": "Construction d'une droite à partir d'un point et d'un vecteur normal."
+        },
+        {
+          "type": "example",
+          "content": "Déterminons l'équation de la droite $(D)$ passant par $A(2, -1)$ et de vecteur normal $\\vec{n}(3, 4)$.\\par\\smallskip\\\\\\textbf{Application de la formule :}\\\\$$3(x - 2) + 4(y - (-1)) = 0$$\\\\$$3(x - 2) + 4(y + 1) = 0$$\\par\\smallskip\\\\\\textbf{Développement :}\\\\$$3x - 6 + 4y + 4 = 0$$\\\\$$3x + 4y - \\blank{2} = 0$$\\par\\smallskip\\\\\\textbf{Vérification :} Le point $A(2, -1)$ vérifie bien l'équation :\\\\$$3 \\times 2 + 4 \\times (-1) - 2 = 6 - 4 - 2 = \\blank{0}$$ \\checkmark"
+        },
+        {
+          "type": "property",
+          "title": "Comment déterminer un vecteur directeur à partir de l'équation ?",
+          "content": "Si une droite $(D)$ admet pour équation $ax+by+c=0$ avec $\\vec{n}(a,b)$ comme vecteur normal, alors un vecteur \\textit{directeur} de $(D)$ est $\\vec{u}(\\blank{-b}, \\blank{a})$.\\\\\\par\\smallskip En effet, vérifions l'orthogonalité : $\\vec{u}\\cdot\\vec{n} = (-b) \\times a + a \\times b = \\blank{-ab} + \\blank{ab} = \\blank{0}$. Cette construction fournit systématiquement un vecteur directeur."
+        },
+        {
+          "type": "example",
+          "content": "Soit la droite $(D): 2x - 5y + 7 = 0$. Déterminons un vecteur directeur et un vecteur normal.\\par\\smallskip\\\\\\textbf{Vecteur normal :} D'après l'équation $ax + by + c = 0$, on lit directement :\\\\$$\\vec{n}(\\blank{2}, \\blank{-5})$$\\par\\smallskip\\\\\\textbf{Vecteur directeur :} En appliquant la formule $\\vec{u}(-b, a)$ :\\\\$$\\vec{u}(-(-5), 2) = \\vec{u}(\\blank{5}, \\blank{2})$$\\par\\smallskip\\\\\\textbf{Vérification de l'orthogonalité :}\\\\$$\\vec{n} \\cdot \\vec{u} = 2 \\times 5 + (-5) \\times 2 = 10 - 10 = \\blank{0}$$ \\checkmark\\par\\smallskip\\\\\\textbf{Remarque :} Tout multiple non nul de $\\vec{u}$ est aussi un vecteur directeur. Par exemple, $\\vec{u}'(10, 4) = 2\\vec{u}$ convient également."
+        },
+        {
+          "type": "remark",
+          "content": "Le passage de la forme \\textit{paramétrique} ($\\vec{u}$ directeur) à la forme \\textit{cartésienne} ($\\vec{n}$ normal) et réciproquement est une technique fondamentale en géométrie analytique. La \\textbf{rotation} de $\\frac{\\pi}{2}$ transforme un vecteur directeur $(x, y)$ en vecteur normal $(-y, x)$ ou $(y, -x)$."
+        }
+      ]
+    },
+    {
+      "id": "cercle",
+      "category": "course",
+      "title": "Étude Analytique du Cercle",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Après les droites, étudions les \\textbf{cercles}. Le produit scalaire permet deux caractérisations : par \\textit{centre-rayon} ou par \\textit{diamètre}."
+        },
+        {
+          "type": "definition",
+          "title": "Quelle est l'équation cartésienne d'un cercle ?",
+          "content": "Le cercle $(\\mathcal{C})$ de centre $\\Omega(a, b)$ et de rayon $R > 0$ est l'ensemble des points $M(x, y)$ du plan vérifiant $\\Omega M = R$, soit $\\Omega M^2 = \\blank{R^2}$. Son \\textbf{équation cartésienne} est :\\\\$$(x-a)^2 + (y-b)^2 = \\blank{R^2}$$\\\\Développée, cette équation prend la forme : $$x^2 + y^2 - \\blank{2a}x - \\blank{2b}y + (a^2+b^2-R^2)=0$$"
+        },
+        {
+          "type": "example",
+          "content": "Déterminons l'équation du cercle de centre $\\Omega(2, -3)$ et de rayon $R = 5$.\\par\\smallskip\\\\\\textbf{Forme canonique :}\\\\$$(x-\\blank{2})^2 + (y-(-3))^2 = 5^2$$\\\\$$(x-2)^2 + (y+\\blank{3})^2 = \\blank{25}$$\\par\\smallskip\\\\\\textbf{Forme développée :}\\\\Développons chaque terme :\\\\$$(x-2)^2 = x^2 - 4x + 4$$\\\\$$(y+3)^2 = y^2 + 6y + 9$$\\par\\smallskip\\\\L'équation devient :\\\\$$x^2 - 4x + 4 + y^2 + 6y + 9 = 25$$\\\\$$x^2 + y^2 - 4x + 6y + 13 - 25 = 0$$\\\\$$x^2 + y^2 - 4x + 6y - \\blank{12} = 0$$"
+        },
+        {
+          "type": "property",
+          "title": "Comment caractériser un cercle défini par un diamètre ?",
+          "content": "L'ensemble des points $M$ tels que $\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = \\blank{0}$ est le cercle de \\blank{diamètre} $[AB]$. Cette propriété découle du \\textit{théorème de l'angle inscrit} dans un demi-cercle (théorème de Thalès).\\\\\\par\\smallskip Si $A(x_A,y_A)$ et $B(x_B,y_B)$, l'équation développée s'écrit : $$(x-x_A)(x-x_B) + (y-y_A)(y-y_B) = \\blank{0}$$",
+          "graphId": "prod_scal_cercle",
+          "graphCaption": "Cercle défini par son diamètre [AB] : tout point M du cercle vérifie l'angle droit en M."
+        },
+        {
+          "type": "example",
+          "content": "Trouvons l'équation du cercle de diamètre $[AB]$ avec $A(1, 2)$ et $B(5, 4)$.\\par\\smallskip\\\\\\textbf{Condition d'appartenance :}\\\\Un point $M(x, y)$ appartient au cercle si et seulement si :\\\\$$\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = \\blank{0}$$\\par\\smallskip\\\\\\textbf{Calcul des vecteurs :}\\\\$$\\overrightarrow{MA}(1-x, 2-y)$$\\\\$$\\overrightarrow{MB}(5-x, 4-y)$$\\par\\smallskip\\\\\\textbf{Produit scalaire :}\\\\$$(1-x)(5-x) + (2-y)(4-y) = 0$$\\par\\smallskip\\\\\\textbf{Développement :}\\\\$$5 - x - 5x + x^2 + 8 - 2y - 4y + y^2 = 0$$\\\\$$x^2 + y^2 - 6x - 6y + \\blank{13} = 0$$\\par\\smallskip\\\\\\textbf{Vérification :} Le centre est $\\Omega(\\blank{3}, \\blank{3})$ (milieu de $[AB]$).\\\\Le rayon est $R = \\frac{AB}{2} = \\frac{\\sqrt{(5-1)^2+(4-2)^2}}{2} = \\frac{\\sqrt{20}}{2} = \\sqrt{\\blank{5}}$."
+        },
+        {
+          "type": "property",
+          "title": "Comment reconnaître une équation de cercle ?",
+          "content": "Soit une équation de la forme $x^2+y^2+\\alpha x+\\beta y+\\gamma=0$ avec $\\alpha, \\beta, \\gamma \\in \\mathbb{R}$. Posons $\\Delta = \\alpha^2+\\beta^2-4\\gamma$ (\\textit{discriminant géométrique}). Alors :\\begin{itemize}\\item Si $\\Delta > \\blank{0}$ : l'équation représente un \\textbf{cercle} de centre $\\Omega\\left(-\\frac{\\alpha}{2},-\\frac{\\beta}{2}\\right)$ et de rayon $R = \\frac{1}{2}\\sqrt{\\blank{\\Delta}}$.\\item Si $\\Delta = \\blank{0}$ : l'équation représente un \\textbf{point} (cercle dégénéré).\\item Si $\\Delta < 0$ : l'équation représente \\textbf{l'ensemble vide}.\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Étudions la nature de l'ensemble défini par $x^2 + y^2 - 4x + 6y + 9 = 0$.\\par\\smallskip\\\\\\textbf{Identification des coefficients :}\\\\Par comparaison avec $x^2 + y^2 + \\alpha x + \\beta y + \\gamma = 0$ :\\\\$$\\alpha = \\blank{-4}, \\quad \\beta = \\blank{6}, \\quad \\gamma = \\blank{9}$$\\par\\smallskip\\\\\\textbf{Calcul du discriminant géométrique :}\\\\$$\\Delta = \\alpha^2 + \\beta^2 - 4\\gamma$$\\\\$$\\Delta = (-4)^2 + 6^2 - 4 \\times 9$$\\\\$$\\Delta = 16 + 36 - 36 = \\blank{16}$$\\par\\smallskip\\\\Puisque $\\Delta = 16 > 0$, il s'agit d'un \\textbf{cercle}.\\par\\smallskip\\\\\\textbf{Centre du cercle :}\\\\$$\\Omega\\left(-\\frac{\\alpha}{2}, -\\frac{\\beta}{2}\\right) = \\left(-\\frac{-4}{2}, -\\frac{6}{2}\\right) = (\\blank{2}, \\blank{-3})$$\\par\\smallskip\\\\\\textbf{Rayon du cercle :}\\\\$$R = \\frac{1}{2}\\sqrt{\\Delta} = \\frac{1}{2}\\sqrt{16} = \\frac{4}{2} = \\blank{2}$$\\par\\smallskip\\\\\\textbf{Équation canonique :} $(x-2)^2 + (y+3)^2 = 4$"
+        },
+        {
+          "type": "example",
+          "content": "Analysons l'équation $x^2 + y^2 + 2x - 4y + 10 = 0$.\\par\\smallskip\\\\\\textbf{Coefficients :}\\\\$$\\alpha = 2, \\quad \\beta = -4, \\quad \\gamma = 10$$\\par\\smallskip\\\\\\textbf{Discriminant :}\\\\$$\\Delta = 2^2 + (-4)^2 - 4 \\times 10$$\\\\$$\\Delta = 4 + 16 - 40 = \\blank{-20}$$\\par\\smallskip\\\\Puisque $\\Delta = -20 < 0$, l'équation représente \\textbf{l'ensemble vide}.\\par\\smallskip\\\\\\textbf{Interprétation géométrique :} Aucun point du plan ne satisfait cette équation. Si on tentait de calculer le rayon, on obtiendrait $R^2 = \\frac{\\Delta}{4} = -5 < 0$, ce qui est impossible pour un rayon réel."
+        },
+        {
+          "type": "remark",
+          "content": "La forme développée d'une équation de cercle se caractérise par l'égalité des coefficients de $x^2$ et $y^2$ (tous deux égaux à $\\blank{1}$) et l'absence de terme en $\\blank{xy}$. Ces conditions garantissent que la courbe représentée est bien un cercle (éventuellement dégénéré) et non une \\textit{ellipse} ou une autre \\textit{conique}."
+        },
+      {
+          "type": "culture",
+          "title": "Physique & Technologie",
+          "content": "Le produit scalaire est omniprésent en sciences. En \\textbf{mécanique}, le \\textit{travail} d'une force s'écrit $W = \\vec{F} \\cdot \\vec{d}$ : une force perpendiculaire au mouvement ne produit aucun travail. En \\textbf{infographie 3D}, il calcule l'\\textit{éclairage} des surfaces (\\textit{shading}) dans les jeux vidéo. En \\textbf{intelligence artificielle}, il mesure la \\textit{similarité} entre vecteurs pour les recommandations Netflix ou Spotify. En \\textbf{relativité générale}, sa généralisation (\\textit{métrique}) décrit les distances dans l'espace-temps courbe d'Einstein."
+        }
+        
+      ]
+    }
+  ]
+}

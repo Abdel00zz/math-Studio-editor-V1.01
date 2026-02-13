@@ -1,0 +1,29 @@
+{
+  "id": "ex-limites-04",
+  "topic": "Limites et Asymptotes",
+  "context": "Soit $f$ la fonction définie par : $f(x) = \\dfrac{x^2 + x - 1}{x + 2}$.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Déterminer $D$ l'ensemble de définition de la fonction $f$ puis calculer les limites de $f$ aux bornes de $D$.",
+      "hint": "Le dénominateur s'annule en -2. Pour les limites à l'infini, utilisez le quotient des termes de plus haut degré. En -2, étudiez le signe de $(x+2)$ à gauche et à droite."
+    },
+    {
+      "id": "q2",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq2a",
+          "content": "Déterminer les réels $a, b$ et $c$ tels que : $(\\forall x \\in D) ; f(x) = ax + b + \\dfrac{c}{x+2}$.",
+          "hint": "Effectuez la division euclidienne de $x^2+x-1$ par $x+2$ ou mettez l'expression de droite au même dénominateur pour identifier les coefficients."
+        },
+        {
+          "id": "sq2b",
+          "content": "Calculer : $\\displaystyle\\lim_{|x| \\to +\\infty} [f(x) - (ax+b)]$ et interpréter géométriquement le résultat.",
+          "hint": "Utilisez l'écriture décomposée trouvée précédemment pour calculer la différence. Si la limite est 0, la droite $y=ax+b$ est une asymptote oblique."
+        }
+      ]
+    }
+  ]
+}

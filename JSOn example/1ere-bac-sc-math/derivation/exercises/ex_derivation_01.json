@@ -1,0 +1,36 @@
+
+{
+  "id": "ex-deriv-01",
+  "topic": "Nombre dérivé",
+  "context": "On considère la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = x^2$.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "De quelle manière montre-t-on que $f$ est dérivable en 2",
+      "subQuestions": [
+        {
+          "id": "a",
+          "content": "Calculer la limite $\\displaystyle\\lim_{x \\to 2} \\frac{f(x)-f(2)}{x-2}$.",
+          "hint": "\\method Utilisez l'identité remarquable $a^2 - b^2$ pour simplifier le numérateur $x^2 - 4$. \\step $\\frac{x^2-4}{x-2} = \\frac{(x-2)(x+2)}{x-2} = x+2$. \\conclusion La limite quand $x \\to 2$ vaut 4."
+        },
+        {
+          "id": "b",
+          "content": "En déduire la valeur du nombre dérivé $f'(2)$.",
+          "hint": "\\conclusion Par définition, si la limite du taux d'accroissement est finie, elle correspond exactement au nombre dérivé. Donc $f'(2) = 4$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Comment vérifier la dérivabilité en -1 avec $h$",
+      "subQuestions": [
+        {
+          "id": "id_a",
+          "content": "Montrer que $\\displaystyle\\lim_{h \\to 0} \\frac{f(-1+h)-f(-1)}{h} = -2$.",
+          "hint": "\\method Développez $(-1+h)^2$. \\step $(-1+h)^2 - 1 = 1 - 2h + h^2 - 1 = h^2 - 2h$. \\step Simplifiez par $h$ : $\\frac{h(h-2)}{h} = h-2$. \\conclusion La limite quand $h \\to 0$ est bien -2."
+        }
+      ]
+    }
+  ]
+}

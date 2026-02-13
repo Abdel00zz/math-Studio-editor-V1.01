@@ -1,0 +1,30 @@
+
+{
+  "id": "ex-deriv-04",
+  "topic": "Dérivabilité latérale",
+  "context": "Soit la fonction $f$ définie sur $\\mathbb{R}$ par $f(x) = |x^2 - x|$.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Comment étudier la dérivabilité en 0",
+      "subQuestions": [
+        {
+          "id": "a",
+          "content": "Calculer la dérivée à gauche $f'_g(0)$.",
+          "hint": "\\method Pour $x < 0$ proche de 0, $x^2-x$ est positif, donc $f(x) = x^2-x$. \\step Le taux d'accroissement est $\\frac{x^2-x-0}{x} = x-1$. \\conclusion La limite vaut -1."
+        },
+        {
+          "id": "b",
+          "content": "Calculer la dérivée à droite $f'_d(0)$.",
+          "hint": "\\method Pour $x > 0$ proche de 0, $x^2-x$ est négatif, donc $f(x) = -(x^2-x) = x-x^2$. \\step Le taux est $\\frac{x-x^2}{x} = 1-x$. \\conclusion La limite vaut 1."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Sous quelle condition $f$ est-elle dérivable en 0",
+      "hint": "\\tip Une fonction est dérivable en un point si et seulement si les dérivées à gauche et à droite sont égales. \\conclusion Ici $-1 \\neq 1$, donc $f$ n'est pas dérivable en 0. On dit que le point est un \\blueb{point anguleux}."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+
+{
+  "id": "ex-bary-005",
+  "topic": "Barycentre",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Construire les points $G$, $K$ et $I$.",
+      "hint": "\\method Pour construire $K$ et $I$, utilisez la relation $\\overrightarrow{AK} = \\frac{\\beta}{\\alpha+\\beta}\\overrightarrow{AB}$. Pour $G$, il est plus simple d'attendre la question suivante qui utilise l'associativité."
+    },
+    {
+      "id": "q2",
+      "content": "En utilisant l'associativité du barycentre, montrer que $G$ est le milieu de $[AI]$.",
+      "hint": "\\method Regroupez les points $(B, -4)$ et $(C, 3)$ dans la définition de $G$. Quel barycentre partiel reconnaissez-vous ? Quels sont les coefficients finaux pour les points $A$ et $I$ ?"
+    },
+    {
+      "id": "q3",
+      "content": "En appliquant la propriété caractéristique du barycentre sur $G$, montrer que $\\overrightarrow{CG} = \\dfrac{1}{2}\\overrightarrow{CA} + 2\\overrightarrow{CB}$.",
+      "hint": "\\method Partez de la relation de définition de $G$ : $-\\overrightarrow{GA} - 4\\overrightarrow{GB} + 3\\overrightarrow{GC} = \\vec{0}$. Utilisez la relation de Chasles pour introduire le point $C$ partout et isolez $\\overrightarrow{CG}$."
+    },
+    {
+      "id": "q4",
+      "content": "Montrer aussi que $\\overrightarrow{CK} = \\dfrac{1}{5}\\overrightarrow{CA} + \\dfrac{4}{5}\\overrightarrow{CB}$.",
+      "hint": "\\method Appliquez la formule de réduction vectorielle à la définition de $K = \\text{bar}\\{(A;-1);(B;-4)\\}$ en utilisant le point $C$ comme origine."
+    },
+    {
+      "id": "q5",
+      "content": "En déduire que les points $C$, $K$ et $G$ sont alignés.",
+      "hint": "Pour prouver l'alignement, montrez que les vecteurs $\\overrightarrow{CG}$ et $\\overrightarrow{CK}$ sont colinéaires. Comparez leurs coordonnées dans la base $(\\overrightarrow{CA}, \\overrightarrow{CB})$."
+    },
+    {
+      "id": "q6",
+      "content": "On considère le point $F = \\text{bar}\\{(A;-1);(C;3)\\}$. Montrer que $G \\in (BF)$.",
+      "hint": "\\method Utilisez l'associativité du barycentre. Dans la définition de $G$, regroupez les points $A$ et $C$. Comment pouvez-vous alors exprimer $G$ comme barycentre de $B$ et $F$ ?"
+    },
+    {
+      "id": "q7",
+      "content": "En déduire que les droites $(AI)$, $(CK)$ et $(BF)$ sont concourantes en un point à déterminer.",
+      "hint": "Rassemblez les résultats des questions 2, 5 et 6. Quel est le point commun à ces trois droites ?"
+    },
+    {
+      "id": "q8",
+      "content": "Déterminer l'ensemble des points $M$ tels que $\\|-\\overrightarrow{MA} - 4\\overrightarrow{MB} + 3\\overrightarrow{MC}\\| = 32$.",
+      "hint": "\\method Utilisez la propriété de réduction vectorielle pour simplifier la somme à l'intérieur de la norme. Quel barycentre de l'énoncé pouvez-vous faire apparaître ?"
+    }
+  ]
+}

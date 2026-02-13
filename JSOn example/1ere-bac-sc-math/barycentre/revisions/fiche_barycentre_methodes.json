@@ -1,0 +1,181 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_construction_bary_2pts",
+      "category": "method",
+      "title": "Sais-tu **construire** le barycentre de deux points ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise la relation vectorielle pour placer précisément le barycentre."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Vérifier que la somme des poids est non nulle ($S = \\alpha + \\beta \\neq 0$)",
+            "Utiliser la relation : $\\overrightarrow{AG} = \\dfrac{\\beta}{\\alpha + \\beta} \\overrightarrow{AB}$",
+            "Diviser le segment $[AB]$ selon le dénominateur et reporter les parts"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_coeffs_bary",
+      "category": "method",
+      "title": "Maîtrises-tu la **détermination des coefficients** barycentriques ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On transforme la relation vectorielle pour obtenir la forme barycentrique."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Introduire le point $G$ dans tous les vecteurs (relation de Chasles)",
+            "Développer et regrouper tous les termes pour obtenir $\\vec{0}$",
+            "Identifier les coefficients devant $\\overrightarrow{GA}$ et $\\overrightarrow{GB}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_coordonnees_bary",
+      "category": "method",
+      "title": "Es-tu capable de **calculer** les coordonnées d'un barycentre ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Les coordonnées du barycentre sont la moyenne pondérée des coordonnées des points."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Relever les coordonnées $(x_i; y_i)$ et les poids $\\alpha_i$ de chaque point",
+            "Calculer la somme totale des poids $S = \\sum \\alpha_i$",
+            "Appliquer : $x_G = \\dfrac{\\sum \\alpha_i x_i}{S}$ et $y_G = \\dfrac{\\sum \\alpha_i y_i}{S}$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_associativite",
+      "category": "method",
+      "title": "Connais-tu la **simplification** d'un barycentre par associativité ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On peut remplacer un groupe de points par leur barycentre partiel."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Repérer un sous-groupe de points dont on connaît le barycentre",
+            "Remplacer ces points par ce barycentre partiel $H$ affecté de la somme de leurs poids",
+            "Construire le barycentre final à partir du système réduit"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_alignement",
+      "category": "method",
+      "title": "Sais-tu **démontrer** l'alignement de trois points ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On montre que l'un des points est le barycentre des deux autres."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier ou construire un point comme barycentre d'un système complet",
+            "Utiliser l'associativité pour faire apparaître le barycentre partiel",
+            "Conclure que les points sont alignés"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_concours",
+      "category": "method",
+      "title": "Maîtrises-tu la **preuve de concours** de plusieurs droites ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On définit un point commun et on montre qu'il appartient à chaque droite."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Définir $G$ comme le barycentre de tous les sommets",
+            "Regrouper les points par deux pour faire apparaître des points intermédiaires",
+            "Démontrer que $G$ est aligné avec chaque sommet et le point opposé"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_reduction_somme",
+      "category": "method",
+      "title": "Es-tu capable de **réduire** une somme vectorielle pondérée ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise la propriété caractéristique du barycentre pour simplifier."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer la somme des coefficients $S$",
+            "Si $S \\neq 0$, introduire le barycentre $G$ du système",
+            "Utiliser la formule : $\\sum \\alpha_i \\overrightarrow{MA_i} = S \\cdot \\overrightarrow{MG}$",
+            "Si $S = 0$, le vecteur est constant"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_lieu_cercle",
+      "category": "method",
+      "title": "Connais-tu la **détermination d'un lieu** géométrique circulaire ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On réduit la somme vectorielle pour obtenir une distance."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier le système pondéré dans la norme et son barycentre $G$",
+            "Réduire la somme vectorielle : $\\|\\alpha\\overrightarrow{MA} + \\beta\\overrightarrow{MB}\\| = \\|(\\alpha+\\beta)\\overrightarrow{MG}\\|$",
+            "Sortir le scalaire de la norme et isoler $MG$ pour obtenir un cercle"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_lieu_mediatrice",
+      "category": "method",
+      "title": "Sais-tu **identifier** une médiatrice comme ensemble de points ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On compare deux normes en réduisant chaque membre avec des barycentres."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Réduire chaque somme avec son barycentre respectif",
+            "Simplifier les scalaires pour obtenir $MG_1 = MG_2$",
+            "Interpréter : $M$ est sur la médiatrice de $[G_1G_2]$"
+          ]
+        }
+      ]
+    }
+  ]
+}

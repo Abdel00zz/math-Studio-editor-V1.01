@@ -1,0 +1,231 @@
+{
+  "header": {
+    "title": "Le Barycentre dans le Plan",
+    "subtitle": "Cours Complet & Applications",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "category": "course",
+      "title": "Introduction : De l'Astronomie aux Mathématiques",
+      "media": {
+        "src": "https://spaceplace.nasa.gov/barycenter/en/barycenter.en.png",
+        "type": "image",
+        "position": "right",
+        "width": "35%",
+        "caption": "Le barycentre : centre de masse commun autour duquel orbitent deux corps",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les planètes et leur étoile orbitent autour de leur \\textbf{centre de masse commun}, le \\blueb{barycentre}, toujours plus proche de l'objet le plus massif. Ce principe cosmique devient en mathématiques un outil puissant : le point d'annulation d'une \\textit{somme vectorielle pondérée}, permettant de traiter élégamment alignements, concours de droites et lieux géométriques."
+        }
+      ]
+    },
+    {
+      "id": "barycentre_deux_points",
+      "category": "course",
+      "title": "Barycentre de Deux Points Pondérés",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le cas fondamental de deux points introduit la \\textbf{définition vectorielle}, l'invariance par changement d'échelle, et les formules de coordonnées."
+        },
+        {
+          "type": "definition",
+          "title": "Quelle relation vectorielle définit le barycentre",
+          "content": "Soit $\\Sigma = \\{(A, \\alpha); (B, \\beta)\\}$ un système pondéré tel que $\\alpha + \\beta \\neq \\blank{0}$. Il existe un unique point $G$ vérifiant :\\\\$$\\alpha \\overrightarrow{GA} + \\beta \\overrightarrow{GB} = \\blank{\\vec{0}}$$\\\\On note $G = \\textit{Bar}\\{(A, \\alpha); (B, \\beta)\\}$ et on dit que $G$ est le \\textbf{barycentre} du système pondéré $(A, \\alpha)$, $(B, \\beta)$.",
+          "graphId": "bary_2_pts",
+          "graphCaption": "Modifiez les valeurs de α et β pour observer le déplacement de G."
+        },
+        {
+          "type": "example",
+          "content": "Soit $A$ et $B$ deux points distincts, avec $\\alpha = 2$ et $\\beta = 3$. Déterminons le barycentre $G$.\\par\\smallskip\\\\Par définition, $G$ vérifie :\\\\$$2\\overrightarrow{GA} + 3\\overrightarrow{GB} = \\vec{0}$$\\par\\smallskip\\\\Utilisons la relation de Chasles pour exprimer $\\overrightarrow{GB}$ en fonction de $\\overrightarrow{GA}$ et $\\overrightarrow{AB}$ :\\\\$$2\\overrightarrow{GA} + 3(\\overrightarrow{GA} + \\overrightarrow{AB}) = \\vec{0}$$\\\\$$2\\overrightarrow{GA} + 3\\overrightarrow{GA} + 3\\overrightarrow{AB} = \\vec{0}$$\\\\$$5\\overrightarrow{GA} = -3\\overrightarrow{AB}$$\\par\\smallskip\\\\D'où :\\\\$$\\overrightarrow{AG} = \\frac{3}{\\blank{5}}\\overrightarrow{AB}$$\\par\\smallskip\\\\Le point $G$ se situe donc sur le segment $[AB]$ aux $\\frac{3}{5}$ du trajet de $A$ vers $B$, plus proche de $B$ puisque son coefficient ($\\beta = 3$) est plus élevé que celui de $A$ ($\\alpha = 2$)."
+        },
+        {
+          "type": "property",
+          "title": "Le barycentre change-t-il si on multiplie les coefficients",
+          "content": "\\begin{itemize}\\item Le barycentre ne change pas si on multiplie tous les coefficients par un même réel $k \\neq \\blank{0}$.\\item Si $\\alpha = \\beta \\neq 0$, le barycentre s'appelle \\blueb{isobarycentre} et correspond au \\blank{milieu} du segment $[AB]$.\\item Les points $A$, $B$ et $G$ sont toujours \\blank{alignés}.\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Vérifions l'invariance par multiplication des coefficients. Soit $G = \\textit{Bar}\\{(A, 2); (B, 3)\\}$.\\par\\smallskip\\\\Multiplions tous les coefficients par $k = 4$ et posons $G' = \\textit{Bar}\\{(A, 8); (B, 12)\\}$.\\par\\smallskip\\\\Pour $G$, nous avons :\\\\$$\\overrightarrow{AG} = \\frac{3}{2+3}\\overrightarrow{AB} = \\frac{3}{5}\\overrightarrow{AB}$$\\par\\smallskip\\\\Pour $G'$, calculons :\\\\$$\\overrightarrow{AG'} = \\frac{12}{8+12}\\overrightarrow{AB} = \\frac{12}{20}\\overrightarrow{AB} = \\frac{3}{\\blank{5}}\\overrightarrow{AB}$$\\par\\smallskip\\\\Puisque $\\overrightarrow{AG} = \\overrightarrow{AG'}$, on a bien $G = G'$. Le barycentre est \\textbf{invariant} par multiplication des coefficients par un même scalaire non nul."
+        },
+        {
+          "type": "property",
+          "title": "Comment exprimer le barycentre en fonction d'un point M",
+          "content": "Pour tout point $M$ du plan, si $G = \\textit{Bar}\\{(A, \\alpha); (B, \\beta)\\}$ :\\\\$$(\\alpha + \\beta)\\overrightarrow{MG} = \\alpha\\overrightarrow{MA} + \\beta\\overrightarrow{\\blank{MB}}$$\\\\Cette formule, appelée \\textit{formule de réduction}, permet de calculer $\\overrightarrow{MG}$ pour n'importe quel point $M$.\\par\\smallskip De plus : $$\\overrightarrow{AG} = \\frac{\\blank{\\beta}}{\\alpha + \\beta}\\overrightarrow{AB}$$"
+        },
+        {
+          "type": "example",
+          "content": "Soit $G = \\textit{Bar}\\{(A, 3); (B, 1)\\}$. Exprimons $\\overrightarrow{OG}$ en fonction de $\\overrightarrow{OA}$ et $\\overrightarrow{OB}$, où $O$ est un point quelconque du plan.\\par\\smallskip\\\\Appliquons la formule de réduction avec $M = O$ :\\\\$$(\\alpha + \\beta)\\overrightarrow{OG} = \\alpha\\overrightarrow{OA} + \\beta\\overrightarrow{OB}$$\\\\$$(3 + 1)\\overrightarrow{OG} = 3\\overrightarrow{OA} + 1\\overrightarrow{OB}$$\\\\$$4\\overrightarrow{OG} = 3\\overrightarrow{OA} + \\overrightarrow{OB}$$\\par\\smallskip\\\\En divisant par $4$ :\\\\$$\\overrightarrow{OG} = \\frac{3\\overrightarrow{OA} + \\overrightarrow{OB}}{\\blank{4}}$$\\par\\smallskip\\\\Cette expression est particulièrement utile lorsque $O$ est l'origine d'un repère, car elle permet de calculer directement les coordonnées de $G$ à partir de celles de $A$ et $B$."
+        },
+        {
+          "type": "property",
+          "title": "Quelles sont les formules des coordonnées",
+          "content": "Si $A(x_A, y_A)$ et $B(x_B, y_B)$, alors les coordonnées de $G = \\textit{Bar}\\{(A, \\alpha); (B, \\beta)\\}$ sont :\\\\$$x_G = \\frac{\\alpha x_A + \\beta x_B}{\\blank{\\alpha + \\beta}} \\quad ; \\quad y_G = \\frac{\\alpha y_A + \\beta y_B}{\\blank{\\alpha + \\beta}}$$\\\\Ces formules sont une \\textit{moyenne pondérée} des coordonnées."
+        },
+        {
+          "type": "example",
+          "content": "Soit $A(1, 3)$ et $B(5, -1)$. Calculons les coordonnées de $G = \\textit{Bar}\\{(A, 2); (B, 3)\\}$.\\par\\smallskip\\\\Appliquons les formules de coordonnées :\\\\$$x_G = \\frac{\\alpha x_A + \\beta x_B}{\\alpha + \\beta} = \\frac{2 \\times 1 + 3 \\times 5}{2 + 3} = \\frac{2 + 15}{5} = \\frac{17}{5} = \\blank{3.4}$$\\par\\smallskip\\\\$$y_G = \\frac{\\alpha y_A + \\beta y_B}{\\alpha + \\beta} = \\frac{2 \\times 3 + 3 \\times (-1)}{2 + 3} = \\frac{6 - 3}{5} = \\frac{3}{5} = \\blank{0.6}$$\\par\\smallskip\\\\Ainsi, $G(\\blank{3.4}, \\blank{0.6})$.\\par\\smallskip\\\\Vérifions graphiquement : le point $G$ doit être plus proche de $B(5, -1)$ que de $A(1, 3)$ car le coefficient de $B$ ($\\beta = 3$) est supérieur à celui de $A$ ($\\alpha = 2$). La coordonnée $x_G = 3.4$ est effectivement entre $x_A = 1$ et $x_B = 5$, et plus proche de $5$ "
+        },
+        {
+          "type": "example",
+          "content": "Soit $A(-2, 4)$ et $B(6, 1)$. Déterminons le milieu $I$ de $[AB]$ en utilisant le concept de barycentre.\\par\\smallskip\\\\Le milieu correspond à l'isobarycentre, donc :\\\\$$I = \\textit{Bar}\\{(A, 1); (B, 1)\\}$$\\par\\smallskip\\\\Appliquons les formules :\\\\$$x_I = \\frac{1 \\times (-2) + 1 \\times 6}{1 + 1} = \\frac{-2 + 6}{2} = \\frac{4}{2} = \\blank{2}$$\\par\\smallskip\\\\$$y_I = \\frac{1 \\times 4 + 1 \\times 1}{1 + 1} = \\frac{4 + 1}{2} = \\frac{5}{2} = \\blank{2.5}$$\\par\\smallskip\\\\Donc $I(\\blank{2}, \\blank{2.5})$.\\par\\smallskip\\\\On retrouve bien la formule classique du milieu : $I\\left(\\frac{x_A + x_B}{2}, \\frac{y_A + y_B}{2}\\right)$."
+        },
+        {
+          "type": "culture",
+          "title": "Art & Physique : Les Mobiles de Calder",
+          "content": "L'artiste Alexander Calder est célèbre pour ses sculptures cinétiques suspendues (les \\textit{mobiles}). L'équilibre de chaque tige repose sur le principe du \\textbf{barycentre} : le point de suspension doit être exactement le barycentre des masses suspendues aux extrémités pour que la structure reste horizontale, créant une harmonie visuelle défiant la gravité.",
+          "media": {
+            "src": "https://hyperallergic.com/content/images/hyperallergic-newspack-s3-amazonaws-com/uploads/2017/09/jill-magid-gray.gif",
+            "type": "image",
+            "position": "right",
+            "width": "100%",
+            "caption": "Équilibre parfait dans un mobile de Calder",
+            "shadow": true,
+            "border": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "barycentre_trois_points",
+      "category": "course",
+      "title": "Barycentre de Trois Points Pondérés",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "L'extension à trois points ouvre les applications géométriques majeures : \\textbf{centre de gravité} d'un triangle, construction par \\textit{associativité}, et résolution d'équations vectorielles complexes."
+        },
+        {
+          "type": "definition",
+          "title": "Quelle relation définit le barycentre de trois points",
+          "content": "Soit $\\Sigma = \\{(A, \\alpha); (B, \\beta); (C, \\gamma)\\}$ avec $\\alpha + \\beta + \\gamma \\neq \\blank{0}$. Il existe un unique point $G$ tel que :\\\\$$\\alpha \\overrightarrow{GA} + \\beta \\overrightarrow{GB} + \\gamma \\overrightarrow{GC} = \\blank{\\vec{0}}$$\\\\On note $G = \\textit{Bar}\\{(A, \\alpha); (B, \\beta); (C, \\gamma)\\}$.",
+          "graphId": "bary_3_pts",
+          "graphCaption": "Le centre de gravité est l'isobarycentre des trois sommets."
+        },
+        {
+          "type": "example",
+          "content": "Soit un triangle $ABC$ et $G = \\textit{Bar}\\{(A, 1); (B, 2); (C, 3)\\}$. Déterminons $\\overrightarrow{AG}$ en fonction de $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$.\\par\\smallskip\\\\Par définition :\\\\$$1 \\cdot \\overrightarrow{GA} + 2 \\cdot \\overrightarrow{GB} + 3 \\cdot \\overrightarrow{GC} = \\vec{0}$$\\par\\smallskip\\\\Exprimons $\\overrightarrow{GB}$ et $\\overrightarrow{GC}$ en fonction de $\\overrightarrow{GA}$, $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$ :\\\\$$\\overrightarrow{GB} = \\overrightarrow{GA} + \\overrightarrow{AB}$$\\\\$$\\overrightarrow{GC} = \\overrightarrow{GA} + \\overrightarrow{AC}$$\\par\\smallskip\\\\Substituons dans la relation :\\\\$$\\overrightarrow{GA} + 2(\\overrightarrow{GA} + \\overrightarrow{AB}) + 3(\\overrightarrow{GA} + \\overrightarrow{AC}) = \\vec{0}$$\\\\$$\\overrightarrow{GA} + 2\\overrightarrow{GA} + 2\\overrightarrow{AB} + 3\\overrightarrow{GA} + 3\\overrightarrow{AC} = \\vec{0}$$\\\\$$6\\overrightarrow{GA} = -2\\overrightarrow{AB} - 3\\overrightarrow{AC}$$\\par\\smallskip\\\\D'où :\\\\$$\\overrightarrow{AG} = \\frac{2\\overrightarrow{AB} + 3\\overrightarrow{AC}}{\\blank{6}}$$\\par\\smallskip\\\\Le point $G$ s'exprime comme une \\textit{combinaison linéaire} des vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{AC}$, confirmant qu'il appartient bien au plan du triangle $ABC$."
+        },
+        {
+          "type": "property",
+          "title": "Comment construire le barycentre par associativité",
+          "content": "La propriété d'\\textbf{associativité} permet de construire graphiquement un barycentre de trois points en deux étapes :\\\\\\begin{enumerate}\\item On calcule d'abord le barycentre partiel $G'$ de deux points, par exemple $$G' = \\textit{Bar}\\{(A, \\alpha); (B, \\beta)\\}$$ avec coefficient total $\\blank{\\alpha + \\beta}$.\\item On détermine ensuite $$G = \\textit{Bar}\\{(G', \\alpha+\\beta); (C, \\gamma)\\}$$\\end{enumerate}\\\\Cette technique évite les calculs de coordonnées."
+        },
+        {
+          "type": "example",
+          "content": "Soit $G = \\textit{Bar}\\{(A, 2); (B, 3); (C, 5)\\}$. Construisons $G$ par associativité.\\par\\smallskip\\\\Commençons par calculer le barycentre partiel de $A$ et $B$ :\\\\$$G' = \\textit{Bar}\\{(A, 2); (B, 3)\\}$$\\par\\smallskip\\\\Le coefficient total associé à $G'$ est $2 + 3 = \\blank{5}$. La position de $G'$ sur $[AB]$ est donnée par :\\\\$$\\overrightarrow{AG'} = \\frac{3}{2+3}\\overrightarrow{AB} = \\frac{3}{5}\\overrightarrow{AB}$$\\par\\smallskip\\\\Maintenant, calculons le barycentre final entre $G'$ et $C$ :\\\\$$G = \\textit{Bar}\\{(G', 5); (C, 5)\\}$$\\par\\smallskip\\\\Puisque les coefficients sont égaux ($5 = 5$), le point $G$ est le \\textbf{milieu} du segment $[G'C]$ :\\\\$$\\overrightarrow{G'G} = \\frac{1}{2}\\overrightarrow{G'C}$$\\par\\smallskip\\\\Pour tracer $G$ : placer $G'$ aux $\\frac{3}{5}$ de $[AB]$ depuis $A$, puis tracer le segment $[G'C]$ et placer $G$ en son milieu."
+        },
+        {
+          "type": "property",
+          "title": "Comment calculer les coordonnées du barycentre de trois points",
+          "content": "Si $A(x_A, y_A)$, $B(x_B, y_B)$ et $C(x_C, y_C)$, alors :\\\\$$x_G = \\frac{\\alpha x_A + \\beta x_B + \\gamma x_C}{\\blank{\\alpha + \\beta + \\gamma}}$$\\\\$$y_G = \\frac{\\alpha y_A + \\beta y_B + \\gamma y_C}{\\blank{\\alpha + \\beta + \\gamma}}$$"
+        },
+        {
+          "type": "example",
+          "content": "Soit $A(0, 0)$, $B(6, 0)$ et $C(3, 6)$ les sommets d'un triangle. Calculons le centre de gravité $G$.\\par\\smallskip\\\\Le centre de gravité est l'isobarycentre, donc $\\alpha = \\beta = \\gamma = 1$ :\\\\$$G = \\textit{Bar}\\{(A, 1); (B, 1); (C, 1)\\}$$\\par\\smallskip\\\\Calculons $x_G$ :\\\\$$x_G = \\frac{1 \\times 0 + 1 \\times 6 + 1 \\times 3}{1 + 1 + 1} = \\frac{0 + 6 + 3}{3} = \\frac{9}{3} = \\blank{3}$$\\par\\smallskip\\\\Calculons $y_G$ :\\\\$$y_G = \\frac{1 \\times 0 + 1 \\times 0 + 1 \\times 6}{1 + 1 + 1} = \\frac{0 + 0 + 6}{3} = \\frac{6}{3} = \\blank{2}$$\\par\\smallskip\\\\Donc $G(\\blank{3}, \\blank{2})$.\\par\\smallskip\\\\Vérifions cette position : le centre de gravité est situé aux $\\frac{2}{3}$ de chaque médiane depuis le sommet. La médiane issue de $C(3, 6)$ rejoint le milieu $M(3, 0)$ de $[AB]$. Le vecteur $\\overrightarrow{CM}$ a pour coordonnées $(0, -6)$, donc $\\overrightarrow{CG} = \\frac{2}{3}\\overrightarrow{CM} = (0, -4)$, ce qui donne bien $G(3, 2)$ "
+        },
+        {
+          "type": "property",
+          "title": "Qu'est-ce que le centre de gravité",
+          "content": "Si $\\alpha = \\beta = \\gamma \\neq 0$, $G$ est le \\blueb{centre de gravité} (ou \\textit{isobarycentre}) du triangle $ABC$.\\\\\\begin{itemize}\\item Il vérifie $\\overrightarrow{GA} + \\overrightarrow{GB} + \\overrightarrow{GC} = \\blank{\\vec{0}}$.\\item Il est situé aux $\\frac{\\blank{2}}{3}$ de chaque médiane en partant du sommet.\\item C'est le point d'intersection des trois \\blank{médianes} du triangle.\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Dans un triangle équilatéral $ABC$ de côté $a = 6$, calculons la distance du centre de gravité $G$ à chaque sommet.\\par\\smallskip\\\\Plaçons le triangle dans un repère : $A(0, 0)$, $B(6, 0)$, $C(3, 3\\sqrt{3})$.\\par\\smallskip\\\\Calculons les coordonnées de $G$ :\\\\$$x_G = \\frac{0 + 6 + 3}{3} = \\frac{9}{3} = \\blank{3}$$\\\\$$y_G = \\frac{0 + 0 + 3\\sqrt{3}}{3} = \\sqrt{\\blank{3}}$$\\par\\smallskip\\\\Donc $G(3, \\sqrt{3})$.\\par\\smallskip\\\\Calculons la distance $GA$ :\\\\$$GA = \\sqrt{(3-0)^2 + (\\sqrt{3}-0)^2} = \\sqrt{9 + 3} = \\sqrt{12} = 2\\sqrt{\\blank{3}}$$\\par\\smallskip\\\\Dans un triangle équilatéral de côté $a$, la distance du centre de gravité à chaque sommet vaut $\\frac{a}{\\sqrt{3}} = \\frac{a\\sqrt{3}}{3}$. Vérifions : $\\frac{6\\sqrt{3}}{3} = 2\\sqrt{3}$ \\par\\smallskip\\\\Cette formule provient du fait que dans un triangle équilatéral, la hauteur vaut $h = \\frac{a\\sqrt{3}}{2}$ et le centre de gravité se situe aux $\\frac{2}{3}$ de cette hauteur depuis le sommet."
+        },
+        {
+          "type": "example",
+          "content": "Soit un triangle $ABC$ rectangle en $A$ avec $AB = 4$ et $AC = 3$. Calculons les coordonnées du centre de gravité $G$.\\par\\smallskip\\\\Plaçons $A$ à l'origine : $A(0, 0)$, $B(4, 0)$, $C(0, 3)$.\\par\\smallskip\\\\Le centre de gravité vérifie :\\\\$$x_G = \\frac{0 + 4 + 0}{3} = \\frac{4}{3} \\approx \\blank{1.33}$$\\\\$$y_G = \\frac{0 + 0 + 3}{3} = \\frac{3}{3} = \\blank{1}$$\\par\\smallskip\\\\Donc $G\\left(\\frac{4}{3}, 1\\right)$.\\par\\smallskip\\\\Calculons maintenant la distance de $G$ au sommet de l'angle droit $A$ :\\\\$$GA = \\sqrt{\\left(\\frac{4}{3}\\right)^2 + 1^2} = \\sqrt{\\frac{16}{9} + 1} = \\sqrt{\\frac{16 + 9}{9}} = \\sqrt{\\frac{25}{9}} = \\frac{5}{\\blank{3}}$$\\par\\smallskip\\\\Remarquons que l'hypoténuse $BC$ a pour longueur $\\sqrt{4^2 + 3^2} = \\sqrt{25} = 5$, et que $GA = \\frac{BC}{3} = \\frac{5}{3}$."
+        },
+        {
+          "type": "culture",
+          "title": "Technologie : La 3D et le Barycentre",
+          "content": "En infographie et dans les jeux vidéo, les surfaces sont modélisées par des milliers de triangles (le \\textit{maillage}). Pour colorer un pixel précis à l'intérieur d'un triangle, l'ordinateur utilise les \\textbf{coordonnées barycentriques}. La couleur du point est calculée comme la \\textit{moyenne pondérée} des couleurs des trois sommets (rouge, vert, bleu), les poids étant les coefficients barycentriques du point par rapport aux sommets."
+        }
+      ]
+    },
+    {
+      "id": "barycentre_quatre_points",
+      "category": "course",
+      "title": "Barycentre de Quatre Points et Plus",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "La généralisation à quatre points (et au-delà) permet de traiter les \\textbf{quadrilatères} et d'introduire les lieux géométriques circulaires."
+        },
+        {
+          "type": "definition",
+          "title": "Comment généraliser le barycentre à quatre points",
+          "content": "Soit $\\Sigma = \\{(A, \\alpha); (B, \\beta); (C, \\gamma); (D, \\delta)\\}$ avec $s = \\alpha + \\beta + \\gamma + \\delta \\neq \\blank{0}$. Il existe un unique point $G$ vérifiant :\\\\$$\\alpha \\overrightarrow{GA} + \\beta \\overrightarrow{GB} + \\gamma \\overrightarrow{GC} + \\delta \\overrightarrow{GD} = \\blank{\\vec{0}}$$\\\\Cette définition se généralise à $n$ points quelconques.",
+          "graphId": "bary_4_pts",
+          "graphCaption": "L'isobarycentre d'un quadrilatère est le point d'intersection des bimédianes."
+        },
+        {
+          "type": "example",
+          "content": "Soit un carré $ABCD$ de côté $4$ avec $A(0, 0)$, $B(4, 0)$, $C(4, 4)$, $D(0, 4)$. Calculons l'isobarycentre $G$.\\par\\smallskip\\\\L'isobarycentre correspond à des coefficients égaux :\\\\$$G = \\textit{Bar}\\{(A, 1); (B, 1); (C, 1); (D, 1)\\}$$\\par\\smallskip\\\\Appliquons les formules de coordonnées :\\\\$$x_G = \\frac{1 \\times 0 + 1 \\times 4 + 1 \\times 4 + 1 \\times 0}{1+1+1+1} = \\frac{0 + 4 + 4 + 0}{4} = \\frac{8}{4} = \\blank{2}$$\\par\\smallskip\\\\$$y_G = \\frac{1 \\times 0 + 1 \\times 0 + 1 \\times 4 + 1 \\times 4}{4} = \\frac{0 + 0 + 4 + 4}{4} = \\frac{8}{4} = \\blank{2}$$\\par\\smallskip\\\\Donc $G(\\blank{2}, \\blank{2})$.\\par\\smallskip\\\\Vérifions : $G$ doit être le centre du carré, c'est-à-dire le point d'intersection des diagonales $[AC]$ et $[BD]$. Le milieu de $[AC]$ est $\\left(\\frac{0+4}{2}, \\frac{0+4}{2}\\right) = (2, 2)$ "
+        },
+        {
+          "type": "property",
+          "title": "Comment réduire une somme de quatre vecteurs",
+          "content": "Pour tout point $M$ du plan, avec $s = \\alpha + \\beta + \\gamma + \\delta$ :\\\\$$s\\overrightarrow{MG} = \\alpha\\overrightarrow{MA} + \\beta\\overrightarrow{MB} + \\gamma\\overrightarrow{MC} + \\delta\\overrightarrow{\\blank{MD}}$$\\\\Cette \\textit{formule de réduction} généralise celle de deux ou trois points."
+        },
+        {
+          "type": "example",
+          "content": "Soit $ABCD$ un quadrilatère et $G$ son isobarycentre. Montrons que $G$ est le milieu du segment joignant les milieux des diagonales.\\par\\smallskip\\\\Soit $I$ le milieu de $[AC]$ et $J$ le milieu de $[BD]$.\\par\\smallskip\\\\Par définition de l'isobarycentre :\\\\$$G = \\textit{Bar}\\{(A, 1); (B, 1); (C, 1); (D, 1)\\}$$\\par\\smallskip\\\\La relation vectorielle s'écrit :\\\\$$\\overrightarrow{GA} + \\overrightarrow{GB} + \\overrightarrow{GC} + \\overrightarrow{GD} = \\vec{0}$$\\par\\smallskip\\\\Regroupons les vecteurs par diagonales :\\\\$$(\\overrightarrow{GA} + \\overrightarrow{GC}) + (\\overrightarrow{GB} + \\overrightarrow{GD}) = \\vec{0}$$\\par\\smallskip\\\\Or, $I$ étant le milieu de $[AC]$, on a $\\overrightarrow{GA} + \\overrightarrow{GC} = 2\\overrightarrow{GI}$.\\\\De même, $J$ étant le milieu de $[BD]$, on a $\\overrightarrow{GB} + \\overrightarrow{GD} = 2\\overrightarrow{GJ}$.\\par\\smallskip\\\\Donc :\\\\$$2\\overrightarrow{GI} + 2\\overrightarrow{GJ} = \\vec{0}$$\\\\$$\\overrightarrow{GI} + \\overrightarrow{GJ} = \\vec{0}$$\\\\$$\\overrightarrow{IG} = \\overrightarrow{GJ}$$\\par\\smallskip\\\\Cela signifie que $G$ est le \\textbf{milieu} du segment $[IJ]$ \\par\\smallskip\\\\Cette propriété caractérise l'isobarycentre d'un quadrilatère quelconque : c'est toujours le milieu du segment joignant les milieux des diagonales."
+        },
+        {
+          "type": "property",
+          "title": "Comment utiliser l'associativité pour quatre points",
+          "content": "On peut construire le barycentre de quatre points par étapes :\\\\\\begin{enumerate}\\item Calculer $G_1 = \\textit{Bar}\\{(A, \\alpha); (B, \\beta)\\}$ avec coefficient $\\blank{\\alpha+\\beta}$\\item Calculer $G_2 = \\textit{Bar}\\{(C, \\gamma); (D, \\delta)\\}$ avec coefficient $\\blank{\\gamma+\\delta}$\\item Puis $G = \\textit{Bar}\\{(G_1, \\alpha+\\beta); (G_2, \\gamma+\\delta)\\}$\\end{enumerate}"
+        },
+        {
+          "type": "example",
+          "content": "Soit $G = \\textit{Bar}\\{(A, 1); (B, 2); (C, 3); (D, 4)\\}$. Construisons $G$ par associativité.\\par\\smallskip\\\\Commençons par regrouper $A$ et $B$ :\\\\$$G_1 = \\textit{Bar}\\{(A, 1); (B, 2)\\}$$\\par\\smallskip\\\\Le coefficient total associé à $G_1$ est $1 + 2 = \\blank{3}$, et sa position est :\\\\$$\\overrightarrow{AG_1} = \\frac{2}{1+2}\\overrightarrow{AB} = \\frac{2}{3}\\overrightarrow{AB}$$\\par\\smallskip\\\\Regroupons maintenant $C$ et $D$ :\\\\$$G_2 = \\textit{Bar}\\{(C, 3); (D, 4)\\}$$\\par\\smallskip\\\\Le coefficient total associé à $G_2$ est $3 + 4 = \\blank{7}$, et sa position est :\\\\$$\\overrightarrow{CG_2} = \\frac{4}{3+4}\\overrightarrow{CD} = \\frac{4}{7}\\overrightarrow{CD}$$\\par\\smallskip\\\\Calculons enfin le barycentre final entre $G_1$ et $G_2$ :\\\\$$G = \\textit{Bar}\\{(G_1, 3); (G_2, 7)\\}$$\\par\\smallskip\\\\Sa position sur $[G_1G_2]$ est :\\\\$$\\overrightarrow{G_1G} = \\frac{7}{3+7}\\overrightarrow{G_1G_2} = \\frac{7}{10}\\overrightarrow{G_1G_2}$$\\par\\smallskip\\\\Pour tracer $G$ : placer $G_1$ aux $\\frac{2}{3}$ de $[AB]$ depuis $A$, placer $G_2$ aux $\\frac{4}{7}$ de $[CD]$ depuis $C$, tracer le segment $[G_1G_2]$, et placer $G$ aux $\\frac{7}{10}$ de ce segment depuis $G_1$."
+        },
+        {
+          "type": "remark",
+          "content": "\\textbf{Cas particulier des quadrilatères} : Pour un quadrilatère $ABCD$, l'isobarycentre des quatre sommets possède des propriétés remarquables :\\begin{itemize}\\item C'est le point d'intersection des \\textbf{bimédianes} (segments joignant les milieux des côtés opposés).\\item C'est aussi le milieu du segment joignant les milieux des \\blank{diagonales}.\\item Dans un parallélogramme, l'isobarycentre coïncide avec le centre de symétrie.\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "applications",
+      "category": "course",
+      "title": "Applications Géométriques",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le barycentre permet de résoudre élégamment trois types de problèmes : \\textbf{alignement} de points, \\textbf{concours} de droites, et détermination de \\textit{lieux géométriques}."
+        },
+        {
+          "type": "property",
+          "title": "Comment prouver l'alignement de trois points avec le barycentre",
+          "content": "Pour prouver que trois points $A$, $B$, $G$ sont alignés, on peut montrer que $G$ est le barycentre de $(A, \\alpha)$ et $(B, \\beta)$ avec $\\alpha + \\beta \\neq \\blank{0}$. En effet, le barycentre de deux points est toujours \\blank{aligné} avec ces deux points."
+        },
+        {
+          "type": "example",
+          "content": "Soit $ABC$ un triangle et $I$ le milieu de $[BC]$. Soit $G$ le point tel que $\\overrightarrow{AG} = \\frac{2}{3}\\overrightarrow{AI}$. Montrons que $A$, $I$, $G$ sont alignés.\\par\\smallskip\\\\Exprimons $I$ comme barycentre : puisque $I$ est le milieu de $[BC]$, on a :\\\\$$I = \\textit{Bar}\\{(B, 1); (C, 1)\\}$$\\par\\smallskip\\\\De la relation $\\overrightarrow{AG} = \\frac{2}{3}\\overrightarrow{AI}$, on déduit que $G$ divise le segment $[AI]$ dans le rapport $\\frac{2}{1}$ depuis $A$.\\par\\smallskip\\\\Cela signifie :\\\\$$G = \\textit{Bar}\\{(A, 1); (I, 2)\\}$$\\par\\smallskip\\\\Par associativité, en substituant l'expression de $I$ :\\\\$$G = \\textit{Bar}\\{(A, 1); (B, 2); (C, 2)\\}$$\\par\\smallskip\\\\Vérifions : la relation vectorielle devient :\\\\$$\\overrightarrow{GA} + 2\\overrightarrow{GB} + 2\\overrightarrow{GC} = \\vec{0}$$\\par\\smallskip\\\\Puisque $G$ est le barycentre de $(A, 1)$ et $(I, 2)$, les points $A$, $I$ et $G$ sont nécessairement \\textbf{alignés} \\par\\smallskip\\\\Remarquons que $G$ est le centre de gravité du triangle $ABC$ (les coefficients $1, 2, 2$ donnent le même barycentre que $1, 1, 1$ par invariance), et qu'il se situe aux $\\frac{2}{3}$ de la médiane $[AI]$ depuis le sommet $A$."
+        },
+        {
+          "type": "property",
+          "title": "Comment déterminer un lieu géométrique avec le barycentre",
+          "content": "Pour déterminer l'ensemble des points $M$ vérifiant une condition donnée :\\\\\\begin{enumerate}\\item Traduire la condition en une équation vectorielle\\item Faire apparaître un barycentre fixe $G$\\item Exprimer la relation entre $M$ et $G$\\item Conclure sur la nature du lieu (cercle, droite, etc.)\\end{enumerate}"
+        },
+        {
+          "type": "example",
+          "content": "Soit $A$ et $B$ deux points distincts. Déterminons l'ensemble $\\mathcal{E}$ des points $M$ tels que :\\\\$$\\|2\\overrightarrow{MA} + 3\\overrightarrow{MB}\\| = 5$$\\par\\smallskip\\\\Introduisons le barycentre $G = \\textit{Bar}\\{(A, 2); (B, 3)\\}$. Par la formule de réduction :\\\\$$(2 + 3)\\overrightarrow{MG} = 2\\overrightarrow{MA} + 3\\overrightarrow{MB}$$\\\\$$5\\overrightarrow{MG} = 2\\overrightarrow{MA} + 3\\overrightarrow{MB}$$\\par\\smallskip\\\\La condition devient :\\\\$$\\|2\\overrightarrow{MA} + 3\\overrightarrow{MB}\\| = 5$$\\\\$$\\|5\\overrightarrow{MG}\\| = 5$$\\\\$$5 \\cdot \\|\\overrightarrow{MG}\\| = 5$$\\\\$$\\|\\overrightarrow{MG}\\| = \\blank{1}$$\\par\\smallskip\\\\Donc :\\\\$$MG = 1$$\\par\\smallskip\\\\L'ensemble $\\mathcal{E}$ est le \\textbf{cercle} de centre $G = \\textit{Bar}\\{(A, 2); (B, 3)\\}$ et de rayon $r = \\blank{1}$.\\par\\smallskip\\\\Le point $G$ est fixe (indépendant de $M$) et la condition impose une distance constante de $M$ à $G$, ce qui caractérise un cercle."
+        },
+        {
+          "type": "example",
+          "content": "Soit $ABC$ un triangle et $M$ un point variable. Déterminons l'ensemble des points $M$ tels que :\\\\$$\\overrightarrow{MA} + 2\\overrightarrow{MB} + 3\\overrightarrow{MC} = \\vec{0}$$\\par\\smallskip\\\\Cette équation définit directement un barycentre :\\\\$$M = \\textit{Bar}\\{(A, 1); (B, 2); (C, 3)\\}$$\\par\\smallskip\\\\Le barycentre est \\textit{unique} car $1 + 2 + 3 = 6 \\neq 0$. Il n'y a donc qu'un seul point $M$ vérifiant la condition.\\par\\smallskip\\\\L'ensemble $\\mathcal{E}$ est réduit à un \\textbf{point unique}, le barycentre $G = \\textit{Bar}\\{(A, 1); (B, 2); (C, 3)\\}$.\\par\\smallskip\\\\Calculons sa position : appliquons la relation de Chasles depuis $A$ :\\\\$$\\overrightarrow{MA} + 2\\overrightarrow{MB} + 3\\overrightarrow{MC} = \\vec{0}$$\\\\$$\\overrightarrow{MA} + 2(\\overrightarrow{MA} + \\overrightarrow{AB}) + 3(\\overrightarrow{MA} + \\overrightarrow{AC}) = \\vec{0}$$\\\\$$6\\overrightarrow{MA} + 2\\overrightarrow{AB} + 3\\overrightarrow{AC} = \\vec{0}$$\\par\\smallskip\\\\D'où :\\\\$$\\overrightarrow{AM} = \\frac{2\\overrightarrow{AB} + 3\\overrightarrow{AC}}{6} = \\frac{1}{3}\\overrightarrow{AB} + \\frac{1}{2}\\overrightarrow{AC}$$"
+        }
+      ]
+    }
+  ]
+}

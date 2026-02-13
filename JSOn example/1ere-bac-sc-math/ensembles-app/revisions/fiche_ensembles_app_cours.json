@@ -1,0 +1,57 @@
+{
+  "header": {
+    "title": "Applications et Ensembles",
+    "subtitle": "Cours & Définitions",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "generalites",
+      "category": "course",
+      "title": "Généralités sur les applications",
+      "content": "\\begin{definition}Une \\textbf{application} $f$ est définie par son ensemble de départ $E$, son ensemble d'arrivée $F$, et une relation qui permet d'associer à tout $x \\in E$ un élément \\textbf{unique} $y$ dans $F$. On note ce dernier $f(x)$.\\\\Les applications de $E$ dans $F$ forment un ensemble noté $\\mathcal{F}(E, F)$.\\end{definition}\\begin{definition}[Application identité]L'\\textbf{application identité} de $E$ est l'application de $E$ dans $E$ définie par $x \\mapsto x$. On la note $Id_E$.\\end{definition}"
+    },
+    {
+      "id": "restriction_prolongement",
+      "category": "course",
+      "title": "Restriction et Prolongement",
+      "content": "Soit $f$ une application de $A$ dans $F$, et $g$ une application de $B$ dans $F$.\\\\Si $A \\subset B$ et si, pour tout $x$ de $A$, on a $f(x) = g(x)$, on dit que :\\begin{itemize}\\item $f$ est une \\textbf{restriction} de $g$ (à l'ensemble $A$).\\item $g$ est un \\textbf{prolongement} de $f$ (à l'ensemble $B$).\\end{itemize}"
+    },
+    {
+      "id": "composition",
+      "category": "course",
+      "title": "Composition des applications",
+      "content": "Soient $E, F, G$ trois ensembles, $f$ une application de $E$ dans $F$, $g$ une application de $F$ dans $G$.\\\\La \\textbf{composée} de $f$ et de $g$, notée $g \\circ f$, est l'application de $E$ dans $G$ définie par :\\\\$$x \\mapsto g(f(x)) = (g \\circ f)(x)$$"
+    },
+    {
+      "id": "injection",
+      "category": "course",
+      "title": "Injection",
+      "content": "\\begin{definition}[Application injective]Une application $f$ de $E$ dans $F$ est dite \\textbf{injective} (ou est une \\textbf{injection}) si elle vérifie l'une des deux propriétés équivalentes :\\\\$$\\forall x \\in E, \\forall x' \\in E, \\quad x \\neq x' \\implies f(x) \\neq f(x')$$$$\\forall x \\in E, \\forall x' \\in E, \\quad f(x) = f(x') \\implies x = x'$$\\end{definition}\\begin{warning}Ne confondez pas avec la définition d'une application qui s'écrit : $\\forall x, x' \\in E, x=x' \\implies f(x)=f(x')$.\\end{warning}"
+    },
+    {
+      "id": "surjection",
+      "category": "course",
+      "title": "Surjection",
+      "content": "\\begin{definition}[Application surjective]Une application $f$ de $E$ dans $F$ est dite \\textbf{surjective} (ou est une \\textbf{surjection}) si tout élément $y$ de $F$ est l'image d'au moins un élément $x$ de $E$, soit :\\\\$$\\forall y \\in F, \\quad \\exists x \\in E : y = f(x)$$\\end{definition}"
+    },
+    {
+      "id": "bijection",
+      "category": "course",
+      "title": "Bijection",
+      "content": "\\begin{definition}[Application bijective]Une application $f$ de $E$ dans $F$ est dite \\textbf{bijective} (ou est une \\textbf{bijection}) si elle est à la fois \\textbf{injective} et \\textbf{surjective}.\\\\Dans ce cas, tout élément $y$ de $F$ est l'image d'un, et \\textbf{un seul}, élément $x$ de $E$.\\end{definition}\\begin{property}À tout $y$ de $F$, on associe ainsi un unique $x$ dans $E$, appelé \\textbf{antécédent} et noté $f^{-1}(y)$.\\\\$f^{-1}$ est la \\textbf{bijection réciproque} de $f$. On a donc :\\\\$$x = f^{-1}(y) \\iff y = f(x)$$\\\\Ce qui entraîne $f \\circ f^{-1} = Id_F$ et $f^{-1} \\circ f = Id_E$.\\end{property}"
+    },
+    {
+      "id": "theoremes_composition",
+      "category": "course",
+      "title": "Théorèmes sur la composition",
+      "content": "\\begin{theorem}Soit $f$ une application de $E$ dans $F$, et $g$ une application de $F$ dans $G$. On a les implications qui suivent :\\begin{itemize}\\item Si $f$ et $g$ sont injectives, alors $g \\circ f$ est injective.\\item Si $g \\circ f$ est injective, alors $f$ est injective.\\item Si $f$ et $g$ sont surjectives, alors $g \\circ f$ est surjective.\\item Si $g \\circ f$ est surjective, alors $g$ est surjective.\\item Si $f$ et $g$ sont bijectives, alors $g \\circ f$ est bijective, et $(g \\circ f)^{-1} = f^{-1} \\circ g^{-1}$.\\end{itemize}\\end{theorem}"
+    },
+    {
+      "id": "images_ensembles",
+      "category": "course",
+      "title": "Image directe et image réciproque",
+      "content": "\\begin{definition}Soit $f$ une application de $E$ dans $F$.\\\\1. Si $A \\subset E$, on appelle \\textbf{image directe} de $A$ par $f$, la partie de $F$ constituée par les images par $f$ des éléments de $A$ :\\\\$$f(A) = \\{f(x) ; x \\in A\\}$$\\\\2. Si $B \\subset F$, on appelle \\textbf{image réciproque} de $B$, la partie de $E$ constituée par les $x$ dont l'image par $f$ est dans $B$ :\\\\$$f^{-1}(B) = \\{x \\in E ; f(x) \\in B\\}$$\\end{definition}\\begin{theorem}\\begin{itemize}\\item $A_1 \\subset A_2 \\implies f(A_1) \\subset f(A_2)$ ; $B_1 \\subset B_2 \\implies f^{-1}(B_1) \\subset f^{-1}(B_2)$\\item $f(A_1 \\cup A_2) = f(A_1) \\cup f(A_2)$ ; $f(A_1 \\cap A_2) \\subset f(A_1) \\cap f(A_2)$\\item $f^{-1}(B_1 \\cup B_2) = f^{-1}(B_1) \\cup f^{-1}(B_2)$ ; $f^{-1}(B_1 \\cap B_2) = f^{-1}(B_1) \\cap f^{-1}(B_2)$\\end{itemize}\\end{theorem}"
+    }
+  ]
+}

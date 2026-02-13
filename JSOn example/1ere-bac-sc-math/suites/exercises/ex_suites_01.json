@@ -1,0 +1,45 @@
+{
+  "id": "ex-analyse-suite-recurrente-lineaire-ordre2",
+  "topic": "Analyse",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "On pose $v_n = u_{n+1} - \\frac{1}{2}u_n$ et $w_n = 2^n u_n$",
+      "subQuestions": [
+        {
+          "id": "sq1a",
+          "content": "Montrer que $(v_n)_n$ est une suite géométrique puis calculer $v_n$ en fonction de $n$",
+          "hint": "Calculez $v_{n+1}$ en remplaçant $u_{n+2}$ par sa définition initiale. Factorisez ensuite l'expression par $\\frac{1}{2}$ pour faire apparaître $v_n$. N'oubliez pas de calculer le premier terme $v_0$."
+        },
+        {
+          "id": "sq1b",
+          "content": "Montrer que $(w_n)_n$ est une suite arithmétique puis calculer $w_n$ en fonction de $n$",
+          "hint": "Calculez la différence $w_{n+1} - w_n$. Après avoir développé $2^{n+1}u_{n+1} - 2^n u_n$, factorisez par $2^n$ et essayez de faire apparaître le terme $v_n$ calculé précédemment. La raison de la suite sera constante."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "En déduire que $(\\forall n \\in \\mathbb{N}) \\quad u_n = \\frac{2n-1}{2^n}$",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Utilisez simplement la définition de $w_n$ ($w_n = 2^n u_n$) et l'expression explicite de $w_n$ trouvée à la question 1b. Inversez la relation pour isoler $u_n$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "On pose $S_n = \\displaystyle \\sum_{k=0}^{n} u_k$. Prouver que : $(\\forall n \\in \\mathbb{N}) \\quad S_n = 2 - \\frac{2n+3}{2^n}$",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "Astuce : Au lieu de sommer directement l'expression de $u_k$, utilisez la relation $v_k = u_{k+1} - \\frac{1}{2}u_k$. Sommez cette égalité pour $k$ allant de $0$ à $n$. Vous lierez ainsi $\\sum v_k$ (somme géométrique connue) à $S_n$ (via un décalage d'indice : $\\sum u_{k+1} = S_n - u_0 + u_{n+1}$)."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "ex-prod-scal-6",
+  "topic": "Produit Scalaire",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Montrer que pour tout réel $m$, l'ensemble $(C_m)$ est un cercle.",
+          "hint": "\\blueb{Transformez} l'équation sous la forme canonique $(x-a)^2 + (y-b)^2 = K$. Pour que ce soit un cercle, montrez que le terme de droite $K$ est strictement positif, quel que soit le réel $m$ (étudiez le signe du trinôme en $m$)."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Montrer que tous les cercles $(C_m)$ passent par deux points fixes $A$ et $B$ tels que $y_A = 0$.",
+          "hint": "Un point fixe ne dépend pas du paramètre $m$. Écrivez l'équation sous la forme $E(x,y) + m \\cdot F(x,y) = 0$. Pour que l'égalité soit vraie pour tout $m$, il faut que \\blueb{le coefficient de m s'annule} et que le reste de l'équation s'annule aussi. Résolvez le système obtenu."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "Donner une équation cartésienne de $(\\Delta_m)$, la tangente au cercle $(C_m)$ en $B$.",
+          "hint": "La tangente en $B$ au cercle de centre $\\Omega_m$ est la droite passant par $B$ et perpendiculaire au rayon $[\\Omega_m B]$. Utilisez le vecteur $\\overrightarrow{\\Omega_m B}$ comme \\blueb{vecteur normal} à la droite cherchée."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "Déterminer les valeurs de $m$ pour lesquelles l'axe des ordonnées est tangent au cercle $(C_m)$, et déterminer les points de contact $E$ et $F$.",
+          "hint": "L'axe des ordonnées $(Oy)$ a pour équation $x=0$. Il est tangent au cercle si la \\blueb{distance} du centre $\\Omega_m$ à cette droite est égale au rayon $R_m$. Cela revient à résoudre $|x_{\\Omega}| = R_m$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq5",
+          "content": "La droite $(AB)$ coupe l'axe des ordonnées au point $G$. Montrer que $G$ est le milieu du segment $[EF]$.",
+          "hint": "Commencez par déterminer l'équation de la droite $(AB)$ pour trouver les coordonnées de son intersection $G$ avec $(Oy)$. Ensuite, \\blueb{calculez} le milieu de $[EF]$ à partir des coordonnées trouvées à la question précédente et comparez."
+        }
+      ]
+    }
+  ]
+}

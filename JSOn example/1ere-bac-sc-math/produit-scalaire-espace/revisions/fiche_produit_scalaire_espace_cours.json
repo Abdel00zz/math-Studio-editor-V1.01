@@ -1,0 +1,187 @@
+{
+  "header": {
+    "title": "Produit Scalaire (Analytique)",
+    "subtitle": "Cours Complet & Applications",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "category": "course",
+      "title": "Introduction : Du Produit Scalaire à la Géométrie Analytique",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Inner-product-angle.svg/500px-Inner-product-angle.svg.png",
+        "type": "image",
+        "position": "right",
+        "width": "35%",
+        "caption": "Produit scalaire : lien entre angle et projection orthogonale",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Le produit scalaire est une opération fondamentale qui permet de mesurer l'angle entre deux vecteurs, de calculer des projections orthogonales et de résoudre des problèmes géométriques par le calcul. Historiquement, ce concept a émergé des travaux sur la mécanique et l'analyse vectorielle au XIXe siècle. Sa traduction analytique dans un repère orthonormé simplifie considérablement les calculs et ouvre la voie à la résolution algébrique de problèmes géométriques."
+        },
+        {
+          "type": "text",
+          "content": "Le plan est rapporté à un repère $(O; \\vec{i}, \\vec{j})$. Lorsque ce repère est orthonormé, les calculs vectoriels se ramènent à des opérations sur les coordonnées, ce qui rend possible l'étude analytique des distances, des angles et des positions relatives de droites et cercles."
+        }
+      ]
+    },
+    {
+      "id": "base_repere",
+      "category": "course",
+      "title": "Base et Repère Orthonormés",
+      "blocks": [
+        {
+          "type": "definition",
+          "title": "Quand une base est-elle orthonormée ?",
+          "content": "Soit $B(\\vec{i}, \\vec{j})$ une base du plan vectoriel $V_2$.\\begin{itemize}\\item La base $B$ est dite \\textbf{orthogonale} si et seulement si $\\vec{i} \\cdot \\vec{j} = \\blank{0}$.\\item Elle est dite \\textbf{normée} si et seulement si $\\|\\vec{i}\\| = \\|\\vec{j}\\| = \\blank{1}$.\\item Une base est \\blueb{orthonormée} si elle est à la fois orthogonale et normée.\\end{itemize}"
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'un repère orthonormé ?",
+          "content": "Un repère $\\mathcal{R}(O; \\vec{i}, \\vec{j})$ est dit \\textbf{orthonormé} si la base associée $(\\vec{i}, \\vec{j})$ est orthonormée. Cela implique que les axes $(O, \\vec{i})$ et $(O, \\vec{j})$ sont perpendiculaires en $O$ et gradués avec la même unité."
+        },
+        {
+          "type": "remark",
+          "title": "Avantages du repère orthonormé",
+          "content": "Dans un repère orthonormé, les formules de distance et d'angle se simplifient considérablement. Par exemple, la distance entre deux points $A(x_A,y_A)$ et $B(x_B,y_B)$ devient $AB = \\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2}$, ce qui n'est autre que le théorème de Pythagore."
+        }
+      ]
+    },
+    {
+      "id": "expression_analytique",
+      "category": "course",
+      "title": "Expression Analytique du Produit Scalaire",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dot_product_angle.svg/400px-Dot_product_angle.svg.png",
+        "type": "image",
+        "position": "right",
+        "width": "30%",
+        "caption": "Produit scalaire : $\\vec{u} \\cdot \\vec{v} = \\|\\vec{u}\\|\\|\\vec{v}\\|\\cos\\theta$",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "theorem",
+          "title": "Comment calculer le produit scalaire avec les coordonnées ?",
+          "content": "Dans un repère orthonormé, si $\\vec{u}(x; y)$ et $\\vec{v}(x'; y')$, alors :\\\\$$\\vec{u} \\cdot \\vec{v} = \\blank{xx' + yy'}$$\\\\Observons ce résultat sur un cas concret : pour $\\vec{u}(2,3)$ et $\\vec{v}(-1,4)$, on obtient $\\vec{u}\\cdot\\vec{v} = 2\\times(-1) + 3\\times4 = -2+12=10$."
+        },
+        {
+          "type": "property",
+          "title": "Norme et orthogonalité",
+          "content": "\\begin{itemize}\\item \\textbf{Norme :} $\\|\\vec{u}\\| = \\sqrt{\\vec{u} \\cdot \\vec{u}} = \\sqrt{\\blank{x^2 + y^2}}$\\item \\textbf{Orthogonalité :} $\\vec{u} \\perp \\vec{v} \\iff xx' + yy' = \\blank{0}$\\end{itemize}\\\\Analysons un cas concret : $\\vec{u}(3,4)$ a pour norme $\\|\\vec{u}\\|=\\sqrt{9+16}=5$. Les vecteurs $\\vec{u}(2,-1)$ et $\\vec{v}(1,2)$ sont orthogonaux car $2\\times1 + (-1)\\times2 = 0$."
+        },
+        {
+          "type": "property",
+          "title": "Anges et lignes trigonométriques",
+          "content": "Soit $\\theta$ une mesure de l'angle orienté $(\\vec{u}, \\vec{v})$. On a les relations fondamentales :\\\\$$\\cos\\theta = \\frac{\\vec{u} \\cdot \\vec{v}}{\\|\\vec{u}\\|\\|\\vec{v}\\|} = \\frac{xx'+yy'}{\\sqrt{x^2+y^2}\\sqrt{x'^2+y'^2}}$$\\\\$$\\sin\\theta = \\frac{\\det(\\vec{u},\\vec{v})}{\\|\\vec{u}\\|\\|\\vec{v}\\|} = \\frac{xy'-yx'}{\\sqrt{x^2+y^2}\\sqrt{x'^2+y'^2}}$$\\\\Regardons un exemple : pour $\\vec{u}(1,0)$ et $\\vec{v}(\\sqrt{2}/2, \\sqrt{2}/2)$, on trouve $\\cos\\theta = \\frac{\\sqrt{2}}{2}$, donc $\\theta = 45^\\circ$."
+        }
+      ]
+    },
+    {
+      "id": "droite_plan",
+      "category": "course",
+      "title": "Droites et Vecteurs Normaux",
+      "blocks": [
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'un vecteur normal à une droite ?",
+          "content": "Un vecteur $\\vec{n}$ non nul est dit \\textbf{normal} à une droite $(D)$ s'il est orthogonal à tout vecteur directeur de $(D)$. Si $\\vec{u}$ dirige $(D)$, alors $\\vec{n} \\cdot \\vec{u} = \\blank{0}$."
+        },
+        {
+          "type": "theorem",
+          "title": "Comment obtenir l'équation cartésienne d'une droite ?",
+          "content": "Toute droite $(D)$ passant par $A(x_0, y_0)$ et de vecteur normal $\\vec{n}(a, b)$ admet pour équation cartésienne :\\\\$$a(x-x_0) + b(y-y_0) = 0$$\\\\Soit, après développement : $\\boxed{ax + by + c = 0}$ où $c = -ax_0 - by_0$.\\\\Réciproquement, l'ensemble des points $M(x,y)$ vérifiant $ax+by+c=0$ est une droite de vecteur normal $\\vec{n}(\\blank{a}, \\blank{b})$.\\\\Appliquons cette formule à un cas concret : la droite passant par $A(2,-1)$ avec $\\vec{n}(3,4)$ donne $3(x-2)+4(y+1)=0$, soit $3x+4y-2=0$."
+        },
+        {
+          "type": "property",
+          "title": "Vecteur directeur à partir de l'équation",
+          "content": "Si $(D): ax+by+c=0$ avec $\\vec{n}(a,b)$ normal, alors un vecteur directeur est $\\vec{u}(\\blank{-b}, \\blank{a})$. En effet, $\\vec{u}\\cdot\\vec{n} = -ab + ab = 0$, ce qui garantit l'orthogonalité. Observons cela sur l'exemple précédent : pour $(D): 3x+4y-2=0$, un vecteur directeur est $\\vec{u}(-4,3)$."
+        },
+        {
+          "type": "culture",
+          "content": "Le concept de vecteur normal trouve ses applications les plus importantes en physique et en ingénierie. En optique, la loi de la réflexion utilise le vecteur normal à une surface. En mécanique des fluides, la pression exercée sur une paroi est perpendiculaire à celle-ci. En infographie 3D, le calcul des normales aux surfaces est essentiel pour le rendu réaliste de la lumière et des ombres."
+        }
+      ]
+    },
+    {
+      "id": "distances_inegalites",
+      "category": "course",
+      "title": "Distances et Inégalités Fondamentales",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Cauchy_schwarz_inequality.svg/400px-Cauchy_schwarz_inequality.svg.png",
+        "type": "image",
+        "position": "right",
+        "width": "30%",
+        "caption": "Inégalité de Cauchy-Schwarz : illustration géométrique",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "theorem",
+          "title": "Comment calculer la distance d'un point à une droite ?",
+          "content": "Soit $(D): ax+by+c=0$ et $M_0(x_0,y_0)$. La distance de $M_0$ à $(D)$ est :\\\\$$d(M_0, D) = \\frac{|ax_0 + by_0 + c|}{\\blank{\\sqrt{a^2 + b^2}}}$$\\\\Analysons cette formule sur un exemple : la distance de $A(1,2)$ à la droite $(D): 3x+4y-5=0$ vaut $d(A,D) = \\frac{|3\\times1 + 4\\times2 -5|}{\\sqrt{9+16}} = \\frac{|3+8-5|}{5} = \\frac{6}{5} = 1.2$. Le dénominateur normalise selon la direction du vecteur normal."
+        },
+        {
+          "type": "property",
+          "title": "Inégalité de Cauchy-Schwarz",
+          "content": "Pour tous vecteurs $\\vec{u}$ et $\\vec{v}$ :\\\\$$|\\vec{u} \\cdot \\vec{v}| \\le \\|\\vec{u}\\| \\times \\|\\vec{v}\\|$$\\\\L'égalité a lieu si et seulement si $\\vec{u}$ et $\\vec{v}$ sont \\blank{colinéaires}.\\\\Cette inégalité exprime que le cosinus de l'angle entre deux vecteurs est toujours compris entre -1 et 1."
+        },
+        {
+          "type": "property",
+          "title": "Inégalité triangulaire",
+          "content": "Pour tous vecteurs $\\vec{u}$ et $\\vec{v}$ :\\\\$$\\|\\vec{u} + \\vec{v}\\| \\le \\|\\vec{u}\\| + \\|\\vec{v}\\|$$\\\\L'égalité a lieu si et seulement si $\\vec{u}$ et $\\vec{v}$ sont colinéaires et de \\blank{même sens}. Géométriquement, cela signifie que dans un triangle, la longueur d'un côté est inférieure à la somme des longueurs des deux autres côtés."
+        },
+        {
+          "type": "culture",
+          "content": "L'inégalité de Cauchy-Schwarz, formulée par Augustin-Louis Cauchy et Hermann Schwarz, est l'une des inégalités les plus importantes en mathématiques. Elle fonde l'analyse fonctionnelle et est utilisée en statistique (corrélation de Pearson), en physique (principe d'incertitude de Heisenberg) et en théorie de l'information. Son équivalent en probabilités est l'inégalité de Cauchy-Schwarz pour les espérances mathématiques."
+        }
+      ]
+    },
+    {
+      "id": "cercle",
+      "category": "course",
+      "title": "Étude Analytique du Cercle",
+      "media": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Circle_center_a_b_radius_r.svg/400px-Circle_center_a_b_radius_r.svg.png",
+        "type": "image",
+        "position": "right",
+        "width": "30%",
+        "caption": "Cercle de centre Ω(a,b) et de rayon R",
+        "shadow": true,
+        "border": true
+      },
+      "blocks": [
+        {
+          "type": "definition",
+          "title": "Quelle est l'équation cartésienne d'un cercle ?",
+          "content": "Le cercle $(\\mathcal{C})$ de centre $\\Omega(a, b)$ et de rayon $R$ est l'ensemble des points $M(x, y)$ tels que $\\Omega M^2 = R^2$. Son équation est :\\\\$$(x-a)^2 + (y-b)^2 = \\blank{R^2}$$\\\\Développée, elle s'écrit : $x^2 + y^2 - 2ax - 2by + (a^2+b^2-R^2)=0$.\\\\Prenons un exemple concret : le cercle de centre $\\Omega(1,-2)$ et de rayon 3 a pour équation $(x-1)^2 + (y+2)^2 = 9$, soit $x^2+y^2-2x+4y-4=0$ après développement."
+        },
+        {
+          "type": "property",
+          "title": "Cercle défini par un diamètre",
+          "content": "L'ensemble des points $M$ tels que $\\overrightarrow{MA} \\cdot \\overrightarrow{MB} = 0$ est le cercle de \\blank{diamètre} $[AB]$ (théorème de l'angle droit).\\\\Si $A(x_A,y_A)$ et $B(x_B,y_B)$, l'équation s'écrit : $(x-x_A)(x-x_B) + (y-y_A)(y-y_B) = 0$. Regardons cela sur un exemple : pour $A(1,2)$ et $B(5,6)$, l'équation du cercle de diamètre $[AB]$ est $(x-1)(x-5) + (y-2)(y-6)=0$."
+        },
+        {
+          "type": "property",
+          "title": "Reconnaître une équation de cercle",
+          "content": "Toute équation de la forme $x^2+y^2+\\alpha x+\\beta y+\\gamma=0$ représente :\\begin{itemize}\\item un cercle si $\\alpha^2+\\beta^2-4\\gamma > 0$ (centre $(-\\frac{\\alpha}{2},-\\frac{\\beta}{2})$, rayon $\\frac{1}{2}\\sqrt{\\alpha^2+\\beta^2-4\\gamma}$)\\item un point si $\\alpha^2+\\beta^2-4\\gamma = 0$\\item l'ensemble vide si $\\alpha^2+\\beta^2-4\\gamma < 0$\\end{itemize}"
+        },
+        {
+          "type": "remark",
+          "title": "Lien avec le produit scalaire",
+          "content": "Le cercle apparaît naturellement lorsqu'on cherche des points $M$ vérifiant $\\overrightarrow{MA}\\cdot\\overrightarrow{MB}=k$ (constante). En particulier, pour $k=0$, on obtient le cercle de diamètre $[AB]$. Cette approche permet de résoudre des problèmes de lieux géométriques complexes."
+        },
+        {
+          "type": "culture",
+          "content": "L'équation du cercle $(x-a)^2+(y-b)^2=R^2$ est une application directe du théorème de Pythagore. Historiquement, les cercles ont été étudiés depuis l'Antiquité, mais leur représentation analytique a été rendue possible par l'invention de la géométrie analytique par Descartes. Aujourd'hui, les cercles sont fondamentaux en géométrie algorithmique et en infographie pour la modélisation des courbes et la détection de collisions."
+        }
+      ]
+    }
+  ]
+}

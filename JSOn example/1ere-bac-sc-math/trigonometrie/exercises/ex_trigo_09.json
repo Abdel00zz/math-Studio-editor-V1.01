@@ -1,0 +1,37 @@
+
+{
+  "id": "ex-trigo-009",
+  "topic": "Trigonométrie",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Résoudre dans $\\mathbb{R}$ puis dans $]-\\pi ; \\pi]$ l'équation $2\\sin(x) - 1 = 0$.",
+      "hint": "$2\\sin(x) - 1 = 0 \\iff \\sin(x) = \\frac{1}{2}$\\par\\par$\\sin(x) = \\sin\\frac{\\pi}{6}$\\par\\par**Dans $\\mathbb{R}$ :**\\par$$x = \\frac{\\pi}{6} + 2k\\pi \\quad \\text{ou} \\quad x = \\pi - \\frac{\\pi}{6} + 2k\\pi = \\frac{5\\pi}{6} + 2k\\pi$$\\par\\par$$\\boxed{\\mathcal{S}_{\\mathbb{R}} = \\left\\{\\frac{\\pi}{6} + 2k\\pi, \\frac{5\\pi}{6} + 2k\\pi \\mid k \\in \\mathbb{Z}\\right\\}}$$\\par\\par**Dans $]-\\pi ; \\pi]$ :**\\par$$\\boxed{\\mathcal{S} = \\left\\{\\frac{\\pi}{6}, \\frac{5\\pi}{6}\\right\\}}$$"
+    },
+    {
+      "id": "q2",
+      "content": "Résoudre dans $\\mathbb{R}$ puis dans $]-\\pi ; \\pi]$ l'équation $\\sqrt{2}\\cos(x) + 1 = 0$.",
+      "hint": "$\\sqrt{2}\\cos(x) + 1 = 0 \\iff \\cos(x) = -\\frac{1}{\\sqrt{2}} = -\\frac{\\sqrt{2}}{2}$\\par\\par$\\cos(x) = \\cos\\frac{3\\pi}{4}$\\par\\par**Dans $\\mathbb{R}$ :**\\par$$x = \\frac{3\\pi}{4} + 2k\\pi \\quad \\text{ou} \\quad x = -\\frac{3\\pi}{4} + 2k\\pi$$\\par\\par$$\\boxed{\\mathcal{S}_{\\mathbb{R}} = \\left\\{\\pm\\frac{3\\pi}{4} + 2k\\pi \\mid k \\in \\mathbb{Z}\\right\\}}$$\\par\\par**Dans $]-\\pi ; \\pi]$ :**\\par$$\\boxed{\\mathcal{S} = \\left\\{-\\frac{3\\pi}{4}, \\frac{3\\pi}{4}\\right\\}}$$"
+    },
+    {
+      "id": "q3",
+      "content": "Résoudre dans $\\mathbb{R}$ puis dans $]-\\pi ; \\pi]$ l'équation $\\cos(x) + \\sqrt{3}\\sin(x) = \\sqrt{2}$.",
+      "hint": "On transforme le membre de gauche en $a\\cos(x - \\phi)$ :\\par$$\\cos x + \\sqrt{3}\\sin x = 2\\left(\\frac{1}{2}\\cos x + \\frac{\\sqrt{3}}{2}\\sin x\\right) = 2\\sin\\left(x + \\frac{\\pi}{6}\\right)$$\\par\\parL'équation devient : $2\\sin\\left(x + \\frac{\\pi}{6}\\right) = \\sqrt{2}$\\par\\par$\\sin\\left(x + \\frac{\\pi}{6}\\right) = \\frac{\\sqrt{2}}{2} = \\sin\\frac{\\pi}{4}$\\par\\par**Dans $\\mathbb{R}$ :**\\par$$x + \\frac{\\pi}{6} = \\frac{\\pi}{4} + 2k\\pi \\implies x = \\frac{\\pi}{12} + 2k\\pi$$\\par$$x + \\frac{\\pi}{6} = \\frac{3\\pi}{4} + 2k\\pi \\implies x = \\frac{7\\pi}{12} + 2k\\pi$$\\par\\par$$\\boxed{\\mathcal{S}_{\\mathbb{R}} = \\left\\{\\frac{\\pi}{12} + 2k\\pi, \\frac{7\\pi}{12} + 2k\\pi \\mid k \\in \\mathbb{Z}\\right\\}}$$\\par\\par**Dans $]-\\pi ; \\pi]$ :**\\par$$\\boxed{\\mathcal{S} = \\left\\{\\frac{\\pi}{12}, \\frac{7\\pi}{12}\\right\\}}$$"
+    },
+    {
+      "id": "q4",
+      "content": "Placer les solutions des équations précédentes sur le cercle trigonométrique.",
+      "hint": "Sur le cercle trigonométrique :\\par\\par• **Équation 1** : $\\frac{\\pi}{6}$ (30°) et $\\frac{5\\pi}{6}$ (150°) — points symétriques par rapport à l'axe $Oy$\\par\\par• **Équation 2** : $\\frac{3\\pi}{4}$ (135°) et $-\\frac{3\\pi}{4}$ (-135°) — points symétriques par rapport à l'axe $Ox$\\par\\par• **Équation 3** : $\\frac{\\pi}{12}$ (15°) et $\\frac{7\\pi}{12}$ (105°)"
+    },
+    {
+      "id": "q5",
+      "content": "Résoudre dans $]-\\pi ; \\pi]$ l'inéquation $2\\sin(x) - 1 \\geq 0$.",
+      "hint": "$2\\sin(x) - 1 \\geq 0 \\iff \\sin(x) \\geq \\frac{1}{2}$\\par\\parSur le cercle trigonométrique, $\\sin(x) \\geq \\frac{1}{2}$ correspond aux points dont l'ordonnée est supérieure ou égale à $\\frac{1}{2}$.\\par\\parLes bornes sont $x = \\frac{\\pi}{6}$ et $x = \\frac{5\\pi}{6}$.\\par\\parDonc dans $]-\\pi ; \\pi]$ :\\par$$\\boxed{\\mathcal{S} = \\left[\\frac{\\pi}{6}, \\frac{5\\pi}{6}\\right]}$$"
+    },
+    {
+      "id": "q6",
+      "content": "Résoudre dans $]-\\pi ; \\pi]$ l'inéquation $\\sqrt{2}\\cos(x) + 1 < 0$.",
+      "hint": "$\\sqrt{2}\\cos(x) + 1 < 0 \\iff \\cos(x) < -\\frac{\\sqrt{2}}{2}$\\par\\parSur le cercle trigonométrique, $\\cos(x) < -\\frac{\\sqrt{2}}{2}$ correspond aux points dont l'abscisse est strictement inférieure à $-\\frac{\\sqrt{2}}{2}$.\\par\\parLes bornes sont $x = \\frac{3\\pi}{4}$ et $x = -\\frac{3\\pi}{4}$.\\par\\parDonc dans $]-\\pi ; \\pi]$ :\\par$$\\boxed{\\mathcal{S} = \\left]-\\pi, -\\frac{3\\pi}{4}\\right[ \\cup \\left]\\frac{3\\pi}{4}, \\pi\\right]}$$"
+    }
+  ]
+}

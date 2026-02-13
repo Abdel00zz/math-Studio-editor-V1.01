@@ -1,0 +1,68 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_derivabilite_point",
+      "category": "method",
+      "title": "Sais-tu **étudier** la dérivabilité en un point ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On revient toujours à la définition : le calcul de la limite du taux d'accroissement."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer la limite du rapport $\\displaystyle \\lim_{x \\to a} \\frac{f(x)-f(a)}{x-a}$",
+            "Si la limite est finie $\\ell$, alors $f$ est dérivable et $f'(a) = \\ell$",
+            "Si la limite est $\\pm\\infty$, $f$ n'est pas dérivable (tangente verticale)",
+            "Pour les fonctions par morceaux, calculer les limites à gauche et à droite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_eq_tangente",
+      "category": "method",
+      "title": "Maîtrises-tu la **détermination de l'équation** d'une tangente ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La tangente est la meilleure approximation affine locale de la fonction."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Vérifier que $f$ est dérivable en $a$",
+            "Calculer $f(a)$ et $f'(a)$",
+            "Appliquer la formule : $y = f'(a)(x-a) + f(a)$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_calcul_derivee",
+      "category": "method",
+      "title": "Es-tu capable de **calculer** une fonction dérivée ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On identifie la forme de la fonction et on applique les règles opératoires."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier la structure : est-ce $u+v$, $uv$, $u/v$, $u^n$ ?",
+            "Calculer les dérivées des composants ($u'$, $v'$)",
+            "Appliquer la formule correspondante",
+            "Simplifier le résultat (factoriser si possible)"
+          ]
+        }
+      ]
+    }
+  ]
+}

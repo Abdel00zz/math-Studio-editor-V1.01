@@ -1,0 +1,51 @@
+{
+  "id": "ex-geom-rotations-equilateral",
+  "topic": "Géométrie Plane",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Soit $A'$ et $B'$ les images respectives des points $A$ et $B$ par l'application $R_B \\circ R_A^{-1}$. Montrer que $I$ est le milieu de $[AA']$ et que $B$ est le milieu de $[AB']$.",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "Pour $A'$, calculez l'image étape par étape : $R_A^{-1}(A) = A$, puis $A' = R_B(A)$. Utilisez les angles pour placer $A'$. Pour le milieu $I$, rappelez-vous que dans un triangle équilatéral, la symétrie centrale se lie aux milieux."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Déterminer la nature de l'application $R_B \\circ R_A^{-1}$.",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Utilisez le théorème de composition des rotations. La somme des angles est $-\\frac{\\pi}{3} + (-\\frac{2\\pi}{3}) = -\\pi$. Une rotation d'angle $\\pi$ (modulo $2\\pi$) est une transformation particulière : une \\blueb{symétrie centrale}."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Soit $M$ un point quelconque du plan. On pose $R_A(M)=M_1$ et $R_B(M)=M_2$. Montrer que $I$ est le milieu de $[M_1M_2]$.",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "Essayez de relier $M_2$ à $M_1$. On a $M = R_A^{-1}(M_1)$, donc $M_2 = R_B(R_A^{-1}(M_1))$. Utilisez alors la \\textbf{nature de l'application} trouvée à la question 2 ($S_I$) pour conclure."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "Montrer que $R_B \\circ R_A$ est une rotation dont on déterminera le centre et l'angle.",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "",
+          "hint": "Calculez la somme des angles : $\\frac{\\pi}{3} + (-\\frac{2\\pi}{3})$. La somme étant non nulle modulo $2\\pi$, c'est une rotation. Pour le centre, cherchez un \\blueb{point invariant} ou calculez l'image d'un point stratégique (comme $C$)."
+        }
+      ]
+    }
+  ]
+}

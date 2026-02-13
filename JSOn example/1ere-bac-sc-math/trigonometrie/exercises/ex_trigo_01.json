@@ -1,0 +1,47 @@
+
+{
+  "id": "ex-trigo-001",
+  "topic": "Trigonométrie",
+  "requiresRedaction": true,
+  "sessionDate": "2023-12-30T18:00:00.000Z",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Inégalité trigonométrique",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Montrer que $(\\forall x \\in \\mathbb{R})$ : $|\\sin x + \\cos x| \\leq \\sqrt{2}$",
+          "hint": "\\method On utilise la transformation classique $a\\cos x + b\\sin x$.\\par$$\\begin{aligned} \\sin x + \\cos x &= \\sqrt{1^2 + 1^2} \\left( \\frac{1}{\\sqrt{2}}\\sin x + \\frac{1}{\\sqrt{2}}\\cos x \\right) \\\\ &= \\sqrt{2} \\left( \\sin x \\cos\\frac{\\pi}{4} + \\cos x \\sin\\frac{\\pi}{4} \\right) \\\\ &= \\sqrt{2} \\sin\\left(x + \\frac{\\pi}{4}\\right) \\end{aligned}$$\\parOr, pour tout $t \\in \\mathbb{R}$, on sait que $|\\sin t| \\leq 1$.\\par$$\\begin{aligned} \\left|\\sin x + \\cos x\\right| &= \\left| \\sqrt{2} \\sin\\left(x + \\frac{\\pi}{4}\\right) \\right| \\\\ &= \\sqrt{2} \\left|\\sin\\left(x + \\frac{\\pi}{4}\\right)\\right| \\\\ &\\leq \\sqrt{2} \\times 1 = \\sqrt{2} \\end{aligned}$$\\par\\conclusion Donc $\\boxed{|\\sin x + \\cos x| \\leq \\sqrt{2}}$ pour tout $x \\in \\mathbb{R}$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Équation trigonométrique",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "On considère l'équation $(E)$ : $1 + \\cos^3 x + \\sin^3 x = \\frac{3}{2} \\sin 2x$",
+          "hint": "\\step a) On pose $y = \\sin x + \\cos x$. Exprimons $\\sin x \\cos x$ et $\\sin^3 x + \\cos^3 x$ en fonction de $y$.\\parEn élevant $y$ au carré :\\par$$\\begin{aligned} y^2 &= (\\sin x + \\cos x)^2 \\\\ &= \\sin^2 x + 2\\sin x \\cos x + \\cos^2 x \\\\ &= 1 + 2\\sin x \\cos x \\end{aligned}$$\\par$\\implies \\sin x \\cos x = \\frac{y^2 - 1}{2}$\\parPour $\\sin^3 x + \\cos^3 x$, on utilise l'identité $a^3 + b^3 = (a+b)(a^2 - ab + b^2)$ :\\par$$\\begin{aligned} \\sin^3 x + \\cos^3 x &= (\\sin x + \\cos x)(\\underbrace{\\sin^2 x + \\cos^2 x}_{1} - \\sin x \\cos x) \\\\ &= y \\left( 1 - \\frac{y^2-1}{2} \\right) \\\\ &= y \\left( \\frac{2 - y^2 + 1}{2} \\right) \\\\ &= \\frac{y(3 - y^2)}{2} \\end{aligned}$$\\par\\conclusion On a donc $\\boxed{\\sin x \\cos x = \\frac{y^2-1}{2}}$ et $\\boxed{\\sin^3 x + \\cos^3 x = \\frac{y(3-y^2)}{2}}$."
+        },
+        {
+          "id": "sq3",
+          "content": "b) Montrer que $(E) \\Leftrightarrow (y+1)(y^2 + 2y - 5) = 0$",
+          "hint": "Remplaçons les expressions dans $(E)$ : $1 + \\cos^3 x + \\sin^3 x = \\frac{3}{2} \\sin 2x$.\\parOn rappelle que $\\sin 2x = 2\\sin x \\cos x = y^2 - 1$.\\par$1 + \\frac{y(3-y^2)}{2} = \\frac{3}{2}(y^2-1)$\\parMultiplions par 2 pour éliminer les fractions :\\par$2 + 3y - y^3 = 3(y^2-1) \\iff 2 + 3y - y^3 = 3y^2 - 3$\\par$\\iff -y^3 - 3y^2 + 3y + 5 = 0 \\iff y^3 + 3y^2 - 3y - 5 = 0$\\parOn remarque que $y = -1$ est une racine évidente : $(-1)^3 + 3(-1)^2 - 3(-1) - 5 = -1 + 3 + 3 - 5 = 0$.\\parOn peut donc factoriser par $(y+1)$ (division euclidienne ou identification) :\\par$y^3 + 3y^2 - 3y - 5 = (y+1)(y^2 + 2y - 5)$\\par\\conclusion Ainsi, $(E) \\Leftrightarrow \\boxed{(y+1)(y^2 + 2y - 5) = 0}$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Résolution dans $\\mathbb{R}$",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "Résoudre dans $\\mathbb{R}$ l'équation $(E)$",
+          "hint": "L'équation équivaut à $y = -1$ ou $y^2 + 2y - 5 = 0$.\\par\\blueb{Cas 1 :} $y = -1$.\\parCela signifie $\\sin x + \\cos x = -1$, soit $\\sqrt{2}\\sin(x + \\frac{\\pi}{4}) = -1$.\\par$\\sin\\left(x + \\frac{\\pi}{4}\\right) = -\\frac{\\sqrt{2}}{2} = \\sin\\left(-\\frac{\\pi}{4}\\right)$\\par$x + \\frac{\\pi}{4} = -\\frac{\\pi}{4} + 2k\\pi \\quad \\text{ou} \\quad x + \\frac{\\pi}{4} = \\pi - \\left(-\\frac{\\pi}{4}\\right) + 2k\\pi$\\par$x = -\\frac{\\pi}{2} + 2k\\pi \\quad \\text{ou} \\quad x = \\pi + 2k\\pi$\\par\\blueb{Cas 2 :} $y^2 + 2y - 5 = 0$. Discriminant : $\\Delta = 4 - 4(1)(-5) = 24$.\\par$y = \\frac{-2 \\pm \\sqrt{24}}{2} = -1 \\pm \\sqrt{6}$\\parOr nous savons que $|y| = |\\sin x + \\cos x| \\leq \\sqrt{2} \\approx 1.41$.\\parVérifions les solutions :\\\\- $y_1 = -1 + \\sqrt{6} \\approx 1.45 > \\sqrt{2}$ (Rejeté)\\\\- $y_2 = -1 - \\sqrt{6} \\approx -3.45 < -\\sqrt{2}$ (Rejeté)\\par\\conclusion Les seules solutions valides proviennent du premier cas : $\\boxed{\\mathcal{S} = \\left\\{-\\frac{\\pi}{2} + 2k\\pi, \\pi + 2k\\pi \\mid k \\in \\mathbb{Z}\\right\\}}$."
+        }
+      ]
+    }
+  ]
+}

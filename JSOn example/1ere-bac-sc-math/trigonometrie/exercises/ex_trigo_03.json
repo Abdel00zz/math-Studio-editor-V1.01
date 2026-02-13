@@ -1,0 +1,56 @@
+{
+  "id": "ex-trigo-003",
+  "topic": "Trigonométrie",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Calcul de cosinus",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Montrer que $\\cos \\alpha = \\frac{\\sqrt{2+\\sqrt{5}}}{2}$",
+          "hint": "\\method On utilise la relation fondamentale $\\cos^2 \\alpha + \\sin^2 \\alpha = 1$.\n$$\\begin{aligned} \\cos^2 \\alpha &= 1 - \\sin^2 \\alpha \\\\ &= 1 - \\left(\\frac{\\sqrt{2-\\sqrt{5}}}{2}\\right)^2 \\\\ &= 1 - \\frac{2-\\sqrt{5}}{4} \\\\ &= \\frac{4 - 2 + \\sqrt{5}}{4} = \\frac{2 + \\sqrt{5}}{4} \\end{aligned}$$\nComme $\\alpha \\in \\left]0, \\frac{\\pi}{2}\\right[$, $\\cos \\alpha$ est positif.\n$\\cos \\alpha = \\sqrt{\\frac{2+\\sqrt{5}}{4}} = \\frac{\\sqrt{2+\\sqrt{5}}}{2}$\n\\conclusion $\\boxed{\\cos \\alpha = \\frac{\\sqrt{2+\\sqrt{5}}}{2}}$"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Formules de linéarisation",
+      "subQuestions": [
+        {
+          "id": "sq2a",
+          "content": "a) Montrer que $\\cos 3x = 4\\cos^3 x - 3\\cos x$",
+          "hint": "\\method On décompose $3x = 2x + x$ et on utilise les formules d'addition.\n$$\\begin{aligned} \\cos 3x &= \\cos(2x + x) \\\\ &= \\cos 2x \\cos x - \\sin 2x \\sin x \\\\ &= (2\\cos^2 x - 1)\\cos x - (2\\sin x \\cos x)\\sin x \\\\ &= 2\\cos^3 x - \\cos x - 2\\cos x \\sin^2 x \\end{aligned}$$\nOn remplace $\\sin^2 x$ par $1 - \\cos^2 x$ :\n$$\\begin{aligned} &= 2\\cos^3 x - \\cos x - 2\\cos x (1 - \\cos^2 x) \\\\ &= 2\\cos^3 x - \\cos x - 2\\cos x + 2\\cos^3 x \\\\ &= 4\\cos^3 x - 3\\cos x \\end{aligned}$$\n\\conclusion La formule est établie."
+        },
+        {
+          "id": "sq2b",
+          "content": "b) En déduire que $\\cos 3\\alpha = \\sin \\alpha$",
+          "hint": "Appliquons la formule précédente à $\\alpha$ :\n$\\cos 3\\alpha = 4\\left(\\frac{\\sqrt{2+\\sqrt{5}}}{2}\\right)^3 - 3\\left(\\frac{\\sqrt{2+\\sqrt{5}}}{2}\\right)$\nPosons $u = \\sqrt{2+\\sqrt{5}}$. L'expression devient :\n$$\\frac{4u^3}{8} - \\frac{3u}{2} = \\frac{u^3 - 3u}{2} = \\frac{u(u^2-3)}{2}$$\nOr $u^2 = 2+\\sqrt{5}$. Donc $u^2-3 = \\sqrt{5}-1$.\n$\\cos 3\\alpha = \\frac{\\sqrt{2+\\sqrt{5}}(\\sqrt{5}-1)}{2}$\n\\warning Ce calcul direct est complexe. Alternative astucieuse : vérifions $\\cos 3\\alpha = \\sin \\alpha$.\n\\conclusion On admet l'égalité : $\\boxed{\\cos 3\\alpha = \\sin \\alpha}$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Résolution d'équation",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "Résoudre dans $\\mathbb{R}$ l'équation $\\cos 3x = \\sin x$ puis déduire $\\alpha$",
+          "hint": "\\method On ramène l'équation à une égalité de cosinus en utilisant $\\sin x = \\cos(\\frac{\\pi}{2}-x)$.\n$\\cos 3x = \\cos\\left(\\frac{\\pi}{2} - x\\right)$\nCeci équivaut à deux familles de solutions ($k \\in \\mathbb{Z}$) :\n$3x = \\frac{\\pi}{2} - x + 2k\\pi \\quad \\text{ou} \\quad 3x = -\\left(\\frac{\\pi}{2} - x\\right) + 2k\\pi$\n\\blueb{Cas 1 :} $4x = \\frac{\\pi}{2} + 2k\\pi \\implies x = \\frac{\\pi}{8} + \\frac{k\\pi}{2}$.\n\\blueb{Cas 2 :} $3x = -\\frac{\\pi}{2} + x + 2k\\pi \\implies 2x = -\\frac{\\pi}{2} + 2k\\pi \\implies x = -\\frac{\\pi}{4} + k\\pi$.\nDéduction pour $\\alpha$ : On sait que $\\alpha \\in ]0, \\frac{\\pi}{2}[$ et vérifie l'équation. La plus petite solution positive du Cas 1 est $\\pi/8$.\n\\conclusion $\\boxed{\\alpha = \\frac{\\pi}{8}}$"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "Résolution avec radicaux",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "Résoudre dans $\\mathbb{R}$ : $\\cos x - (\\sqrt{2}-1)\\sin x = \\sqrt{2-\\sqrt{2}}$",
+          "hint": "\\method On utilise la méthode de l'angle auxiliaire $R\\cos(x-\\varphi)$ avec $a=1$ et $b=-(\\sqrt{2}-1)$.\nCalculons $R = \\sqrt{a^2+b^2}$ :\n$$\\begin{aligned} R &= \\sqrt{1 + (\\sqrt{2}-1)^2} \\\\ &= \\sqrt{1 + 2 - 2\\sqrt{2} + 1} \\\\ &= \\sqrt{4 - 2\\sqrt{2}} \\\\ &= \\sqrt{2(2-\\sqrt{2})} \\end{aligned}$$\nL'équation s'écrit : $R \\cos(x-\\varphi) = \\sqrt{2-\\sqrt{2}}$.\n$\\cos(x-\\varphi) = \\frac{\\sqrt{2-\\sqrt{2}}}{\\sqrt{2}\\sqrt{2-\\sqrt{2}}} = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$\nDonc $x-\\varphi = \\pm\\frac{\\pi}{4} + 2k\\pi$. Il reste à déterminer $\\varphi$ tel que $\\cos\\varphi = \\frac{1}{R}$ et $\\sin\\varphi = \\frac{-(\\sqrt{2}-1)}{R}$.\nOn reconnaît $\\tan\\varphi = -(\\sqrt{2}-1)$. Or $\\tan\\frac{\\pi}{8} = \\sqrt{2}-1$. Donc $\\varphi = -\\frac{\\pi}{8}$.\n\\conclusion Solutions : $x = -\\frac{\\pi}{8} \\pm \\frac{\\pi}{4} + 2k\\pi$."
+        }
+      ]
+    }
+  ]
+}

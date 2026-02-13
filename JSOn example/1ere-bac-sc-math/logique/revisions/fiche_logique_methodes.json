@@ -1,0 +1,206 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_tables_verite",
+      "category": "method",
+      "title": "Sais-tu **utiliser** les tables de vérité ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Une table de vérité permet de déterminer la valeur de vérité d'une proposition complexe."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Dresser un tableau avec une colonne pour chaque variable et chaque étape",
+            "Remplir les colonnes des variables avec toutes les combinaisons de Vrai et Faux",
+            "Appliquer les règles des connecteurs logiques",
+            "Conclure : si la dernière colonne ne contient que des Vrai, c'est une tautologie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_negation_quantificateurs",
+      "category": "method",
+      "title": "Maîtrises-tu la **négation** d'une proposition avec quantificateurs ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Les quantificateurs s'inversent et la propriété finale est niée."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Transformer $\\forall$ en $\\exists$ et inversement",
+            "Nier la conclusion $P(x)$",
+            "Conserver l'ordre des variables"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_contraposee",
+      "category": "method",
+      "title": "Connais-tu le **raisonnement par contraposée** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise l'équivalence : $(P \\implies Q) \\iff (\\text{non } Q \\implies \\text{non } P)$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier l'hypothèse $P$ et la conclusion $Q$",
+            "Formuler leurs négations : non $Q$ et non $P$",
+            "Démontrer que si non $Q$ est vraie, alors non $P$ est vraie",
+            "Conclure que l'implication initiale est vraie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_absurde",
+      "category": "method",
+      "title": "Es-tu capable de **raisonner par l'absurde** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On suppose que la proposition est fausse et on cherche une contradiction."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Supposer la négation de la proposition à démontrer",
+            "Dérouler un raisonnement logique valide",
+            "Mettre en évidence une contradiction",
+            "Conclure que l'hypothèse est fausse, donc la proposition est vraie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_cas_par_cas",
+      "category": "method",
+      "title": "Sais-tu **utiliser** la disjonction des cas ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On divise l'ensemble d'étude en sous-ensembles disjoints couvrant toutes les possibilités."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier les cas pertinents",
+            "Traiter le problème pour chaque cas",
+            "Vérifier que l'union des cas couvre bien tout l'ensemble"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_contre_exemple",
+      "category": "method",
+      "title": "Maîtrises-tu l'**utilisation du contre-exemple** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Pour réfuter une proposition universelle, il suffit de trouver un seul élément qui ne la vérifie pas."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier la proposition universelle à réfuter",
+            "Chercher une valeur particulière qui met la propriété en défaut",
+            "Calculer et montrer que la propriété est fausse pour cette valeur",
+            "Conclure que la proposition est fausse"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_equivalence",
+      "category": "method",
+      "title": "Connais-tu le **raisonnement par équivalence** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On procède par une chaîne d'équivalences successives avec des opérations réversibles."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Partir de la proposition $P$ à transformer",
+            "Appliquer des opérations réversibles",
+            "Utiliser le symbole $\\iff$ à chaque étape",
+            "Aboutir à une proposition simple qui prouve le résultat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_recurrence_divisibilite",
+      "category": "method",
+      "title": "Es-tu capable de faire une **récurrence pour la divisibilité** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La récurrence permet de prouver qu'une propriété est vraie pour tout entier $n$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Initialisation : vérifier la propriété au premier rang",
+            "Hérédité : supposer $P(n)$ vraie et démontrer $P(n+1)$",
+            "Pour la divisibilité : utiliser l'hypothèse pour factoriser",
+            "Conclure par le principe de récurrence"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_recurrence_somme",
+      "category": "method",
+      "title": "Sais-tu faire une **récurrence pour les sommes** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On sépare le dernier terme de la somme au rang $n+1$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Initialisation : vérifier la formule au premier rang",
+            "Hérédité : supposer la formule vraie au rang $n$",
+            "Écrire $S_{n+1} = S_n + \\text{terme}_{n+1}$",
+            "Remplacer $S_n$ et simplifier pour obtenir la formule au rang $n+1$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_unicite_existence",
+      "category": "method",
+      "title": "Maîtrises-tu la **démonstration d'existence et unicité** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On procède en deux temps : existence puis unicité."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Existence : exhiber une solution ou utiliser un théorème",
+            "Unicité : supposer qu'il existe deux solutions $x$ et $y$",
+            "Montrer par implications que nécessairement $x = y$"
+          ]
+        }
+      ]
+    }
+  ]
+}

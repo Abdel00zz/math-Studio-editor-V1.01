@@ -1,0 +1,56 @@
+{
+  "id": "ex-prod-scal-4",
+  "topic": "Produit Scalaire",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Déterminer les coordonnées de $A'$, $B'$ et $C'$ les milieux des segments $[BC]$, $[CA]$ et $[AB]$ respectivement.",
+      "hint": "Les coordonnées du milieu $I$ d'un segment $[MN]$ sont : $\\left(\\frac{x_M + x_N}{2} ; \\frac{y_M + y_N}{2}\\right)$"
+    },
+    {
+      "id": "q2",
+      "content": "Déterminer une équation cartésienne de chacune des médiatrices des segments $[AB]$, $[AC]$ et $[BC]$.",
+      "hint": "La médiatrice d'un segment passe par son milieu et est perpendiculaire à ce segment. Utilisez le vecteur directeur du segment comme \\blueb{vecteur normal} de la médiatrice."
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que ces médiatrices sont concourantes en un unique point $\\Omega$.",
+      "hint": "Résolvez le système formé par les équations de deux médiatrices. Le point d'intersection $\\Omega$ est le \\blueb{centre du cercle circonscrit} au triangle."
+    },
+    {
+      "id": "q4",
+      "content": "Déterminer une équation cartésienne de chacune des hauteurs du triangle $ABC$.",
+      "hint": "La hauteur issue de $A$ passe par $A$ et est perpendiculaire au côté $[BC]$. Le vecteur $\\overrightarrow{BC}$ est donc un \\blueb{vecteur normal} à cette hauteur."
+    },
+    {
+      "id": "q5",
+      "content": "Montrer que ces hauteurs sont concourantes en un unique point $H$.",
+      "hint": "Résolvez le système formé par les équations de deux hauteurs. Le point d'intersection $H$ est l'\\blueb{orthocentre} du triangle."
+    },
+    {
+      "id": "q6",
+      "content": "Déterminer les coordonnées du point $G$ le centre de gravité du triangle $ABC$ (on pourra utiliser les coordonnées du barycentre).",
+      "hint": "Le centre de gravité $G$ est l'isobarycentre des trois sommets : $G = \\left(\\frac{x_A + x_B + x_C}{3} ; \\frac{y_A + y_B + y_C}{3}\\right)$"
+    },
+    {
+      "id": "q7",
+      "content": "Montrer que $\\overrightarrow{\\Omega H} = 3\\overrightarrow{\\Omega G}$.",
+      "hint": "Calculez les coordonnées des vecteurs $\\overrightarrow{\\Omega H}$ et $\\overrightarrow{\\Omega G}$, puis vérifiez la relation. Cela prouve que $\\Omega$, $G$ et $H$ sont alignés sur la \\blueb{droite d'Euler}."
+    },
+    {
+      "id": "q8",
+      "content": "Déterminer les coordonnées des points $H_1$, $H_2$ et $H_3$ les symétriques du point $H$ par rapport aux milieux des segments $[AB]$, $[AC]$ et $[BC]$ respectivement.",
+      "hint": "Le symétrique de $H$ par rapport au milieu $M$ a pour coordonnées : $H' = 2M - H$, soit $(2x_M - x_H ; 2y_M - y_H)$"
+    },
+    {
+      "id": "q9",
+      "content": "Déterminer l'équation cartésienne de $(C)$ le cercle circonscrit au triangle $A'B'C'$.",
+      "hint": "Le cercle $(C)$ passe par les trois milieux $A'$, $B'$, $C'$. Son centre est le milieu de $[\\Omega H]$ et son rayon est la moitié du rayon du cercle circonscrit au triangle $ABC$."
+    },
+    {
+      "id": "q10",
+      "content": "Vérifier que les points $H_1$, $H_2$ et $H_3$ appartiennent au cercle $(C)$ et que le centre de $(C)$ est le milieu de $[\\Omega H]$.",
+      "hint": "Substituez les coordonnées de chaque point dans l'équation du cercle pour vérifier l'appartenance. Ce cercle est le \\blueb{cercle des neuf points} (ou cercle d'Euler) du triangle."
+    }
+  ]
+}

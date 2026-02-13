@@ -1,0 +1,142 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_demi_tangente",
+      "category": "method",
+      "title": "Sais-tu **interpréter** la non-dérivabilité ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Lorsque la limite du rapport d'accroissement est infinie, la courbe possède une tangente verticale."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer la limite du rapport : $\\displaystyle L = \\lim_{x \\to a^+} \\frac{f(x) - f(a)}{x - a}$",
+            "Si $L = +\\infty$ : demi-tangente verticale dirigée vers le haut",
+            "Si $L = -\\infty$ : demi-tangente verticale dirigée vers le bas"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_asymptotes_droites",
+      "category": "method",
+      "title": "Maîtrises-tu l'**identification des asymptotes** parallèles aux axes ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Les limites aux bornes du domaine indiquent la présence d'asymptotes."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Asymptote verticale : si $\\displaystyle \\lim_{x \\to a} f(x) = \\pm \\infty$, alors $x=a$ est asymptote",
+            "Asymptote horizontale : si $\\displaystyle \\lim_{x \\to \\pm \\infty} f(x) = \\ell$, alors $y=\\ell$ est asymptote"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_direction_asymptotique",
+      "category": "method",
+      "title": "Es-tu capable de **déterminer** la direction asymptotique ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On compare la croissance de $f(x)$ à celle de $x$ en calculant $\\frac{f(x)}{x}$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer $\\displaystyle a = \\lim_{x \\to \\infty} \\frac{f(x)}{x}$",
+            "Si $a=0$ : branche parabolique de direction $(Ox)$",
+            "Si $a=\\pm \\infty$ : branche parabolique de direction $(Oy)$",
+            "Si $a \\in \\mathbb{R}^*$ : poursuivre l'étude pour une asymptote oblique"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_asymptote_oblique",
+      "category": "method",
+      "title": "Connais-tu la **démonstration d'une asymptote oblique** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On examine la différence $f(x) - ax$ pour savoir si la courbe se rapproche d'une droite."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer $\\displaystyle b = \\lim_{x \\to \\infty} [f(x) - ax]$",
+            "Si $b \\in \\mathbb{R}$ : la droite $y = ax + b$ est une asymptote oblique",
+            "Si $b = \\pm \\infty$ : branche parabolique de direction $y=ax$"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_position_relative",
+      "category": "method",
+      "title": "Sais-tu **étudier** la position relative courbe/asymptote ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On étudie le signe de la différence des ordonnées."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer la différence $d(x) = f(x) - y_{(\\Delta)}$",
+            "Étudier le signe de $d(x)$ sur le domaine",
+            "Si $d(x) > 0$ : courbe au-dessus ; si $d(x) < 0$ : courbe en dessous"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_axe_symetrie",
+      "category": "method",
+      "title": "Maîtrises-tu la **démonstration d'un axe de symétrie** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "La droite $x=a$ est axe de symétrie si la courbe se replie sur elle-même."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Vérifier la symétrie du domaine : $\\forall x \\in D_f, (2a - x) \\in D_f$",
+            "Démontrer l'égalité : $\\displaystyle f(2a - x) = f(x)$",
+            "Conclure que $x=a$ est un axe de symétrie"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_centre_symetrie",
+      "category": "method",
+      "title": "Es-tu capable de **démontrer** qu'un point est un centre de symétrie ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Le point $\\Omega(a, b)$ est centre de symétrie si la courbe est invariante par symétrie centrale."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Vérifier la symétrie du domaine : $\\forall x \\in D_f, (2a - x) \\in D_f$",
+            "Démontrer l'égalité : $\\displaystyle f(2a - x) + f(x) = 2b$",
+            "Conclure que $\\Omega(a, b)$ est centre de symétrie"
+          ]
+        }
+      ]
+    }
+  ]
+}

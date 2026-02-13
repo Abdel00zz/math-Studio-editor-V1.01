@@ -1,0 +1,22 @@
+
+{
+  "id": "ex-trigo-006",
+  "topic": "Trigonométrie",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "En remarquant que $\\frac{\\pi}{6} = 2 \\times \\frac{\\pi}{12}$, calculer $\\sin^2\\left(\\frac{\\pi}{12}\\right)$ puis en déduire la valeur de $\\sin\\left(\\frac{\\pi}{12}\\right)$.",
+      "hint": "On utilise la formule de l'angle double : $\\cos(2\\alpha) = 1 - 2\\sin^2(\\alpha)$.\\par\\parAvec $\\alpha = \\frac{\\pi}{12}$ :\\par$$\\cos\\frac{\\pi}{6} = 1 - 2\\sin^2\\frac{\\pi}{12}$$\\par$$\\frac{\\sqrt{3}}{2} = 1 - 2\\sin^2\\frac{\\pi}{12}$$\\par$$\\sin^2\\frac{\\pi}{12} = \\frac{1 - \\frac{\\sqrt{3}}{2}}{2} = \\frac{2-\\sqrt{3}}{4}$$\\par\\parComme $0 < \\frac{\\pi}{12} < \\frac{\\pi}{2}$, on a $\\sin\\frac{\\pi}{12} > 0$.\\par\\par$$\\sin\\frac{\\pi}{12} = \\sqrt{\\frac{2-\\sqrt{3}}{4}} = \\frac{\\sqrt{2-\\sqrt{3}}}{2} = \\boxed{\\frac{\\sqrt{6}-\\sqrt{2}}{4}}$$"
+    },
+    {
+      "id": "q2",
+      "content": "Calculer par deux méthodes $\\cos\\left(\\frac{\\pi}{12}\\right)$.",
+      "hint": "**Méthode 1 :** En utilisant $\\cos^2 x + \\sin^2 x = 1$\\par$$\\cos^2\\frac{\\pi}{12} = 1 - \\sin^2\\frac{\\pi}{12} = 1 - \\frac{2-\\sqrt{3}}{4} = \\frac{2+\\sqrt{3}}{4}$$\\par$$\\cos\\frac{\\pi}{12} = \\frac{\\sqrt{2+\\sqrt{3}}}{2} = \\boxed{\\frac{\\sqrt{6}+\\sqrt{2}}{4}}$$\\par\\par**Méthode 2 :** En utilisant $\\frac{\\pi}{12} = \\frac{\\pi}{3} - \\frac{\\pi}{4}$\\par$$\\cos\\frac{\\pi}{12} = \\cos\\left(\\frac{\\pi}{3} - \\frac{\\pi}{4}\\right) = \\cos\\frac{\\pi}{3}\\cos\\frac{\\pi}{4} + \\sin\\frac{\\pi}{3}\\sin\\frac{\\pi}{4}$$\\par$$= \\frac{1}{2} \\cdot \\frac{\\sqrt{2}}{2} + \\frac{\\sqrt{3}}{2} \\cdot \\frac{\\sqrt{2}}{2} = \\boxed{\\frac{\\sqrt{6}+\\sqrt{2}}{4}}$$"
+    },
+    {
+      "id": "q3",
+      "content": "Calculer par deux méthodes $\\tan\\left(\\frac{\\pi}{12}\\right)$ puis calculer par deux méthodes $\\tan\\left(\\frac{\\pi}{12} + \\frac{\\pi}{4}\\right)$.",
+      "hint": "**Pour $\\tan\\frac{\\pi}{12}$ :**\\par\\par*Méthode 1 :* $\\tan\\frac{\\pi}{12} = \\frac{\\sin\\frac{\\pi}{12}}{\\cos\\frac{\\pi}{12}} = \\frac{\\sqrt{6}-\\sqrt{2}}{\\sqrt{6}+\\sqrt{2}} = \\boxed{2 - \\sqrt{3}}$\\par\\par*Méthode 2 :* Avec $\\tan(a-b) = \\frac{\\tan a - \\tan b}{1 + \\tan a \\tan b}$ et $\\frac{\\pi}{12} = \\frac{\\pi}{3} - \\frac{\\pi}{4}$ :\\par$$\\tan\\frac{\\pi}{12} = \\frac{\\sqrt{3} - 1}{1 + \\sqrt{3}} = \\frac{(\\sqrt{3}-1)^2}{(1+\\sqrt{3})(\\sqrt{3}-1)} = \\frac{4-2\\sqrt{3}}{2} = 2-\\sqrt{3}$$\\par\\par**Pour $\\tan\\left(\\frac{\\pi}{12} + \\frac{\\pi}{4}\\right) = \\tan\\frac{\\pi}{3}$ :**\\par\\par*Méthode 1 :* Directement $\\tan\\frac{\\pi}{3} = \\boxed{\\sqrt{3}}$\\par\\par*Méthode 2 :* Avec la formule d'addition :\\par$$\\tan\\left(\\frac{\\pi}{12} + \\frac{\\pi}{4}\\right) = \\frac{(2-\\sqrt{3}) + 1}{1 - (2-\\sqrt{3})} = \\frac{3-\\sqrt{3}}{\\sqrt{3}-1} = \\sqrt{3}$$"
+    }
+  ]
+}

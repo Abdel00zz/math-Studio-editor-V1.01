@@ -1,0 +1,53 @@
+{
+  "id": "ex-limites-03",
+  "topic": "Limites : Techniques Avancées",
+  "context": "Calculer les limites suivantes, qui demandent des manipulations algébriques avancées et une attention particulière aux cas limites.",
+  "sessionDate": "2026-01-26T19:00:00.000Z",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "$\\displaystyle\\lim_{x \\to +\\infty} \\left(\\sqrt{x^2 - x} + \\sqrt{x^2 + x} - 2x\\right)$",
+      "hint": "Découpez l'expression en deux parties : $(\\sqrt{x^2 - x} - x) + (\\sqrt{x^2 + x} - x)$. Traitez chaque parenthèse séparément avec sa quantité conjuguée."
+    },
+    {
+      "id": "q2",
+      "content": "$\\displaystyle\\lim_{x \\to -\\infty} \\left(\\frac{3x + 1}{\\sqrt{4x^2 + 1} + x}\\right)$",
+      "hint": "Attention au signe : pour $x < 0$, $\\sqrt{x^2} = -x$. Factorisez par $x$ le numérateur et le dénominateur en tenant compte de ce changement de signe."
+    },
+    {
+      "id": "q3",
+      "content": "$\\displaystyle\\lim_{x \\to +\\infty} \\left(\\frac{x|x - 1|}{|x^2 - 3x|}\\right)$",
+      "hint": "En $+\\infty$, les expressions dans les valeurs absolues sont positives. Enlevez les barres de valeur absolue et simplifiez la fraction rationnelle."
+    },
+    {
+      "id": "q4",
+      "content": "$\\displaystyle\\lim_{x \\to -\\infty} \\left(\\frac{|x^2 - 3x + 5|}{3|x| + 4}\\right)$",
+      "hint": "En $-\\infty$, $x^2$ domine donc l'intérieur de la première valeur absolue est positif. Par contre $|x| = -x$. Réécrivez sans valeurs absolues puis factorisez."
+    },
+    {
+      "id": "q5",
+      "content": "$\\displaystyle\\lim_{x \\to -\\infty} \\left(\\frac{(x - 1)^2 - x^2}{|2x - 1|}\\right)$",
+      "hint": "Développez le numérateur. Pour le dénominateur, comme $x \\to -\\infty$, $2x-1$ est négatif, donc $|2x-1| = -(2x-1)$."
+    },
+    {
+      "id": "q6",
+      "content": "$\\displaystyle\\lim_{x \\to +\\infty} \\left(\\frac{x^n - 3x}{x^2 + 1}\\right)$ (Discuter suivant les valeurs de $n \\in \\mathbb{N}^*$)",
+      "hint": "Comparez le degré $n$ du numérateur avec le degré 2 du dénominateur. Trois cas se présentent : $n < 2$, $n = 2$ et $n > 2$."
+    },
+    {
+      "id": "q7",
+      "content": "$\\displaystyle\\lim_{x \\to 4} \\frac{\\sqrt{x}-2}{\\sqrt{x+5}-3}$",
+      "hint": "Multipliez simultanément par l'expression conjuguée du numérateur ET celle du dénominateur pour faire apparaître le facteur $(x-4)$ en haut et en bas."
+    },
+    {
+      "id": "q8",
+      "content": "$\\displaystyle\\lim_{x \\to 3} \\frac{\\sqrt{2x+3}-x}{x^2-3x}$",
+      "hint": "Utilisez la quantité conjuguée pour le numérateur. Vous obtiendrez un polynôme du second degré ayant 3 pour racine. Factorisez-le, ainsi que le dénominateur, par $(x-3)$."
+    },
+    {
+      "id": "q9",
+      "content": "$\\displaystyle\\lim_{x \\to 2^-} \\frac{\\sqrt{4-x^2}}{x-2}$",
+      "hint": "Factorisez $4-x^2$ sous la racine. Écrivez le dénominateur $x-2$ sous la forme $-\\sqrt{(2-x)^2}$ (car $x-2 < 0$) pour pouvoir simplifier."
+    }
+  ]
+}

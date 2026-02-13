@@ -1,0 +1,53 @@
+{
+  "id": "ex-limites-05",
+  "topic": "Fonctions trigonométriques",
+  "context": "Calculer les limites suivantes en utilisant les limites trigonométriques usuelles :",
+  "sessionDate": "2026-01-26T20:00:00.000Z",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "$\\displaystyle\\lim_{x \\to 0} \\frac{\\sin(3x)}{x}$",
+      "hint": "Utilisez la limite de référence $\\lim_{X \\to 0} \\frac{\\sin X}{X} = 1$ en posant $X=3x$. Multipliez numérateur et dénominateur par 3."
+    },
+    {
+      "id": "q2",
+      "content": "$\\displaystyle\\lim_{x \\to 0} \\frac{\\sin^2(2x)}{x^3}$",
+      "hint": "Décomposez l'expression pour faire apparaître $\\left(\\frac{\\sin(2x)}{2x}\\right)^2$. Étudiez la limite du facteur restant $\\frac{1}{x}$ en 0."
+    },
+    {
+      "id": "q3",
+      "content": "$\\displaystyle\\lim_{x \\to 0} \\frac{1 - \\cos(x)}{x \\tan(x)}$",
+      "hint": "Divisez le numérateur et le dénominateur par $x^2$. Utilisez les limites usuelles $\\frac{1-\\cos x}{x^2}$ et $\\frac{\\tan x}{x}$."
+    },
+    {
+      "id": "q4",
+      "content": "$\\displaystyle\\lim_{x \\to +\\infty} \\frac{\\sqrt{3\\cos(x) - \\sin(x) - \\sqrt{3}}}{x}$",
+      "hint": "Le numérateur est borné car les fonctions sinus et cosinus le sont. Appliquez le théorème de l'encadrement (gendarmes)."
+    },
+    {
+      "id": "q5",
+      "content": "$\\displaystyle\\lim_{x \\to \\frac{\\pi}{2}} \\frac{2\\cos(x) - \\sqrt{3}}{x - \\frac{\\pi}{6}}$",
+      "hint": "La fonction est définie en $\\pi/2$. Remplacez directement $x$ par cette valeur pour calculer la limite."
+    },
+    {
+      "id": "q6",
+      "content": "$\\displaystyle\\lim_{x \\to 2} \\left(\\frac{\\tan(\\pi x)}{x-2}\\right)$",
+      "hint": "Posez $t = x-2$. Quand $x \\to 2$, $t \\to 0$. Utilisez la périodicité de la tangente : $\\tan(\\pi(t+2)) = \\tan(\\pi t)$."
+    },
+    {
+      "id": "q7",
+      "content": "$\\displaystyle\\lim_{x \\to 0^+} \\sqrt{\\frac{1-\\cos x}{x}}$",
+      "hint": "Multipliez numérateur et dénominateur par l'expression conjuguée $1+\\cos x$. Utilisez la relation $\\sin^2 x = 1 - \\cos^2 x$ et simplifiez."
+    },
+    {
+      "id": "q8",
+      "content": "$\\displaystyle\\lim_{x \\to 0} \\left(\\frac{\\sin x + \\sin(2x) + \\sin(3x)}{x(x+2)}\\right)$",
+      "hint": "Séparez la fraction en une somme de trois termes. Faites apparaître les formes $\\frac{\\sin(kx)}{kx}$ et factorisez par la limite de $\\frac{1}{x+2}$."
+    },
+    {
+      "id": "q9",
+      "content": "Soit $(a, b) \\in \\mathbb{R}^2$ tels que $0 < a < b$. Calculer $\\displaystyle\\lim_{x \\to 0^+} \\frac{\\sqrt{\\cos(ax) - \\cos(bx)}}{x}$",
+      "hint": "Écrivez $\\cos(ax) - \\cos(bx)$ sous la forme $(1 - \\cos(bx)) - (1 - \\cos(ax))$. Forcez l'apparition des termes $\\frac{1-\\cos U}{U^2}$ sous la racine en factorisant par $x^2$."
+    }
+  ]
+}

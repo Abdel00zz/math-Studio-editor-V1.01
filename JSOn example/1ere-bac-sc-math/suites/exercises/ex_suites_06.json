@@ -1,0 +1,83 @@
+{
+  "id": "ex-analyse-suites-imbriquees-min",
+  "topic": "Analyse",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que : $k \\le u_n \\le 1+k$ pour tout $n$ de $\\mathbb{N}$.",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "Transformez d'abord la relation en $u_{n+1} = k + \\frac{1}{u_n}$. Procédez par récurrence. Pour l'hérédité, rappelez-vous que la fonction inverse $x \\mapsto \\frac{1}{x}$ est décroissante sur $\\mathbb{R}_+^*$, ce qui inverse le sens des inégalités."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq2a",
+          "content": "Montrer que : $\\displaystyle v_{n+1} = k + \\frac{v_n}{1+kv_n}$ pour tout $n$ de $\\mathbb{N}$.",
+          "hint": "Méthode : Exprimez $v_{n+1} = u_{2n+2}$ en fonction de $u_{2n+1}$, puis remplacez $u_{2n+1}$ par son expression en fonction de $u_{2n}$ ($v_n$). C'est la composition de la fonction homographique $f(x) = k + 1/x$ par elle-même."
+        },
+        {
+          "id": "sq2b",
+          "content": "Montrer que : $\\displaystyle w_{n+1} = k + \\frac{w_n}{1+kw_n}$ pour tout $n$ de $\\mathbb{N}$.",
+          "hint": "Observation : La relation de récurrence liant $u_{n+2}$ à $u_n$ est la même pour les termes pairs et impairs. Appliquez le même résultat qu'à la question 2a pour $w_n$."
+        },
+        {
+          "id": "sq2c",
+          "content": "Montrer que : $\\displaystyle w_n = k + \\frac{1}{v_n}$ pour tout $n$ de $\\mathbb{N}$.",
+          "hint": "Utilisez simplement la définition des sous-suites ($w_n$ est le terme suivant $v_n$ dans la suite $u$) et la relation initiale $u_{n+1} = k + \\frac{1}{u_n}$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que : $v_n \\le w_n$ pour tout $n$ de $\\mathbb{N}$.",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "Utilisez l'égalité de la question 2c pour substituer $w_n$. L'inégalité $v_n \\le k + \\frac{1}{v_n}$ se ramène à l'étude du signe du trinôme $v_n^2 - kv_n - 1$. Servez-vous de l'encadrement prouvé en Q1 ($v_n \\ge k$)."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "Démontrer que $(w_n)_{n \\in \\mathbb{N}}$ est décroissante et que $(v_n)_{n \\in \\mathbb{N}}$ est croissante.",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "",
+          "hint": "Calcul algébrique : Formez la différence $v_{n+1} - v_n$ à l'aide de la formule 2a. Après mise au même dénominateur, le signe dépendra de $k - v_n(kv_n)$. Lien clé : utilisez l'inégalité $v_n \\le w_n$ transformée pour conclure."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "Montrer que : $\\displaystyle w_{n+1} - v_{n+1} \\le \\frac{w_n - v_n}{(1+k^2)^2}$ pour tout $n$ de $\\mathbb{N}$.",
+      "subQuestions": [
+        {
+          "id": "sq5",
+          "content": "",
+          "hint": "Démarrez par le calcul brut de la différence avec les expressions de 2a et 2b. Factorisez par $(w_n - v_n)$. Pour la majoration, minimisez le dénominateur en utilisant les bornes inférieures $v_n \\ge k$ et $w_n \\ge k$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "Déduire que : $\\displaystyle w_n - v_n \\le \\frac{w_0 - v_0}{(1+k^2)^{2n}}$ pour tout $n$ de $\\mathbb{N}$.",
+      "subQuestions": [
+        {
+          "id": "sq6",
+          "content": "",
+          "hint": "Raisonnement par itération : Appliquez l'inégalité précédente $n$ fois. Remarquez que le facteur $(1+k^2)^2$ s'accumule $n$ fois pour donner la puissance $2n$."
+        }
+      ]
+    }
+  ]
+}

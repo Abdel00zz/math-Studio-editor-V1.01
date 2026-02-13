@@ -1,0 +1,51 @@
+{
+  "id": "ex-prod-scal-2",
+  "topic": "Produit Scalaire",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Déterminer le centre $\\Omega$ et le rayon $R$ de $(C)$.",
+          "hint": "Forme canonique : $(x-2)^2 - 4 + (y+1)^2 - 1 - 4 = 0 \\implies (x-2)^2 + (y+1)^2 = 9$.\\\\Centre $\\Omega(2, -1)$, Rayon $R=3$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Déterminer les points d'intersection de $(C)$ avec l'axe des abscisses $(Ox)$.",
+          "hint": "Résoudre le système avec $y=0$ : $x^2 - 4x - 4 = 0$. $\\Delta = 16 + 16 = 32$. $x = \\frac{4 \\pm 4\\sqrt{2}}{2} = 2 \\pm 2\\sqrt{2}$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "Déterminer l'équation de la tangente au cercle en ces points d'intersection.",
+          "hint": "Pour un point $M_0$ du cercle, la tangente est la droite passant par $M_0$ et de vecteur normal $\\overrightarrow{\\Omega M_0}$."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "Déterminer les équations des tangentes à $(C)$ parallèles à la droite d'équation $3x + 4y = 0$.",
+          "hint": "Les tangentes auront une équation de la forme $3x + 4y + k = 0$. Utiliser la distance du centre à la droite qui doit être égale au rayon : $\\frac{|3(2) + 4(-1) + k|}{\\sqrt{3^2+4^2}} = 3$."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+
+{
+  "id": "ex-logique-01",
+  "topic": "Logique",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Démonstration d'une implication",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Soient $x, y \\in \\mathbb{R}$. Montrer que : $\\frac{x}{1+x^2} = \\frac{y}{1+y^2} \\implies x=y \\text{ ou } xy=1$.",
+          "hint": "\\method Pour prouver une implication $P \\implies Q$, on suppose que $P$ est vraie et on travaille pour aboutir à $Q$. Commencez par le produit en croix, regroupez tous les termes d'un même côté et cherchez une factorisation qui fait apparaître $(x-y)$."
+        },
+        {
+          "id": "sq1b",
+          "content": "Application : en déduire que la fonction $f(x)=\\dfrac{x}{1+x^2}$ n'est pas injective sur $\\mathbb{R}$.",
+          "hint": "Rappelez-vous qu'une fonction est injective si $f(x)=f(y) \\implies x=y$. Le résultat de la question précédente vous donne une autre possibilité. Comment pouvez-vous l'utiliser pour trouver un contre-exemple ?"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Raisonnement par l'absurde",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Montrer que $\\forall x \\in \\mathbb{R}^*, x + \\frac{1}{x} \\neq 0$.",
+          "hint": "\\method Supposons le contraire, c'est-à-dire qu'il existe un $x$ non nul tel que $x + \\frac{1}{x} = 0$. Mettez cette expression au même dénominateur. Quelle équation simple obtenez-vous ? Cette équation a-t-elle des solutions dans $\\mathbb{R}$ ?"
+        }
+      ]
+    }
+  ]
+}

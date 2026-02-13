@@ -1,0 +1,232 @@
+{
+  "header": {
+    "title": "Logique et Raisonnements",
+    "subtitle": "L'essentiel du cours (1BAC Sciences Mathématiques)",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "introduction-generale",
+      "category": "course",
+      "title": "Introduction",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "\\textbf{Comment bâtir une démonstration inattaquable ?}\\par\\smallskip\nImaginez un architecte qui construit sans plan, un juge qui tranche sans preuve. Absurde, n'est-ce pas ? En mathématiques, la logique est ce plan, cette preuve. Elle transforme l'intuition en certitude, le « je pense » en « je démontre ». De la simple proposition jusqu'aux démonstrations les plus sophistiquées, ce chapitre vous révèle les rouages du raisonnement rigoureux.\\par\\smallskip\n\\gray{\\textbf{Compétences visées}} : distinguer proposition et fonction propositionnelle, maîtriser la négation et les connecteurs logiques, manipuler les quantificateurs universels et existentiels, choisir la méthode de preuve adaptée à chaque situation."
+        }
+      ]
+    },
+    {
+      "id": "propositions-fondamentales",
+      "category": "course",
+      "title": "Propositions et valeurs de vérité",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Vous manipulez quotidiennement des phrases comme « $7$ est premier » ou « $x + 3 = 5$ », mais toutes ne sont pas de même nature. La différence fondamentale réside dans la \\textbf{valeur de vérité} : peut-on trancher définitivement si l'énoncé est vrai ou faux ?"
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une proposition ?",
+          "content": "On appelle \\textbf{proposition} tout énoncé mathématique auquel on peut attribuer exactement une valeur de vérité : \\textbf{Vrai} ($1$) ou \\textbf{Faux} ($0$).\\par\\smallskip\n\\gray{\\textbf{Observons :}}\\par\n\\begin{itemize}\n\\item L'énoncé « $7$ est un nombre premier » est une proposition \\blank{Vraie}.\n\\item L'énoncé « $\\sqrt{2}$ est un nombre rationnel » est une proposition \\blank{Fausse}.\n\\item L'énoncé « La somme des angles d'un triangle vaut $180^{\\circ}$ » est une proposition \\blank{Vraie}.\n\\end{itemize}"
+        },
+        {
+          "type": "definition",
+          "title": "Qu'est-ce qu'une fonction propositionnelle ?",
+          "content": "Une \\textbf{fonction propositionnelle}, souvent notée $P(x)$, est un énoncé dépendant d'une variable $x$ appartenant à un ensemble $E$. Cet énoncé ne devient une proposition (Vrai ou Faux) que lorsque l'on remplace $x$ par une valeur précise.\\par\\smallskip\nL'\\textbf{ensemble de vérité} est l'ensemble des éléments qui rendent la proposition vraie : $\\mathcal{V}_{P(x)} = \\{x \\in E \\mid P(x) \\text{ est vraie}\\}$."
+        },
+        {
+          "type": "remark",
+          "content": "\\textbf{Attention aux faux amis} : Certains énoncés ne sont jamais des propositions logiques.\\par\n\\begin{itemize}\n\\item « $x^2 = 4$ » (Ceci dépend de $x$, c'est une fonction propositionnelle, pas une proposition).\n\\item « Fermez la porte ! » (C'est un ordre, pas une affirmation).\n\\item « Quelle heure est-il ? » (C'est une question).\n\\end{itemize}"
+        }
+      ]
+    },
+    {
+      "id": "connecteurs-logiques",
+      "category": "course",
+      "title": "Les Connecteurs Logiques",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Pour construire des raisonnements, nous devons assembler des briques élémentaires. Les connecteurs logiques nous permettent de combiner des propositions."
+        },
+        {
+          "type": "definition",
+          "title": "Que signifie la négation $\\overline{P}$ ?",
+          "content": "La \\textbf{négation} d'une proposition $P$, notée $\\overline{P}$, est la proposition qui affirme le contraire de $P$.\\par\nElle est vraie lorsque $P$ est fausse, et fausse lorsque $P$ est vraie.\\par\\smallskip\n$$\\begin{array}{|c|c|}\\hline P & \\overline{P} \\\\\\hline 1 & \\blank{0} \\\\\\hline 0 & \\blank{1} \\\\\\hline\\end{array}$$"
+        },
+        {
+          "type": "property",
+          "title": "Que signifient $P\\land Q$ et $P\\lor Q$ ?",
+          "content": "Nous définissons deux opérations fondamentales pour combiner deux propositions $P$ et $Q$ :\\par\\smallskip\n\\begin{itemize}\n\\item La \\textbf{Conjonction} (notée $P \\land Q$) : Elle correspond au « \\textbf{et} » logique. Elle n'est vraie que si \\blank{$P$ et $Q$ sont vraies simultanément}.\n\\item La \\textbf{Disjonction} (notée $P \\lor Q$) : Elle correspond au « \\textbf{ou} » logique. Elle est vraie si \\blank{au moins l'une des deux propositions est vraie}.\n\\end{itemize}"
+        },
+        {
+          "type": "remark",
+          "content": "\\textbf{Ou inclusif vs ou exclusif :} En logique, $P \\lor Q$ est un \\textbf{ou inclusif} (il est vrai même si $P$ et $Q$ sont vraies).\\par\\smallskip\nSi l'énoncé en français veut dire « l'un ou l'autre, mais pas les deux », il faut le préciser (ou utiliser un autre connecteur, non exigé ici)."
+        },
+        {
+          "type": "property",
+          "title": "Que dit une table de vérité ?",
+          "content": "Ces tables permettent de calculer la valeur de vérité d'une proposition composée.\\par\\smallskip\n\\begin{enumerate}\n\\item \\textbf{$P \\land Q$ :}\\par\n$$\\begin{array}{|c|c|c|}\\hline P & Q & P\\land Q \\\\\n\\hline 1 & 1 & 1 \\\\\n\\hline 1 & 0 & 0 \\\\\n\\hline 0 & 1 & 0 \\\\\n\\hline 0 & 0 & 0 \\\\\n\\hline\\end{array}$$\\par\\smallskip\n\\item \\textbf{$P \\lor Q$ :}\\par\n$$\\begin{array}{|c|c|c|}\\hline P & Q & P\\lor Q \\\\\n\\hline 1 & 1 & 1 \\\\\n\\hline 1 & 0 & 1 \\\\\n\\hline 0 & 1 & 1 \\\\\n\\hline 0 & 0 & 0 \\\\\n\\hline\\end{array}$$\n\\end{enumerate}"
+        }
+      ]
+    },
+    {
+      "id": "implication-equivalence",
+      "category": "course",
+      "title": "Implication et Équivalence",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "L'implication est la pierre angulaire de la démonstration mathématique. Elle formalise la relation de cause à effet."
+        },
+        {
+          "type": "definition",
+          "title": "Quand une implication $P \\Rightarrow Q$ est-elle fausse ?",
+          "content": "L'\\textbf{implication} de $P$ vers $Q$, notée $P \\Rightarrow Q$, se lit « Si $P$, alors $Q$ ».\\par\\smallskip\nIl est crucial de retenir qu'elle est fausse dans un seul et unique cas :\\par\n\\begin{itemize}\n\\item Elle est fausse si \\blank{l'hypothèse $P$ est vraie et la conclusion $Q$ est fausse}.\n\\item Dans tous les autres cas, elle est vraie.\n\\end{itemize}"
+        },
+        {
+          "type": "remark",
+          "content": "\\textbf{Le paradoxe du Faux} : Si le point de départ $P$ est faux, l'implication $P \\Rightarrow Q$ est automatiquement \\blank{Vraie}, peu importe ce que raconte $Q$.\\par\nC'est pourquoi la phrase « Si $2+2=5$, alors je suis le roi du monde » est une proposition mathématiquement correcte (Vraie)."
+        },
+        {
+          "type": "definition",
+          "title": "Que signifie $P \\Leftrightarrow Q$ ?",
+          "content": "L'\\textbf{équivalence}, notée $P \\Leftrightarrow Q$, signifie que $P$ et $Q$ ont exactement la même valeur de vérité.\\par\nCela revient à dire que l'on a une double implication :\\par\n\\begin{itemize}\n\\item Si $P$ est vraie, alors $Q$ est vraie ($P \\Rightarrow Q$).\n\\item ET si $Q$ est vraie, alors $P$ est vraie ($Q \\Rightarrow P$).\n\\end{itemize}"
+        },
+        {
+          "type": "property",
+          "title": "Que valent $P\\Rightarrow Q$ et $P\\Leftrightarrow Q$ ?",
+          "content": "\\textbf{Implication $P \\Rightarrow Q$ :}\\par\n$$\\begin{array}{|c|c|c|}\\hline P & Q & P\\Rightarrow Q \\\\\n\\hline 1 & 1 & 1 \\\\\n\\hline 1 & 0 & 0 \\\\\n\\hline 0 & 1 & 1 \\\\\n\\hline 0 & 0 & 1 \\\\\n\\hline\\end{array}$$\\par\\smallskip\n\\textbf{Équivalence $P \\Leftrightarrow Q$ :}\\par\n$$\\begin{array}{|c|c|c|}\\hline P & Q & P\\Leftrightarrow Q \\\\\n\\hline 1 & 1 & 1 \\\\\n\\hline 1 & 0 & 0 \\\\\n\\hline 0 & 1 & 0 \\\\\n\\hline 0 & 0 & 1 \\\\\n\\hline\\end{array}$$"
+        },
+        {
+          "type": "property",
+          "title": "Quand une condition est-elle nécessaire ou suffisante ?",
+          "content": "On dit que :\\par\\smallskip\n\\begin{itemize}\n\\item $P$ est \\textbf{suffisante} pour $Q$ si $P \\Rightarrow Q$.\n\\item $P$ est \\textbf{nécessaire} pour $Q$ si $Q \\Rightarrow P$.\n\\item $P$ est \\textbf{nécessaire et suffisante} pour $Q$ si $P \\Leftrightarrow Q$.\n\\end{itemize}\\par\\smallskip\n\\gray{\\textbf{Analysons :}} Pour $x\\in\\mathbb{R}$, si $x=0$ alors $x^2=0$ (donc $x=0$ est \\textbf{suffisante} pour $x^2=0$).\\par\nRéciproquement, si $x^2=0$ alors nécessairement $x=0$ (donc $x=0$ est aussi \\textbf{nécessaire}).\\par\\smallskip\nConclusion : $x=0$ est \\textbf{nécessaire et suffisante} pour $x^2=0$, soit $x=0 \\Leftrightarrow x^2=0$."
+        }
+      ]
+    },
+    {
+      "id": "lois-de-morgan-algebre",
+      "category": "course",
+      "title": "Lois de De Morgan et Algèbre",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "L'intuition nous trompe souvent lorsqu'il s'agit de nier une phrase complexe. Les lois de De Morgan nous offrent une règle infaillible."
+        },
+        {
+          "type": "theorem",
+          "title": "Comment nier correctement « ET » / « OU » ? (De Morgan)",
+          "content": "Pour nier une proposition composée, il faut inverser les connecteurs :\\par\\smallskip\n\\begin{itemize}\n\\item La négation de « $P$ et $Q$ » est équivalente à « non $P$ \\textbf{ou} non $Q$ ».\n\\item La négation de « $P$ ou $Q$ » est équivalente à « non $P$ \\textbf{et} non $Q$ ».\n\\end{itemize}\\par\\smallskip\n\\gray{\\textbf{Observons :}} Nier « Je suis riche et célèbre » ne donne pas « Je suis pauvre et inconnu », mais « Je suis pauvre \\textbf{ou} je suis inconnu » : il suffit qu'un seul des deux points tombe pour que la phrase « riche \\textbf{et} célèbre » devienne fausse."
+        },
+        {
+          "type": "property",
+          "title": "Quelles règles algébriques ont les connecteurs ?",
+          "content": "Les connecteurs possèdent des propriétés similaires au calcul algébrique (comme la multiplication qui se distribue sur l'addition). Ici, la distributivité est double :\\par\\smallskip\n\\begin{itemize}\n\\item \\textbf{Distributivité du ET sur le OU} : $P \\land (Q \\lor R)$ équivaut à $(P \\land Q) \\lor (P \\land R)$.\n\\item \\textbf{Distributivité du OU sur le ET} : $P \\lor (Q \\land R)$ équivaut à $(P \\lor Q) \\land (P \\lor R)$.\n\\end{itemize}"
+        },
+        {
+          "type": "culture",
+          "title": "De Morgan et Boole",
+          "content": "Augustus De Morgan et George Boole ont révolutionné la logique au XIXe siècle en montrant qu'elle fonctionnait comme une algèbre. Cette « algèbre booléenne » est aujourd'hui la base physique des processeurs de vos ordinateurs et smartphones."
+        }
+      ]
+    },
+    {
+      "id": "quantificateurs",
+      "category": "course",
+      "title": "Les Quantificateurs",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "En mathématiques, on veut souvent préciser si une propriété est vraie pour « tout le monde » ou juste pour « quelqu'un ». Les quantificateurs sont les symboles qui gèrent cette nuance."
+        },
+        {
+          "type": "definition",
+          "title": "Que signifient $\\forall$ et $\\exists$ ?",
+          "content": "Nous distinguons deux types de quantification :\\par\\smallskip\n\\begin{itemize}\n\\item Le \\textbf{quantificateur universel} ($\\forall$) : Il signifie « Pour tout » ou « Quel que soit ». La proposition $(\\forall x \\in E)\\, P(x)$ exige que la propriété soit vérifiée par \\textbf{tous} les éléments sans exception.\n\\item Le \\textbf{quantificateur existentiel} ($\\exists$) : Il signifie « Il existe au moins un ». La proposition $(\\exists x \\in E)\\, P(x)$ demande juste de trouver \\textbf{au moins un} élément qui vérifie la propriété.\n\\end{itemize}"
+        },
+        {
+          "type": "theorem",
+          "title": "Quelle est la négation de $\\forall$ et $\\exists$ ?",
+          "content": "Pour nier une phrase quantifiée, on applique une règle mécanique simple : on inverse le symbole et on nie la propriété.\\par\\smallskip\n\\begin{itemize}\n\\item La négation de « Pour tout $x$, $P(x)$ » devient : « \\textbf{Il existe} un $x$ tel que \\textbf{non} $P(x)$ ».\n\\item La négation de « Il existe un $x$, $P(x)$ » devient : « \\textbf{Pour tout} $x$, \\textbf{non} $P(x)$ ».\n\\end{itemize}"
+        },
+        {
+          "type": "property",
+          "title": "Pourquoi l'ordre des quantificateurs change tout ?",
+          "content": "Attention, l'ordre des quantificateurs change radicalement le sens de la phrase :\\par\\smallskip\n\\begin{itemize}\n\\item $(\\forall x)(\\exists y)$ : Pour chaque personne, il existe un chapeau à sa taille. (Chacun a son chapeau personnel).\n\\item $(\\exists y)(\\forall x)$ : Il existe un chapeau unique qui va à toutes les têtes. (C'est un chapeau magique universel).\n\\end{itemize}"
+        },
+        {
+          "type": "remark",
+          "title": "Observons un cas réel : ordre des quantificateurs en $\\mathbb{R}$",
+          "content": "\\gray{\\textbf{Observons :}}\\par\n\\begin{itemize}\n\\item $\\boxed{(\\forall x\\in\\mathbb{R})(\\exists y\\in\\mathbb{R})\\; y>x}$ est \\textbf{vraie} : une fois $x$ fixé, il suffit de choisir $y=x+1$.\n\\item $\\boxed{(\\exists y\\in\\mathbb{R})(\\forall x\\in\\mathbb{R})\\; y>x}$ est \\textbf{fausse} : ici, $y$ devrait être \\textbf{le même} pour tous les $x$, ce qui est impossible dans $\\mathbb{R}$.\n\\end{itemize}\\par\\smallskip\nIdée à retenir : dans $(\\forall x)(\\exists y)$, le choix de $y$ peut dépendre de $x$ ; dans $(\\exists y)(\\forall x)$, il ne le peut pas."
+        }
+      ]
+    },
+    {
+      "id": "methodes-raisonnement-1",
+      "category": "course",
+      "title": "Méthodes : Direct, Disjonction et Contraposée",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Une fois les outils maîtrisés, il faut savoir construire une stratégie de preuve."
+        },
+        {
+          "type": "theorem",
+          "title": "Quelle démarche pour une preuve directe ?",
+          "content": "C'est la méthode la plus naturelle. Pour prouver que $P$ implique $Q$ :\\par\n\\begin{enumerate}\n\\item On considère $P$ comme acquise (hypothèse).\n\\item On enchaîne les déductions logiques ($P \\Rightarrow P_1 \\Rightarrow P_2 \\dots$).\n\\item On aboutit à la conclusion $Q$.\n\\end{enumerate}"
+        },
+        {
+          "type": "theorem",
+          "title": "Quand utiliser une disjonction des cas ?",
+          "content": "Parfois, il est impossible de traiter le problème en un seul bloc. On découpe alors l'ensemble de départ en plusieurs parties (les cas) :\\par\\smallskip\n\\begin{enumerate}\n\\item \\textbf{Premier cas :} On suppose que $x$ vérifie une condition $A$, et on prouve le résultat.\n\\item \\textbf{Second cas :} On suppose que $x$ vérifie la condition contraire (ou complémentaire), et on prouve aussi le résultat.\n\\end{enumerate}\\par\nSi le résultat est vrai dans tous les cas possibles, alors il est vrai absolument."
+        },
+        {
+          "type": "theorem",
+          "title": "Pourquoi prouver la contraposée suffit-il ?",
+          "content": "Plutôt que de prouver l'implication directe $P \\Rightarrow Q$, on peut choisir de prouver son équivalent logique, la contraposée :\\par\n$$ \\overline{Q} \\Rightarrow \\overline{P} $$\\par\nAutrement dit : on suppose que la conclusion est fausse, et on montre que cela oblige l'hypothèse de départ à être fausse."
+        }
+      ]
+    },
+    {
+      "id": "redaction-mathematique",
+      "category": "course",
+      "title": "Guide de l'Excellence Rédactionnelle",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "\\blueb{Structure universelle}\\par\\smallskip\nUne démonstration n'est pas une simple suite de calculs, c'est un récit logique qui doit guider le lecteur. Elle respecte toujours l'ordre immuable :\\par\\smallskip\n$$\\boxed{\\text{Introduction}} \\xrightarrow{\\text{Déduction}} \\boxed{\\text{Développement}} \\xrightarrow{\\text{Résultat}} \\boxed{\\text{Conclusion}}$$\\par\n\\begin{itemize}\n\\item \\textbf{Introduction} : Posez le cadre (« Soit $x \\in \\mathbb{R}$... », « Supposons que... »). C'est ici que vous définissez les objets manipulés.\n\\item \\textbf{Développement} : Enchaînez les arguments (« Or... », « Comme... », « D'après le théorème... »).\n\\item \\textbf{Conclusion} : Répondez explicitement à la question (« Ainsi... », « On en déduit que... »).\n\\end{itemize}"
+        },
+        {
+          "type": "text",
+          "content": "\\blueb{Connecteurs logiques recommandés}\\par\\smallskip\nLa clarté vient des mots de liaison. Ils structurent votre pensée :\\par\n\\begin{itemize}\n\\item \\textbf{Pour déduire} : « Donc », « Par conséquent », « Alors », « Il s'ensuit que ».\n\\item \\textbf{Pour justifier} : « Car », « Puisque », « Comme », « En effet », « D'après ».\n\\item \\textbf{Pour ajouter} : « De plus », « En outre », « Par ailleurs ».\n\\item \\textbf{Pour conclure} : « Finalement », « En conclusion », « Ainsi ».\n\\end{itemize}\n\\redb{Attention} : N'utilisez jamais le symbole $\\Rightarrow$ comme abréviation dans une phrase en français. Ce symbole a un sens logique strict."
+        },
+        {
+          "type": "text",
+          "content": "\\blueb{Précision des mots clés}\\par\\smallskip\nChaque mot a un rôle précis dans la mise en place du raisonnement :\\par\n\\begin{itemize}\n\\item \\textbf{« Soit »} : Introduit un objet générique (ex: « Soit $x$ un réel »). C'est la clé de l'universalité.\n\\item \\textbf{« Posons »} : Définit un objet construit par vous (ex: « Posons $f(x) = x^2$ »).\n\\item \\textbf{« Supposons »} : Lance une hypothèse (pour une récurrence ou un raisonnement par l'absurde).\n\\item \\textbf{« Fixons »} : Gèle une variable pour travailler dessus localement.\n\\end{itemize}"
+        },
+        {
+          "type": "text",
+          "content": "\\blueb{Formulations recommandées}\\par\\smallskip\nAdoptez un style scientifique impersonnel et rigoureux :\\par\n\\begin{itemize}\n\\item Préférez le \\textbf{« On »} ou le \\textbf{« Nous »} au « Je ».\n\\item Soyez direct : « Montrons que... » plutôt que « Je vais essayer de montrer que... ».\n\\item Pour l'unicité : « Il existe un unique... ».\n\\item Pour l'exigence : « Il faut et il suffit que... » (Condition nécessaire et suffisante).\n\\end{itemize}"
+        },
+        {
+          "type": "text",
+          "content": "\\blueb{Rédaction par type d'exercice}\\par\\smallskip\nAdaptez votre style au contenu :\\par\n\\begin{itemize}\n\\item \\textbf{Analyse (calculs)} : Alignez les signes $=$ verticalement pour la lisibilité. Justifiez chaque passage délicat.\n\\item \\textbf{Géométrie} : Citez toujours la propriété utilisée avant de conclure (« Le triangle est rectangle, donc d'après Pythagore... »).\n\\item \\textbf{Logique} : Soyez explicite sur le type de raisonnement (« Raisonnons par l'absurde... », « Procédons par récurrence... »).\n\\end{itemize}"
+        },
+        {
+          "type": "text",
+          "content": "\\blueb{Erreurs fréquentes à éviter}\\par\\smallskip\nCes fautes de syntaxe mathématique sont pénalisées :\\par\n\\begin{itemize}\n\\item \\textbf{Confusion fonction/image} : $f$ est la fonction (l'objet), $f(x)$ est le nombre (l'image). Ne dites pas « la fonction $f(x)$ ».\n\\item \\textbf{Implication vs égalité} : Ne mettez pas de $\\Rightarrow$ entre deux nombres. $A=B$ est une égalité, $P \\Rightarrow Q$ est un lien logique.\n\\item \\textbf{Quantificateurs} : Ne les placez pas à la fin de la phrase. « $\\forall x, f(x)=0$ » est correct, « $f(x)=0, \\forall x$ » est à éviter.\n\\end{itemize}"
+        },
+        {
+          "type": "text",
+          "content": "\\blueb{Checklist avant de rendre}\\par\\smallskip\nAvant de considérer une question comme terminée, vérifiez :\\par\n\\begin{itemize}\n\\item $\\square$ Ai-je introduit toutes les variables que j'utilise ? (« Soit $n$ ... »)\n\\item $\\square$ Ai-je justifié les étapes non triviales ? (« Car la fonction est croissante... »)\n\\item $\\square$ Le résultat final est-il clairement mis en évidence ?\n\\item $\\square$ Ai-je répondu exactement à la question posée ?\n\\end{itemize}"
+        },
+        {
+          "type": "text",
+          "content": "\\blueb{Points stratégiques}\\par\\smallskip\nPour gagner des points et de la clarté :\\par\n\\begin{itemize}\n\\item \\textbf{Relisez-vous} : Une phrase qui n'a pas de sens pour vous n'en aura pas pour le correcteur.\n\\item \\textbf{Soignez la présentation} : Encadrez vos résultats finaux. Espacez vos paragraphes.\n\\item \\textbf{Cohérence} : Vérifiez l'homogénéité (on n'ajoute pas des mètres et des secondes, on n'égale pas un vecteur et un réel).\n\\end{itemize}"
+        }
+      ]
+    }
+  ]
+}

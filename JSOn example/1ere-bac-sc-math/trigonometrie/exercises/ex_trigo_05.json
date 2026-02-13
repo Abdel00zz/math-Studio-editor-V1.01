@@ -1,0 +1,62 @@
+{
+  "id": "ex-trigo-005",
+  "topic": "Trigonométrie",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Égalité d'angles",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Vérifier que $\\sin 2\\alpha = \\cos 3\\alpha$",
+          "hint": "Calculons les angles : $2\\alpha = \\frac{2\\pi}{10} = \\frac{\\pi}{5}$ et $3\\alpha = \\frac{3\\pi}{10}$.\nOn remarque que $2\\alpha + 3\\alpha = 5\\alpha = \\frac{5\\pi}{10} = \\frac{\\pi}{2}$.\nLes angles $2\\alpha$ et $3\\alpha$ sont complémentaires. Donc :\n$\\sin(2\\alpha) = \\cos\\left(\\frac{\\pi}{2} - 2\\alpha\\right) = \\cos(3\\alpha)$\n\\conclusion L'égalité est vérifiée."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Expression de cos 3α",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Montrer que $\\cos 3\\alpha = \\cos \\alpha (1 - 4\\sin^2 \\alpha)$",
+          "hint": "\\method Utilisons la formule $\\cos 3x = 4\\cos^3 x - 3\\cos x$.\n$$\\begin{aligned} \\cos 3\\alpha &= \\cos \\alpha (4\\cos^2 \\alpha - 3) \\\\ &= \\cos \\alpha (4(1-\\sin^2 \\alpha) - 3) \\\\ &= \\cos \\alpha (4 - 4\\sin^2 \\alpha - 3) \\\\ &= \\cos \\alpha (1 - 4\\sin^2 \\alpha) \\end{aligned}$$\n\\conclusion Formule démontrée."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Valeurs exactes",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "Déduire la valeur de $\\sin\\frac{\\pi}{10}$ et $\\cos\\frac{\\pi}{10}$",
+          "hint": "L'égalité $\\sin 2\\alpha = \\cos 3\\alpha$ devient :\n$2\\sin \\alpha \\cos \\alpha = \\cos \\alpha (1 - 4\\sin^2 \\alpha)$\nComme $\\alpha = \\frac{\\pi}{10}$, $\\cos \\alpha \\neq 0$, on peut simplifier par $\\cos \\alpha$ :\n$2\\sin \\alpha = 1 - 4\\sin^2 \\alpha \\iff 4\\sin^2 \\alpha + 2\\sin \\alpha - 1 = 0$\nOn résout $4X^2 + 2X - 1 = 0$. $\\Delta = 20$.\n$X = \\frac{-2 \\pm 2\\sqrt{5}}{8} = \\frac{-1 \\pm \\sqrt{5}}{4}$\nComme $\\sin(\\frac{\\pi}{10}) > 0$, on garde la solution positive :\n\\conclusion $\\boxed{\\sin\\frac{\\pi}{10} = \\frac{\\sqrt{5}-1}{4}}$\nPour le cosinus : $\\cos^2\\alpha = 1 - \\sin^2\\alpha = 1 - \\left(\\frac{\\sqrt{5}-1}{4}\\right)^2 = 1 - \\frac{6-2\\sqrt{5}}{16} = \\frac{10+2\\sqrt{5}}{16}$.\n\\conclusion $\\boxed{\\cos\\frac{\\pi}{10} = \\frac{\\sqrt{10+2\\sqrt{5}}}{4}}$"
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "Différence d'angles",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "Calculer $\\frac{\\pi}{3} - \\frac{\\pi}{10}$",
+          "hint": "$\\frac{\\pi}{3} - \\frac{\\pi}{10} = \\frac{10\\pi - 3\\pi}{30} = \\frac{7\\pi}{30}$\n\\conclusion Le résultat est $\\frac{7\\pi}{30}$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "Valeur complexe",
+      "subQuestions": [
+        {
+          "id": "sq5",
+          "content": "Montrer que $\\sin\\frac{7\\pi}{30} = \\frac{1}{8}\\left(\\sqrt{30 + 6\\sqrt{5}} + 1 - \\sqrt{5}\\right)$",
+          "hint": "\\method On développe $\\sin(\\frac{\\pi}{3} - \\frac{\\pi}{10})$.\n$$\\begin{aligned} \\sin\\left(\\frac{\\pi}{3} - \\frac{\\pi}{10}\\right) &= \\sin\\frac{\\pi}{3}\\cos\\frac{\\pi}{10} - \\cos\\frac{\\pi}{3}\\sin\\frac{\\pi}{10} \\\\ &= \\frac{\\sqrt{3}}{2} \\times \\frac{\\sqrt{10+2\\sqrt{5}}}{4} - \\frac{1}{2} \\times \\frac{\\sqrt{5}-1}{4} \\\\ &= \\frac{\\sqrt{3(10+2\\sqrt{5})}}{8} - \\frac{\\sqrt{5}-1}{8} \\\\ &= \\frac{\\sqrt{30+6\\sqrt{5}} - \\sqrt{5} + 1}{8} \\end{aligned}$$\n\\conclusion La formule est vérifiée."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_limite_polynome",
+      "category": "method",
+      "title": "Sais-tu **calculer** la limite d'un polynôme à l'infini ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On identifie le terme de plus haut degré qui détermine le comportement asymptotique."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier le terme de plus haut degré du polynôme",
+            "Factoriser par ce terme dominant",
+            "Appliquer les limites usuelles et conclure"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_limite_rationnelle",
+      "category": "method",
+      "title": "Maîtrises-tu le **calcul de la limite** d'une fonction rationnelle ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On factorise par les termes de plus haut degré au numérateur et au dénominateur."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier les degrés du numérateur et du dénominateur",
+            "Factoriser par les termes dominants",
+            "Simplifier et calculer la limite",
+            "Distinguer les trois cas selon la comparaison des degrés"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_quantite_conjuguee",
+      "category": "method",
+      "title": "Es-tu capable de **lever une indétermination** avec la quantité conjuguée ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On transforme une différence de radicaux en quotient avec la quantité conjuguée."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier la forme indéterminée $\\infty - \\infty$",
+            "Multiplier et diviser par la quantité conjuguée",
+            "Utiliser l'identité : $(a-b)(a+b) = a^2 - b^2$",
+            "Simplifier et calculer la limite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_taux_accroissement",
+      "category": "method",
+      "title": "Connais-tu le **calcul de limite** par taux d'accroissement ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Une limite de la forme $\\dfrac{f(a+h) - f(a)}{h}$ représente le nombre dérivé de $f$ en $a$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Reconnaître la forme d'un taux d'accroissement",
+            "Identifier la fonction $f$ et le point $a$",
+            "Vérifier que $f$ est dérivable en $a$",
+            "Calculer $f'(a)$ qui donne la limite"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_limites_trigonometriques",
+      "category": "method",
+      "title": "Sais-tu **calculer** une limite trigonométrique ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise les limites remarquables $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ et $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\tan x}{x} = 1$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Identifier la forme de la limite",
+            "Se ramener à une limite remarquable par changement de variable",
+            "Utiliser les limites usuelles et simplifier"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_asymptotes",
+      "category": "method",
+      "title": "Maîtrises-tu la **détermination des asymptotes** d'une courbe ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On calcule les limites aux bornes du domaine et à l'infini."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Déterminer le domaine de définition de $f$",
+            "Calculer les limites aux bornes pour les asymptotes verticales",
+            "Calculer $\\displaystyle\\lim_{x \\to \\pm\\infty} f(x)$ pour les asymptotes horizontales",
+            "Si limite infinie, calculer $\\displaystyle\\lim_{x \\to \\pm\\infty} \\dfrac{f(x)}{x}$ pour une asymptote oblique"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_branches_infinies",
+      "category": "method",
+      "title": "Es-tu capable d'**étudier** les branches infinies ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On étudie le quotient $\\dfrac{f(x)}{x}$ pour déterminer la nature de la branche infinie."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Vérifier que $\\displaystyle\\lim_{x \\to +\\infty} f(x) = \\pm\\infty$",
+            "Calculer $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{f(x)}{x}$",
+            "Distinguer trois cas : limite nulle, finie non nulle, ou infinie",
+            "Conclure sur la nature de la branche"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_theoreme_encadrement",
+      "category": "method",
+      "title": "Connais-tu le **théorème d'encadrement** ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "Si $g(x) \\le f(x) \\le h(x)$ et $g$ et $h$ ont la même limite $\\ell$, alors $f$ a pour limite $\\ell$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Trouver deux fonctions $g$ et $h$ qui encadrent $f$",
+            "Vérifier que $g(x) \\le f(x) \\le h(x)$",
+            "Calculer $\\displaystyle\\lim g(x)$ et $\\displaystyle\\lim h(x)$",
+            "Si ces limites sont égales, conclure que $\\displaystyle\\lim f(x) = \\ell$"
+          ]
+        }
+      ]
+    }
+  ]
+}

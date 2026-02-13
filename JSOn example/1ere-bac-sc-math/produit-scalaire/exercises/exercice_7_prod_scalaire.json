@@ -1,0 +1,39 @@
+{
+  "id": "ex-prod-scal-7",
+  "topic": "Produit Scalaire",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Montrer que $\\overrightarrow{AH} \\cdot \\overrightarrow{BC} = 0$.",
+          "hint": "Introduisez le point $O$ dans $\\overrightarrow{AH}$ par la relation de Chasles : $\\overrightarrow{AH} = \\overrightarrow{AO} + \\overrightarrow{OH}$.\\\\Utilisez ensuite la définition de $\\overrightarrow{OH}$ pour simplifier l'expression. Rappelez-vous que $OB = OC$ (rayons du cercle circonscrit), donc le triangle $OBC$ est isocèle en $O$."
+        },
+        {
+          "id": "sq2",
+          "content": "En déduire que $H$ est l'orthocentre du triangle $ABC$.",
+          "hint": "Un raisonnement analogue montre que $\\overrightarrow{BH} \\cdot \\overrightarrow{AC} = 0$. Si un point appartient à deux hauteurs, que représente-t-il pour le triangle ?"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "Rappeler la relation vectorielle caractérisant le centre de gravité $G$, puis montrer que $\\overrightarrow{OH} = 3\\overrightarrow{OG}$.",
+          "hint": "Le centre de gravité $G$ vérifie $\\overrightarrow{GA} + \\overrightarrow{GB} + \\overrightarrow{GC} = \\vec{0}$.\\\\Utilisez la relation de Chasles pour introduire l'origine $O$ dans cette somme : $\\overrightarrow{OA} + \\overrightarrow{AG} + \\dots$ et comparez avec la définition de $H$."
+        },
+        {
+          "id": "sq4",
+          "content": "Conclure quant à la position relative des points $O$, $G$ et $H$.",
+          "hint": "[GRAPH:ex_prod_scal_euler]\\\\La relation $\\overrightarrow{OH} = k \\cdot \\overrightarrow{OG}$ prouve que les vecteurs sont colinéaires. Qu'est-ce que cela implique pour les points ?"
+        }
+      ]
+    }
+  ]
+}

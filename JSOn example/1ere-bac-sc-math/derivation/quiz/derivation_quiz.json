@@ -1,0 +1,316 @@
+
+{
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "category": "Définition",
+      "prompt": "De quelle manière définit-on le nombre dérivé de $f$ en un point $a$",
+      "options": [
+        { "id": "a", "text": "$\\displaystyle\\lim_{x \\to a} \\frac{f(x)-f(a)}{x-a}$", "isCorrect": true },
+        { "id": "b", "text": "$\\displaystyle\\lim_{h \\to 0} \\frac{f(a+h)+f(a)}{h}$", "isCorrect": false },
+        { "id": "c", "text": "$\\frac{f(x)-f(a)}{x-a}$", "isCorrect": false },
+        { "id": "d", "text": "$\\displaystyle\\lim_{x \\to a} f(x)$", "isCorrect": false }
+      ],
+      "explanation": "Le nombre dérivé $f'(a)$ est la limite finie du taux d'accroissement de la fonction entre $a$ et $x$ lorsque $x$ tend vers $a$."
+    },
+    {
+      "id": "q2",
+      "type": "boolean",
+      "category": "Définition",
+      "prompt": "Une fonction est-elle dite dérivable en $a$ si la limite de son taux d'accroissement est infinie",
+      "isTrue": false,
+      "explanation": "Pour qu'une fonction soit dérivable, la limite doit être un nombre RÉEL (finie). Une limite infinie correspond à une tangente verticale et à une non-dérivabilité."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "category": "Géométrie",
+      "prompt": "Comment interprète-t-on graphiquement le nombre dérivé $f'(a)$",
+      "options": [
+        { "id": "a", "text": "La pente de la tangente au point d'abscisse $a$", "isCorrect": true },
+        { "id": "b", "text": "L'ordonnée à l'origine de la tangente", "isCorrect": false },
+        { "id": "c", "text": "L'image du point $a$ par la fonction", "isCorrect": false },
+        { "id": "d", "text": "La courbure de la fonction", "isCorrect": false }
+      ],
+      "explanation": "$f'(a)$ est le coefficient directeur (la pente) de la droite tangente à la courbe au point $(a, f(a))$."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "category": "Géométrie",
+      "prompt": "Quelle est l'équation correcte de la tangente $(T)$ à $\\mathcal{C}_f$ au point d'abscisse $a$",
+      "options": [
+        { "id": "a", "text": "$y = f'(a)(x-a) + f(a)$", "isCorrect": true },
+        { "id": "b", "text": "$y = f'(a)(x+a) + f(a)$", "isCorrect": false },
+        { "id": "c", "text": "$y = f(a)(x-a) + f'(a)$", "isCorrect": false },
+        { "id": "d", "text": "$y = f'(a)x + f(a)$", "isCorrect": false }
+      ],
+      "explanation": "Il s'agit d'une droite de pente $f'(a)$ passant par le point $(a, f(a))$."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "category": "Calcul",
+      "prompt": "Comment s'exprime la dérivée de la fonction puissance $x^n$ pour $n \\in \\mathbb{N}^*$",
+      "options": [
+        { "id": "a", "text": "$nx^{n-1}$", "isCorrect": true },
+        { "id": "b", "text": "$nx^n$", "isCorrect": false },
+        { "id": "c", "text": "$x^{n-1}$", "isCorrect": false },
+        { "id": "d", "text": "$n^x$", "isCorrect": false }
+      ],
+      "explanation": "C'est la règle de base du calcul dérivé : on multiplie par l'exposant et on diminue celui-ci d'une unité."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "category": "Calcul",
+      "prompt": "Quelle est la valeur de la dérivée de la fonction sinus",
+      "options": [
+        { "id": "a", "text": "$\\cos x$", "isCorrect": true },
+        { "id": "b", "text": "$-\\cos x$", "isCorrect": false },
+        { "id": "c", "text": "$\\sin x$", "isCorrect": false },
+        { "id": "d", "text": "$-\\sin x$", "isCorrect": false }
+      ],
+      "explanation": "Par lecture directe du tableau des dérivées usuelles, $(\\sin x)' = \\cos x$."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "category": "Calcul",
+      "prompt": "De quelle manière dérive-t-on la fonction tangente $\\tan x$",
+      "options": [
+        { "id": "a", "text": "$1 + \\tan^2 x$", "isCorrect": true },
+        { "id": "b", "text": "$\\frac{1}{\\cos^2 x}$", "isCorrect": true },
+        { "id": "c", "text": "$\\cos^2 x$", "isCorrect": false },
+        { "id": "d", "text": "$1 - \\tan^2 x$", "isCorrect": false }
+      ],
+      "explanation": "Les options A et B sont toutes deux valides et équivalentes."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "category": "Opérations",
+      "prompt": "Comment calcule-t-on la dérivée d'un produit de fonctions $(uv)'$",
+      "options": [
+        { "id": "a", "text": "$u'v + uv'$", "isCorrect": true },
+        { "id": "b", "text": "$u'v'$", "isCorrect": false },
+        { "id": "c", "text": "$u'v - uv'$", "isCorrect": false },
+        { "id": "d", "text": "$uv' - u'v$", "isCorrect": false }
+      ],
+      "explanation": "La règle du produit exige de sommer la dérivée de la première par la seconde et la première par la dérivée de la seconde."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "category": "Opérations",
+      "prompt": "Quelle est la formule correcte pour la dérivée d'un quotient $(\\frac{u}{v})'$",
+      "options": [
+        { "id": "a", "text": "$\\frac{u'v - uv'}{v^2}$", "isCorrect": true },
+        { "id": "b", "text": "$\\frac{u'v + uv'}{v^2}$", "isCorrect": false },
+        { "id": "c", "text": "$\\frac{uv' - u'v}{v^2}$", "isCorrect": false },
+        { "id": "d", "text": "$u'v - uv'$", "isCorrect": false }
+      ],
+      "explanation": "L'ordre au numérateur est primordial : dérivée du haut fois le bas MOINS le haut fois dérivée du bas."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "category": "Approximation",
+      "prompt": "Comment définit-on l'approximation affine de $f$ au voisinage de $a$",
+      "options": [
+        { "id": "a", "text": "$f(a+h) \\approx f(a) + hf'(a)$", "isCorrect": true },
+        { "id": "b", "text": "$f(a+h) \\approx f'(a) + hf(a)$", "isCorrect": false },
+        { "id": "c", "text": "$f(a+h) \\approx hf'(a)$", "isCorrect": false },
+        { "id": "d", "text": "$f(a+h) \\approx f(a) - hf'(a)$", "isCorrect": false }
+      ],
+      "explanation": "C'est l'utilisation de la tangente pour estimer une valeur proche du point de dérivabilité."
+    },
+    {
+      "id": "q11",
+      "type": "boolean",
+      "category": "Dérivabilité",
+      "prompt": "Une fonction peut-elle être dérivable en un point sans être dérivable à gauche et à droite de ce point",
+      "isTrue": false,
+      "explanation": "La dérivabilité en un point impose d'être dérivable à gauche ET à droite avec des valeurs de dérivées égales."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "category": "Géométrie",
+      "prompt": "Qu'indique la présence d'un point anguleux sur une courbe",
+      "options": [
+        { "id": "a", "text": "Les dérivées à gauche et à droite existent mais sont différentes", "isCorrect": true },
+        { "id": "b", "text": "La fonction n'est pas définie en ce point", "isCorrect": false },
+        { "id": "c", "text": "La limite est infinie", "isCorrect": false },
+        { "id": "d", "text": "La tangente est horizontale", "isCorrect": false }
+      ],
+      "explanation": "Un point anguleux (comme pour $|x-3|$ en 3) signifie que la pente change brusquement."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "category": "Géométrie",
+      "prompt": "Quelle est l'allure d'une demi-tangente si $\\lim_{x \\to a^+} \\frac{f(x)-f(a)}{x-a} = +\\infty$",
+      "options": [
+        { "id": "a", "text": "Verticale dirigée vers le haut", "isCorrect": true },
+        { "id": "b", "text": "Horizontale", "isCorrect": false },
+        { "id": "c", "text": "Verticale dirigée vers le bas", "isCorrect": false },
+        { "id": "d", "text": "Oblique de pente positive", "isCorrect": false }
+      ],
+      "explanation": "Une limite infinie à droite traduit une pente qui devient verticale en s'éloignant vers le haut."
+    },
+    {
+      "id": "q14",
+      "type": "mcq",
+      "category": "Calcul",
+      "prompt": "Sous quelle forme dérive-t-on une fonction composée $f(ax+b)$",
+      "options": [
+        { "id": "a", "text": "$a \\cdot f'(ax+b)$", "isCorrect": true },
+        { "id": "b", "text": "$f'(ax+b)$", "isCorrect": false },
+        { "id": "c", "text": "$a \\cdot f(ax+b)$", "isCorrect": false },
+        { "id": "d", "text": "$f'(a)$", "isCorrect": false }
+      ],
+      "explanation": "On multiplie la dérivée de la fonction par le coefficient directeur du binôme intérieur."
+    },
+    {
+      "id": "q15",
+      "type": "mcq",
+      "category": "Analyse",
+      "prompt": "Que représente physiquement la dérivée seconde $f''(x)$ pour un mouvement",
+      "options": [
+        { "id": "a", "text": "L'accélération", "isCorrect": true },
+        { "id": "b", "text": "La vitesse", "isCorrect": false },
+        { "id": "c", "text": "La distance", "isCorrect": false },
+        { "id": "d", "text": "Le temps", "isCorrect": false }
+      ],
+      "explanation": "La dérivée de la vitesse (elle-même dérivée de la position) est l'accélération."
+    },
+    {
+      "id": "q16",
+      "type": "mcq",
+      "category": "Variations",
+      "prompt": "Quel est le lien entre le signe de $f'(x)$ et la monotonie de la fonction",
+      "options": [
+        { "id": "a", "text": "$f'(x) \\geq 0 \\implies f$ est croissante", "isCorrect": true },
+        { "id": "b", "text": "$f'(x) = 0 \\implies f$ est nulle", "isCorrect": false },
+        { "id": "c", "text": "$f'(x) < 0 \\implies f$ est croissante", "isCorrect": false },
+        { "id": "d", "text": "$f$ croissante $\\implies f'(x) < 0$", "isCorrect": false }
+      ],
+      "explanation": "Le signe de la dérivée indique la direction de la pente : positive pour monter, négative pour descendre."
+    },
+    {
+      "id": "q17",
+      "type": "boolean",
+      "category": "Analyse",
+      "prompt": "Une fonction peut-elle être strictement croissante si sa dérivée s'annule en des points isolés",
+      "isTrue": true,
+      "explanation": "Oui, si $f'(x) \\geq 0$ et ne s'annule qu'en des points isolés (comme $x^3$ en 0), la fonction reste strictement croissante."
+    },
+    {
+      "id": "q18",
+      "type": "mcq",
+      "category": "Extrema",
+      "prompt": "Sous quelle condition nécessaire un point $a$ est-il un extremum local pour une fonction dérivable",
+      "options": [
+        { "id": "a", "text": "$f'(a) = 0$", "isCorrect": true },
+        { "id": "b", "text": "$f(a) = 0$", "isCorrect": false },
+        { "id": "c", "text": "$f'(a) > 0$", "isCorrect": false },
+        { "id": "d", "text": "$f''(a) > 0$", "isCorrect": false }
+      ],
+      "explanation": "En un maximum ou un minimum local, la tangente est obligatoirement horizontale, donc la dérivée s'annule."
+    },
+    {
+      "id": "q19",
+      "type": "mcq",
+      "category": "Extrema",
+      "prompt": "Comment confirme-t-on qu'un point où $f'(a)=0$ est bien un extremum",
+      "options": [
+        { "id": "a", "text": "La dérivée doit changer de signe en $a$", "isCorrect": true },
+        { "id": "b", "text": "La dérivée doit rester positive", "isCorrect": false },
+        { "id": "c", "text": "La fonction doit être nulle en $a$", "isCorrect": false },
+        { "id": "d", "text": "La limite en $a$ doit être infinie", "isCorrect": false }
+      ],
+      "explanation": "Si la dérivée s'annule sans changer de signe (comme $x^3$), il n'y a pas d'extremum (juste un palier)."
+    },
+    {
+      "id": "q20",
+      "type": "mcq",
+      "category": "Calcul",
+      "prompt": "Quelle est la dérivée de la fonction racine carrée $\\sqrt{x}$",
+      "options": [
+        { "id": "a", "text": "$\\frac{1}{2\\sqrt{x}}$", "isCorrect": true },
+        { "id": "b", "text": "$2\\sqrt{x}$", "isCorrect": false },
+        { "id": "c", "text": "$\\frac{1}{\\sqrt{x}}$", "isCorrect": false },
+        { "id": "d", "text": "$\\sqrt{x}$", "isCorrect": false }
+      ],
+      "explanation": "C'est une formule usuelle du cours à connaître pour $x > 0$."
+    },
+    {
+      "id": "q21",
+      "type": "error",
+      "category": "Calcul",
+      "prompt": "Dans quel passage de ce calcul de dérivée de $\\frac{1}{x^2}$ se situe l'erreur",
+      "steps": [
+        { "id": "1", "text": "On utilise la règle $(u^n)' = nu^{n-1}$" },
+        { "id": "2", "text": "On écrit $\\frac{1}{x^2}$ sous la forme $x^{-2}$" },
+        { "id": "3", "text": "La dérivée est $-2x^{-2-1} = -2x^{-3}$", "isError": false },
+        { "id": "4", "text": "Le résultat final est $-\\frac{2}{x^2}$", "isError": true, "correction": "L'exposant est -3, donc le résultat est $-2/x^3$." }
+      ],
+      "explanation": "L'erreur est dans la réécriture finale : $x^{-3}$ devient $1/x^3$ et non $1/x^2$."
+    },
+    {
+      "id": "q22",
+      "type": "mcq",
+      "category": "ODE",
+      "prompt": "Quelle est la forme générale des solutions de l'équation $y'' + \\omega^2 y = 0$",
+      "options": [
+        { "id": "a", "text": "$y(x) = a\\cos(\\omega x) + b\\sin(\\omega x)$", "isCorrect": true },
+        { "id": "b", "text": "$y(x) = a\\cos(x) + b\\sin(x)$", "isCorrect": false },
+        { "id": "c", "text": "$y(x) = a\\cos^2(\\omega x)$", "isCorrect": false },
+        { "id": "d", "text": "$y(x) = e^{\\omega x}$", "isCorrect": false }
+      ],
+      "explanation": "C'est la solution caractéristique des équations différentielles du second ordre sans second membre."
+    },
+    {
+      "id": "q23",
+      "type": "order",
+      "category": "Méthode",
+      "prompt": "Ordonnez les étapes pour trouver l'extremum d'une fonction",
+      "items": [
+        { "id": "1", "content": "Calculer la fonction dérivée $f'(x)$" },
+        { "id": "2", "content": "Résoudre l'équation $f'(x) = 0$" },
+        { "id": "3", "content": "Étudier le signe de $f'(x)$ autour de la solution" },
+        { "id": "4", "content": "Vérifier le changement de signe et calculer l'image $f(a)$" }
+      ],
+      "correctOrder": ["1", "2", "3", "4"],
+      "explanation": "Il faut d'abord trouver les points où la pente est nulle, puis vérifier s'il s'agit d'un sommet ou d'un creux par le signe."
+    },
+    {
+      "id": "q24",
+      "type": "mcq",
+      "category": "Calcul",
+      "prompt": "De quelle manière dérive-t-on la fonction composée $\\sqrt{u}$",
+      "options": [
+        { "id": "a", "text": "$\\frac{u'}{2\\sqrt{u}}$", "isCorrect": true },
+        { "id": "b", "text": "$\\frac{1}{2\\sqrt{u}}$", "isCorrect": false },
+        { "id": "c", "text": "$u' \\cdot \\sqrt{u}$", "isCorrect": false },
+        { "id": "d", "text": "$\\frac{u'}{\\sqrt{u}}$", "isCorrect": false }
+      ],
+      "explanation": "On n'oublie pas de multiplier par la dérivée de la fonction $u$ située sous la racine."
+    },
+    {
+      "id": "q25",
+      "type": "mcq",
+      "category": "Calcul",
+      "prompt": "Quel est le résultat de la dérivation de $\\cos(2x+1)$",
+      "options": [
+        { "id": "a", "text": "$-2\\sin(2x+1)$", "isCorrect": true },
+        { "id": "b", "text": "$2\\sin(2x+1)$", "isCorrect": false },
+        { "id": "c", "text": "$-\\sin(2x+1)$", "isCorrect": false },
+        { "id": "d", "text": "$-2\\cos(2x+1)$", "isCorrect": false }
+      ],
+      "explanation": "On applique $(f(ax+b))' = a f'(ax+b)$. La dérivée de cosinus est moins sinus."
+    }
+  ]
+}

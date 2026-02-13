@@ -1,0 +1,27 @@
+{
+  "header": {
+    "title": "Vecteurs de l'Espace",
+    "subtitle": "Fiche de Cours - Concepts Fondamentaux",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "vecteurs_espace_def",
+      "category": "course",
+      "title": "Vecteurs dans l'espace",
+      "content": "\\begin{definition}La notion de vecteur dans l'espace est une extension directe de celle du plan. Un vecteur est défini par une direction, un sens et une norme.\\\\L'ensemble des vecteurs de l'espace est noté $\\mathcal{V}_3$.\\end{definition}"
+    },
+    {
+      "id": "colinearite_espace",
+      "category": "course",
+      "title": "Colinéarité et Coplanarité",
+      "content": "\\begin{definition}Deux vecteurs $\\vec{u}$ et $\\vec{v}$ sont \\textbf{colinéaires} s'il existe $k \\in \\mathbb{R}$ tel que $\\vec{u} = k\\vec{v}$ (ou $\\vec{v} = k\\vec{u}$).\\\\Trois vecteurs $\\vec{u}, \\vec{v}, \\vec{w}$ sont \\textbf{coplanaires} si l'un peut s'écrire comme combinaison linéaire des deux autres (si $\\vec{u}, \\vec{v}$ non colinéaires, $\\exists a,b : \\vec{w} = a\\vec{u} + b\\vec{v}$).\\end{definition}"
+    },
+    {
+      "id": "base_espace",
+      "category": "course",
+      "title": "Base et Repère",
+      "content": "\\begin{definition}Trois vecteurs $(\\vec{i}, \\vec{j}, \\vec{k})$ forment une \\textbf{base} de l'espace s'ils ne sont pas coplanaires.\\\\Tout vecteur $\\vec{u}$ se décompose de manière unique : $\\vec{u} = x\\vec{i} + y\\vec{j} + z\\vec{k}$. $(x,y,z)$ sont les coordonnées.\\end{definition}"
+    }
+  ]
+}

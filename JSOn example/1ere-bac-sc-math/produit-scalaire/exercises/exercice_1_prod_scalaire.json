@@ -1,0 +1,105 @@
+{
+  "id": "ex-prod-scal-1",
+  "topic": "Produit Scalaire",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Calculer les distances $AB$ et $AC$, ainsi que le produit scalaire $\\overrightarrow{AC} \\cdot \\overrightarrow{AB}$.",
+          "hint": "Pour la distance, utilisez $\\sqrt{(x_B-x_A)^2 + (y_B-y_A)^2}$. Pour le produit scalaire, calculez d'abord les coordonnées des vecteurs puis appliquez la formule $xx' + yy'$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Calculer $\\cos(\\overrightarrow{AC}, \\overrightarrow{AB})$ et $\\sin(\\overrightarrow{AC}, \\overrightarrow{AB})$.",
+          "hint": "Utilisez les résultats précédents. Rappel : $\\cos\\theta = \\frac{\\vec{u}\\cdot\\vec{v}}{||\\vec{u}|| \\times ||\\vec{v}||}$ et $\\sin\\theta = \\frac{\\det(\\vec{u},\\vec{v})}{||\\vec{u}|| \\times ||\\vec{v}||}$. N'oubliez pas de calculer le déterminant $xy' - yx'$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "Déduire la nature du triangle $ABC$.",
+          "hint": "Comparez les longueurs $AB$ et $AC$. Ensuite, utilisez les valeurs de cosinus et sinus trouvées pour déterminer la mesure de l'angle $\\widehat{A}$."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "Montrer que $y = -x$ est une équation cartésienne de la droite $(AB)$.",
+          "hint": "Vérifiez simplement si les coordonnées des points $A$ et $B$ satisfont l'équation donnée. Alternativement, déterminez un vecteur normal à $\\overrightarrow{AB}$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq5",
+          "content": "Calculer $d(C, (AB))$ puis en déduire l'aire du triangle $ABC$.",
+          "hint": "Utilisez la formule de la distance d'un point à une droite : $d = \\frac{|ax_C + by_C + c|}{\\sqrt{a^2+b^2}}$. Pour l'aire, pensez à la formule classique : $\\frac{1}{2} \\times \\text{base} \\times \\text{hauteur}$."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq6",
+          "content": "Calculer l'aire du triangle $ABC$ par une autre méthode.",
+          "hint": "Rappelez-vous que l'aire d'un triangle engendré par deux vecteurs $\\vec{u}$ et $\\vec{v}$ est donnée par $\\frac{1}{2} |\\det(\\vec{u}, \\vec{v})|$."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq7a",
+          "content": "Soit $(C)$ le cercle passant par $C$ et de centre $A$. Vérifier que $x^2 + y^2 - 2x + 2y - 6 = 0$ est son équation.",
+          "hint": "Un point $M(x,y)$ appartient au cercle si $AM^2 = R^2$. Ici, le rayon $R$ est la distance $AC$ calculée précédemment."
+        },
+        {
+          "id": "sq7b",
+          "content": "Montrer que $B \\in (C)$ puis déterminer l'équation de la tangente à $(C)$ en $B$.",
+          "hint": "Pour l'appartenance, vérifiez si $AB = R$. Pour la tangente en $B$, rappelez-vous que le vecteur $\\overrightarrow{AB}$ (rayon) est un \\textbf{vecteur normal} à la tangente."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq8a",
+          "content": "Soit $(\\Delta)$ la droite passant par $D$ et parallèle à $(AB)$. Montrer que $x + y - 1 = 0$ est son équation.",
+          "hint": "Deux droites parallèles ont le même vecteur normal (ou directeur). Utilisez l'équation de $(AB)$ trouvée en Q4 pour déduire la forme de $(\\Delta)$, puis utilisez le point $D$ pour trouver la constante."
+        },
+        {
+          "id": "sq8b",
+          "content": "Étudier l'intersection de la droite $(\\Delta)$ et du cercle $(C)$.",
+          "hint": "[GRAPH:ex_prod_scal_1_graph]\\\\Comparez la distance $d(A, \\Delta)$ avec le rayon $R$ du cercle. Si $d < R$, il y a deux points ; si $d = R$, un seul ; si $d > R$, aucun."
+        }
+      ]
+    }
+  ]
+}

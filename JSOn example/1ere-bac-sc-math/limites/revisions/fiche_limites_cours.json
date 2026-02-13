@@ -1,0 +1,360 @@
+{
+  "header": {
+    "title": "Limites et Comportement Asymptotique",
+    "subtitle": "Fiche de Révision Complète",
+    "context": "1BAC Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "introduction",
+      "category": "course",
+      "title": "Introduction : Au cœur de l'Analyse",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "La notion de limite constitue le fondement de l'Analyse Mathématique. Elle étudie le comportement des fonctions lorsque la variable s'approche d'une valeur donnée, même lorsque le calcul direct est impossible.\\par\\smallskip\\textbf{Importance cruciale :} Les limites permettent de comprendre les phénomènes près de valeurs « interdites » (division par zéro) ou lorsque $x$ devient très grand.\\par\\smallskip\\textbf{Transition conceptuelle :} Elles marquent le passage d'une vision statique à une approche dynamique, nous apprenant à penser en termes de tendances et d'évolutions continues.\\par\\smallskip\\textbf{Applications essentielles :} Les limites expliquent l'accélération instantanée, la vitesse limite en physique, et sont fondamentales en économie et dans de nombreux domaines scientifiques."
+        },
+        {
+          "type": "text",
+          "content": "Prenons la fonction $f(x) = \\dfrac{1}{x}$. Observons ce qui se passe lorsque $x$ devient de plus en plus grand :\\begin{itemize}\\item Pour $x=10$, $f(x)=0{,}1$\\item Pour $x=1\\,000$, $f(x)=0{,}001$\\item Pour $x=1\\,000\\,000$, $f(x)=0{,}000001$\\end{itemize}\\textbf{Analyse :} Plus $x$ augmente, plus $f(x)$ tend vers $\\blank{0}$. On dit que la limite de $f(x)$ en $+\\infty$ est $0$."
+        },
+        {
+          "type": "text",
+          "content": "Considérons $f(x) = x^2$. Étudions la croissance quadratique explosive de la fonction :\\begin{itemize}\\item Pour $x=10$, $f(x)=100$\\item Pour $x=1\\,000$, $f(x)=1\\,000\\,000$\\item Pour $x=10\\,000$, $f(x)=100\\,000\\,000$\\end{itemize}\\textbf{Analyse :} Lorsque $x$ grandit, $f(x)$ dépasse n'importe quel nombre imaginable. On dit que la limite de $f(x)$ en $+\\infty$ est $\\blank{+\\infty}$."
+        },
+        {
+          "type": "text",
+          "content": "Regardons $f(x) = \\sqrt{x}$. Elle tend aussi vers l'infini, mais il faut aller chercher les $x$ très loin :\\begin{itemize}\\item Pour atteindre $10$, il faut $x=100$\\item Pour atteindre $100$, il faut $x=10\\,000$\\item Pour atteindre $1\\,000$, il faut $x=1\\,000\\,000$\\end{itemize}\\textbf{Analyse :} $f(x)$ augmente lentement mais sans plafond. On dit que la limite de $f(x)$ en $\\blank{+\\infty}$ est $+\\infty$."
+        }
+      ]
+    },
+    {
+      "id": "limites_usuelles",
+      "category": "course",
+      "title": "Limites usuelles",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les limites usuelles sont des résultats fondamentaux à connaître par cœur. Elles permettent de calculer rapidement les limites de fonctions plus complexes."
+        },
+        {
+          "type": "property",
+          "title": "Limites des puissances à l'infini",
+          "content": "Les fonctions puissances $x^n$ et $\\sqrt{x}$ croissent sans limite quand $x$ devient très grand. Plus l'exposant $n$ est élevé, plus la croissance est explosive. En $-\\infty$, le signe dépend de la parité de $n$ : une puissance paire reste positive, une puissance impaire conserve le signe de $x$.\\par\\smallskip\\begin{itemize}\\item \\textbf{En $+\\infty$} : $\\displaystyle\\lim_{x \\to +\\infty} x^n = \\blank{+\\infty}$ et $\\displaystyle\\lim_{x \\to +\\infty} \\sqrt{x} = +\\infty$\\\\ \\item \\textbf{En $-\\infty$} : $\\displaystyle\\lim_{x \\to -\\infty} x^n = \\begin{cases}+\\infty & \\text{si } n \\text{ est pair}\\\\\\blank{-\\infty} & \\text{si } n \\text{ est impair}\\end{cases}$\\end{itemize}"
+        },
+        {
+          "type": "property",
+          "title": "Limites des inverses (en l'infini)",
+          "content": "Quand $x$ tend vers l'infini, son inverse tend vers 0. On divise un nombre fixe par un nombre de plus en plus grand, le résultat devient arbitrairement petit.\\par\\smallskip\\begin{itemize}\\item $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{x^n} = \\blank{0}$ et $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{\\sqrt{x}} = \\blank{0}$\\\\ \\item $\\displaystyle\\lim_{x \\to -\\infty} \\dfrac{1}{x^n} = \\blank{0}$\\end{itemize}"
+        },
+        {
+          "type": "property",
+          "title": "Limites en 0 (zéro)",
+          "content": "Diviser par un nombre qui s'approche de $0$, c'est diviser par quelque chose de très petit : le résultat explose vers l'infini. C'est le phénomène d'asymptote verticale. Le signe de l'infini dépend du signe du dénominateur quand $x$ s'approche de $0$.\\par\\smallskip\\begin{itemize}\\item $\\displaystyle\\lim_{x \\to 0^+} \\dfrac{1}{x^n} = +\\infty$ et $\\displaystyle\\lim_{x \\to 0^+} \\dfrac{1}{\\sqrt{x}} = +\\infty$\\\\ \\item $\\displaystyle\\lim_{x \\to 0^-} \\dfrac{1}{x^n} = \\begin{cases}+\\infty & \\text{si } n \\text{ est pair}\\\\\\blank{-\\infty} & \\text{si } n \\text{ est impair}\\end{cases}$\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Analysons quelques cas typiques :\\begin{itemize}\\item \\textbf{Puissance paire :} $\\displaystyle\\lim_{x \\to -\\infty} x^4 = +\\infty$ mais $\\displaystyle\\lim_{x \\to 0^-} \\dfrac{1}{x^4} = \\blank{+\\infty}$\\item \\textbf{Puissance impaire :} $\\displaystyle\\lim_{x \\to -\\infty} x^3 = -\\infty$ et $\\displaystyle\\lim_{x \\to 0^-} \\dfrac{1}{x^3} = \\blank{-\\infty}$\\item \\textbf{Racine :} $\\displaystyle\\lim_{x \\to +\\infty} \\sqrt{x} = +\\infty$ et $\\displaystyle\\lim_{x \\to 0^+} \\dfrac{1}{\\sqrt{x}} = \\blank{+\\infty}$\\end{itemize}"
+        },
+        {
+          "type": "warning",
+          "content": "Attention au signe pour $x < 0$ ! Pour $x$ négatif, $x^3$ est négatif, donc son inverse $\\dfrac{1}{x^3}$ tend vers $-\\infty$. En revanche, $x^2$ est positif, donc $\\dfrac{1}{x^2}$ tend vers $+\\infty$."
+        }
+      ]
+    },
+    {
+      "id": "definitions_formelles",
+      "category": "course",
+      "title": "Définitions Formelles et Rigueur",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "L'analyse mathématique formalise la notion de limite. Les définitions qui suivent utilisent les quantificateurs pour traduire rigoureusement le comportement asymptotique des fonctions."
+        },
+        {
+          "type": "definition",
+          "title": "Limite finie en un point",
+          "content": "Soit $f$ une fonction définie sur un intervalle ouvert $I$ contenant $x_0$ (sauf peut-être en $x_0$).\\\\On dit que la limite de $f$ quand $x$ tend vers $x_0$ est le réel $\\ell$ si :\\\\Pour tout réel $\\varepsilon > 0$, il existe un réel $\\alpha > 0$ tel que pour tout $x \\in D_f$ :$$0 < |x - x_0| < \\alpha \\implies |f(x) - \\ell| < \\blank{\\varepsilon}$$On note : $\\displaystyle\\lim_{x \\to x_0} f(x) = \\ell$."
+        },
+        {
+          "type": "example",
+          "content": "Démontrons que $\\displaystyle\\lim_{x \\to 2} (3x - 1) = 5$.\\par\\smallskip Fixons $\\varepsilon > 0$. Nous cherchons $\\alpha$ tel que $|x - 2| < \\alpha \\implies |(3x - 1) - 5| < \\varepsilon$.\\par Or $|3x - 6| = 3|x - 2|$.\\par Pour avoir $3|x - 2| < \\varepsilon$, il suffit d'avoir $|x - 2| < \\frac{\\varepsilon}{3}$.\\par On peut donc choisir $\\alpha = \\blank{\\frac{\\varepsilon}{3}}$.",
+          "graphId": "definition_limite_finie_point",
+          "graphCaption": "Ajustez ε pour voir comment α est déterminé. La zone verte représente |x - x₀| < α et la bande rose |f(x) - ℓ| < ε."
+        },
+        {
+          "type": "definition",
+          "title": "Limite infinie en un point",
+          "content": "Soit $f$ une fonction définie au voisinage de $x_0$. On dit que $f$ tend vers $+\\infty$ quand $x$ tend vers $x_0$ si :\\\\Pour tout réel $A > 0$, il existe un réel $\\alpha > 0$ tel que pour tout $x \\in D_f$ :$$0 < |x - x_0| < \\alpha \\implies f(x) > \\blank{A}$$On note : $\\displaystyle\\lim_{x \\to x_0} f(x) = +\\infty$."
+        },
+        {
+          "type": "example",
+          "content": "Démontrons que $\\displaystyle\\lim_{x \\to 0^+} \\frac{1}{x} = +\\infty$.\\par Soit $A > 0$ (aussi grand soit-il). Nous cherchons $\\alpha$ tel que $0 < x < \\alpha \\implies \\frac{1}{x} > A$.\\par L'inégalité $\\frac{1}{x} > A$ équivaut à $x < \\frac{1}{A}$ (car $x, A > 0$).\\par Il suffit de choisir $\\alpha = \\blank{\\frac{1}{A}}$.",
+          "graphId": "definition_limite_infinie",
+          "graphCaption": "Déplacez le curseur A : la zone verte |x - x₀| < α garantit que f(x) > A (zone violette)."
+        },
+        {
+          "type": "definition",
+          "title": "Limite finie à l'infini",
+          "content": "On dit que $\\displaystyle\\lim_{x \\to +\\infty} f(x) = \\ell$ si pour tout réel $\\varepsilon > 0$, il existe un réel $B > 0$ tel que pour tout $x \\in D_f$ :$$x > B \\implies |f(x) - \\ell| < \\blank{\\varepsilon}$$"
+        },
+        {
+          "type": "example",
+          "content": "Démontrons que $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{x} = 0$.\\par Soit $\\varepsilon > 0$. On cherche $B$ tel que $x > B \\implies |\\frac{1}{x} - 0| < \\varepsilon$.\\par Comme $x>0$, cela revient à $\\frac{1}{x} < \\varepsilon$, soit $x > \\frac{1}{\\varepsilon}$.\\par Il suffit de choisir $B = \\blank{\\frac{1}{\\varepsilon}}$.",
+          "graphId": "definition_limite_a_infini",
+          "graphCaption": "Ajustez ε : la zone verte x > B garantit que f(x) reste dans la bande ℓ ± ε (zone rose)."
+        },
+        {
+          "type": "remark",
+          "content": "La limite décrit le comportement de la fonction \\textbf{au voisinage} de $x_0$, et non \\textbf{en} $x_0$. La valeur $f(x_0)$ n'a aucune influence sur la limite."
+        },
+        {
+          "type": "culture",
+          "title": "Histoire de la rigueur mathématique",
+          "content": "Au XIXe siècle, les mathématiciens Augustin-Louis Cauchy et Karl Weierstrass ont banni les « infinitésimaux » flous de Newton et Leibniz. Ils ont forgé la définition rigoureuse $(\\varepsilon, \\alpha)$ que nous utilisons aujourd'hui, transformant l'intuition du « tendre vers » en une mécanique d'inégalités d'une précision redoutable."
+        }
+      ]
+    },
+    {
+      "id": "limites_laterales",
+      "category": "course",
+      "title": "Limites à Droite et à Gauche",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Certaines fonctions se comportent différemment selon qu'on s'approche d'un point par la droite ou par la gauche. C'est crucial pour les fonctions définies par morceaux."
+        },
+        {
+          "type": "definition",
+          "title": "Définition rigoureuse des limites à gauche et à droite",
+          "content": "Soit $f$ une fonction définie sur un intervalle de la forme $]a, a+r[$ (resp. $]a-r, a[$) où $r>0$.\\par\\smallskip\\textbf{Limite à droite :} On dit que $f$ a pour limite $\\ell$ à droite en $a$ si $f(x)$ tend vers $\\ell$ lorsque $x$ tend vers $a$ en restant strictement supérieur à $a$. On note : $$\\lim_{x \\to a^+} f(x) = \\ell \\quad \\text{ou} \\quad \\displaystyle\\lim_{\\substack{x \\to a \\\\ x > a}} f(x) = \\ell$$\\par\\textbf{Limite à gauche :} On dit que $f$ a pour limite $\\ell'$ à gauche en $a$ si $f(x)$ tend vers $\\ell'$ lorsque $x$ tend vers $a$ en restant strictement inférieur à $\\blank{a}$. On note : $$\\lim_{x \\to a^-} f(x) = \\ell' \\quad \\text{ou} \\quad \\displaystyle\\lim_{\\substack{x \\to a \\\\ x < a}} f(x) = \\ell'$$"
+        },
+        {
+          "type": "example",
+          "content": "Considérons la fonction partie entière $f(x) = E(x)$ au voisinage de l'entier $2$ :\\par\\begin{itemize}\\item $\\displaystyle\\lim_{x \\to 2^+} E(x) = \\blank{2}$ (car pour $2 < x < 3$, $E(x)=2$)\\item $\\displaystyle\\lim_{x \\to 2^-} E(x) = \\blank{1}$ (car pour $1 \\le x < 2$, $E(x)=1$)\\end{itemize}\\par Les limites latérales sont \\textbf{différentes}, donc la limite en $2$ n'existe pas."
+        },
+        {
+          "type": "property",
+          "title": "Quelle est la condition d'existence de la limite ?",
+          "content": "Pour que $f$ admette une limite $\\ell$ en $a$, il faut et il suffit qu'elle admette la limite $\\ell$ à droite et à gauche en $a$.\\par$$\\boxed{\\displaystyle\\lim_{x \\to a} f(x) = \\ell \\Leftrightarrow \\displaystyle\\lim_{x \\to a^+} f(x) = \\displaystyle\\lim_{x \\to a^-} f(x) = \\blank{\\ell}}$$"
+        },
+        {
+          "type": "example",
+          "content": "Soit $h(x) = \\begin{cases} x^2+1 & \\text{si } x \\geqslant 1 \\\\ 3-x & \\text{si } x < 1 \\end{cases}$.\\par\\smallskip Calculons les limites latérales en 1 :\\par$$\\displaystyle\\lim_{x \\to 1^+} h(x) = 1^2 + 1 = \\blank{2} \\qquad \\displaystyle\\lim_{x \\to 1^-} h(x) = 3 - 1 = \\blank{2}$$\\par Les limites latérales sont égales, donc $\\displaystyle\\lim_{x \\to 1} h(x) = \\blank{2}$."
+        },
+        {
+          "type": "warning",
+          "content": "Si les limites à droite et à gauche sont différentes, la limite en $a$ n'existe pas. C'est le cas de la fonction partie entière aux points entiers."
+        },
+        {
+          "type": "remark",
+          "content": "Pour calculer une limite en $a$, il faut que $f$ soit définie au voisinage de $a$ (sauf peut-être en $a$ lui-même). Pour les limites latérales, $f$ doit être définie au voisinage à droite ou à \\blank{gauche} de $a$."
+        }
+      ]
+    },
+    {
+      "id": "operations_limites",
+      "category": "course",
+      "title": "Opérations sur les limites",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les limites suivent des règles algébriques précises. Il est essentiel de connaître les opérations valides et les formes indéterminées."
+        },
+        {
+          "type": "property",
+          "title": "Comment calculer la limite d'une somme ?",
+          "content": "$$\\begin{array}{|c|c|c|c|c|c|}\\hline \\lim f & \\ell & \\ell & \\ell & +\\infty & -\\infty \\\\\\hline \\lim g & \\ell' & +\\infty & -\\infty & +\\infty & -\\infty \\\\\\hline \\lim (f+g) & \\blank{\\ell+\\ell'} & \\blank{+\\infty} & \\blank{-\\infty} & \\blank{+\\infty} & \\blank{-\\infty} \\\\\\hline\\end{array}$$\\par\\textbf{Forme indéterminée :} $\\blank{+\\infty - \\infty}$ (on ne peut pas conclure directement)"
+        },
+        {
+          "type": "property",
+          "title": "Comment calculer la limite d'un produit ?",
+          "content": "$$\\begin{array}{|c|c|c|c|c|}\\hline \\lim f & \\ell & \\ell \\neq 0 & \\infty & 0 \\\\\\hline \\lim g & \\ell' & \\infty & \\infty & \\infty \\\\\\hline \\lim (f \\times g) & \\blank{\\ell \\ell'} & \\blank{\\infty} & \\blank{\\infty} & \\text{F.I.} \\\\\\hline\\end{array}$$\\par Le signe de l'infini suit la règle des signes.\\par\\textbf{Forme indéterminée :} $\\blank{0 \\times \\infty}$"
+        },
+        {
+          "type": "property",
+          "title": "Comment calculer la limite d'un quotient ?",
+          "content": "$$\\begin{array}{|c|c|c|c|c|c|c|}\\hline \\lim f & \\ell & \\ell & \\ell \\neq 0 & \\infty & \\infty & 0 \\\\\\hline \\lim g & \\ell' \\neq 0 & 0 & \\infty & \\ell' & \\infty & 0 \\\\\\hline \\lim \\displaystyle\\frac{f}{g} & \\blank{\\frac{\\ell}{\\ell'}} & \\blank{\\infty} & \\blank{0} & \\blank{\\infty} & \\text{F.I.} & \\text{F.I.} \\\\\\hline\\end{array}$$\\par\\textbf{Formes indéterminées :} $\\blank{\\frac{\\infty}{\\infty}}$ et $\\blank{\\frac{0}{0}}$"
+        },
+        {
+          "type": "warning",
+          "title": "Les 4 formes indéterminées",
+          "content": "Une forme indéterminée (F.I.) ne signifie pas « pas de limite », mais « on ne peut pas conclure directement ». Il faut transformer l'expression.\\par\\smallskip\\textbf{Les 4 F.I. à retenir :}\\begin{enumerate}\\item $\\displaystyle\\frac{0}{0}$ : Qui est le plus petit ?\\item $\\displaystyle\\frac{\\infty}{\\infty}$ : Qui est le plus grand ?\\item $0 \\times \\infty$ : Le zéro absorbe-t-il l'infini ou l'inverse ?\\item $+\\infty - \\infty$ : Qui gagne ?\\end{enumerate}"
+        },
+        {
+          "type": "example",
+          "content": "Calcul de $\\displaystyle\\lim_{x \\to +\\infty} (x^3 - x^2 + 1)$ (Forme $\\infty - \\infty$).\\par On factorise par le terme de plus haut degré :\\par\\begin{align*}\\displaystyle\\lim_{x \\to +\\infty} x^3 \\left(1 - \\frac{1}{x} + \\frac{1}{x^3}\\right) &= (+\\infty) \\times (1 - 0 + 0) \\\\&= \\blank{+\\infty}\\end{align*}"
+        },
+        {
+          "type": "example",
+          "content": "Calcul de $\\displaystyle\\lim_{x \\to 1} \\dfrac{x^2 - 1}{x - 1}$ (Forme $\\dfrac{0}{0}$).\\par On factorise le numérateur :\\par\\begin{align*}\\displaystyle\\lim_{x \\to 1} \\dfrac{x^2 - 1}{x - 1} &= \\displaystyle\\lim_{x \\to 1} \\dfrac{(x-1)(x+1)}{x-1} \\\\&= \\displaystyle\\lim_{x \\to 1} (x+1) \\\\&= \\blank{2}\\end{align*}"
+        },
+        {
+          "type": "remark",
+          "content": "Pour lever une forme indéterminée : factoriser, utiliser les identités remarquables, multiplier par la conjuguée, ou utiliser le théorème des \\blank{gendarmes}."
+        },
+        {
+          "type": "warning",
+          "content": "$\\infty - \\infty$ n'est pas égal à $0$. C'est une forme indéterminée. Contre-exemple : $\\displaystyle\\lim_{x \\to +\\infty} (x^2 - x) = +\\infty \\neq 0$."
+        }
+      ]
+    },
+    {
+      "id": "polynomes_rationnelles",
+      "category": "course",
+      "title": "Limites des polynômes et fractions rationnelles",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les polynômes et les fractions rationnelles ont des comportements asymptotiques prévisibles, régis par leurs termes de plus haut degré."
+        },
+        {
+          "type": "property",
+          "title": "Comment calculer la limite d'un polynôme ?",
+          "content": "Soit $P(x)$ un polynôme de degré $n$ : $P(x) = a_n x^n + \\cdots + a_1 x + a_0$ avec $a_n \\neq 0$.\\par\\begin{itemize}\\item \\textbf{En un point $a$ :} $\\displaystyle\\lim_{x \\to a} P(x) = \\blank{P(a)}$ (simple substitution)\\item \\textbf{À l'infini :} $\\displaystyle\\lim_{x \\to \\pm\\infty} P(x) = \\displaystyle\\lim_{x \\to \\pm\\infty} a_n x^n$ (terme de plus haut degré)\\end{itemize}"
+        },
+        {
+          "type": "property",
+          "title": "Comment calculer la limite d'une fraction rationnelle ?",
+          "content": "Soit $f(x) = \\dfrac{P(x)}{Q(x)}$ avec $\\deg P(x) = n$ et $\\deg Q(x) = m$.\\par\\begin{itemize}\\item \\textbf{En un point $a$ :} Si $Q(a) \\neq 0$, alors $\\displaystyle\\lim_{x \\to a} f(x) = \\dfrac{P(a)}{\\blank{Q(a)}}$\\item \\textbf{À l'infini :} $\\displaystyle\\lim_{x \\to \\pm\\infty} f(x) = \\displaystyle\\lim_{x \\to \\pm\\infty} \\dfrac{a_n x^n}{\\blank{b_m x^m}}$ (quotient des termes dominants)\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Calcul de $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{2x^3 + 5x - 1}{x^3 - 3}$ :\\par On garde les termes dominants :\\par$$\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{2x^3 + 5x - 1}{x^3 - 3} = \\displaystyle\\lim_{x \\to +\\infty} \\dfrac{2x^3}{x^3} = \\blank{2}$$"
+        },
+        {
+          "type": "example",
+          "content": "Calcul de $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{x^2 - 9}{x - 3}$ :\\par$$\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{x^2 - 9}{x - 3} = \\displaystyle\\lim_{x \\to +\\infty} \\dfrac{x^2}{x} = \\displaystyle\\lim_{x \\to +\\infty} x = \\blank{+\\infty}$$"
+        },
+        {
+          "type": "example",
+          "content": "Calcul de $\\displaystyle\\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}$ (Forme $\\dfrac{0}{0}$).\\par On factorise :\\par\\begin{align*}\\displaystyle\\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3} &= \\displaystyle\\lim_{x \\to 3} \\dfrac{(x-3)(x+3)}{x-3} \\\\&= \\displaystyle\\lim_{x \\to 3} (x+3) \\\\&= \\blank{6}\\end{align*}"
+        },
+        {
+          "type": "remark",
+          "content": "Pour une limite de type $\\displaystyle\\lim_{x \\to \\pm\\infty} \\sqrt{ax^2 + bx + c} \\pm (\\alpha x + \\beta)$ (forme indéterminée) :\\par Si $\\sqrt{a} = \\alpha$, multiplier par le \\blank{conjugué}. Sinon, factoriser par $\\blank{x^2}$ sous la racine."
+        },
+        {
+          "type": "warning",
+          "content": "À l'infini, on garde \\textbf{seulement} le terme de plus haut degré. Ne pas écrire $\\displaystyle\\lim_{x \\to +\\infty} (x^2 + x) = +\\infty + \\infty$, mais factoriser par $\\blank{x^2}$."
+        }
+      ]
+    },
+    {
+      "id": "limites_trigonometriques",
+      "category": "course",
+      "title": "Limites des fonctions trigonométriques",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les fonctions trigonométriques possèdent des limites remarquables en 0, essentielles pour l'étude des fonctions."
+        },
+        {
+          "type": "property",
+          "title": "Quelle est la continuité des fonctions trigonométriques ?",
+          "content": "\\begin{itemize}\\item Pour tout $a \\in \\mathbb{R}$ : $\\displaystyle\\lim_{x \\to a} \\cos(x) = \\cos(a)$ et $\\displaystyle\\lim_{x \\to a} \\sin(x) = \\blank{\\sin(a)}$\\item Pour tout $a \\in \\mathbb{R} \\setminus \\left\\{\\dfrac{\\pi}{2} + k\\pi \\, / \\, k \\in \\mathbb{Z}\\right\\}$ : $\\displaystyle\\lim_{x \\to a} \\tan(x) = \\blank{\\tan(a)}$\\end{itemize}"
+        },
+        {
+          "type": "property",
+          "title": "Quelles sont les limites remarquables en 0 ?",
+          "content": "$$\\boxed{\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(x)}{x} = \\blank{1}} \\quad \\boxed{\\displaystyle\\lim_{x \\to 0} \\dfrac{\\tan(x)}{x} = 1} \\quad \\boxed{\\displaystyle\\lim_{x \\to 0} \\dfrac{1 - \\cos(x)}{x^2} = \\dfrac{1}{\\blank{2}}}$$\\par\\bigskip\\textbf{Généralisation :} Pour tout $a \\neq 0$ :\\begin{itemize}\\item $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(ax)}{x} = \\blank{a}$\\item $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\tan(ax)}{x} = \\blank{a}$\\item $\\displaystyle\\lim_{x \\to 0} \\dfrac{1 - \\cos(ax)}{x^2} = \\blank{\\frac{a^2}{2}}$\\end{itemize}"
+        },
+        {
+          "type": "example",
+          "content": "Calcul de $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(3x)}{4x}$ :\\par\\begin{align*}\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(3x)}{4x} &= \\displaystyle\\lim_{x \\to 0} \\dfrac{3}{4} \\times \\dfrac{\\sin(3x)}{3x} \\\\&= \\dfrac{3}{4} \\times 1 \\\\&= \\blank{\\dfrac{3}{4}}\\end{align*}"
+        },
+        {
+          "type": "example",
+          "content": "Calcul de $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(5x)}{\\sin(2x)}$ (Forme $\\dfrac{0}{0}$) :\\par\\begin{align*}\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(5x)}{\\sin(2x)} &= \\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(5x)}{5x} \\times \\dfrac{2x}{\\sin(2x)} \\times \\dfrac{5x}{2x} \\\\&= 1 \\times 1 \\times \\dfrac{5}{2} \\\\&= \\blank{\\dfrac{5}{2}}\\end{align*}"
+        },
+        {
+          "type": "remark",
+          "content": "Les fonctions $\\cos$, $\\sin$ et $\\tan$ \\textbf{n'ont pas de limite} en $\\pm\\infty$ car elles \\blank{oscillent} indéfiniment entre $-1$ et $1$."
+        },
+        {
+          "type": "warning",
+          "content": "La limite $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin(x)}{x} = 1$ ne s'applique que si $x \\to \\blank{0}$. Pour $x \\to \\pi$, on ne peut pas l'utiliser directement."
+        },
+        {
+          "type": "culture",
+          "title": "Application en physique",
+          "content": "La limite $\\displaystyle\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ est essentielle en physique pour les approximations des petits angles. En optique, mécanique et électronique, on utilise $\\sin x \\approx x$ et $\\tan x \\approx x$ pour simplifier les calculs."
+        }
+      ]
+    },
+    {
+      "id": "limite_ordre",
+      "category": "course",
+      "title": "Limite et ordre",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "Les théorèmes de comparaison permettent de déterminer des limites par encadrement ou par comparaison avec d'autres fonctions."
+        },
+        {
+          "type": "theorem",
+          "title": "Que dit le théorème des gendarmes ?",
+          "content": "Si $g(x) \\leqslant f(x) \\leqslant h(x)$ au voisinage de $a$ et $\\displaystyle\\lim_{x \\to a} g(x) = \\displaystyle\\lim_{x \\to a} h(x) = \\ell$, alors :\\par$$\\boxed{\\displaystyle\\lim_{x \\to a} f(x) = \\blank{\\ell}}$$"
+        },
+        {
+          "type": "example",
+          "content": "Calcul de $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x}$.\\par\\smallskip On a l'encadrement : $-1 \\leqslant \\cos x \\leqslant 1$\\par Pour $x > 0$, on divise par $x$ : $-\\dfrac{1}{x} \\leqslant \\dfrac{\\cos x}{x} \\leqslant \\dfrac{1}{x}$\\par Or $\\displaystyle\\lim_{x \\to +\\infty} -\\dfrac{1}{x} = 0$ et $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{x} = 0$\\par Donc, par le théorème des gendarmes : $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\cos x}{x} = \\blank{0}$"
+        },
+        {
+          "type": "property",
+          "title": "Que disent les théorèmes de comparaison ?",
+          "content": "\\textbf{Limite infinie par comparaison :}\\par\\begin{itemize}\\item Si $f(x) \\geqslant g(x)$ et $\\displaystyle\\lim_{x \\to a} g(x) = +\\infty$, alors $\\displaystyle\\lim_{x \\to a} f(x) = \\blank{+\\infty}$\\item Si $f(x) \\leqslant h(x)$ et $\\displaystyle\\lim_{x \\to a} h(x) = -\\infty$, alors $\\displaystyle\\lim_{x \\to a} f(x) = \\blank{-\\infty}$\\end{itemize}\\par\\bigskip\\textbf{Limite finie par comparaison :}\\par Si $|f(x) - \\ell| \\leqslant g(x)$ et $\\displaystyle\\lim_{x \\to a} g(x) = 0$, alors $\\displaystyle\\lim_{x \\to a} f(x) = \\blank{\\ell}$"
+        },
+        {
+          "type": "example",
+          "content": "Montrons que $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\sin x}{x^2} = 0$.\\par Encadrement : $-1 \\leqslant \\sin x \\leqslant 1$ donc $-\\dfrac{1}{x^2} \\leqslant \\dfrac{\\sin x}{x^2} \\leqslant \\dfrac{1}{x^2}$\\par Or $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{1}{x^2} = 0$, donc par encadrement : $\\displaystyle\\lim_{x \\to +\\infty} \\dfrac{\\sin x}{x^2} = \\blank{0}$"
+        },
+        {
+          "type": "remark",
+          "content": "Encadrements utiles : $-1 \\leqslant \\cos(x) \\leqslant 1$ et $-1 \\leqslant \\sin(x) \\leqslant \\blank{1}$ pour tout $x \\in \\mathbb{R}$."
+        },
+        {
+          "type": "warning",
+          "content": "Le théorème des gendarmes nécessite que les deux fonctions qui encadrent tendent vers la \\textbf{même} limite. Si $\\displaystyle\\lim g \\neq \\displaystyle\\lim h$, on ne peut \\blank{rien} conclure."
+        }
+      ]
+    },
+    {
+      "id": "etude_asymptotique",
+      "category": "course",
+      "title": "Branches Infinies et Asymptotes",
+      "blocks": [
+        {
+          "type": "text",
+          "content": "L'étude des branches infinies révèle l'allure de la courbe aux extrémités de son domaine (quand $x$ ou $y$ tend vers l'infini)."
+        },
+        {
+          "type": "definition",
+          "title": "Comment identifier les trois types d'asymptotes ?",
+          "content": "\\begin{enumerate}\\item \\textbf{Asymptote Verticale :} Si $\\displaystyle\\lim_{x \\to a} f(x) = \\pm \\infty$, la droite $x=a$ est asymptote verticale\\item \\textbf{Asymptote Horizontale :} Si $\\displaystyle\\lim_{x \\to \\pm \\infty} f(x) = b$, la droite $y=\\blank{b}$ est asymptote horizontale\\item \\textbf{Asymptote Oblique :} Si $\\displaystyle\\lim_{x \\to \\pm \\infty} [f(x) - (ax+b)] = 0$, la droite $y=ax+b$ est asymptote oblique\\end{enumerate}",
+          "media": {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Hyperbola_properties.svg/500px-Hyperbola_properties.svg.png",
+            "type": "image",
+            "position": "right",
+            "width": "22.5%",
+            "caption": "Hyperbole avec ses asymptotes",
+            "shadow": true
+          }
+        },
+        {
+          "type": "example",
+          "content": "Pour $f(x) = \\dfrac{2x+3}{x-1}$ :\\par\\begin{itemize}\\item $\\displaystyle\\lim_{x \\to 1} f(x) = \\pm\\infty$ donc asymptote verticale : $x = \\blank{1}$\\item $\\displaystyle\\lim_{x \\to \\pm\\infty} f(x) = 2$ donc asymptote horizontale : $y = \\blank{2}$\\end{itemize}"
+        },
+        {
+          "type": "method",
+          "title": "Comment déterminer la position par rapport à l'asymptote ?",
+          "content": "On étudie le signe de $f(x) - \\ell$ (pour une asymptote $y=\\ell$).\\par\\begin{itemize}\\item Si $f(x) - \\ell > 0$, la courbe est \\textbf{au-dessus}\\item Si $f(x) - \\ell < 0$, la courbe est \\textbf{au-\\blank{dessous}}\\end{itemize}"
+        },
+        {
+          "type": "remark",
+          "content": "Une fonction peut avoir plusieurs asymptotes : une verticale en chaque point où elle n'est pas définie, et une horizontale ou oblique en $\\pm\\infty$."
+        }
+      ]
+    }
+  ]
+}

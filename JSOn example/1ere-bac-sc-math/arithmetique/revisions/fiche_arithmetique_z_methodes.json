@@ -1,0 +1,86 @@
+{
+  "header": {
+    "title": "Chapitre : Auto-évaluation",
+    "subtitle": "Valide tes compétences",
+    "context": "1ère Bac Sciences Mathématiques"
+  },
+  "sections": [
+    {
+      "id": "skill_pgcd_euclide",
+      "category": "method",
+      "title": "Sais-tu **calculer** le PGCD par l'algorithme d'Euclide ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise la suite des divisions euclidiennes successives."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Effectuer la division de $a$ par $b$ : $a = bq_0 + r_0$",
+            "Répéter la division du diviseur par le reste",
+            "Arrêter lorsque le reste est nul",
+            "Le PGCD est le dernier reste non nul"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_congruences",
+      "category": "method",
+      "title": "Maîtrises-tu la **résolution d'équations** avec congruences ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise les propriétés de compatibilité de la congruence."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Simplifier les coefficients modulo $n$",
+            "Dresser un tableau de valeurs possibles si $n$ est petit",
+            "Utiliser le théorème de Bézout si nécessaire"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_pgcd_decomposition",
+      "category": "method",
+      "title": "Es-tu capable de **calculer** PGCD et PPCM par décomposition ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On utilise la décomposition en facteurs premiers."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Décomposer $a$ et $b$ en produit de facteurs premiers",
+            "PGCD : prendre les facteurs communs avec le plus petit exposant",
+            "PPCM : prendre tous les facteurs avec le plus grand exposant"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill_nombres_premiers",
+      "category": "method",
+      "title": "Connais-tu la **détermination** si un nombre est premier ?",
+      "blocks": [
+        {
+          "type": "method_principle",
+          "content": "On teste la divisibilité par tous les nombres premiers jusqu'à $\\sqrt{n}$."
+        },
+        {
+          "type": "method_steps",
+          "content": [
+            "Calculer $\\sqrt{n}$",
+            "Tester la divisibilité par tous les nombres premiers $p \\le \\sqrt{n}$",
+            "Si aucun ne divise $n$, alors $n$ est premier"
+          ]
+        }
+      ]
+    }
+  ]
+}

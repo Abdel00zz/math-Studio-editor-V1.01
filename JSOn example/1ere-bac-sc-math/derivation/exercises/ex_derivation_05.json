@@ -1,0 +1,24 @@
+
+{
+  "id": "ex-deriv-05",
+  "topic": "Calcul de dérivées usuelles",
+  "context": "Calculer la fonction dérivée $f'$ pour chacune des fonctions suivantes sur leur domaine de dérivabilité.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Quelle est la dérivée de $f(x) = x^5 + 2026$",
+      "hint": "\\method Utilisez les règles $(x^n)' = nx^{n-1}$ et $(c)' = 0$. \\conclusion $f'(x) = 5x^4$."
+    },
+    {
+      "id": "q2",
+      "content": "Comment dériver $f(x) = \\sin(x) - \\cos(x)$",
+      "hint": "\\method Appliquez les formules $(\\sin x)' = \\cos x$ et $(\\cos x)' = -\\sin x$. \\conclusion $f'(x) = \\cos x - (-\\sin x) = \\cos x + \\sin x$."
+    },
+    {
+      "id": "q3",
+      "content": "De quelle manière obtient-on la dérivée de $f(x) = \\frac{1}{x^9}$",
+      "hint": "\\method Utilisez la règle $(\\frac{1}{x^n})' = -\\frac{n}{x^{n+1}}$. \\conclusion $f'(x) = -\\frac{9}{x^{10}}$."
+    }
+  ]
+}

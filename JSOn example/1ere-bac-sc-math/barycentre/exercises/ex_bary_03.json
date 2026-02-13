@@ -1,0 +1,42 @@
+
+{
+  "id": "ex-bary-003",
+  "topic": "Barycentre",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que : $\\overrightarrow{IC} = (1-\\alpha)\\overrightarrow{BC}$.",
+      "hint": "\\method Utilisez la relation de Chasles pour décomposer $\\overrightarrow{IC}$ en passant par le point B. Vous pourrez ensuite substituer $\\overrightarrow{BI}$ par son expression donnée dans l'énoncé."
+    },
+    {
+      "id": "q2",
+      "content": "En déduire que $I$ est le barycentre du système pondéré : $\\{(C;1);(B;\\dfrac{1}{\\alpha}-1)\\}$.",
+      "hint": "\\method Transformez l'égalité vectorielle $\\overrightarrow{IC} = (1-\\alpha)\\overrightarrow{BC}$ pour obtenir une relation de la forme $\\beta_1 \\overrightarrow{IC} + \\beta_2 \\overrightarrow{IB} = \\vec{0}$, qui est la définition du barycentre."
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que : $J = \\text{bar}\\{(C;1);(A;\\dfrac{1}{\\alpha}-1)\\}$.",
+      "hint": "Le raisonnement est parfaitement symétrique à celui de la question 2. Appliquez la même méthode en partant de la définition de $J$."
+    },
+    {
+      "id": "q4",
+      "content": "On considère $G$ le barycentre du système : $\\{(C;1);(B;\\dfrac{1}{\\alpha}-1);(A;\\dfrac{1}{\\alpha}-1)\\}$. Vérifier que : $\\overrightarrow{AG} = \\dfrac{1}{2-\\alpha}\\overrightarrow{AI}$.",
+      "hint": "\\method Utilisez la propriété d'associativité du barycentre. Regroupez les points $C$ et $B$ pour faire apparaître leur barycentre partiel $I$. Exprimez ensuite $G$ comme le barycentre de $A$ et $I$."
+    },
+    {
+      "id": "q5",
+      "content": "Montrer que les points $J$, $G$ et $B$ sont alignés.",
+      "hint": "\\method De nouveau, utilisez l'associativité du barycentre. Cette fois, regroupez les points $C$ et $A$. Quel barycentre partiel reconnaissez-vous ? Comment cela prouve-t-il l'alignement ?"
+    },
+    {
+      "id": "q6",
+      "content": "Soit $K$ le milieu du segment $[AB]$. Montrer que les droites $(AI)$, $(BJ)$ et $(CK)$ sont concourantes en un point à déterminer.",
+      "hint": "On a déjà montré que $G$ appartient à $(AI)$ et $(BJ)$. Il reste à prouver que $G \\in (CK)$. Pour cela, utilisez une dernière fois l'associativité en regroupant les points $A$ et $B$ pour faire apparaître le milieu $K$."
+    },
+    {
+      "id": "q7",
+      "content": "Déterminer l'ensemble : $\\Omega = \\{M \\in \\mathscr{P} \\mid \\|2(1-\\alpha)\\overrightarrow{MA} + (1-\\alpha)\\overrightarrow{MB} + \\alpha\\overrightarrow{MC}\\| = (2-\\alpha)\\|\\overrightarrow{MA} + \\overrightarrow{MB}\\|\\}$.",
+      "hint": "\\method Utilisez la propriété de réduction pour chaque membre. Le membre de gauche peut être simplifié avec un barycentre $G'$. Le membre de droite peut être simplifié en utilisant le milieu de $[AB]$. Vous devriez obtenir une égalité de distances de la forme $k_1 MG' = k_2 MK$."
+    }
+  ]
+}

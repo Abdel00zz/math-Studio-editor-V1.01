@@ -1,0 +1,40 @@
+{
+  "id": "ex-suites-05",
+  "topic": "Suites Numériques",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que, pour tout entier $k \\in \\{1; \\dots; n\\}$, on a : $$\\frac{1}{n + \\sqrt{n}} \\le \\frac{1}{n + \\sqrt{k}} \\le \\frac{1}{n + 1}$$",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "Partez de l'encadrement évident $1 \\le k \\le n$. Construisez l'inégalité pas à pas (racine, ajout de $n$). Enfin, utilisez la \\blueb{décroissance de la fonction inverse} sur $\\mathbb{R}_+^*$ qui \\textbf{change le sens} des inégalités."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "En déduire que, pour tout $n \\in \\mathbb{N}^*$ : $$\\frac{n}{n + \\sqrt{n}} \\le u_n \\le \\frac{n}{n + 1}$$",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "\\blueb{Sommez les inégalités} établies à la question précédente pour $k$ allant de $1$ à $n$. Remarquez que les termes encadrants (gauche et droite) sont \\textbf{indépendants de l'indice $k$} (ce sont des constantes vis-à-vis de la somme). Rappel : $\\displaystyle \\sum_{k=1}^n C = n \\times C$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Calculer la limite de la suite $(u_n)$.",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "Appliquez le \\blueb{Théorème des Gendarmes}. Calculez la limite des membres de gauche et de droite quand $n \\to +\\infty$."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "id": "ex-geom-rotation-carres-barycentre",
+  "topic": "Géométrie Plane",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Construire une figure convenable.",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "Respectez scrupuleusement l'orientation des angles donnés. Notez que les carrés partagent le sommet $A$ et que la condition $(\\overrightarrow{AD};\\overrightarrow{AE}) \\equiv \\frac{\\pi}{2}$ place le côté $AE$ par rapport à $AD$. [GRAPH:ex_rot_01_fig]"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Déterminer l'angle de la rotation $r$ de centre $A$ et qui transforme $B$ en $E$.",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Calculez l'angle $(\\overrightarrow{AB};\\overrightarrow{AE})$ en utilisant la \\blueb{relation de Chasles} : $(\\overrightarrow{AB};\\overrightarrow{AD}) + (\\overrightarrow{AD};\\overrightarrow{AE})$. La valeur obtenue ($\\pi$) indique une symétrie centrale."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq3a",
+          "content": "Montrer que $r(C)=F$ et $r(D)=G$.",
+          "hint": "Pour $G$, vérifiez que l'angle $(\\overrightarrow{AD};\\overrightarrow{AG})$ correspond à l'angle de la rotation. Pour $F$, utilisez le fait que la rotation \\blueb{conserve les figures} : l'image du sommet opposé à $A$ dans $ABCD$ est le sommet opposé à $A$ dans $AEFG$."
+        },
+        {
+          "id": "sq3b",
+          "content": "Déterminer une mesure de l'angle $(\\overrightarrow{BC};\\overrightarrow{EF})$.",
+          "hint": "Rappel de cours : L'angle entre un vecteur $\\vec{u}$ et son image $\\vec{u'}$ par une rotation d'angle $\\theta$ vaut exactement $\\theta$. Ici, $\\overrightarrow{EF}$ est l'image de $\\overrightarrow{BC}$."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "Soit $K = Bar\\{(A;-1);(B;1);(C;1)\\}$ on pose $K'=r(K)$. Montrer que les points $K'$, $F$ et $G$ sont alignés.",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "",
+          "hint": "Utilisez la propriété de \\blueb{conservation du barycentre} par la rotation. $K'$ sera le barycentre des images des points pondérés. Exprimez ensuite vectoriellement la position de $K'$ dans le carré $AEFG$ pour prouver l'alignement."
+        }
+      ]
+    }
+  ]
+}

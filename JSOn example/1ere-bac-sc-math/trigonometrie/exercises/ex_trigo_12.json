@@ -1,0 +1,33 @@
+
+{
+  "id": "ex-trigo-012",
+  "topic": "Trigonométrie",
+  "context": "Exercices sur les formules trigonométriques et le calcul de valeurs exactes.",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que $\\dfrac{\\cos(3x)}{\\cos(x)} - \\dfrac{\\sin(3x)}{\\sin(x)} = -2$ pour $x \\neq \\frac{k\\pi}{2}$.",
+      "hint": "On met au même dénominateur :\\par$$\\frac{\\cos(3x)}{\\cos x} - \\frac{\\sin(3x)}{\\sin x} = \\frac{\\cos(3x)\\sin x - \\sin(3x)\\cos x}{\\cos x \\sin x}$$\\par\\parLe numérateur est de la forme $\\sin(a - b) = \\sin a \\cos b - \\cos a \\sin b$ avec $a = x$ et $b = 3x$ :\\par$$\\cos(3x)\\sin x - \\sin(3x)\\cos x = -\\sin(3x - x) = -\\sin(2x)$$\\par\\parOr $\\sin(2x) = 2\\sin x \\cos x$.\\par\\par$$\\frac{-\\sin(2x)}{\\cos x \\sin x} = \\frac{-2\\sin x \\cos x}{\\cos x \\sin x} = \\boxed{-2}$$"
+    },
+    {
+      "id": "q2",
+      "content": "Calculer $\\cos\\left(\\frac{\\pi}{8}\\right)$.",
+      "hint": "On utilise $\\cos^2\\theta = \\frac{1 + \\cos(2\\theta)}{2}$ avec $\\theta = \\frac{\\pi}{8}$ :\\par\\par$$\\cos^2\\frac{\\pi}{8} = \\frac{1 + \\cos\\frac{\\pi}{4}}{2} = \\frac{1 + \\frac{\\sqrt{2}}{2}}{2} = \\frac{2 + \\sqrt{2}}{4}$$\\par\\parComme $0 < \\frac{\\pi}{8} < \\frac{\\pi}{2}$, $\\cos\\frac{\\pi}{8} > 0$ :\\par\\par$$\\cos\\frac{\\pi}{8} = \\sqrt{\\frac{2 + \\sqrt{2}}{4}} = \\boxed{\\frac{\\sqrt{2 + \\sqrt{2}}}{2}}$$"
+    },
+    {
+      "id": "q3",
+      "content": "Calculer $\\cos\\left(\\frac{\\pi}{16}\\right)$.",
+      "hint": "De même, avec $\\theta = \\frac{\\pi}{16}$ :\\par\\par$$\\cos^2\\frac{\\pi}{16} = \\frac{1 + \\cos\\frac{\\pi}{8}}{2} = \\frac{1 + \\frac{\\sqrt{2+\\sqrt{2}}}{2}}{2} = \\frac{2 + \\sqrt{2+\\sqrt{2}}}{4}$$\\par\\par$$\\cos\\frac{\\pi}{16} = \\boxed{\\frac{\\sqrt{2 + \\sqrt{2+\\sqrt{2}}}}{2}}$$"
+    },
+    {
+      "id": "q4",
+      "content": "Montrer que $\\cos\\left(\\frac{\\pi}{9}\\right)\\cos\\left(\\frac{2\\pi}{9}\\right)\\cos\\left(\\frac{3\\pi}{9}\\right)\\cos\\left(\\frac{4\\pi}{9}\\right) = \\frac{1}{16}$.",
+      "hint": "Notons que $\\cos\\frac{3\\pi}{9} = \\cos\\frac{\\pi}{3} = \\frac{1}{2}$.\\par\\parDe plus, $\\cos\\frac{4\\pi}{9} = \\cos\\left(\\frac{\\pi}{2} - \\frac{\\pi}{18}\\right) = \\sin\\frac{\\pi}{18}$.\\par\\parOn utilise l'identité classique : pour $\\theta = \\frac{\\pi}{9}$ (20°) :\\par$$\\sin(3\\theta) = 4\\sin\\theta\\sin(60°-\\theta)\\sin(60°+\\theta)$$\\par\\parAvec $3\\theta = \\frac{\\pi}{3}$ et $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$.\\par\\parOn peut montrer que :\\par$$\\cos\\frac{\\pi}{9}\\cos\\frac{2\\pi}{9}\\cos\\frac{4\\pi}{9} = \\frac{1}{8}$$\\par\\parDonc : $\\cos\\frac{\\pi}{9}\\cos\\frac{2\\pi}{9}\\cos\\frac{\\pi}{3}\\cos\\frac{4\\pi}{9} = \\frac{1}{8} \\times \\frac{1}{2} = \\boxed{\\frac{1}{16}}$"
+    },
+    {
+      "id": "q5",
+      "content": "Résoudre dans $[-\\pi, \\pi]$ l'équation $1 + \\cos(x) + \\cos(2x) + \\cos(3x) = 0$.",
+      "hint": "Regroupons : $(1 + \\cos(2x)) + (\\cos(x) + \\cos(3x))$\\par\\par$1 + \\cos(2x) = 2\\cos^2 x$ et $\\cos x + \\cos(3x) = 2\\cos(2x)\\cos x$.\\par\\parL'équation devient :\\par$$2\\cos^2 x + 2\\cos(2x)\\cos x = 0$$\\par$$2\\cos x(\\cos x + \\cos(2x)) = 0$$\\par$$2\\cos x(\\cos x + 2\\cos^2 x - 1) = 0$$\\par$$2\\cos x(2\\cos^2 x + \\cos x - 1) = 0$$\\par$$2\\cos x(2\\cos x - 1)(\\cos x + 1) = 0$$\\par\\par• $\\cos x = 0 \\implies x = \\pm\\frac{\\pi}{2}$\\par• $\\cos x = \\frac{1}{2} \\implies x = \\pm\\frac{\\pi}{3}$\\par• $\\cos x = -1 \\implies x = \\pi$ (ou $-\\pi$)\\par\\par$$\\boxed{\\mathcal{S} = \\left\\{-\\pi, -\\frac{\\pi}{2}, -\\frac{\\pi}{3}, \\frac{\\pi}{3}, \\frac{\\pi}{2}, \\pi\\right\\}}$$"
+    }
+  ]
+}

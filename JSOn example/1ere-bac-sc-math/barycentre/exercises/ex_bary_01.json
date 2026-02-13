@@ -1,0 +1,48 @@
+
+{
+  "id": "ex-bary-001",
+  "topic": "Barycentre",
+  "context": "Soit $ABC$ un triangle.",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Construire le point $I$ tel que $\\overrightarrow{BI} = 3\\overrightarrow{BC}$.",
+      "hint": "La relation $\\overrightarrow{BI} = 3\\overrightarrow{BC}$ implique que les points $B, C, I$ sont alignés. Sur quelle droite se trouve le point $I$ ? Le coefficient $3$ étant positif, dans quel sens se fait le déplacement de $B$ vers $I$ par rapport à $\\overrightarrow{BC}$ ?"
+    },
+    {
+      "id": "q2",
+      "content": "Montrer que $I = \\text{bar}\\{(B;-2);(C;3)\\}$.",
+      "hint": "\\method Partez de la définition du barycentre : si $I = \\text{bar}\\{(B;\\alpha);(C;\\beta)\\}$, alors $\\alpha\\overrightarrow{BI} + \\beta\\overrightarrow{CI} = \\overrightarrow{0}$.\\nUtilisez la relation de Chasles pour exprimer $\\overrightarrow{CI}$ en fonction de $\\overrightarrow{BI}$ et $\\overrightarrow{BC}$, puis utilisez la relation de l'énoncé."
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que $\\overrightarrow{AI} = -2\\overrightarrow{AB} + 3\\overrightarrow{AC}$.",
+      "hint": "\\method Utilisez la relation de Chasles pour décomposer $\\overrightarrow{AI}$ en passant par le point $B$. Vous pourrez ensuite substituer $\\overrightarrow{BI}$ par son expression de l'énoncé."
+    },
+    {
+      "id": "q4",
+      "content": "Soit $G = \\text{bar}\\{(A;-3);(B;-2);(C;3)\\}$. Montrer que $\\overrightarrow{AG} = \\overrightarrow{AB} - \\dfrac{3}{2}\\overrightarrow{AC}$.",
+      "hint": "\\method Appliquez la propriété caractéristique du barycentre en introduisant le point $A$ dans tous les vecteurs. N'oubliez pas de vérifier que la somme des coefficients est non nulle."
+    },
+    {
+      "id": "q5",
+      "content": "En déduire que les points $A$, $I$ et $G$ sont alignés.",
+      "hint": "Pour prouver l'alignement, il suffit de montrer que les vecteurs $\\overrightarrow{AG}$ et $\\overrightarrow{AI}$ sont colinéaires. Essayez de trouver un réel $k$ tel que $\\overrightarrow{AG} = k \\cdot \\overrightarrow{AI}$ en utilisant les expressions des questions 3 et 4."
+    },
+    {
+      "id": "q6",
+      "content": "Construire le point $G$.",
+      "hint": "La relation de colinéarité trouvée à la question précédente vous donne la position exacte de $G$ sur la droite $(AI)$. Quel est le signe de $k$ ? Que pouvez-vous en déduire sur le sens des vecteurs ?"
+    },
+    {
+      "id": "q7",
+      "content": "Déterminer l'ensemble des points $M$ tels que $\\|−3\\overrightarrow{MA} − 2\\overrightarrow{MB} + 3\\overrightarrow{MC}\\| = \\|−2\\overrightarrow{AB} + 3\\overrightarrow{AC}\\|$.",
+      "hint": "\\method Utilisez la propriété de réduction vectorielle pour simplifier le membre de gauche. Vous devriez faire apparaître le barycentre $G$. Quelle est la nature de l'ensemble des points $M$ vérifiant $MG = R$ où $R$ est une constante ?"
+    },
+    {
+      "id": "q8",
+      "content": "Déterminer l'ensemble des points $M$ tels que $\\|−2\\overrightarrow{MB} + 3\\overrightarrow{MC}\\| = 3$.",
+      "hint": "\\method De même, simplifiez la somme vectorielle de gauche en utilisant le barycentre partiel $I$ de $(B,-2)$ et $(C,3)$. Quelle équation simple obtenez-vous ?"
+    }
+  ]
+}

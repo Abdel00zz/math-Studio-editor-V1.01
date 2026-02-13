@@ -1,0 +1,34 @@
+
+{
+  "meta": {
+    "version": "4.1",
+    "lastUpdated": "2024-12-21"
+  },
+  "classes": [
+    {
+      "id": "tronc-commun-sc",
+      "title": "Tronc Commun Scientifique",
+      "path": "data/classes/tronc-commun-sc.json"
+    },
+    {
+      "id": "1ere-bac-sc-ex",
+      "title": "1ère Bac Sciences Expérimentales",
+      "path": "data/classes/1ere-bac-sc-ex.json"
+    },
+    {
+      "id": "1ere-bac-sc-math",
+      "title": "1ère Bac Sciences Mathématiques",
+      "path": "data/classes/1ere-bac-sc-math.json"
+    },
+    {
+      "id": "2eme-bac-sc-ex",
+      "title": "2ème Bac Sciences Expérimentales",
+      "path": "data/classes/2eme-bac-sc-ex.json"
+    },
+    {
+      "id": "2eme-bac-sc-math",
+      "title": "2ème Bac Sciences Mathématiques",
+      "path": "data/classes/2eme-bac-sc-math.json"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "ex-geom-rotation-triangle",
+  "topic": "Géométrie Plane",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que $AE = BF$.",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "Observez la nature du quadrilatère $AEMF$ (parallélogramme) pour relier $AE$ à $MF$. Ensuite, montrez que le triangle $FBM$ est \\blueb{isocèle} en utilisant les propriétés des angles."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Montrer qu'il existe une rotation $r$ telle que $r(A) = B$ et $r(E) = F$.",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Rappelez-vous qu'une rotation est une \\blueb{isométrie} (elle conserve les longueurs). La condition nécessaire est $AE = BF$, ce qui a été prouvé. Le centre se situera à l'intersection des médiatrices de $[AB]$ et $[EF]$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Soit $\\alpha$ une mesure de l'angle $(\\overrightarrow{AB}; \\overrightarrow{AC})$. Déterminer en fonction de $\\alpha$ l'angle de la rotation $r$.",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "L'angle de la rotation est l'angle entre un vecteur et son image. Considérez le vecteur $\\overrightarrow{AE}$ (porté par $(AC)$) et son image $\\overrightarrow{BF}$ (portée par $(AB)$)."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "Montrer que $r(C) = A$.",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "",
+          "hint": "Utilisez la conservation des distances et des angles. Puisque $r(A)=B$ et que la droite $(AC)$ est transformée en $(AB)$, où doit se trouver l'image de $C$ sachant que $AC=AB$ ?"
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "Déterminer $O$ le centre de la rotation $r$.",
+      "subQuestions": [
+        {
+          "id": "sq5",
+          "content": "",
+          "hint": "Le centre $O$ est invariant. Utilisez le fait que $r(A)=B$ et $r(C)=A$ pour établir des égalités de distances ($OA=OB=OC$). De quel \\blueb{point remarquable} du triangle s'agit-il ?"
+        }
+      ]
+    }
+  ]
+}

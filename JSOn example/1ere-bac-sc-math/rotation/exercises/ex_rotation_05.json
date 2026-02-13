@@ -1,0 +1,67 @@
+{
+  "id": "ex-geom-rotation-equilateral-ext",
+  "topic": "Géométrie Plane",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Construire une figure.",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "",
+          "hint": "Attention à l'orientation : le sens \\textbf{positif} est le sens inverse des aiguilles d'une montre. Les triangles étant \\textbf{extérieurs}, assurez-vous que les sommets $D$ et $E$ ne chevauchent pas le triangle $ABC$. [GRAPH:ex_rot_05_fig]"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Déterminer : $r(C)$ et $r(D)$.",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Utilisez la définition de la rotation : conservation des longueurs et de l'angle. Pour $r(C)$, observez le triangle équilatéral $ACE$ : comparez $AC$ et $AE$, et regardez l'angle $(\\overrightarrow{AC}; \\overrightarrow{AE})$."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que : $CD = BE$.",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "La rotation est une \\blueb{isométrie} : elle conserve les distances. Si vous avez identifié les images de $C$ et $D$ à la question précédente, la conclusion est immédiate."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "On considère le point $I$ le milieu du segment $[CD]$. Déterminer $(\\Gamma')$ l'image du cercle $(\\Gamma)$ de centre $C$ et de rayon $CI$ par la rotation $r$.",
+      "subQuestions": [
+        {
+          "id": "sq4",
+          "content": "",
+          "hint": "L'image d'un cercle par une rotation est un cercle de \\blueb{même rayon} dont le centre est l'image du centre initial. Le nouveau rayon sera la longueur $r(C)r(I)$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "Soit la droite $(\\Delta')$ l'image de la droite $(AI)$ par la rotation $r$.",
+      "subQuestions": [
+        {
+          "id": "sq5a",
+          "content": "Construire la droite $(\\Delta')$.",
+          "hint": "Pour construire l'image d'une droite, cherchez l'image de deux de ses points. $A$ est le centre de la rotation (donc invariant). Où va le point $I$ ?"
+        },
+        {
+          "id": "sq5b",
+          "content": "Montrer que : la droite $(\\Delta')$ coupe nécessairement le cercle $(\\Gamma')$ ; justifier.",
+          "hint": "Raisonnez sur les \\blueb{antécédents} : le point $I$ appartient-il à la droite $(AI)$ ? Appartient-il au cercle $(\\Gamma)$ ? Si $I$ est un point d'intersection initial, son image $r(I)$ sera sur l'intersection des images."
+        }
+      ]
+    }
+  ]
+}

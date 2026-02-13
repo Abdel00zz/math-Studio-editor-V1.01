@@ -1,0 +1,245 @@
+{
+  "questions": [
+    {
+      "id": "q1_def_rotation",
+      "type": "mcq",
+      "category": "Définition",
+      "question": "Soit $r$ une rotation de centre $\\Omega$ et d'angle $\\theta$. Quelle est la condition nécessaire et suffisante pour que $r(M) = M'$ (avec $M \\neq \\Omega$) ?",
+      "options": [
+        { "text": "$\\Omega M = \\Omega M'$ et $(\\overrightarrow{M\\Omega}, \\overrightarrow{M'\\Omega}) \\equiv \\theta [2\\pi]$", "isCorrect": false },
+        { "text": "$\\Omega M = \\Omega M'$ et $(\\overrightarrow{\\Omega M}, \\overrightarrow{\\Omega M'}) \\equiv \\theta [2\\pi]$", "isCorrect": true },
+        { "text": "$\\overrightarrow{\\Omega M} = \\overrightarrow{\\Omega M'}$", "isCorrect": false },
+        { "text": "$(\\overrightarrow{\\Omega M}, \\overrightarrow{\\Omega M'}) \\equiv \\theta [2\\pi]$ seulement", "isCorrect": false }
+      ],
+      "explanation": "Pour qu'une transformation soit une rotation, elle doit conserver la distance au centre ($\\Omega M = \\Omega M'$) et respecter l'angle orienté entre le vecteur origine et le vecteur image."
+    },
+    {
+      "id": "q2_invariant",
+      "type": "true-false",
+      "category": "Propriété",
+      "question": "Si l'angle de rotation $\\theta$ n'est pas un multiple de $2\\pi$, le centre $\\Omega$ est le seul point invariant de la rotation.",
+      "isTrue": true,
+      "explanation": "Le centre $\\Omega$ est toujours invariant car $r(\\Omega) = \\Omega$. Si l'angle n'est pas nul (modulo $2\\pi$), aucun autre point ne reste à sa place initiale."
+    },
+    {
+      "id": "q3_image_segment",
+      "type": "mcq",
+      "category": "Propriété",
+      "question": "Soit $r$ une rotation transformant $A$ en $A'$ et $B$ en $B'$. Quelle est l'image du segment $[AB]$ ?",
+      "options": [
+        { "text": "La droite $(A'B')$", "isCorrect": false },
+        { "text": "Le segment $[A'B']$", "isCorrect": true },
+        { "text": "Un arc de cercle reliant $A'$ et $B'$", "isCorrect": false }
+      ],
+      "explanation": "Une rotation est une isométrie qui conserve l'alignement et les segments. L'image du segment joignant deux points est le segment joignant leurs images respectives."
+    },
+    {
+      "id": "q4_reciproque",
+      "type": "mcq",
+      "category": "Définition",
+      "question": "Quelle est la rotation réciproque de la rotation $r(\\Omega; \\frac{\\pi}{3})$ ?",
+      "options": [
+        { "text": "$r(\\Omega; \\frac{\\pi}{3})$", "isCorrect": false },
+        { "text": "$r(\\Omega; -\\frac{\\pi}{3})$", "isCorrect": true },
+        { "text": "$r(\\Omega; \\pi)$", "isCorrect": false },
+        { "text": "C'est une translation", "isCorrect": false }
+      ],
+      "explanation": "La transformation réciproque d'une rotation est une rotation de même centre mais d'angle opposé, permettant de revenir au point de départ."
+    },
+    {
+      "id": "q5_isocele",
+      "type": "true-false",
+      "category": "Propriété",
+      "question": "Pour tout point $M$ distinct du centre $\\Omega$, le triangle $\\Omega M M'$ formé par $M$ et son image $M'$ est toujours isocèle en $\\Omega$.",
+      "isTrue": true,
+      "explanation": "Puisque la définition de la rotation impose $\\Omega M = \\Omega M'$, le triangle $\\Omega MM'$ possède deux côtés de même longueur issus de $\\Omega$, il est donc isocèle."
+    },
+    {
+      "id": "q6_angle_vecteur",
+      "type": "mcq",
+      "category": "Propriété",
+      "question": "Si $r(A)=A'$ et $r(B)=B'$, quelle est la relation entre les vecteurs $\\overrightarrow{AB}$ et $\\overrightarrow{A'B'}$ ?",
+      "options": [
+        { "text": "$\\overrightarrow{AB} = \\overrightarrow{A'B'}$", "isCorrect": false },
+        { "text": "$(\\overrightarrow{AB}, \\overrightarrow{A'B'}) \\equiv \\theta [2\\pi]$", "isCorrect": true },
+        { "text": "$(\\overrightarrow{AB}, \\overrightarrow{A'B'}) \\equiv -\\theta [2\\pi]$", "isCorrect": false },
+        { "text": "Ils sont orthogonaux", "isCorrect": false }
+      ],
+      "explanation": "Une propriété fondamentale de la rotation est que l'angle orienté formé par un vecteur et son image est égal à l'angle de la rotation."
+    },
+    {
+      "id": "q7_image_cercle",
+      "type": "mcq",
+      "category": "Application",
+      "question": "L'image d'un cercle $\\mathscr{C}(O, R)$ par une rotation $r$ est :",
+      "options": [
+        { "text": "Un cercle de même centre $O$ et de rayon $R$", "isCorrect": false },
+        { "text": "Un cercle de centre $r(O)$ et de rayon $R$", "isCorrect": true },
+        { "text": "Une ellipse", "isCorrect": false }
+      ],
+      "explanation": "La rotation conserve les distances. L'ensemble des points situés à une distance $R$ de $O$ devient l'ensemble des points situés à une distance $R$ de l'image de $O$, soit $r(O)$."
+    },
+    {
+      "id": "q8_conservation_angles",
+      "type": "mcq",
+      "category": "Propriété",
+      "question": "Soient $A, B, C, D$ quatre points distincts et leurs images respectives $A', B', C', D'$. Que peut-on dire de $(\\overrightarrow{A'B'}, \\overrightarrow{C'D'})$ ?",
+      "options": [
+        { "text": "$(\\overrightarrow{A'B'}, \\overrightarrow{C'D'}) \\equiv -(\\overrightarrow{AB}, \\overrightarrow{CD}) [2\\pi]$", "isCorrect": false },
+        { "text": "$(\\overrightarrow{A'B'}, \\overrightarrow{C'D'}) \\equiv (\\overrightarrow{AB}, \\overrightarrow{CD}) + \\theta [2\\pi]$", "isCorrect": false },
+        { "text": "$(\\overrightarrow{A'B'}, \\overrightarrow{C'D'}) \\equiv (\\overrightarrow{AB}, \\overrightarrow{CD}) [2\\pi]$", "isCorrect": true }
+      ],
+      "explanation": "La rotation conserve la mesure des angles orientés entre deux vecteurs. L'angle entre deux vecteurs initiaux est identique à l'angle entre leurs vecteurs images."
+    },
+    {
+      "id": "q9_barycentre",
+      "type": "mcq",
+      "category": "Propriété",
+      "question": "Soit $G$ le barycentre de $\\{(A, 2); (B, 3)\\}$. Si $r$ est une rotation, alors $r(G)$ est :",
+      "options": [
+        { "text": "Le milieu de $[A'B']$", "isCorrect": false },
+        { "text": "Le barycentre de $\\{(A', 3); (B', 2)\\}$", "isCorrect": false },
+        { "text": "Le barycentre de $\\{(A', 2); (B', 3)\\}$", "isCorrect": true }
+      ],
+      "explanation": "La rotation, comme toute isométrie affine, conserve le barycentre. Le point image $r(G)$ est le barycentre des points images affectés des mêmes coefficients."
+    },
+    {
+      "id": "q10_decomposition_order",
+      "type": "ordering",
+      "category": "Méthode",
+      "question": "Remettez dans l'ordre les étapes pour décomposer une rotation $r(\\Omega, \\theta)$ en deux symétries orthogonales $S_{(\\Delta')} \\circ S_{(\\Delta)}$.",
+      "items": [
+        { "id": "1", "text": "Choisir une droite $(\\Delta)$ passant par $\\Omega$ arbitrairement." },
+        { "id": "2", "text": "Définir $(\\Delta')$ passant par $\\Omega$ telle que $((\\Delta), (\\Delta')) \\equiv \\frac{\\theta}{2} [\\pi]$." },
+        { "id": "3", "text": "Écrire $r = S_{(\\Delta')} \\circ S_{(\\Delta)}$." }
+      ],
+      "correctOrder": ["1", "2", "3"],
+      "explanation": "Pour décomposer une rotation, on fixe le premier axe de symétrie passant par le centre, puis on détermine le second axe de sorte que l'angle entre les deux axes soit la moitié de l'angle de rotation."
+    },
+    {
+      "id": "q11_colinearite",
+      "type": "true-false",
+      "category": "Propriété",
+      "question": "Si trois points $A, B, C$ sont alignés tels que $\\overrightarrow{AC} = k \\overrightarrow{AB}$, alors leurs images $A', B', C'$ vérifient $\\overrightarrow{A'C'} = k \\overrightarrow{A'B'}$.",
+      "isTrue": true,
+      "explanation": "La rotation conserve le coefficient de colinéarité. La relation vectorielle entre trois points alignés est préservée pour leurs images."
+    },
+    {
+      "id": "q12_figure_image",
+      "type": "mcq",
+      "category": "Application",
+      "question": "Soit $ABC$ un triangle équilatéral direct de centre $O$. Quelle est l'image de $A$ par la rotation $r(O, \\frac{2\\pi}{3})$ sachant que le sens direct est $A \\to B \\to C$ ?",
+      "options": [
+        { "text": "$A$", "isCorrect": false },
+        { "text": "$C$", "isCorrect": false },
+        { "text": "$B$", "isCorrect": true }
+      ],
+      "explanation": "Dans un triangle équilatéral, l'angle au centre entre deux sommets consécutifs est $\\frac{2\\pi}{3}$. Dans le sens direct, $A$ est transformé en $B$."
+    },
+    {
+      "id": "q13_droites_paralleles",
+      "type": "mcq",
+      "category": "Propriété",
+      "question": "Soient $(D_1)$ et $(D_2)$ deux droites parallèles. Leurs images $(D'_1)$ et $(D'_2)$ par une rotation sont :",
+      "options": [
+        { "text": "Sécantes", "isCorrect": false },
+        { "text": "Perpendiculaires", "isCorrect": false },
+        { "text": "Parallèles", "isCorrect": true }
+      ],
+      "explanation": "La rotation conserve le parallélisme. Si deux droites ne se coupent pas, leurs images ne se couperont pas non plus."
+    },
+    {
+      "id": "q14_droites_perp",
+      "type": "true-false",
+      "category": "Propriété",
+      "question": "L'image de deux droites perpendiculaires par une rotation est deux droites perpendiculaires.",
+      "isTrue": true,
+      "explanation": "La rotation conserve l'orthogonalité. L'angle de $90^{\\circ}$ entre deux droites est préservé après transformation."
+    },
+    {
+      "id": "q15_intersection",
+      "type": "mcq",
+      "category": "Propriété",
+      "question": "Si une figure $F$ est l'intersection de deux figures $F_1$ et $F_2$, alors l'image $r(F)$ est :",
+      "options": [
+        { "text": "L'union de $r(F_1)$ et $r(F_2)$", "isCorrect": false },
+        { "text": "L'intersection de $r(F_1)$ et $r(F_2)$", "isCorrect": true },
+        { "text": "L'ensemble vide", "isCorrect": false }
+      ],
+      "explanation": "L'image de l'intersection de deux ensembles est égale à l'intersection des images de ces deux ensembles : $r(F_1 \\cap F_2) = r(F_1) \\cap r(F_2)$."
+    },
+    {
+      "id": "q16_compo_meme_centre",
+      "type": "mcq",
+      "category": "Application",
+      "question": "Soit $r_1$ une rotation de centre $\\Omega$ et d'angle $\\frac{\\pi}{3}$, et $r_2$ une rotation de centre $\\Omega$ et d'angle $\\frac{\\pi}{6}$. La composée $r_1 \\circ r_2$ est :",
+      "options": [
+        { "text": "Une rotation de centre $\\Omega$ et d'angle $\\frac{\\pi}{2}$", "isCorrect": true },
+        { "text": "Une rotation de centre $\\Omega$ et d'angle $\\frac{\\pi}{18}$", "isCorrect": false },
+        { "text": "Une translation", "isCorrect": false }
+      ],
+      "explanation": "Lorsque deux rotations ont le même centre, leur composée est une rotation de même centre dont l'angle est la somme des angles des deux rotations."
+    },
+    {
+      "id": "q17_compo_diff_centre_trans",
+      "type": "mcq",
+      "category": "Synthèse",
+      "question": "Soient $r_1(\\Omega_1, \\alpha)$ et $r_2(\\Omega_2, \\beta)$ avec $\\Omega_1 \\neq \\Omega_2$. Si $\\alpha + \\beta = 2k\\pi$ (avec $k \\in \\mathbb{Z}$), alors $r_1 \\circ r_2$ est :",
+      "options": [
+        { "text": "Une rotation d'angle $\\alpha + \\beta$", "isCorrect": false },
+        { "text": "L'identité", "isCorrect": false },
+        { "text": "Une translation", "isCorrect": true }
+      ],
+      "explanation": "Si la somme des angles de deux rotations (de centres différents) est congrue à $0$ modulo $2\\pi$, les parties 'rotation' s'annulent et la transformation résultante est une translation."
+    },
+    {
+      "id": "q18_compo_diff_centre_rot",
+      "type": "mcq",
+      "category": "Synthèse",
+      "question": "Soient $r_1(\\Omega_1, \\alpha)$ et $r_2(\\Omega_2, \\beta)$ avec $\\Omega_1 \\neq \\Omega_2$. Si $\\alpha + \\beta \\neq 2k\\pi$, alors $r_1 \\circ r_2$ est :",
+      "options": [
+        { "text": "Une translation", "isCorrect": false },
+        { "text": "Une symétrie centrale", "isCorrect": false },
+        { "text": "Une rotation d'angle $\\alpha + \\beta$", "isCorrect": true }
+      ],
+      "explanation": "Si la somme des angles n'est pas un multiple de $2\\pi$, la composée de deux rotations de centres différents est une nouvelle rotation dont l'angle est la somme $\\alpha + \\beta$."
+    },
+    {
+      "id": "q19_error_spotting_angle",
+      "type": "error-spotting",
+      "category": "Réflexion",
+      "question": "Un élève cherche à justifier l'angle d'une rotation. Trouvez l'erreur dans son raisonnement.",
+      "steps": [
+        { "id": "s1", "text": "Soit $r$ une rotation transformant $A$ en $A'$ et $B$ en $B'$." },
+        { "id": "s2", "text": "On sait que la rotation conserve les angles orientés." },
+        { "id": "s3", "text": "Donc l'angle de la rotation est $\\theta \\equiv (\\overrightarrow{AB}, \\overrightarrow{A'B'}) [2\\pi]$." },
+        { "id": "s4", "text": "Ainsi, on a aussi $\\theta \\equiv (\\overrightarrow{AB}, \\overrightarrow{CD}) [2\\pi]$ pour tous points $C, D$." , "isError": true, "correction": "Ceci est faux. La propriété $(\\overrightarrow{AB}, \\overrightarrow{A'B'}) = \\theta$ est vraie (angle entre vecteur et son image). Mais l'angle entre deux vecteurs quelconques n'est pas l'angle de rotation; la conservation des angles signifie $(\\overrightarrow{AB}, \\overrightarrow{CD}) = (\\overrightarrow{A'B'}, \\overrightarrow{C'D'})." }
+      ],
+      "explanation": "L'élève confond la propriété de l'angle de rotation (angle entre un vecteur et son propre image) avec la conservation des angles entre deux vecteurs distincts et leurs images respectives."
+    },
+    {
+      "id": "q20_carre_rotation",
+      "type": "mcq",
+      "category": "Application",
+      "question": "Soit $ABCD$ un carré direct. On cherche la rotation de centre $A$ qui transforme $B$ en $D$.",
+      "options": [
+        { "text": "C'est la rotation d'angle $-\\frac{\\pi}{2}$", "isCorrect": false },
+        { "text": "Aucune, car les distances $AB$ et $AD$ sont différentes", "isCorrect": false },
+        { "text": "C'est la rotation d'angle $\\frac{\\pi}{2}$", "isCorrect": true }
+      ],
+      "explanation": "Dans un carré, les côtés sont égaux ($AB=AD$). Le centre étant $A$ (point fixe), il suffit de vérifier l'angle. Comme le carré est direct, $(\\overrightarrow{AB}, \\overrightarrow{AD}) = \\frac{\\pi}{2}$."
+    },
+    {
+      "id": "q21_translation_compo",
+      "type": "error-spotting",
+      "category": "Synthèse",
+      "question": "Un élève affirme qu'une translation ne peut pas être liée à des rotations. Trouvez l'erreur.",
+      "steps": [
+        { "id": "s1", "text": "Une translation $t_{\\vec{u}}$ déplace tous les points." },
+        { "id": "s2", "text": "Une rotation a un point fixe." },
+        { "id": "s3", "text": "Donc, il est impossible d'obtenir une translation en composant des rotations.", "isError": true, "correction": "C'est faux. La composée de deux rotations dont la somme des angles est nulle (modulo $2\\pi$) et dont les centres sont distincts est une translation." }
+      ],
+      "explanation": "Bien qu'une translation n'ait pas de point fixe unique (contrairement à une rotation), elle peut mathématiquement être générée par l'enchaînement de deux rotations qui s'annulent angulairement mais dont les centres décalés créent un déplacement."
+    }
+  ]
+}

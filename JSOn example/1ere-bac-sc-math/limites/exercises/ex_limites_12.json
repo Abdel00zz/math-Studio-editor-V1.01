@@ -1,0 +1,29 @@
+{
+  "id": "ex-limites-12",
+  "topic": "Partie Entière et Densité",
+  "context": "Soit $a$ et $b$ des réels strictement positifs.\n\nOn considère la fonction $f$ définie sur $\\mathbb{R}^*$ par : $f(x) = \\dfrac{x}{a} E\\left(\\dfrac{b}{x}\\right)$.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1a",
+          "content": "Montrer que : $(\\forall x \\in ]0; +\\infty[), \\quad \\frac{b}{a} - \\frac{x}{a} < f(x) \\le \\frac{b}{a}$",
+          "hint": "Partez de la définition de la partie entière : $t-1 < E(t) \\le t$. Posez $t = b/x$. Multipliez ensuite l'encadrement par $x/a$. Attention au signe de $x$."
+        },
+        {
+          "id": "sq1b",
+          "content": "Montrer que : $(\\forall x \\in ]-\\infty; 0[), \\quad \\frac{b}{a} \\le f(x) < \\frac{b}{a} - \\frac{x}{a}$.",
+          "hint": "Le raisonnement est similaire à la question précédente, mais le sens des inégalités change lorsque vous multipliez par $x < 0$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "En déduire que : $(\\forall x \\in \\mathbb{R}^*); |f(x) - \\frac{b}{a}| < \\frac{|x|}{|a|}$, puis déterminer : $\\lim_{x \\to 0} f(x)$",
+      "hint": "Pour la première partie, utilisez les deux encadrements de la question 1 en distinguant les cas $x>0$ et $x<0$. Pour la seconde partie, appliquez le théorème des gendarmes à l'inégalité que vous venez d'établir."
+    }
+  ]
+}

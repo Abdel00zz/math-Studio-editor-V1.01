@@ -1,0 +1,30 @@
+{
+  "id": "ex-limites-08",
+  "topic": "Limites de fonctions",
+  "context": "Soit $f$ la fonction définie sur $\\mathbb{R}^*$ par : $f(x) = x^2 \\sin\\left(\\frac{1}{x}\\right)$.",
+  "sessionDate": "2026-01-28T20:00:00.000Z",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1a",
+          "content": "Montrer que : $(\\forall x \\in [-1; 1] - \\{0\\}); |f(x)| \\le |x|$.",
+          "hint": "Partez de l'encadrement $|\\sin t| \\le 1$. En posant $t = 1/x$, montrez que $|f(x)| \\le x^2$. Sur l'intervalle $[-1; 1]$, comparez $x^2$ et $|x|$ pour conclure."
+        },
+        {
+          "id": "sq1b",
+          "content": "En déduire $\\displaystyle\\lim_{x \\to 0} f(x)$.",
+          "hint": "L'inégalité $|f(x)| \\le |x|$ équivaut à $-|x| \\le f(x) \\le |x|$. Calculez les limites des membres de gauche et de droite en 0 pour conclure."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Montrer que : $\\displaystyle\\lim_{x \\to +\\infty} f(x) = +\\infty$.",
+      "hint": "Posez $t = \\frac{1}{x}$. Quand $x \\to +\\infty$, $t \\to 0$. Réécrivez l'expression en fonction de $t$ pour faire apparaître la limite usuelle $\\frac{\\sin t}{t}$."
+    }
+  ]
+}

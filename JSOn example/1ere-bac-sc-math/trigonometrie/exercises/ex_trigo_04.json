@@ -1,0 +1,52 @@
+
+{
+  "id": "ex-trigo-004",
+  "topic": "Trigonométrie",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Résolution d'équation",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Résoudre dans $[0, \\pi]$ l'équation $F(x) = 0$",
+          "hint": "\\method On utilise la formule de transformation somme-produit : $\\cos p + \\cos q = 2\\cos\\frac{p+q}{2}\\cos\\frac{p-q}{2}$.\\par$F(x) = 2 \\cos\\left(\\frac{3x+2x}{2}\\right) \\cos\\left(\\frac{3x-2x}{2}\\right) = 2 \\cos\\left(\\frac{5x}{2}\\right) \\cos\\left(\\frac{x}{2}\\right)$\\parL'équation $F(x)=0$ équivaut à :\\par$\\cos\\frac{5x}{2} = 0 \\quad \\text{ou} \\quad \\cos\\frac{x}{2} = 0$\\par\\blueb{Cas 1 :} $\\frac{5x}{2} = \\frac{\\pi}{2} + k\\pi \\iff 5x = \\pi + 2k\\pi \\iff x = \\frac{\\pi}{5} + \\frac{2k\\pi}{5}$.\\parDans $[0, \\pi]$ : $k=0 \\to \\frac{\\pi}{5}$, $k=1 \\to \\frac{3\\pi}{5}$, $k=2 \\to \\pi$.\\par\\blueb{Cas 2 :} $\\frac{x}{2} = \\frac{\\pi}{2} + k\\pi \\iff x = \\pi + 2k\\pi$.\\parDans $[0, \\pi]$ : $k=0 \\to \\pi$ (déjà trouvé).\\par\\conclusion $\\boxed{\\mathcal{S} = \\left\\{ \\frac{\\pi}{5}, \\frac{3\\pi}{5}, \\pi \\right\\}}$"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Formule de linéarisation",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Prouver que $\\cos 3x = 4\\cos^3 x - 3\\cos x$",
+          "hint": "\\method Développons $\\cos(2x+x)$.\\par$$\\begin{aligned} \\cos 3x &= \\cos 2x \\cos x - \\sin 2x \\sin x \\\\ &= (2\\cos^2 x - 1)\\cos x - (2\\sin x \\cos x)\\sin x \\\\ &= 2\\cos^3 x - \\cos x - 2\\cos x (1-\\cos^2 x) \\\\ &= 2\\cos^3 x - \\cos x - 2\\cos x + 2\\cos^3 x \\\\ &= 4\\cos^3 x - 3\\cos x \\end{aligned}$$\\par\\conclusion La formule est prouvée."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Factorisation",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "En déduire que $F(x) = (1 + \\cos x)(4\\cos^2 x - 2\\cos x - 1)$",
+          "hint": "Remplaçons $\\cos 3x$ et $\\cos 2x$ en fonction de $\\cos x$ :\\par$$\\begin{aligned} F(x) &= (4\\cos^3 x - 3\\cos x) + (2\\cos^2 x - 1) \\\\ &= 4\\cos^3 x + 2\\cos^2 x - 3\\cos x - 1 \\end{aligned}$$\\par\\method Factorisons le polynôme $P(X) = 4X^3 + 2X^2 - 3X - 1$. On remarque que $X=-1$ est racine.\\par$P(-1) = -4 + 2 + 3 - 1 = 0$\\parPar division euclidienne ou identification : $P(X) = (X+1)(4X^2 - 2X - 1)$.\\par\\conclusion En posant $X = \\cos x$, on obtient : $\\boxed{F(x) = (1+\\cos x)(4\\cos^2 x - 2\\cos x - 1)}$."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "Valeur numérique",
+      "subQuestions": [
+        {
+          "id": "sq5",
+          "content": "Déterminer la valeur de $\\cos\\frac{\\pi}{5}$",
+          "hint": "On sait que $F(\\frac{\\pi}{5}) = 0$ (d'après Q1).\\parComme $\\frac{\\pi}{5} \\in ]0, \\pi[$, $\\cos\\frac{\\pi}{5} \\neq -1$. Donc le deuxième facteur doit être nul :\\par$4\\cos^2\\frac{\\pi}{5} - 2\\cos\\frac{\\pi}{5} - 1 = 0$\\parC'est une équation du second degré $4X^2 - 2X - 1 = 0$. $\\Delta = 4 - 4(4)(-1) = 20$.\\par$X = \\frac{2 \\pm \\sqrt{20}}{8} = \\frac{2 \\pm 2\\sqrt{5}}{8} = \\frac{1 \\pm \\sqrt{5}}{4}$\\parComme $\\frac{\\pi}{5} \\in ]0, \\frac{\\pi}{2}[$, $\\cos\\frac{\\pi}{5} > 0$. On garde la solution positive.\\par\\conclusion $\\boxed{\\cos\\frac{\\pi}{5} = \\frac{1 + \\sqrt{5}}{4}}$"
+        }
+      ]
+    }
+  ]
+}

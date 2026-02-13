@@ -1,0 +1,31 @@
+
+{
+  "id": "ex-arith-sm-01",
+  "topic": "Arithmétique",
+  "context": "On considère l'équation $(E) : 13x - 7y = 3$ dans $\\mathbb{Z}^2$.",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Solution particulière",
+      "subQuestions": [
+        {
+          "id": "sq1",
+          "content": "Vérifier que $(2, 3)$ est une solution particulière, puis résoudre l'équation.",
+          "hint": "$13(2) - 7(3) = 26 - 21 = 5 \\neq 3$. Ah, attention aux calculs !\\parEssayons l'algorithme d'Euclide : $13 = 7 \\times 1 + 6$ et $7 = 6 \\times 1 + 1$.\\par$1 = 7 - 6 = 7 - (13 - 7) = 2 \\times 7 - 1 \\times 13$.\\parDonc $13(-1) - 7(-2) = 1$. Multiplions par 3 : $13(-3) - 7(-6) = 3$.\\parUne solution est $(-3, -6)$.\\parSolution générale : $x = -3 + 7k, y = -6 + 13k$."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Système de congruences",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "Déduire les solutions du système $\\begin{cases} n \\equiv 3 \\pmod{13} \\\\ n \\equiv 6 \\pmod{7} \\end{cases}$.",
+          "hint": "$n = 13k + 3 = 7k' + 6$. Donc $13k - 7k' = 3$.\\parC'est l'équation $(E)$ avec $x=k$ et $y=k'$.\\parOn utilise les solutions trouvées précédemment pour $k$."
+        }
+      ]
+    }
+  ]
+}

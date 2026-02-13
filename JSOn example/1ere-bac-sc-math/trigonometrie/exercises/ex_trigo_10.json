@@ -1,0 +1,22 @@
+
+{
+  "id": "ex-trigo-010",
+  "topic": "Trigonométrie",
+  "questions": [
+    {
+      "id": "q1",
+      "content": "Montrer que $\\cos^2(A) + \\cos^2(B) + \\cos^2(C) = 1 - 2\\cos(A)\\cos(B)\\cos(C)$.",
+      "hint": "Comme $C = \\pi - A - B$, on a $\\cos(C) = -\\cos(A+B)$.\\par\\parDéveloppons $\\cos^2(A) + \\cos^2(B) + \\cos^2(C)$ :\\par\\parOn utilise $\\cos^2 \\theta = \\frac{1 + \\cos(2\\theta)}{2}$ :\\par$$\\sum \\cos^2 = \\frac{3}{2} + \\frac{1}{2}(\\cos 2A + \\cos 2B + \\cos 2C)$$\\par\\parOr $\\cos 2A + \\cos 2B = 2\\cos(A+B)\\cos(A-B) = -2\\cos C \\cos(A-B)$\\par\\parEt $\\cos 2C = 2\\cos^2 C - 1$.\\par\\parAprès calcul :\\par$$\\cos^2 A + \\cos^2 B + \\cos^2 C = 1 - 2\\cos A \\cos B \\cos C$$"
+    },
+    {
+      "id": "q2",
+      "content": "Montrer que $\\sin(A) + \\sin(B) + \\sin(C) = 4\\cos\\left(\\frac{A}{2}\\right)\\cos\\left(\\frac{B}{2}\\right)\\cos\\left(\\frac{C}{2}\\right)$.",
+      "hint": "Utilisons la formule de somme-produit :\\par$$\\sin A + \\sin B = 2\\sin\\frac{A+B}{2}\\cos\\frac{A-B}{2}$$\\par\\parComme $A + B = \\pi - C$, on a $\\frac{A+B}{2} = \\frac{\\pi - C}{2}$, donc $\\sin\\frac{A+B}{2} = \\cos\\frac{C}{2}$.\\par\\par$$\\sin A + \\sin B = 2\\cos\\frac{C}{2}\\cos\\frac{A-B}{2}$$\\par\\parDe plus, $\\sin C = 2\\sin\\frac{C}{2}\\cos\\frac{C}{2}$.\\par\\par$$\\sin A + \\sin B + \\sin C = 2\\cos\\frac{C}{2}\\left(\\cos\\frac{A-B}{2} + \\sin\\frac{C}{2}\\right)$$\\par\\parOr $\\sin\\frac{C}{2} = \\cos\\frac{A+B}{2}$, donc :\\par$$= 2\\cos\\frac{C}{2}\\left(\\cos\\frac{A-B}{2} + \\cos\\frac{A+B}{2}\\right)$$\\par$$= 2\\cos\\frac{C}{2} \\cdot 2\\cos\\frac{A}{2}\\cos\\frac{B}{2} = \\boxed{4\\cos\\frac{A}{2}\\cos\\frac{B}{2}\\cos\\frac{C}{2}}$$"
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que $\\cos(A) + \\cos(B) + \\cos(C) = 1 + 4\\sin\\left(\\frac{A}{2}\\right)\\sin\\left(\\frac{B}{2}\\right)\\sin\\left(\\frac{C}{2}\\right)$.",
+      "hint": "De même :\\par$$\\cos A + \\cos B = 2\\cos\\frac{A+B}{2}\\cos\\frac{A-B}{2} = 2\\sin\\frac{C}{2}\\cos\\frac{A-B}{2}$$\\par\\parEt $\\cos C = 1 - 2\\sin^2\\frac{C}{2}$.\\par\\par$$\\cos A + \\cos B + \\cos C = 2\\sin\\frac{C}{2}\\cos\\frac{A-B}{2} + 1 - 2\\sin^2\\frac{C}{2}$$\\par$$= 1 + 2\\sin\\frac{C}{2}\\left(\\cos\\frac{A-B}{2} - \\sin\\frac{C}{2}\\right)$$\\par\\parOr $\\sin\\frac{C}{2} = \\cos\\frac{A+B}{2}$, donc :\\par$$= 1 + 2\\sin\\frac{C}{2}\\left(\\cos\\frac{A-B}{2} - \\cos\\frac{A+B}{2}\\right)$$\\par$$= 1 + 2\\sin\\frac{C}{2} \\cdot 2\\sin\\frac{A}{2}\\sin\\frac{B}{2}$$\\par$$= \\boxed{1 + 4\\sin\\frac{A}{2}\\sin\\frac{B}{2}\\sin\\frac{C}{2}}$$"
+    }
+  ]
+}

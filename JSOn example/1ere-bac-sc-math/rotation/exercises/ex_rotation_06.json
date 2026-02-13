@@ -1,0 +1,45 @@
+{
+  "id": "ex-geom-carre-rotation-004",
+  "topic": "Géométrie Plane",
+  "requiresRedaction": true,
+  "questions": [
+    {
+      "id": "q1",
+      "content": "",
+      "subQuestions": [
+        {
+          "id": "sq1a",
+          "content": "Déterminer les images des droites $(OM)$ et $(BC)$ par la rotation $r$ de centre $O$ et d'angle $\\frac{\\pi}{2}$.",
+          "hint": "Pour $(OM)$, utilisez la définition de la perpendiculaire donnée dans l'énoncé. Pour $(BC)$, trouvez l'image d'un vecteur directeur ou de points clés (comme $B$) en tenant compte de l'angle de la rotation."
+        },
+        {
+          "id": "sq1b",
+          "content": "Montrer que : $r(M)=N$.",
+          "hint": "Utilisez l'\\blueb{intersection des images} : $M$ est l'intersection de $(OM)$ et $(BC)$, donc son image $r(M)$ doit se trouver à l'intersection des images de ces deux droites trouvées précédemment."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "Vérifier que : $\\overrightarrow{BN} = \\frac{3}{2}\\overrightarrow{BA}$ et $(\\overrightarrow{MO}, \\overrightarrow{MD}) \\equiv (\\overrightarrow{NO}, \\overrightarrow{NC})[2\\pi]$.",
+      "subQuestions": [
+        {
+          "id": "sq2",
+          "content": "",
+          "hint": "Pour le vecteur, exploitez la \\blueb{conservation des rapports} par la rotation ou les propriétés des triangles isométriques. Pour les angles, pensez à la propriété de cocyclicité des points."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "Montrer que : $AM=ON$ et en déduire la nature du triangle $AMO$.",
+      "subQuestions": [
+        {
+          "id": "sq3",
+          "content": "",
+          "hint": "Pour l'égalité $AM=ON$, vous pouvez utiliser les triangles isométriques (par exemple $ABM$ et un autre). Pour la nature du triangle, n'oubliez pas que la rotation implique toujours $OM = ON$."
+        }
+      ]
+    }
+  ]
+}
