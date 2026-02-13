@@ -35,7 +35,9 @@ const detectType = (json: any): ContentType => {
 };
 
 // Polyfill check for File System Access API
-const supportsFileSystemAccess = 'showDirectoryPicker' in window;
+// We also check if we are not in a cross-origin iframe (common in preview environments)
+// because the API is often blocked there, causing crashes.
+const supportsFileSystemAccess = 'showDirectoryPicker' in window && window.self === window.top;
 
 const App: React.FC = () => {
   const [project, setProject] = useState<ProjectState>({
@@ -123,7 +125,7 @@ const App: React.FC = () => {
       finishLoad(filesMap, manifestData, jsonFiles, 'live');
     } catch (e) {
       console.error("Error accessing file system:", e);
-      alert("Could not access folder. Check permissions or use Standard Upload.");
+      alert("Could not access folder. Check permissions or use Standard Upload.\n\nNote: Live Edit may not work in iframes or without HTTPS.");
     }
   };
 
@@ -461,7 +463,7 @@ const App: React.FC = () => {
             />
             
             <div className="mt-12 text-center">
-               <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest opacity-50">Version 3.1 • Live Editing Enabled</p>
+               <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest opacity-50">Version 3.2 • Live Editing Enabled (if supported)</p>
             </div>
         </div>
       </div>
