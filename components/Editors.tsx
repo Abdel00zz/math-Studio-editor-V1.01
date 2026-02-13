@@ -712,22 +712,25 @@ export const RevisionEditor: React.FC<EditorProps<Revision>> = ({ data, onChange
   );
 };
 
-// ... QuizEditor remains largely the same but can be styled similarly if needed ...
-// Keeping QuizEditor concise for brevity, styling updates applied generally above.
+// ==========================================
+// QUIZ EDITOR
+// ==========================================
 export const QuizEditor: React.FC<EditorProps<Quiz>> = ({ data, onChange }) => {
-    // ... logic remains same ...
-    // Using simplified render for brevity in this response, ideally apply same glassmorphism styles
-    const updateQuestion = (idx: number, q: QuizQuestion) => {
+     // Safe metadata access to prevent crashes with optional metadata files
+     const safeMetadata = data.metadata || { title: '', chapter: '', level: '', total_questions: data.questions.length };
+
+     const updateQuestion = (idx: number, q: QuizQuestion) => {
         const newQs = [...data.questions];
         newQs[idx] = q;
-        onChange({...data, questions: newQs, metadata: {...data.metadata, total_questions: newQs.length}});
+        onChange({...data, questions: newQs, metadata: {...safeMetadata, total_questions: newQs.length}});
      };
    
      const addQuestion = () => {
+       const newQs = [...(data.questions || []), { id: `q${Date.now()}`, type: 'mcq' as const, question: '', options: [] }];
        onChange({
          ...data, 
-         questions: [...data.questions, { id: `q${Date.now()}`, type: 'mcq', question: '', options: [] }],
-         metadata: {...data.metadata, total_questions: data.questions.length + 1}
+         questions: newQs,
+         metadata: {...safeMetadata, total_questions: newQs.length}
        });
      };
    
@@ -742,8 +745,18 @@ export const QuizEditor: React.FC<EditorProps<Quiz>> = ({ data, onChange }) => {
              Quiz Metadata
            </h2>
            <div className="grid grid-cols-2 gap-6 relative z-10">
-              <LatexInput value={data.metadata.title} onChange={v => onChange({...data, metadata: {...data.metadata, title: v}})} label="Quiz Title" placeholder="e.g. Limits & Continuity" />
-              <LatexInput value={data.metadata.chapter} onChange={v => onChange({...data, metadata: {...data.metadata, chapter: v}})} label="Chapter ID" placeholder="e.g. ch-01" />
+              <LatexInput 
+                value={safeMetadata.title} 
+                onChange={v => onChange({...data, metadata: {...safeMetadata, title: v}})} 
+                label="Quiz Title" 
+                placeholder="e.g. Limits & Continuity" 
+              />
+              <LatexInput 
+                value={safeMetadata.chapter} 
+                onChange={v => onChange({...data, metadata: {...safeMetadata, chapter: v}})} 
+                label="Chapter ID" 
+                placeholder="e.g. ch-01" 
+              />
            </div>
          </div>
    
@@ -767,12 +780,12 @@ export const QuizEditor: React.FC<EditorProps<Quiz>> = ({ data, onChange }) => {
                    </div>
                    <button onClick={() => {
                       const qs = data.questions.filter((_, i) => i !== idx);
-                      onChange({...data, questions: qs, metadata: {...data.metadata, total_questions: qs.length}});
+                      onChange({...data, questions: qs, metadata: {...safeMetadata, total_questions: qs.length}});
                    }} className="text-slate-300 hover:text-red-500 transition"><Icons.Trash /></button>
                 </div>
    
                 <div className="mb-6">
-                    <LatexInput value={q.question} onChange={v => updateQuestion(idx, {...q, question: v})} multiline rows={2} placeholder="Question text (LaTeX supported)..." />
+                    <LatexInput value={q.question || q.prompt || ''} onChange={v => updateQuestion(idx, {...q, question: v})} multiline rows={2} placeholder="Question text (LaTeX supported)..." />
                 </div>
                 
                 {/* MCQ & True/False Interface */}
@@ -783,11 +796,11 @@ export const QuizEditor: React.FC<EditorProps<Quiz>> = ({ data, onChange }) => {
                        <div key={oIdx} className="flex gap-4 items-start group/opt">
                           <input 
                            type="checkbox" 
-                           checked={opt.is_correct} 
+                           checked={opt.is_correct || opt.isCorrect} 
                            onChange={e => {
                              const newOpts = [...(q.options || [])];
-                             if(q.type === 'true-false') newOpts.forEach(o => o.is_correct = false); 
-                             newOpts[oIdx] = {...opt, is_correct: e.target.checked};
+                             if(q.type === 'true-false') newOpts.forEach(o => o.isCorrect = false); 
+                             newOpts[oIdx] = {...opt, isCorrect: e.target.checked}; // Standardize on isCorrect
                              updateQuestion(idx, {...q, options: newOpts});
                            }}
                            className="mt-3 w-5 h-5 text-emerald-600 rounded focus:ring-emerald-500 border-gray-300 cursor-pointer"
@@ -816,9 +829,6 @@ export const QuizEditor: React.FC<EditorProps<Quiz>> = ({ data, onChange }) => {
                      <button onClick={() => updateQuestion(idx, {...q, options: [...(q.options||[]), {text: '', is_correct: false}]})} className="text-xs text-emerald-600 font-bold hover:bg-emerald-50 px-3 py-1.5 rounded transition flex items-center gap-1">+ Add Option</button>
                   </div>
                 )}
-   
-                {/* Other Types (kept simplified for XML length constraints, same logic applies) */}
-                {/* ... */}
    
                 <div className="mt-6 pt-6 border-t border-slate-50">
                    <LatexInput label="Global Explanation / Feedback" value={q.explanation || ''} onChange={v => updateQuestion(idx, {...q, explanation: v})} multiline rows={2} placeholder="Explain the reasoning..." />
