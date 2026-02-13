@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { Manifest, ClassData, ProjectState, VirtualFile, ContentType, Exercise, Revision, Quiz, FileSystemDirectoryHandle, FileSystemHandle, FileSystemFileHandle } from './types';
+import { Manifest, ClassData, ProjectState, VirtualFile, ContentType, Exercise, Revision, Quiz, FileSystemDirectoryHandle, FileSystemHandle, FileSystemFileHandle, ContentRef } from './types';
 import { ExerciseEditor, RevisionEditor, QuizEditor } from './components/Editors';
 
 // --- Icons ---
@@ -17,26 +17,28 @@ const Icons = {
   Graph: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>,
   Upload: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>,
   Save: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7" /></svg>,
-  Disk: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /></svg> // Placeholder for save icon if needed, reusing upload for now
+  Disk: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /></svg>
 };
-
-const SaveIcon = () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /></svg>;
-const DiskIcon = () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 17a5 5 0 01-.916-9.916 5.002 5.002 0 019.832 0A5.002 5.002 0 0116 17m-7-5l3-3m0 0l3 3m-3-3v12" /></svg>; // Actually Cloud upload or Disk
-const RealDiskIcon = () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /></svg>;
 
 const SaveDiskIcon = () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2h2m3-4H9a2 2 0 00-2 2v7a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-3.172a2 2 0 01-1.414-.586l-.828-.828A2 2 0 009.172 2H9z" /></svg>;
 
 // Robust check to guess file type
 const detectType = (json: any): ContentType => {
   if (json.header && json.sections) return 'revision';
+  // Check for Quiz: either explicit metadata OR structure of questions (mcq, true-false)
   if (json.metadata && json.questions) return 'quiz';
-  if (json.questions && Array.isArray(json.questions)) return 'exercise';
+  if (json.questions && Array.isArray(json.questions)) {
+     // Distinguish between Exercise and Quiz based on content if metadata is missing
+     const hasQuizTypes = json.questions.some((q: any) => 
+       ['mcq', 'true-false', 'order', 'error-spotting'].includes(q.type) || q.options || q.correctAnswers
+     );
+     if (hasQuizTypes) return 'quiz';
+     return 'exercise';
+  }
   return 'unknown';
 };
 
 // Polyfill check for File System Access API
-// We also check if we are not in a cross-origin iframe (common in preview environments)
-// because the API is often blocked there, causing crashes.
 const supportsFileSystemAccess = 'showDirectoryPicker' in window && window.self === window.top;
 
 const App: React.FC = () => {
@@ -69,6 +71,18 @@ const App: React.FC = () => {
       if (next.has(id)) next.delete(id); else next.add(id);
       return next;
     });
+  };
+
+  // --- Helper: Find Files by Path ---
+  // This is critical for auto-discovery of quizzes that are not in the manifest
+  const findFilesByPattern = (pattern: string): VirtualFile[] => {
+     const results: VirtualFile[] = [];
+     project.files.forEach((file) => {
+        if (file.path.includes(pattern) && file.name.endsWith('.json') && !file.name.includes('manifest')) {
+           results.push(file);
+        }
+     });
+     return results;
   };
 
   // --- File System Handlers ---
@@ -340,7 +354,7 @@ const App: React.FC = () => {
           return { ...p, unsavedChanges: next };
         });
         
-        // Visual feedback could be added here (toast)
+        // Visual feedback
         setTimeout(() => setIsSaving(false), 500);
       } catch (e) {
         console.error("Save failed", e);
@@ -463,7 +477,7 @@ const App: React.FC = () => {
             />
             
             <div className="mt-12 text-center">
-               <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest opacity-50">Version 3.2 • Live Editing Enabled (if supported)</p>
+               <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest opacity-50">Version 3.2.1 • Auto-Discovery of Quizzes</p>
             </div>
         </div>
       </div>
@@ -483,7 +497,7 @@ const App: React.FC = () => {
         case 'exercise': editorContent = <ExerciseEditor data={parsedContent as Exercise} onChange={handleSaveContent} graphFiles={project.graphFiles} graphIndex={project.graphIndex} />; break;
         case 'revision': editorContent = <RevisionEditor data={parsedContent as Revision} onChange={handleSaveContent} graphFiles={project.graphFiles} graphIndex={project.graphIndex} />; break;
         case 'quiz': editorContent = <QuizEditor data={parsedContent as Quiz} onChange={handleSaveContent} graphFiles={project.graphFiles} graphIndex={project.graphIndex} />; break;
-        default: editorContent = <div className="text-center p-10 text-slate-400">Unknown file format</div>;
+        default: editorContent = <div className="text-center p-10 text-slate-400">Unknown file format. Detected: {type}</div>;
       }
     } catch (e) {
       editorContent = <div className="text-center p-10 text-rose-500 font-bold">Invalid JSON Syntax</div>;
@@ -553,7 +567,27 @@ const App: React.FC = () => {
 
                       try {
                         const classData = JSON.parse(project.files.get(classFileKey)!.content) as ClassData;
-                        return classData.chapters?.map(ch => (
+                        return classData.chapters?.map(ch => {
+                           // AUTO-DISCOVERY: Check for Quizzes if not present in JSON
+                           const chapterPathSeg = `/${ch.id}/`;
+                           const quizFiles = findFilesByPattern(`${chapterPathSeg}quiz/`);
+                           // Convert virtual files to ContentRef
+                           const autoQuizzes: ContentRef[] = quizFiles.map(f => ({
+                               id: f.name.replace('.json',''),
+                               title: f.name.replace('.json','').replace(/_/g, ' '),
+                               path: f.path
+                           }));
+
+                           // Merge existing manifest quizzes with auto-discovered ones (deduplicating by path)
+                           const existingQuizzes = ch.quizzes || [];
+                           const allQuizzes = [...existingQuizzes];
+                           autoQuizzes.forEach(aq => {
+                              if (!allQuizzes.find(eq => eq.path === aq.path || eq.path.endsWith(aq.path))) {
+                                  allQuizzes.push(aq);
+                              }
+                           });
+
+                           return (
                            <div key={ch.id} className="mb-1">
                               <button 
                                 onClick={() => toggleNode(ch.id)}
@@ -572,7 +606,7 @@ const App: React.FC = () => {
                                        className={`w-full text-left text-[11px] py-1 px-2 rounded-sm flex items-center gap-2 truncate transition-all ${project.activePath?.endsWith(r.path) ? 'bg-indigo-600 text-white' : 'text-slate-500 hover:text-slate-300'}`}
                                      >
                                        <span className={`w-1 h-1 rounded-full ${project.activePath?.endsWith(r.path) ? 'bg-white' : 'bg-indigo-500'}`}></span>
-                                       {r.path.split('/').pop()?.replace('.json', '')}
+                                       {r.title || r.path.split('/').pop()?.replace('.json', '')}
                                      </button>
                                    ))}
                                    {ch.exercises?.map(e => (
@@ -582,23 +616,25 @@ const App: React.FC = () => {
                                        className={`w-full text-left text-[11px] py-1 px-2 rounded-sm flex items-center gap-2 truncate transition-all ${project.activePath?.endsWith(e.path) ? 'bg-indigo-600 text-white' : 'text-slate-500 hover:text-slate-300'}`}
                                      >
                                        <span className={`w-1 h-1 rounded-full ${project.activePath?.endsWith(e.path) ? 'bg-white' : 'bg-emerald-500'}`}></span>
-                                       {e.path.split('/').pop()?.replace('.json', '')}
+                                       {e.title || e.path.split('/').pop()?.replace('.json', '')}
                                      </button>
                                    ))}
-                                    {ch.quizzes?.map(q => (
+                                   
+                                   {/* Quizzes Display */}
+                                   {allQuizzes.map(q => (
                                      <button 
                                        key={q.path} 
                                        onClick={() => loadFile(q.path)}
                                        className={`w-full text-left text-[11px] py-1 px-2 rounded-sm flex items-center gap-2 truncate transition-all ${project.activePath?.endsWith(q.path) ? 'bg-indigo-600 text-white' : 'text-slate-500 hover:text-slate-300'}`}
                                      >
                                        <span className={`${project.activePath?.endsWith(q.path) ? 'text-white' : 'text-amber-500'}`}><Icons.Puzzle /></span>
-                                       {q.path.split('/').pop()?.replace('.json', '')}
+                                       {q.title || q.path.split('/').pop()?.replace('.json', '')}
                                      </button>
                                    ))}
                                 </div>
                               )}
                            </div>
-                        ));
+                        )});
                       } catch (e) { return null; }
                    })()}
                 </div>

@@ -29,6 +29,7 @@ export interface Chapter {
 export interface ContentRef {
   id: string;
   path: string;
+  title?: string; // Added title for auto-discovery display
   methodsPath?: string;
   difficulty?: 'facile' | 'moyen' | 'difficile';
 }
@@ -66,7 +67,7 @@ export interface Question {
   hint?: string;
   subQuestions?: SubQuestion[];
   media?: MediaData;
-  graphId?: string; // Added for graph integration
+  graphId?: string;
   graphCaption?: string;
 }
 
@@ -75,7 +76,7 @@ export interface SubQuestion {
   content: string;
   hint?: string;
   media?: MediaData;
-  graphId?: string; // Added for graph integration
+  graphId?: string;
 }
 
 export interface Revision {
@@ -104,11 +105,11 @@ export interface RevisionBlock {
 }
 
 export interface Quiz {
-  metadata: {
+  metadata?: { // Made optional for robust loading
     title: string;
     chapter: string;
-    level: string;
-    total_questions: number;
+    level?: string;
+    total_questions?: number;
   };
   questions: QuizQuestion[];
 }
@@ -116,29 +117,31 @@ export interface Quiz {
 export interface QuizQuestion {
   id: string;
   type: 'mcq' | 'true-false' | 'order' | 'input' | 'error-spotting';
-  question: string;
+  question?: string; // Sometimes called 'prompt' in some JSONs
+  prompt?: string; // Alternate key
   context?: string;
   section?: string;
   category?: string;
   options?: QuizOption[];
   explanation?: string;
-  isTrue?: boolean; // For true-false
-  steps?: QuizStep[]; // For error-spotting
-  items?: QuizOrderItem[]; // For ordering
-  placeholder?: string; // For input
-  correctAnswers?: string[]; // For input
+  isTrue?: boolean;
+  steps?: QuizStep[];
+  items?: QuizOrderItem[];
+  placeholder?: string;
+  correctAnswers?: string[];
 }
 
 export interface QuizOption {
   text: string;
-  is_correct: boolean;
+  is_correct?: boolean; // Can be is_correct or isCorrect
+  isCorrect?: boolean;
   explanation?: string;
 }
 
 export interface QuizStep {
   id?: string;
   text: string;
-  isError: boolean;
+  isError?: boolean;
   correction?: string;
 }
 
@@ -150,7 +153,6 @@ export interface QuizOrderItem {
 
 // --- App State Types ---
 
-// Polyfills for File System Access API
 export interface FileSystemHandle {
   kind: 'file' | 'directory';
   name: string;
@@ -175,19 +177,19 @@ export interface FileSystemWritableFileStream extends WritableStream {
 export interface VirtualFile {
   path: string;
   name: string;
-  content: string; // JSON string
+  content: string;
   isDir: boolean;
-  handle?: FileSystemFileHandle; // Handle for direct disk writing
+  handle?: FileSystemFileHandle;
 }
 
 export interface ProjectState {
   manifest: Manifest | null;
-  files: Map<string, VirtualFile>; // Content files (JSON)
-  graphFiles: Map<string, VirtualFile>; // Graph files (TS)
-  graphIndex: any | null; // The parsed graphs-index.json
+  files: Map<string, VirtualFile>;
+  graphFiles: Map<string, VirtualFile>;
+  graphIndex: any | null;
   activePath: string | null;
   unsavedChanges: Set<string>;
-  mode: 'readonly' | 'live'; // New mode to track if we can write to disk
+  mode: 'readonly' | 'live';
 }
 
 // --- Graph Types ---
@@ -201,6 +203,7 @@ export interface GeometryGraphConfig {
   showGrid?: boolean;
   keepAspectRatio?: boolean;
   init: (board: JSXGraphBoard) => void;
+  labels?: { x: string; y: string };
 }
 
 export interface FunctionGraphConfig {
@@ -225,4 +228,4 @@ export interface FunctionGraphConfig {
   labels?: { x: string; y: string };
 }
 
-export type GraphConfig = FunctionGraphConfig;
+export type GraphConfig = FunctionGraphConfig | GeometryGraphConfig;
