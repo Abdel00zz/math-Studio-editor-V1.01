@@ -150,11 +150,34 @@ export interface QuizOrderItem {
 
 // --- App State Types ---
 
+// Polyfills for File System Access API
+export interface FileSystemHandle {
+  kind: 'file' | 'directory';
+  name: string;
+}
+
+export interface FileSystemFileHandle extends FileSystemHandle {
+  kind: 'file';
+  getFile(): Promise<File>;
+  createWritable(): Promise<FileSystemWritableFileStream>;
+}
+
+export interface FileSystemDirectoryHandle extends FileSystemHandle {
+  kind: 'directory';
+  values(): AsyncIterable<FileSystemHandle>;
+}
+
+export interface FileSystemWritableFileStream extends WritableStream {
+  write(data: string | BufferSource | Blob): Promise<void>;
+  close(): Promise<void>;
+}
+
 export interface VirtualFile {
   path: string;
   name: string;
   content: string; // JSON string
   isDir: boolean;
+  handle?: FileSystemFileHandle; // Handle for direct disk writing
 }
 
 export interface ProjectState {
@@ -164,6 +187,7 @@ export interface ProjectState {
   graphIndex: any | null; // The parsed graphs-index.json
   activePath: string | null;
   unsavedChanges: Set<string>;
+  mode: 'readonly' | 'live'; // New mode to track if we can write to disk
 }
 
 // --- Graph Types ---

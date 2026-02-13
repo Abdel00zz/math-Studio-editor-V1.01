@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
-import { Manifest, ClassData, ProjectState, VirtualFile, ContentType, Exercise, Revision, Quiz } from './types';
+import { Manifest, ClassData, ProjectState, VirtualFile, ContentType, Exercise, Revision, Quiz, FileSystemDirectoryHandle, FileSystemHandle, FileSystemFileHandle } from './types';
 import { ExerciseEditor, RevisionEditor, QuizEditor } from './components/Editors';
 
 // --- Icons ---
@@ -11,22 +11,31 @@ const Icons = {
   Minus: () => <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M20 12H4" /></svg>,
   Folder: () => <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" /></svg>,
   File: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>,
-  Puzzle: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>,
+  Puzzle: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" /></svg>,
   Undo: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" /></svg>,
   Redo: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 10h-10a8 8 0 00-8 8v2M21 10l-6 6m6-6l-6-6" /></svg>,
   Graph: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" /></svg>,
-  Upload: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>
+  Upload: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" /></svg>,
+  Save: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7" /></svg>,
+  Disk: () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /></svg> // Placeholder for save icon if needed, reusing upload for now
 };
+
+const SaveIcon = () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /></svg>;
+const DiskIcon = () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 17a5 5 0 01-.916-9.916 5.002 5.002 0 019.832 0A5.002 5.002 0 0116 17m-7-5l3-3m0 0l3 3m-3-3v12" /></svg>; // Actually Cloud upload or Disk
+const RealDiskIcon = () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" /></svg>;
+
+const SaveDiskIcon = () => <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16v2a2 2 0 01-2 2H5a2 2 0 01-2-2v-7a2 2 0 012-2h2m3-4H9a2 2 0 00-2 2v7a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-3.172a2 2 0 01-1.414-.586l-.828-.828A2 2 0 009.172 2H9z" /></svg>;
 
 // Robust check to guess file type
 const detectType = (json: any): ContentType => {
   if (json.header && json.sections) return 'revision';
-  // Quiz MUST have metadata and questions to be identified distinct from exercise
   if (json.metadata && json.questions) return 'quiz';
-  // Exercise has questions but usually no complex metadata object at root like Quiz
   if (json.questions && Array.isArray(json.questions)) return 'exercise';
   return 'unknown';
 };
+
+// Polyfill check for File System Access API
+const supportsFileSystemAccess = 'showDirectoryPicker' in window;
 
 const App: React.FC = () => {
   const [project, setProject] = useState<ProjectState>({
@@ -35,13 +44,15 @@ const App: React.FC = () => {
     graphFiles: new Map(),
     graphIndex: null,
     activePath: null,
-    unsavedChanges: new Set()
+    unsavedChanges: new Set(),
+    mode: 'readonly'
   });
 
   // UI State
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const [expandedNodes, setExpandedNodes] = useState<Set<string>>(new Set());
   const [manifestCandidates, setManifestCandidates] = useState<VirtualFile[]>([]);
+  const [isSaving, setIsSaving] = useState(false);
   
   // History State for Undo/Redo
   const [history, setHistory] = useState<{past: ProjectState[], future: ProjectState[]}>({ past: [], future: [] });
@@ -60,6 +71,7 @@ const App: React.FC = () => {
 
   // --- File System Handlers ---
 
+  // Standard Upload (Read-only / Download to save)
   const handleFolderUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const fileList = e.target.files;
     if (!fileList || fileList.length === 0) return;
@@ -71,7 +83,6 @@ const App: React.FC = () => {
     for (let i = 0; i < fileList.length; i++) {
       const file = fileList[i];
       const path = file.webkitRelativePath || file.name;
-      // Skip hidden files or node_modules
       if (path.includes('/.') || path.includes('node_modules')) continue;
 
       const text = await file.text();
@@ -94,13 +105,79 @@ const App: React.FC = () => {
       }
     }
 
+    finishLoad(filesMap, manifestData, jsonFiles, 'readonly');
+  };
+
+  // Native File System Access (Live Edit)
+  const handleNativeFolderOpen = async () => {
+    try {
+      // @ts-ignore - TS might not know showDirectoryPicker yet
+      const dirHandle = await window.showDirectoryPicker({ mode: 'readwrite' });
+      
+      const filesMap = new Map<string, VirtualFile>();
+      let manifestData: Manifest | null = null;
+      const jsonFiles: VirtualFile[] = [];
+
+      await processDirectoryHandle(dirHandle, '', filesMap, jsonFiles, (man) => manifestData = man);
+
+      finishLoad(filesMap, manifestData, jsonFiles, 'live');
+    } catch (e) {
+      console.error("Error accessing file system:", e);
+      alert("Could not access folder. Check permissions or use Standard Upload.");
+    }
+  };
+
+  const processDirectoryHandle = async (
+    dirHandle: FileSystemDirectoryHandle, 
+    pathPrefix: string, 
+    filesMap: Map<string, VirtualFile>,
+    jsonFiles: VirtualFile[],
+    setManifest: (m: Manifest) => void
+  ) => {
+    for await (const entry of dirHandle.values()) {
+      const entryPath = pathPrefix ? `${pathPrefix}/${entry.name}` : entry.name;
+      
+      if (entry.kind === 'file') {
+        if (entry.name.includes('.DS_Store') || entry.name.startsWith('.')) continue;
+        
+        const fileHandle = entry as FileSystemFileHandle;
+        const file = await fileHandle.getFile();
+        const text = await file.text();
+        
+        const vFile: VirtualFile = {
+          path: entryPath,
+          name: entry.name,
+          content: text,
+          isDir: false,
+          handle: fileHandle // Store the handle!
+        };
+        
+        filesMap.set(entryPath, vFile);
+
+        if (entry.name.endsWith('.json')) {
+          jsonFiles.push(vFile);
+          if (entry.name === 'manifest.json') {
+             try {
+               setManifest(JSON.parse(text));
+             } catch (e) { console.warn("Invalid manifest", e); }
+          }
+        }
+      } else if (entry.kind === 'directory') {
+        if (entry.name === 'node_modules' || entry.name.startsWith('.')) continue;
+        await processDirectoryHandle(entry as FileSystemDirectoryHandle, entryPath, filesMap, jsonFiles, setManifest);
+      }
+    }
+  };
+
+  const finishLoad = (filesMap: Map<string, VirtualFile>, manifestData: Manifest | null, jsonFiles: VirtualFile[], mode: 'readonly' | 'live') => {
     if (manifestData) {
       setProject(prev => ({
         ...prev,
         manifest: manifestData,
         files: filesMap,
         activePath: null,
-        unsavedChanges: new Set()
+        unsavedChanges: new Set(),
+        mode
       }));
       setManifestCandidates([]);
     } else {
@@ -109,7 +186,7 @@ const App: React.FC = () => {
         return;
       }
       setManifestCandidates(jsonFiles);
-      setProject(prev => ({ ...prev, files: filesMap }));
+      setProject(prev => ({ ...prev, files: filesMap, mode }));
     }
   };
 
@@ -139,7 +216,6 @@ const App: React.FC = () => {
              } catch (e) { console.warn("Invalid graphs-index.json", e); }
         }
 
-        // We index by full path AND by filename for easier fuzzy search
         graphFilesMap.set(path, vFile);
         graphFilesMap.set(file.name.replace(/\.(ts|js)$/, ''), vFile); 
      }
@@ -150,7 +226,6 @@ const App: React.FC = () => {
          graphIndex: graphIndexData || prev.graphIndex
      }));
      
-     // Feedback visual
      alert(`Graph Library loaded! ${graphFilesMap.size / 2} graphs indexed.`);
   };
 
@@ -187,7 +262,6 @@ const App: React.FC = () => {
 
     if (foundKey) {
       setProject(p => ({ ...p, activePath: foundKey! }));
-      // On mobile, auto-close sidebar when file is selected
       if (window.innerWidth < 768) setSidebarOpen(false);
     } else {
       console.warn(`File not found in index: ${path}`);
@@ -202,7 +276,7 @@ const App: React.FC = () => {
       const activePath = currentProject.activePath;
       if (!activePath) return currentProject;
 
-      // Push current state to history before modifying
+      // Push history
       setHistory(h => ({
         past: [...h.past, currentProject],
         future: []
@@ -245,26 +319,50 @@ const App: React.FC = () => {
     setProject(next);
   };
 
-  const downloadActiveFile = () => {
+  const performSave = async () => {
     if (!project.activePath) return;
     const file = project.files.get(project.activePath);
     if (!file) return;
 
-    const blob = new Blob([file.content], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = file.name;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-    
-    setProject(p => {
-       const next = new Set(p.unsavedChanges);
-       next.delete(p.activePath!);
-       return { ...p, unsavedChanges: next };
-    });
+    if (project.mode === 'live' && file.handle) {
+      // Write directly to disk
+      try {
+        setIsSaving(true);
+        const writable = await file.handle.createWritable();
+        await writable.write(file.content);
+        await writable.close();
+        
+        setProject(p => {
+          const next = new Set(p.unsavedChanges);
+          next.delete(p.activePath!);
+          return { ...p, unsavedChanges: next };
+        });
+        
+        // Visual feedback could be added here (toast)
+        setTimeout(() => setIsSaving(false), 500);
+      } catch (e) {
+        console.error("Save failed", e);
+        alert("Failed to save to disk. Permission denied or file locked.");
+        setIsSaving(false);
+      }
+    } else {
+      // Fallback download
+      const blob = new Blob([file.content], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = file.name;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      
+      setProject(p => {
+         const next = new Set(p.unsavedChanges);
+         next.delete(p.activePath!);
+         return { ...p, unsavedChanges: next };
+      });
+    }
   };
 
   // --- Screens ---
@@ -310,28 +408,46 @@ const App: React.FC = () => {
            </div>
 
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div 
-                 className="bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 cursor-pointer hover:border-indigo-300 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group text-center"
-                 onClick={() => directoryInputRef.current?.click()}
-              >
-                  <div className="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                    <Icons.Folder />
-                  </div>
-                  <h3 className="font-bold text-slate-800 text-lg mb-2">Content Folder</h3>
-                  <p className="text-sm text-slate-400">Select the root folder containing your JSON content and manifest.</p>
-              </div>
+              {supportsFileSystemAccess ? (
+                 <div 
+                   className="bg-white rounded-3xl p-8 shadow-xl shadow-indigo-100 border border-indigo-100 cursor-pointer hover:border-indigo-400 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group text-center relative overflow-hidden"
+                   onClick={handleNativeFolderOpen}
+                 >
+                    <div className="absolute top-0 right-0 bg-indigo-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-xl uppercase tracking-widest">Recommended</div>
+                    <div className="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                      <SaveDiskIcon />
+                    </div>
+                    <h3 className="font-bold text-slate-800 text-lg mb-2">Open Project (Live Edit)</h3>
+                    <p className="text-sm text-slate-400">Directly edit files on your disk. Changes are saved instantly.</p>
+                 </div>
+              ) : null}
 
               <div 
-                 className={`bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 cursor-pointer hover:border-emerald-300 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group text-center ${project.graphFiles.size > 0 ? 'ring-2 ring-emerald-400' : ''}`}
+                 className="bg-white rounded-3xl p-8 shadow-xl shadow-slate-200/50 border border-slate-100 cursor-pointer hover:border-slate-400 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group text-center"
+                 onClick={() => directoryInputRef.current?.click()}
+              >
+                  <div className="w-16 h-16 bg-slate-100 text-slate-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <Icons.Folder />
+                  </div>
+                  <h3 className="font-bold text-slate-800 text-lg mb-2">Standard Upload</h3>
+                  <p className="text-sm text-slate-400">Load a folder in memory. You must download files to save them.</p>
+              </div>
+           </div>
+
+           <div className={`mt-6 mx-auto max-w-sm ${project.graphFiles.size > 0 ? 'opacity-50' : ''}`}>
+              <div 
+                 className={`bg-white/50 rounded-2xl p-4 border border-slate-200 cursor-pointer hover:border-emerald-300 hover:bg-white transition-all duration-300 group flex items-center gap-4`}
                  onClick={() => graphDirectoryInputRef.current?.click()}
               >
-                  <div className="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0">
                     <Icons.Graph />
                   </div>
-                  <h3 className="font-bold text-slate-800 text-lg mb-2">Graphs Library</h3>
-                  <p className="text-sm text-slate-400">
-                    {project.graphFiles.size > 0 ? `${project.graphFiles.size / 2} Graphs Loaded ✓` : "Optional: Load TS graph definitions."}
-                  </p>
+                  <div className="text-left">
+                    <h3 className="font-bold text-slate-800 text-sm">Graphs Library</h3>
+                    <p className="text-[10px] text-slate-400">
+                      {project.graphFiles.size > 0 ? `${project.graphFiles.size / 2} Graphs Loaded ✓` : "Optional: Load TS graphs."}
+                    </p>
+                  </div>
               </div>
            </div>
            
@@ -345,7 +461,7 @@ const App: React.FC = () => {
             />
             
             <div className="mt-12 text-center">
-               <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest opacity-50">Version 3.0 • Modernized Interface</p>
+               <p className="text-slate-400 text-xs font-semibold uppercase tracking-widest opacity-50">Version 3.1 • Live Editing Enabled</p>
             </div>
         </div>
       </div>
@@ -380,25 +496,27 @@ const App: React.FC = () => {
     );
   }
 
+  const canLiveSave = project.mode === 'live' && activeFile?.handle;
+
   return (
     <div className="flex h-screen overflow-hidden bg-slate-50 text-slate-900 font-sans">
       
-      {/* Sidebar - Collapsed/Flexible Design */}
+      {/* Sidebar */}
       <aside className={`
         fixed inset-y-0 left-0 z-30 bg-[#0f172a] text-slate-400 flex flex-col transition-all duration-300 ease-in-out border-r border-slate-800
         ${sidebarOpen ? 'w-72 translate-x-0' : 'w-0 -translate-x-full md:w-0 md:translate-x-0 overflow-hidden'}
       `}>
-        {/* Minimal Header without large logo */}
+        {/* Minimal Header */}
         <div className="h-14 flex items-center justify-between px-4 bg-[#0f172a] border-b border-slate-800 shrink-0">
           <div className="font-bold text-slate-200 tracking-tight text-sm truncate flex items-center gap-2">
             <span className="text-indigo-500 font-black">M+</span> Studio
+            {project.mode === 'live' && <span className="px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-400 text-[9px] font-bold uppercase border border-indigo-500/30">Live</span>}
           </div>
           <button onClick={() => setSidebarOpen(false)} className="md:hidden p-1 rounded hover:bg-slate-800 text-slate-500"><Icons.Close /></button>
         </div>
         
-        {/* Tree View Content */}
+        {/* Tree View */}
         <div className={`flex-1 overflow-y-auto p-2 space-y-1 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent`}>
-           {/* Add Graphs Upload Button inside Sidebar */}
            <div className="mb-4">
              <button 
                onClick={() => graphDirectoryInputRef.current?.click()}
@@ -425,7 +543,6 @@ const App: React.FC = () => {
 
               {expandedNodes.has(cls.id) && (
                 <div className="ml-2 pl-2 border-l border-slate-800/50 mt-1 space-y-1">
-                   {/* Fetch Class Data */}
                    {(() => {
                       let classFileKey = '';
                       for (const k of project.files.keys()) if (k.endsWith(cls.path) || k === cls.path) classFileKey = k;
@@ -446,7 +563,6 @@ const App: React.FC = () => {
 
                               {expandedNodes.has(ch.id) && (
                                 <div className="ml-2 space-y-0.5 mt-0.5 animate-in slide-in-from-left-1 duration-200 border-l border-slate-800/30 pl-2">
-                                   {/* Revisions */}
                                    {ch.revisions?.map(r => (
                                      <button 
                                        key={r.path} 
@@ -457,7 +573,6 @@ const App: React.FC = () => {
                                        {r.path.split('/').pop()?.replace('.json', '')}
                                      </button>
                                    ))}
-                                   {/* Exercises */}
                                    {ch.exercises?.map(e => (
                                      <button 
                                        key={e.path} 
@@ -468,9 +583,7 @@ const App: React.FC = () => {
                                        {e.path.split('/').pop()?.replace('.json', '')}
                                      </button>
                                    ))}
-                                   
-                                   {/* Quizzes - Distinct Icon */}
-                                   {ch.quizzes?.map(q => (
+                                    {ch.quizzes?.map(q => (
                                      <button 
                                        key={q.path} 
                                        onClick={() => loadFile(q.path)}
@@ -515,7 +628,7 @@ const App: React.FC = () => {
           </div>
           
           <div className="flex items-center gap-3">
-            {/* Undo / Redo Toolbar */}
+            {/* Undo / Redo */}
             <div className="flex bg-slate-100 rounded-lg p-0.5 border border-slate-200">
                <button 
                   onClick={undo} 
@@ -537,12 +650,20 @@ const App: React.FC = () => {
             </div>
 
             <button 
-              onClick={downloadActiveFile}
-              disabled={!project.activePath}
-              className="bg-slate-900 hover:bg-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs font-bold px-3 py-2 rounded-lg transition-all shadow-sm hover:shadow-md flex items-center gap-2"
+              onClick={performSave}
+              disabled={!project.activePath || isSaving}
+              className={`text-white text-xs font-bold px-4 py-2 rounded-lg transition-all shadow-sm hover:shadow-md flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed
+                ${canLiveSave ? 'bg-indigo-600 hover:bg-indigo-700' : 'bg-slate-900 hover:bg-slate-800'}
+              `}
             >
-              <span className="hidden md:inline">Download</span>
-              <Icons.Upload />
+              {isSaving ? (
+                <span>Saving...</span>
+              ) : (
+                <>
+                  <span className="hidden md:inline">{canLiveSave ? 'Save to Disk' : 'Download'}</span>
+                  {canLiveSave ? <SaveDiskIcon /> : <Icons.Upload />}
+                </>
+              )}
             </button>
           </div>
         </header>
